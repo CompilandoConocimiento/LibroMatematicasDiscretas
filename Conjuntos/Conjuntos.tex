@@ -1,0 +1,309 @@
+% ****************************************************************************************
+% ************************     	TRANFORMADA DE LAPLACE	  ********************************
+% ****************************************************************************************
+
+
+% =======================================================
+% =======         HEADER FOR DOCUMENT        ============
+% =======================================================
+    \documentclass[12pt]{report}                                %Type of docuemtn and size of font
+    \usepackage[margin=1.2in]{geometry}                         %Margins
+    \usepackage{hyperref}                                       %Create MetaData for a PDF
+
+    \usepackage[spanish]{babel}                                 %Please use spanish
+    \usepackage[utf8]{inputenc}                                 %Please use spanish 
+    \usepackage[T1]{fontenc}                                    %Please use spanish
+
+    \usepackage{amsthm, amssymb, amsfonts, mathrsfs}            %Make math beautiful
+    \usepackage[fleqn]{amsmath}                                 %Please make equations left
+    \decimalpoint                                               %Make math beautiful
+    \setlength{\parindent}{0pt}                                 %Eliminate ugly indentation
+
+    \usepackage{graphicx}                                       %Allow to create graphics
+    \usepackage{wrapfig}                                        %Allow to create images
+    \graphicspath{ {Graphics/} }                                %Where are the images :D
+    \usepackage{listings}                                       %We will be using code here
+    \usepackage[inline]{enumitem}                               %We will need to enumarate
+
+    \usepackage{fancyhdr}                                       %Lets make awesome headers/footers
+    \usepackage{tasks}                                          %Horizontal lists
+    \usepackage{longtable}                                      %Lets make tables awesome
+
+    \renewcommand{\footrulewidth}{0.5pt}                        %We will need this!
+    \setlength{\headheight}{16pt}                               %We will need this!
+    \setlength{\parskip}{0.5em}                                 %We will need this!
+    \pagestyle{fancy}                                           %Lets make awesome headers/footers
+    \lhead{\footnotesize{\leftmark}}                            %Headers!
+    \rhead{\footnotesize{\rightmark}}                           %Headers!
+    \lfoot{Compilando Conocimiento}                             %Footers!
+    \rfoot{Oscar Rosas}                                         %Footers!
+
+    \author{Oscar Andrés Rosas}                                 %Who I am
+
+% ========================================
+% ===========   COMMANDS    ==============
+% ========================================
+    \DeclareMathOperator \Real {\mathbb{R}}                     %The real numbers
+    \DeclareMathOperator \Naturals {\mathbb{N}}                 %The real numbers
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}    %A Cool T, that's it!
+
+
+
+% =====================================================
+% ============     	  COVER PAGE	   ================
+% =====================================================
+\begin{document}
+\begin{titlepage}
+
+	\center
+	% ============ UNIVERSITY NAME AND DATA =========
+	\textbf{\textsc{\Large Proyecto Compilando Conocimiento}}\\[1.0cm] 
+	\textsc{\Large Matemáticas Discretas}\\[1.0cm] 
+
+	% ============ NAME OF THE DOCUMENT  ============
+	\rule{\linewidth}{0.5mm} \\[1.0cm]
+		{ \huge \bfseries Teoría de Conjuntos}\\[1.0cm] 
+	\rule{\linewidth}{0.5mm} \\[2.0cm]
+	
+	% ====== SEMI TITLE ==========
+	{\LARGE Una Pequeña Introducción}\\[7cm] 
+	
+	% ============  MY INFORMATION  =================
+	\begin{center} \large
+	\textbf{\textsc{Autor:}}\\
+	Rosas Hernandez Oscar Andres
+	\end{center}
+
+	\vfill
+
+\end{titlepage}
+
+% =====================================================
+% ========                INDICE              =========
+% =====================================================
+\tableofcontents{}
+\clearpage
+
+% ======================================================================================
+% =============================       PRINCIPIOS BASICOS      ==========================
+% ======================================================================================
+\chapter{Principios Básicos}
+    \clearpage
+
+    % =====================================================
+    % ============           DEFINICION            ========
+    % =====================================================
+    \section{Definición}
+
+        % =====================================
+        % =========   ¿QUE SON?     ===========
+        % =====================================
+        \subsection{¿Qué son?}
+            Olvida todo lo que sabes sobre números. Olvídate de que sabes lo que es un número.
+            Aquí es donde empiezan las matemáticas. En vez de matemáticas con números,
+            vamos a hacer matemáticas con 'cosas'.
+
+            Se denomina conjunto a la agrupación de entes o elementos, que poseen una o
+            varias características en común. 
+
+        % =====================================
+        % =========  ¿COMO DEFINIRLO?  ========
+        % =====================================
+        \clearpage
+        \subsection{¿Cómo Definirlo?}
+
+            Definimos cierto conjunto, al que llamaremos $A$ como todas las $x$ (es decir
+            cada x es un elemento, un ente) en las que se cumplan ciertas características
+            (eso es lo que significa esos puntitos, ahí deberías poner las reglas que tenga
+            tu conjunto). 
+
+            \begin{equation}   
+                A = \{ x |\quad x \dots \}
+            \end{equation}
+
+            Recuerda que basicamente hay dos formas de 'declarar' un conjunto:
+            \begin{itemize}
+                \item \textbf{Explícitamente}:
+                    Es decir, enumerando TODOS los elementos o entes que forman
+                    el conjunto ($A = \{a, e, i, o, u\}$)
+
+                \item \textbf{Implícitamente}:
+                Es decir, enumerando las características de los elementos o entes que
+                forman el conjunto ($B = \{ x \in \Naturals |\quad +\sqrt{a} \in \Naturals \}$)
+            \end{itemize}
+
+
+            Recuerda también:
+            \begin{itemize}
+                \item Los elementos repetidos no cuentan,
+                    si ya esta un elemento dentro del conjunto, da lo mismo que lo vuelvas
+                    a enumerar.\\
+                    ($A = \{a, e, i, o, u\} = \{a, a, e, i, o, u\}$)
+
+                \item No importa el orden en el me muestres los elementos,
+                    solo importa que esten dentro.
+                    ($B = \{a, e, i, o, u\} = \{u, a, i, e, o\}$)
+            \end{itemize}
+
+
+
+            \clearpage
+            % ==================
+            % ===  EJEMPLO   ===
+            % ==================
+            \subsubsection{\large \\Ejemplo 1:}
+
+                Veamos por ejemplo como definir el Conjunto $C_1$ \emph{(lo sé me muero con
+                mi creatividad para los nombres)} como aquel que contenga a TODOS los números
+                reales negativos:
+
+                \begin{equation*}   
+                    C_1 = \{ x \in \Real |\quad x < 0 \}
+                \end{equation*}
+
+                \textbf{En Lenguaje normal:\\}
+                Esto lo podemos leer como $C_1$ es el conjunto \emph{(es decir todo lo que esta
+                entre parentesís)} de todas las $x$ que pertenezcan al los números reales
+                \emph{(eso quiere decir el $x \in \Real$)} tal que (eso lo representamos
+                como: $|$ , no porque :/) $x$ es menor que 0 \emph{(esa es nuestra condición para
+                encontrar si alguna $x$ pertenece a nuestro conjunto)}.
+
+            % ==================
+            % ===  EJEMPLO   ===
+            % ==================
+                \subsubsection{\large \\Ejemplo 2:}
+
+                Veamos por ejemplo como definir el Conjunto $C_2$ como aquel que contenga a
+                TODOS las vocales:
+
+                \begin{equation*}   
+                \begin{split}   
+                    C_2 &= \{ Vocales \}            \\
+                    C_2 &= \{a, e, i, o, u \}
+                \end{split}   
+                \end{equation*}
+
+                Si te das cuenta, podemos definirlos de muchas maneras.
+
+
+
+
+    % =====================================================
+    % ============        CLASIFICACION            ========
+    % =====================================================
+    \clearpage
+    \section{Clasificación}
+            
+        Podemos clasificar de muchas maneras a los conjuntos, veamos las mas comunes:
+
+        \textbf{\large \\Tamaño}
+
+        \begin{itemize}
+            \item \textbf{Finito}:
+                Si tiene una colección que se pueda contar, aunque sea difícil.
+
+                Por ejemplo, el conjunto de juguetes incluye todos los tipos de
+                juguetes que hay en el mundo. Aunque sea difícil, se podrían contar
+                todos los tipos de juguetes del mundo, por lo que es finito.
+
+            \item \textbf{Infinito}:
+                Si tiene una colección que no se pueda terminar de contar nunca.
+
+                Por ejemplo, el conjunto de todos los números pares, que son
+                infinitos, es un conjunto infinito.
+        \end{itemize}
+
+
+    % =====================================================
+    % ============    CONJUNTO VACIO/UNIVERSO      ========
+    % =====================================================
+    \clearpage
+    \section{Conjunto Vacío}
+            
+        Ok, ya sabemos que un conjunto es un grupo de elementos, pero ...
+        ¿Cómo represento a un conjunto en el que no hay nada?
+
+        Como una caja vacía.
+
+        De hecho, me gusta, hablemos de el Conjunto vacío como un caja vacía.
+        \begin{equation}   
+            \phi = \{ \}
+        \end{equation}
+
+        Listo, eso es casí todo, además te gustará que te recuerde las siguientes
+        proposiciones:
+
+        \begin{itemize}
+            \item $|\phi| = 0$ : 
+                    Esto quiere decir que la cardinalidad \emph{(es decir
+                    la cantidad de elementos)} del conjunto vacío es la misma que 
+                    la cantidad de galletas en una caja vacía de galletas, osea 0.
+
+            \item $\phi \neq \{\phi\}$: 
+                    Esto quiere decir que no es lo mismo hablar del conjunto
+                    vacío que de hablar de un conjunto cualquiera que contiene al
+                    conjunto vacío.
+
+                    Es decir simplemente no es lo mismo tener una caja vacía que una caja
+                    con una caja vacía dentro \emph{(si lo piensas la segunda caja ya 
+                    no esta completamente vacía)}
+        \end{itemize}
+
+    \section{Conjunto Universo}
+        
+        Como podemos imaginarnos, tenía que existir un término inverso, digamos que estamos
+        analizando y agrupando animales por su habitad, entonces tenemos muchos conjuntos cool
+        como animales del bosque o marinos, pero también tenemos a un mega conjunto que llamamos
+        universo donde tenemos a todos los animales.
+
+        Creo que resulta bastante obvio pero aquí hay algunas cosas que quizá te interesen.
+        \begin{itemize}
+            \item $\phi^c = u$
+            \item $u^c = \phi$
+        \end{itemize}
+
+
+    % =====================================================
+    % ============           CARDINALIDAD          ========
+    % =====================================================
+    \clearpage
+    \section{Cardinalidad}
+            
+        Ok, vamos avanzando, ahora es la hora de ver una característica de los conjuntos.
+        La Cardinalidad, que no es mas que una forma \emph{fancy} de decir, el número de 
+        elementos ó entes que contiene cierto conjunto. Puedes verlo como una función que
+        recibe un conjunto cualquiera y te regresa un número \emph{(Bueno, tecnicamente también
+        esta el caso en el que la cardinalidad es infinita)}.
+
+        Esta es la forma en que solemos expresar la cardinalidad de un conjunto cualquiera:
+        \begin{equation}   
+            |A| = \#A = Card(A)
+        \end{equation}
+
+
+        Ahora si, veamos algunas proposiciones super cool:
+
+
+
+
+
+% =====================================================
+% ============        BIBLIOGRAPHY   ==================
+% =====================================================
+\clearpage
+\bibliographystyle{plain}
+	\begin{thebibliography}{9}
+
+	% ============ REFERENCE #1 ========
+	\bibitem{Sitio1} 
+		ProbRob
+		\\\texttt{Youtube.com}
+
+
+	 
+
+\end{thebibliography}
+
+
+
+\end{document}
