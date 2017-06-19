@@ -71,16 +71,21 @@
 % ===========   COMMANDS    ==============
 % ========================================
 
+    % =====  GENERAL MATH  ==========
+    \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
+    \DeclareMathOperator \MiniSpace {\ }                            %Use: \Space for a cool mini space
+    \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
+
     % =====  NUMBER THEORY  ==========
     \DeclareMathOperator \Naturals {\mathbb{N}}                     %Use: \Naturals por Notation
     \DeclareMathOperator \Integers {\mathbb{Z}}                     %Use: \Integers por Notation
     \DeclareMathOperator \Racionals{\mathbb{Q}}                     %Use: \Racionals por Notation
     \DeclareMathOperator \Reals {\mathbb{R}}                        %Use: \Reals por Notation
     \DeclareMathOperator \Complexs {\mathbb{C}}                     %Use: \Complex por Notation
-    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
-    \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool space
 
-    % =====  VECTORS  ================
+    % === LINEAL ALGEBRA & VECTORS ===
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+
     \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
         \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
     }
@@ -144,7 +149,7 @@
         % =====================================
         % =========   ¿QUE SON?     ===========
         % =====================================
-        \subsection{¿Qué son?}
+        \subsection*{¿Qué son?}
             Olvida todo lo que sabes sobre números. Olvídate de que sabes lo que es un número.
             Aquí es donde empiezan las matemáticas. En vez de matemáticas con números,
             vamos a hacer matemáticas con 'cosas'.
@@ -152,13 +157,18 @@
             Se denomina conjunto a la agrupación de entes o elementos, que poseen una o
             varias características en común. 
 
-
-            \subsubsection{Ideas Importantes}
-
             Un conjunto puede ser una agrupación de números, de vectores, de autos, de espacios vectoriales,
             de objectos, de funciones e incluso un conjunto puede ser una agrupación de otros conjuntos.
 
-            Lo conjuntos generalmente son denotados por letras mayúsculas, como $A, B, C, \cdots$
+
+            % =====================================
+            % =====   IDEAS IMPORTANTES    ========
+            % =====================================
+            \subsection*{Ideas Importantes}
+
+            Lo conjuntos generalmente son denotados por letras mayúsculas, como $A, B, C, \cdots$, mientras
+            que las letras minusculas como $a, b, c, \cdots x, y, z$ se usan para representar elementos
+            de un conjunto.
 
 
             Quiza los conjuntos más importantes que verás a lo largo de estos apuntes son:
@@ -173,75 +183,125 @@
                 \item $\Reals$ : Representa al conjunto de todos los reales, ya sabes
                         números como \\$\frac{3}{2}, -\pi, 3, \cdots$
                 \item $\Complexs$ : Representa al conjunto de todos los complejos, ya sabes
-                        números como \\$3 + 2i, \pi i, 3 \cdots$
+                        números como \\$3 + 2i, \pi i, 3, \cdots$
             \end{itemize}
+
+            
 
         % =====================================
         % =========  ¿COMO DEFINIRLO?  ========
         % =====================================
         \clearpage
-        \subsection{¿Cómo Definirlo?}
-
-            Definimos cierto conjunto, al que llamaremos $A$ como la agrupación de todas las $x$
-            (es decir cada x es un elemento, un ente) que cumplen ciertas características
-            (eso es lo que significa esos puntitos, ahí deberías poner las reglas que tenga
-            tu conjunto). 
-
-            \begin{equation}   
-                A = \{ x |\quad x \dots \}
-            \end{equation}
-
-            Recuerda que basicamente hay dos formas de 'declarar' un conjunto:
-            \begin{itemize}
-                \item \textbf{Explícitamente}:
-                    Es decir, enumerando TODOS los elementos o entes que forman
-                    el conjunto ($A = \{a, e, i, o, u\}$)
-
-                \item \textbf{Implícitamente}:
-                Es decir, enumerando las características de los elementos o entes que
-                forman el conjunto ($B = \{ x \in \Naturals |\quad |\sqrt{x}| \in \Naturals \}$)
-            \end{itemize}
+        \section{¿Cómo Definirlo?}
 
 
-            Recuerda también:
-            \begin{itemize}
-                \item Los elementos repetidos no cuentan,
-                    si ya esta un elemento dentro del conjunto, da lo mismo que lo vuelvas
-                    a enumerar.\\
-                    ($A = \{a, e, i, o, u\} = \{a, a, e, i, o, u\}$)
+            % =====================================
+            % =========   PERTENCIA     ===========
+            % =====================================
+            \subsection{Pertencia}
 
-                \item No importa el orden en el me muestres los elementos,
-                    solo importa que esten dentro.
-                    ($A = \{a, e, i, o, u\} = \{u, a, i, e, o\}$)
-            \end{itemize}
+            Creo que el símbolo más importante al hablar de conjuntos es este: $x \in A $. Esto quiere decir,
+            el elemento x \textbf{pertenece} al Conjunto A.
 
+            
+            Y de la misma manera puedes usar el símbolo $\notin$ que significa \textbf{no pertenece}.
 
 
+            % =====================================
+            % ====   FORMAS DE DECLARAR   =========
+            % =====================================
+            \subsection{Notación Básica}
+
+                La notación más común para declarar o hablar de un conjunto es colocar los elementos de esta
+                manera : $ A = \{\ \text{Elementos de A} \}$.
+
+                Puedes entonces hacer algo como:
+
+                \begin{itemize}
+                    \item Enumerar TODOS los elementos o entes que forman el conjunto :
+                    \\$A = \{a, e, i, o, u\}$
+
+                    \item Enumerar un patrón de los elementos o entes que forman el conjunto :
+                    \\$A = \{+2, -4, +8, -16, \cdots \}$
+                \end{itemize}
+
+
+                Recuerda también:
+
+                \begin{itemize}
+                    \item Los elementos repetidos no cuentan, si ya esta un elemento dentro del
+                        conjunto, da lo mismo que lo vuelvas a enumerar.\\
+                        $A = \{a, e, i, o, u\} = \{a, a, e, i, o, u\}$
+
+                    \item No importa el orden en el me muestres los elementos,
+                        solo importa que esten dentro.\\
+                        $A = \{a, e, i, o, u\} = \{u, a, i, e, o\}$
+                \end{itemize}
+
+
+
+            % =====================================
+            % ====   FORMAS DE DECLARAR   =========
+            % =====================================
             \clearpage
+            \subsection{Notación Formal} 
+
+                Esta notación tiene un nombre genial en inglés, se le conoce como \textbf{Set Builder Notation},
+                esta notación es la que sueles encontrar en los libros. 
+
+                Se ve fea al principio pero te da toda la información que necesitas.
+
+                Veamos como formarla poco a poco:
+
+                Lo primero que hacemos es elegir una letra minúscula (de forma normal, no es ninguna regla)
+                que representará a cualquier elemento al azar del conjunto, por ejemplo usemos la $x$.
+
+                También solemos usar la línea vertical, de esta forma: $P_1 | P_2$ que se lee como: 
+                $P_1$ tal que $P_2$.  
+
+                \subsubsection*{Formas Básica}
+
+                    Ahora si, veamos como se ve esta notación:
+                    \begin{equation}   
+                        A = \{ x \Such x \dots \}
+                    \end{equation}
+
+                    Esto es la base y esto es lo que nos quiere decir:
+
+                    Definimos cierto conjunto, al que llamaremos $A$ como la agrupación de todas las $x$
+                    (es decir cada x es un elemento, un ente) tal que cumplen ciertas características
+                    (eso es lo que significa esos puntitos, ahí deberías poner las reglas que tenga
+                    tu conjunto). \\
+
+                    Por ejemplo podemos poner algo como:
+
+                    $B = \{ x \Such x \in \Naturals, x < 4 \}$\\
+
+                    B es el conjunto de todas las $x$ tal que $x$ pertenece a los Naturales
+                    y $x$ es menor que 4.
+
+
+                \subsubsection*{Formas Alternas}
+                
+                    También es común ver la característica que pertenece a cierto conjunto mayor
+                    antes de la línea vertical.
+
+                    Entonces el ejemplo anterior se vería como:
+
+                    $B = \{ x \in \Naturals \Such x < 4 \} = \{ x \Such x \in \Naturals, \MiniSpace x < 4 \} $
+
+
+                
+            % =====================================
+            % ====          EJEMPLOS      =========
+            % =====================================
+            \clearpage
+            \subsection{Ejemplos} 
+
             % ==================
             % ===  EJEMPLO   ===
             % ==================
-            \subsubsection{\large \\Ejemplo 1:}
-
-                Veamos por ejemplo como definir el Conjunto $C_1$ \emph{(lo sé me muero con
-                mi creatividad para los nombres)} como aquel que contenga a TODOS los números
-                reales negativos:
-
-                \begin{equation*}   
-                    C_1 = \{ x \in \Reals |\quad x < 0 \}
-                \end{equation*}
-
-                \textbf{En Lenguaje normal:\\}
-                Esto lo podemos leer como $C_1$ es el conjunto \emph{(es decir todo lo que esta
-                entre parentesís)} de todas las $x$ que pertenezcan al los números reales
-                \emph{(eso quiere decir el $x \in \Reals$)} tal que (eso lo representamos
-                como: $|$ , no porque :/) $x$ es menor que 0 \emph{(esa es nuestra condición para
-                encontrar si alguna $x$ pertenece a nuestro conjunto)}.
-
-            % ==================
-            % ===  EJEMPLO   ===
-            % ==================
-                \subsubsection{\large \\Ejemplo 2:}
+            \subsubsection*{Ejemplo 1:}
 
                 Veamos por ejemplo como definir el Conjunto $C_2$ como aquel que contenga a
                 TODOS las vocales:
@@ -255,6 +315,26 @@
 
                 Si te das cuenta, podemos definirlos de muchas maneras.
 
+
+            % ==================
+            % ===  EJEMPLO   ===
+            % ==================
+            \subsubsection*{Ejemplo 2:}
+
+                Veamos por ejemplo como definir el Conjunto $C$ \emph{(lo sé me muero con
+                mi creatividad para los nombres)} como aquel que contenga a TODOS los números
+                reales negativos:
+
+                \begin{equation*}   
+                    C = \{ x \in \Reals |\quad x < 0 \}
+                \end{equation*}
+
+                \textbf{En Lenguaje normal:\\}
+                Esto lo podemos leer como $C$ es el conjunto \emph{(es decir todo lo que esta
+                entre parentesís)} de todas las $x$ que pertenezcan al los números reales
+                \emph{(eso quiere decir el $x \in \Reals$)} tal que (eso lo representamos
+                como: $|$) $x$ es menor que 0 \emph{(esa es nuestra condición para
+                encontrar si alguna $x$ pertenece a nuestro conjunto)}.
 
 
 
@@ -285,7 +365,7 @@
 
 
     % =====================================================
-    % ============    CONJUNTO VACIO/UNIVERSO      ========
+    % ============        CONJUNTO VACIO        ===========
     % =====================================================
     \clearpage
     \section{Conjunto Vacío}
@@ -296,13 +376,15 @@
         Como una caja vacía.
 
         De hecho, me gusta, hablemos de el Conjunto vacío como un caja vacía.
-        \begin{equation}   
-            \phi = \{ \}
-        \end{equation}
+
+        \subsubsection*{Definición}
+        Llamemos $\phi$ como aquel conjunto tal que $\phi = \{ \}$ es decir el conjunto que no
+        tiene elementos.
 
         Solemos usar este simbolo por su parecido con un cero, pero recuerda no es un cero, simplemente
         es una forma de denotar al conjunto vacío.
 
+        \subsubsection*{Ideas Importantes}
         Listo, eso es casí todo, además te gustará que te recuerde las siguientes
         proposiciones:
 
@@ -322,6 +404,11 @@
                     no esta completamente vacía)}
         \end{itemize}
 
+
+    % =====================================================
+    % ============        CONJUNTO UNIVERSO      ==========
+    % =====================================================
+    \clearpage
     \section{Conjunto Universo}
         
         Como podemos imaginarnos, tenía que existir un término inverso, digamos que estamos
@@ -331,15 +418,20 @@
 
         Muchas veces a la hora de hablar sobre conjuntos solemos definirlos sobre un universo.
 
-        Podemos ver muchasc analogías, veamos a ver cual te gusta más:
+        Podemos ver muchaS analogías, veamos a ver cual te gusta más:
 
         \begin{itemize}
             \item Es como si el universo fuera el padre, entonces las hijas son nuestros conjuntos
             \item Es como si el universo una caja de cereal, entonces nuestros conjuntos son grupos de cereales
-                que estaban dentro de la caja, ya que es imposible sacar mas cereales más que los que estaban
-                en la caja.
+                que estaban dentro de la caja.
         \end{itemize}
 
+
+        \subsubsection*{Definición}
+        Un conjunto universo es aquel conjunto que contiene a cualquier conjunto del que estemos hablando.
+
+
+        \subsubsection*{Ideas Importantes}
         Creo que resulta bastante obvio pero aquí hay algunas cosas que quizá te interesen.
         \begin{itemize}
             \item $\phi^c = u$
