@@ -1,51 +1,95 @@
 % ****************************************************************************************
-% ************************     	TRANFORMADA DE LAPLACE	  ********************************
+% ************************     	TEORIA DE CONJUNTOS  	  ********************************
 % ****************************************************************************************
 
 
 % =======================================================
 % =======         HEADER FOR DOCUMENT        ============
 % =======================================================
-    \documentclass[12pt]{report}                                %Type of docuemtn and size of font
-    \usepackage[margin=1.2in]{geometry}                         %Margins
-    \usepackage{hyperref}                                       %Create MetaData for a PDF
+    % *********   DOCUMENT ITSELF   **************
+    \documentclass[12pt]{report}                                    %Type of docuemtn and size of font
+    \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
+    \usepackage{ifthen}                                             %Allow simple programming
+    \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
+    \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
+    \author{Oscar Andrés Rosas}                                     %Who I am
 
-    \usepackage[spanish]{babel}                                 %Please use spanish
-    \usepackage[utf8]{inputenc}                                 %Please use spanish 
-    \usepackage[T1]{fontenc}                                    %Please use spanish
+    % *********   LANGUAJE AND UFT-8   *********
+    \usepackage[spanish]{babel}                                     %Please use spanish
+    \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
+    \usepackage[T1]{fontenc}                                        %Please use spanish
 
-    \usepackage{amsthm, amssymb, amsfonts, mathrsfs}            %Make math beautiful
-    \usepackage[fleqn]{amsmath}                                 %Please make equations left
-    \decimalpoint                                               %Make math beautiful
-    \setlength{\parindent}{0pt}                                 %Eliminate ugly indentation
+    % *********   MATH AND HIS STYLE  *********
+    \usepackage{amsthm, amssymb, amsfonts, mathrsfs}                %Make math beautiful
+    \usepackage[fleqn]{amsmath}                                     %Please make equations left
+    \decimalpoint                                                   %Use decimal point
 
-    \usepackage{graphicx}                                       %Allow to create graphics
-    \usepackage{wrapfig}                                        %Allow to create images
-    \graphicspath{ {Graphics/} }                                %Where are the images :D
-    \usepackage{listings}                                       %We will be using code here
-    \usepackage[inline]{enumitem}                               %We will need to enumarate
+    % *********   GRAPHICS AND IMAGES *********
+    \usepackage{graphicx}                                           %Allow to create graphics
+    \usepackage{wrapfig}                                            %Allow to create images
+    \graphicspath{ {Graphics/} }                                    %Where are the images :D
 
-    \usepackage{fancyhdr}                                       %Lets make awesome headers/footers
-    \usepackage{tasks}                                          %Horizontal lists
-    \usepackage{longtable}                                      %Lets make tables awesome
+    % *********   LISTS AND TABLES ***********
+    \usepackage{listings}                                           %We will be using code here
+    \usepackage[inline]{enumitem}                                   %We will need to enumarate
+    \usepackage{tasks}                                              %Horizontal lists
+    \usepackage{longtable}                                          %Lets make tables awesome
 
-    \renewcommand{\footrulewidth}{0.5pt}                        %We will need this!
-    \setlength{\headheight}{16pt}                               %We will need this!
-    \setlength{\parskip}{0.5em}                                 %We will need this!
-    \pagestyle{fancy}                                           %Lets make awesome headers/footers
-    \lhead{\footnotesize{\leftmark}}                            %Headers!
-    \rhead{\footnotesize{\rightmark}}                           %Headers!
-    \lfoot{Compilando Conocimiento}                             %Footers!
-    \rfoot{Oscar Rosas}                                         %Footers!
 
-    \author{Oscar Andrés Rosas}                                 %Who I am
+    % *********   HEADERS AND FOOTERS ********
+    \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
+    \pagestyle{fancy}                                               %Lets make awesome headers/footers
+    \setlength{\headheight}{16pt}                                   %Top line
+    \setlength{\parskip}{0.5em}                                     %Top line
+    \renewcommand{\footrulewidth}{0.5pt}                            %Bottom line
 
+    \lhead{                                                         %Left Header
+        \hyperlink{chapter.\arabic{chapter}}                        %Make a link to the current chapter
+        {\normalsize{\textsc{\nouppercase{\leftmark}}}}             %And fot it put the name
+    }
+
+    \rhead{                                                         %Right Header
+        \hyperlink{section.\arabic{chapter}.\arabic{section}}       %Make a link to the current chapter
+            {\footnotesize{\textsc{\nouppercase{\rightmark}}}}      %And fot it put the name
+    }
+
+    \rfoot{\textsc{\small{\hyperref[sec:Index]{Ve al Índice}}}}    %This will always be a footer  
+
+    \fancyfoot[L]{                                                  %Algoritm for a changing footer
+        \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
+            {\href{https://compilandoconocimiento.com/yo/}          %DO THIS:
+                {\footnotesize                                      %Send the page
+                    {\textsc{Oscar Andrés Rosas}}}}                 %Send the page
+            {\href{https://compilandoconocimiento.com}              %ELSE DO THIS: 
+                {\footnotesize                                      %Send the author
+                    {\textsc{Compilando Conocimiento}}}}            %Send the author
+    }
+    
+    
+    
 % ========================================
 % ===========   COMMANDS    ==============
 % ========================================
-    \DeclareMathOperator \Real {\mathbb{R}}                     %The real numbers
-    \DeclareMathOperator \Naturals {\mathbb{N}}                 %The real numbers
-    \DeclareMathOperator \LinealTransformation {\mathcal{T}}    %A Cool T, that's it!
+
+    % =====  NUMBER THEORY  ==========
+    \DeclareMathOperator \Naturals {\mathbb{N}}                     %Use: \Naturals por Notation
+    \DeclareMathOperator \Integers {\mathbb{Z}}                     %Use: \Integers por Notation
+    \DeclareMathOperator \Racionals{\mathbb{Q}}                     %Use: \Racionals por Notation
+    \DeclareMathOperator \Reals {\mathbb{R}}                        %Use: \Reals por Notation
+    \DeclareMathOperator \Complexs {\mathbb{C}}                     %Use: \Complex por Notation
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+    \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool space
+
+    % =====  VECTORS  ================
+    \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
+        \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
+    }
+    \newcommand{\lVector}[1]{                                       %Use: \lVector {Matrix Notation} use a abs 
+        \ensuremath{\begin{vmatrix}#1\end{vmatrix}}                 %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
+    }
+    \newcommand{\Vector}[1]{                                        %Use: \Vector {Matrix Notation} no parentesis
+        \ensuremath{\begin{matrix}#1\end{matrix}}                   %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
+    }
 
 
 
@@ -82,6 +126,8 @@
 % ========                INDICE              =========
 % =====================================================
 \tableofcontents{}
+\label{sec:Index}
+
 \clearpage
 
 % ======================================================================================
@@ -106,14 +152,38 @@
             Se denomina conjunto a la agrupación de entes o elementos, que poseen una o
             varias características en común. 
 
+
+            \subsubsection{Ideas Importantes}
+
+            Un conjunto puede ser una agrupación de números, de vectores, de autos, de espacios vectoriales,
+            de objectos, de funciones e incluso un conjunto puede ser una agrupación de otros conjuntos.
+
+            Lo conjuntos generalmente son denotados por letras mayúsculas, como $A, B, C, \cdots$
+
+
+            Quiza los conjuntos más importantes que verás a lo largo de estos apuntes son:
+
+            \begin{itemize}
+                \item $\Naturals$ : Representa al conjunto de todos los naturales, ya sabes
+                        números como \\$1, 2, 3, \cdots$
+                \item $\Integers$ : Representa al conjunto de todos los enteros, ya sabes
+                        números como \\$\cdots, -1, 0, 1, \cdots$
+                \item $\Racionals$ : Representa al conjunto de todos los racionales, ya sabes
+                        números como \\$\frac{1}{1}, \frac{1}{2}, \frac{23}{72}, \cdots$
+                \item $\Reals$ : Representa al conjunto de todos los reales, ya sabes
+                        números como \\$\frac{3}{2}, -\pi, 3, \cdots$
+                \item $\Complexs$ : Representa al conjunto de todos los complejos, ya sabes
+                        números como \\$3 + 2i, \pi i, 3 \cdots$
+            \end{itemize}
+
         % =====================================
         % =========  ¿COMO DEFINIRLO?  ========
         % =====================================
         \clearpage
         \subsection{¿Cómo Definirlo?}
 
-            Definimos cierto conjunto, al que llamaremos $A$ como todas las $x$ (es decir
-            cada x es un elemento, un ente) en las que se cumplan ciertas características
+            Definimos cierto conjunto, al que llamaremos $A$ como la agrupación de todas las $x$
+            (es decir cada x es un elemento, un ente) que cumplen ciertas características
             (eso es lo que significa esos puntitos, ahí deberías poner las reglas que tenga
             tu conjunto). 
 
@@ -129,7 +199,7 @@
 
                 \item \textbf{Implícitamente}:
                 Es decir, enumerando las características de los elementos o entes que
-                forman el conjunto ($B = \{ x \in \Naturals |\quad +\sqrt{a} \in \Naturals \}$)
+                forman el conjunto ($B = \{ x \in \Naturals |\quad |\sqrt{x}| \in \Naturals \}$)
             \end{itemize}
 
 
@@ -142,7 +212,7 @@
 
                 \item No importa el orden en el me muestres los elementos,
                     solo importa que esten dentro.
-                    ($B = \{a, e, i, o, u\} = \{u, a, i, e, o\}$)
+                    ($A = \{a, e, i, o, u\} = \{u, a, i, e, o\}$)
             \end{itemize}
 
 
@@ -158,13 +228,13 @@
                 reales negativos:
 
                 \begin{equation*}   
-                    C_1 = \{ x \in \Real |\quad x < 0 \}
+                    C_1 = \{ x \in \Reals |\quad x < 0 \}
                 \end{equation*}
 
                 \textbf{En Lenguaje normal:\\}
                 Esto lo podemos leer como $C_1$ es el conjunto \emph{(es decir todo lo que esta
                 entre parentesís)} de todas las $x$ que pertenezcan al los números reales
-                \emph{(eso quiere decir el $x \in \Real$)} tal que (eso lo representamos
+                \emph{(eso quiere decir el $x \in \Reals$)} tal que (eso lo representamos
                 como: $|$ , no porque :/) $x$ es menor que 0 \emph{(esa es nuestra condición para
                 encontrar si alguna $x$ pertenece a nuestro conjunto)}.
 
@@ -194,7 +264,7 @@
     \clearpage
     \section{Clasificación}
             
-        Podemos clasificar de muchas maneras a los conjuntos, veamos las mas comunes:
+        Podemos clasificar de muchas maneras a los conjuntos, veamos las más comunes:
 
         \textbf{\large \\Tamaño}
 
@@ -230,6 +300,9 @@
             \phi = \{ \}
         \end{equation}
 
+        Solemos usar este simbolo por su parecido con un cero, pero recuerda no es un cero, simplemente
+        es una forma de denotar al conjunto vacío.
+
         Listo, eso es casí todo, además te gustará que te recuerde las siguientes
         proposiciones:
 
@@ -256,11 +329,59 @@
         como animales del bosque o marinos, pero también tenemos a un mega conjunto que llamamos
         universo donde tenemos a todos los animales.
 
+        Muchas veces a la hora de hablar sobre conjuntos solemos definirlos sobre un universo.
+
+        Podemos ver muchasc analogías, veamos a ver cual te gusta más:
+
+        \begin{itemize}
+            \item Es como si el universo fuera el padre, entonces las hijas son nuestros conjuntos
+            \item Es como si el universo una caja de cereal, entonces nuestros conjuntos son grupos de cereales
+                que estaban dentro de la caja, ya que es imposible sacar mas cereales más que los que estaban
+                en la caja.
+        \end{itemize}
+
         Creo que resulta bastante obvio pero aquí hay algunas cosas que quizá te interesen.
         \begin{itemize}
             \item $\phi^c = u$
             \item $u^c = \phi$
         \end{itemize}
+
+
+
+
+
+% ======================================================================================
+% ============================      ALGEBRA CON CONJUNTOS     ==========================
+% ======================================================================================
+\chapter{Álgebra y Operaciones}
+    \clearpage
+
+    % =====================================================
+    % ============           OPERACIONES           ========
+    % =====================================================
+    \clearpage
+    \section{Operaciones}
+
+        Podemos hacer operaciones con los conjuntos de una manera muy similiar a como hacemos
+        operaciones con los números normales, tu defines una operación, y la haces entre dos conjuntos
+        y esta te dará un nuevo conjunto,  pero aquí siento que son incluso más divertidas.
+
+        Te presentaré estas operaciones una a una y te mostraré con mas detalle cada una, así 
+        que vamos, empecemos:
+            
+        \subsection{Unión}
+
+            La unión representa la fuerza, así que veamos que representa la unión cuando estemos
+            hablando de conjuntos.
+
+            \begin{equation}
+                A \cup B = \{ x \Space | x \in A \text{ ó bien } x \in B \}
+            \end{equation}
+
+            Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+            que bien pertenezcan a A o bien que pertenezcan a B.
+
+
 
 
     % =====================================================
@@ -270,8 +391,10 @@
     \section{Cardinalidad}
             
         Ok, vamos avanzando, ahora es la hora de ver una característica de los conjuntos.
-        La Cardinalidad, que no es mas que una forma \emph{fancy} de decir, el número de 
-        elementos ó entes que contiene cierto conjunto. Puedes verlo como una función que
+        La Cardinalidad, que no es mas que una forma \emph{fancy} de decir el número de 
+        elementos ó entes que contiene cierto conjunto.
+
+        Puedes verlo como una función que
         recibe un conjunto cualquiera y te regresa un número \emph{(Bueno, tecnicamente también
         esta el caso en el que la cardinalidad es infinita)}.
 
@@ -281,7 +404,8 @@
         \end{equation}
 
 
-        Ahora si, veamos algunas proposiciones super cool:
+        Ahora si, veamos algunas proposiciones super geniales:
+
 
 
 
