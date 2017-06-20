@@ -73,7 +73,7 @@
 
     % =====  GENERAL MATH  ==========
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
-    \DeclareMathOperator \MiniSpace {\ }                            %Use: \Space for a cool mini space
+    \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
     \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
 
     % =====  NUMBER THEORY  ==========
@@ -275,7 +275,7 @@
 
                     Por ejemplo podemos poner algo como:
 
-                    $B = \{ x \Such x \in \Naturals, x < 4 \}$\\
+                    $B = \{ x \Such x \in \Naturals, \MiniSpace x < 4 \}$\\
 
                     B es el conjunto de todas las $x$ tal que $x$ pertenece a los Naturales
                     y $x$ es menor que 4.
@@ -308,7 +308,7 @@
 
                 \begin{equation*}   
                 \begin{split}   
-                    C_2 &= \{ Vocales \}            \\
+                    C_2 &= \{ Vocales \}       \\
                     C_2 &= \{a, e, i, o, u \}
                 \end{split}   
                 \end{equation*}
@@ -447,6 +447,46 @@
 % ======================================================================================
 \chapter{Álgebra y Operaciones}
     \clearpage
+
+
+    % =====================================================
+    % ============        RELACIONES               ========
+    % =====================================================
+    \clearpage
+    \section{Relaciones}
+
+        Es muy importante que ademas de hablar de los conjuntos hablemos de las relaciones
+        que existen entre los dos conjuntos.
+
+
+        % =================================
+        % ======    EQUIVALENCIA    =======
+        % =================================
+        \subsection{Equivalencia}
+
+        Creo que esta relación es más que obvia, tanto que ya la he usado sin darme cuenta
+        porque considero que es de lo más obvio.
+
+        Que dos conjuntos sea iguales quiere decir que ambos conjuntos contiene \textbf{exactamente}
+        los mismos elementos.
+
+        Ve entonces que ahora tiene mucho sentido las ideas que puse antes:
+
+        \begin{itemize}
+            \item Los elementos repetidos no cuentan, si ya esta un elemento dentro del
+                conjunto, da lo mismo que lo vuelvas a enumerar.\\
+                $A = \{a, e, i, o, u\} = \{a, a, e, i, o, u\}$
+
+            \item No importa el orden en el me muestres los elementos,
+                solo importa que esten dentro.\\
+                $A = \{a, e, i, o, u\} = \{u, a, i, e, o\}$
+        \end{itemize}
+
+
+        % =================================
+        % ======    EQUIVALENCIA    =======
+        % =================================
+        \subsection{Equivalencia}
 
     % =====================================================
     % ============           OPERACIONES           ========
