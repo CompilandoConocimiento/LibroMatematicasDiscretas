@@ -464,29 +464,56 @@
         % =================================
         \subsection{Equivalencia}
 
-        Creo que esta relación es más que obvia, tanto que ya la he usado sin darme cuenta
-        porque considero que es de lo más obvio.
+            Creo que esta relación es más que obvia, tanto que ya la he usado sin darme cuenta
+            porque considero que es de lo más obvio.
 
-        Que dos conjuntos sea iguales quiere decir que ambos conjuntos contiene \textbf{exactamente}
-        los mismos elementos.
+            Que dos conjuntos sea iguales quiere decir que ambos conjuntos contiene \textbf{exactamente}
+            los mismos elementos.
 
-        Ve entonces que ahora tiene mucho sentido las ideas que puse antes:
+            Ve entonces que ahora tiene mucho sentido las ideas que puse antes:
 
-        \begin{itemize}
-            \item Los elementos repetidos no cuentan, si ya esta un elemento dentro del
-                conjunto, da lo mismo que lo vuelvas a enumerar.\\
-                $A = \{a, e, i, o, u\} = \{a, a, e, i, o, u\}$
+            \begin{itemize}
+                \item Los elementos repetidos no cuentan, si ya esta un elemento dentro del
+                    conjunto, da lo mismo que lo vuelvas a enumerar.\\
+                    $A = \{a, e, i, o, u\} = \{a, a, e, i, o, u\}$
 
-            \item No importa el orden en el me muestres los elementos,
-                solo importa que esten dentro.\\
-                $A = \{a, e, i, o, u\} = \{u, a, i, e, o\}$
-        \end{itemize}
+                \item No importa el orden en el me muestres los elementos,
+                    solo importa que esten dentro.\\
+                    $A = \{a, e, i, o, u\} = \{u, a, i, e, o\}$
+            \end{itemize}
 
 
         % =================================
-        % ======    EQUIVALENCIA    =======
+        % ======    SUBCONJUNTOS    =======
         % =================================
-        \subsection{Equivalencia}
+        \clearpage
+        \subsection{Subconjuntos}
+
+            Esta es la relación mas importante siento yo, porque será la que mas ocupemos a lo largo
+            del tiempo.
+
+            Que el A sea un subconjunto de B quiere decir que \textbf{todos} los elementos de A
+            también son elementos de B.
+            \begin{equation}
+                A \subseteq B
+            \end{equation}
+
+            \subsubsection{Proposiciones}
+
+            Algunas proposiciones muy obvias son que:
+            \begin{itemize}
+                \item $A \subseteq A$
+                \item Si $A = B$, entonces $A \subseteq B$
+            \end{itemize}
+
+            \subsubsection{SubConjuntos Propios}
+
+            Solemos usar la idea de un subconjunto propio $A \subset B$ si es que sabemos ya que:
+            $A \subseteq B$ y $A \neq B$
+
+
+
+
 
     % =====================================================
     % ============           OPERACIONES           ========
@@ -500,21 +527,114 @@
 
         Te presentaré estas operaciones una a una y te mostraré con mas detalle cada una, así 
         que vamos, empecemos:
-            
+
+        % =================================
+        % ======    INTERSECCION    =======
+        % =================================
+        \subsection{Intersección}
+
+            Lo mejor de dos mundos, veamos como seleccionar a los elementos en común con operaciones
+            de conjuntos.
+
+            \begin{equation}
+                A \cap B = \{ x \Such x \in A \text{ y también } x \in B \}
+            \end{equation}
+
+            Esta operación basicamente nos da un conjunto en el que estan \textbf{solo} los elementos
+            que bien pertenezcan a A y bien que pertenezcan a B.
+
+
+        % =================================
+        % ======        UNION       =======
+        % =================================
+        \clearpage
         \subsection{Unión}
 
             La unión representa la fuerza, así que veamos que representa la unión cuando estemos
             hablando de conjuntos.
 
             \begin{equation}
-                A \cup B = \{ x \Space | x \in A \text{ ó bien } x \in B \}
+                A \cup B = \{ x \Such x \in A \text{ ó bien } x \in B \}
             \end{equation}
 
             Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
             que bien pertenezcan a A o bien que pertenezcan a B.
 
 
+        % =================================
+        % ======   COMPLEMENTO      =======
+        % =================================
+        \clearpage
+        \subsection{Complemento}
 
+            Todo lo que no seas tu, así que veamos que representa el complemento cuando estemos
+            hablando de conjuntos.
+
+            \begin{equation}
+                A^C = \overline A = \{ x \in U \Such x \notin A \}
+            \end{equation}
+
+            Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+            que no pertenezcen a A.
+
+            \subsubsection{Conjunto Universo}
+                Si lo piensas detenidamente, aquí hay un problema y es que no te dije que es $U$, este
+                representa el conjunto universo, es decir, es aquel conjunto que del que todos los demás
+                son subconjuntos.
+
+                Es importantes especificar cual es tu conjunto universo.
+
+
+        % =================================
+        % ======      RESTA         =======
+        % =================================
+        \clearpage
+        \subsection{Resta}
+
+            No quiero nada que ver contigo, así que veamos que representa la resta cuando estemos
+            hablando de conjuntos.
+
+            \begin{equation}
+                A - B = A \char`\\ B = \{ x \Such x \in A \text{ y también }  x \notin B \}
+            \end{equation}
+
+            Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+            de A que no pertenezcen a B.
+
+            A esta operación también se la conoce como complemento relativo.
+
+
+
+        % =================================
+        % ==    DIFERENCIA SIMETRICA   ====
+        % =================================
+        \clearpage
+        \subsection{Diferencia Simétrica}
+
+            El XOR de los conjuntos, así que veamos que representa la diferencia simétrica cuando estemos
+            hablando de conjuntos.
+
+            \begin{equation}
+                A \Delta B = \{ x \Such x \in A \cup B \text{ y también }  x \notin A \cap B \}
+            \end{equation}
+
+            Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+            que pertenezcen a $A$ y a $B$, pero no a ambos.
+
+            Ve que de la definición se tiene que:
+            \begin{equation*}
+            \begin{split}
+                A \Delta B &= (A \cup B) - ( A \cap B) \\
+                A \Delta B &= (A - B) \cup ( B - A)
+            \end{split}
+            \end{equation*}
+
+
+
+
+
+
+           
 
     % =====================================================
     % ============           CARDINALIDAD          ========

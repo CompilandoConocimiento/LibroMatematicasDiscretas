@@ -12,7 +12,14 @@
 \contentsline {chapter}{\numberline {2}\IeC {\'A}lgebra y Operaciones}{10}{chapter.2}
 \contentsline {section}{\numberline {2.1}Relaciones}{11}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Equivalencia}{11}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Equivalencia}{11}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Operaciones}{12}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Uni\IeC {\'o}n}{12}{subsection.2.2.1}
-\contentsline {section}{\numberline {2.3}Cardinalidad}{13}{section.2.3}
+\contentsline {subsection}{\numberline {2.1.2}Subconjuntos}{12}{subsection.2.1.2}
+\contentsline {subsubsection}{Proposiciones}{12}{section*.12}
+\contentsline {subsubsection}{SubConjuntos Propios}{12}{section*.13}
+\contentsline {section}{\numberline {2.2}Operaciones}{13}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Intersecci\IeC {\'o}n}{13}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Uni\IeC {\'o}n}{14}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Complemento}{15}{subsection.2.2.3}
+\contentsline {subsubsection}{Conjunto Universo}{15}{section*.14}
+\contentsline {subsection}{\numberline {2.2.4}Resta}{16}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Diferencia Sim\IeC {\'e}trica}{17}{subsection.2.2.5}
+\contentsline {section}{\numberline {2.3}Cardinalidad}{18}{section.2.3}
