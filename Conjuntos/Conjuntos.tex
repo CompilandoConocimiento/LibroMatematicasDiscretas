@@ -34,6 +34,7 @@
     \usepackage[inline]{enumitem}                                   %We will need to enumarate
     \usepackage{tasks}                                              %Horizontal lists
     \usepackage{longtable}                                          %Lets make tables awesome
+    \usepackage{booktabs}                                           %Lets make tables awesome
 
 
     % *********   HEADERS AND FOOTERS ********
@@ -494,22 +495,28 @@
 
             Que el A sea un subconjunto de B quiere decir que \textbf{todos} los elementos de A
             también son elementos de B.
-            \begin{equation}
-                A \subseteq B
-            \end{equation}
+
+            \subsubsection{Definición}
+
+                Una forma más formal de definirlo es que $x \in A \to x \in B$
+
+                Esta idea es muy inteligente, pues nos dice que un el hecho de que
+                un elemento pertenezca a A infiere o nos obliga a que ese mismo
+                elemento pertenezca a B.
+
 
             \subsubsection{Proposiciones}
 
-            Algunas proposiciones muy obvias son que:
-            \begin{itemize}
-                \item $A \subseteq A$
-                \item Si $A = B$, entonces $A \subseteq B$
-            \end{itemize}
+                Algunas proposiciones muy obvias son que:
+                \begin{itemize}
+                    \item $A \subseteq A$
+                    \item Si $A = B$, entonces $A \subseteq B$
+                \end{itemize}
 
             \subsubsection{SubConjuntos Propios}
 
-            Solemos usar la idea de un subconjunto propio $A \subset B$ si es que sabemos ya que:
-            $A \subseteq B$ y $A \neq B$
+                Solemos usar la idea de un subconjunto propio $A \subset B$ si es que sabemos ya que:
+                $A \subseteq B$ y $A \neq B$
 
 
 
@@ -629,12 +636,222 @@
             \end{split}
             \end{equation*}
 
+            De hecho de la útima proposición sale su nombre, es una diferencia simétrica.
+
+
+        % =================================
+        % ==    PRODUCTO CARTESIANO    ====
+        % =================================
+        \clearpage
+        \subsection{Producto Cartesiano}
+
+            Esta es la base de lo que se conoce como es plano cartesiano, y es quizá
+            la operación mas útil que vas a conocer a lo largo de estos textos,
+            veamos específicamente porque:
+
+            \subsubsection*{N-Tuplas}
+
+                El resultado de un producto cartesiano es un conjunto formado de n-tuplas,
+                cada n-tuplas es una agrupación ordenada de elementos.
+                Por ejemplo $(a,b)$ ó $(x,y,z)$.
+
+                Al ser un ente ordenado $(a,b) \neq (b,a)$
+
+                La n en su nombre solo nos dice la cantidad de elementos que tiene cada tupla.
+
+
+            \subsubsection*{Definición}
+
+                Esta operación basicamente nos da un conjunto en el que estan \textbf{todas} las n-tuplas
+                donde su primer elemento pertenece a $A$ y su segundo elemento pertenece a $B$.
+
+                \begin{equation}
+                    A \times B = \{ (a, b) \Such a \in A \text{ y también } b \in B \}
+                \end{equation}
+
+            \subsubsection*{Ideas Importantes}
+
+            \begin{itemize}
+                \item Ve que de la definición se tiene que $ A \times B \neq B \times A$
+
+                \item También de manera común solemos simplificar $A \times A$ como $A^2$
+
+                \item Un elemento de $A \times B \times C$ es $((a,b),c) = (a,(b,c)) = (a,b,c)$
+            \end{itemize}
+
+            % ====================
+            % ==    EJEMPLOS  ====
+            % ====================
+            \clearpage
+            \subsection*{Ejemplo}
+
+                Podemos hacer uso de una tabla para encontrar todos los elementos del producto
+                cartesiano.
+
+                Veamos por ejemplo $A = \{a, b, c\}$ y $B = \{ x, y, z\}$
+
+                \begin{tabular}{r ||c |c | c  }
+                   $A \times B$ & $x$ & $y$ & $z$ \\
+                   \midrule
+                  
+                   $a$ &  $(a, x)$  &  $(a, y)$  &  $(a, z)$  \\
+                   $b$ &  $(b, x)$  &  $(b, y)$  &  $(b, z)$  \\
+                   $c$ &  $(c, x)$  &  $(c, y)$  &  $(c, z)$  \\
+                 
+                \end{tabular}
+
+                Entonces : 
+                \begin{equation*}
+                    A \times B = 
+                    \{
+                        (a, x) , (a, y) , (a, z) ,
+                        (b, x) , (b, y) , (b, z) ,
+                        (c, x) , (c, y) , (c, z) 
+                    \}
+                \end{equation*}
 
 
 
+        % =================================
+        % ==    CONJUNTO POTENCIA      ====
+        % =================================
+        \clearpage
+        \subsection{Conjunto Potencia}
+
+            El conjunto que contiene a todos los subconjuntos posibles. 
+
+            Esta operación es diferente en el sentido de que no toma sus elementos del conjunto
+            que toma como entrada, sino que usa esos elementos para combinarlos y crear subconjuntos
+            que son los elementos de esta nueva operación.
+
+            Ok, ok, quizá me puse muy intenso con el párrafo de arriba, veamos un poco más calmado
+            como es que funciona.
+
+            \subsubsection*{Definición}
+
+                Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los
+                conjuntos que son subconjuntos de tu conjunto original.
+
+                \begin{equation}
+                    P(A) = \{ A' \Such A' \subseteq A \}
+                \end{equation}
+
+            \subsubsection*{Ideas Importantes}
+
+            \begin{itemize}
+                \item Si tu conjunto tiene $n$ elementos, tu conjunto potencia tendrá $2^n$ elementos.
+            \end{itemize}
+
+            % ====================
+            % ==    EJEMPLOS  ====
+            % ====================
+            \clearpage
+            \subsection*{Ejemplo}
+
+                Podemos hacer uso de una tabla y el binario para encontrar todos los
+                elementos del conjunto potencia.
+
+                Si quieres crear un conjunto potencia, escribe la sucesión de números binarios de $n$ cifras,
+                y con cada número haz un subconjunto: Cuando haya un $'1'$, añade el elemento que corresponde.\\
+
+                Veamos por ejemplo $A = \{a, b, c\}$ \\
 
 
-           
+                \begin{tabular}{c | c  }
+                   $a b c$ & SubConjuntos       \\
+                   \midrule
+                  
+                   $0 0 0$ &  $\{ \}$           \\
+                   $0 0 1$ &  $\{ c \}$         \\
+                   $0 1 0$ &  $\{ b \}$         \\
+                   $0 1 1$ &  $\{ b, c \}$      \\
+                   $1 0 0$ &  $\{ a \}$         \\
+                   $1 0 1$ &  $\{ a, c \}$      \\
+                   $1 1 0$ &  $\{ a, b \}$      \\
+                   $1 1 1$ &  $\{ a, b, c \}$   \\
+                 
+                \end{tabular}
+
+                Entonces : 
+                \begin{equation*}
+                    P(A) = 
+                    \{
+                        \{ \}, \{ c \}, \{ b \}, \{ b, c \}, 
+                        \{ a \}, \{ a, c \}, \{ a, b \}, \{ a, b, c \}
+                    \}
+                \end{equation*}
+
+
+
+    % =====================================================
+    % ========         LEYES DE CONJUNTOS          ========
+    % =====================================================
+    \clearpage
+    \section{Leyes de los Conjuntos}
+            
+        Sean $A, B, C$ conjuntos de un universo $U$, entonces tenemos las siguientes propiedades:
+
+        \begin{itemize}
+            \item \textbf{Doble Complemento} \\
+                    $(A^C)^C = A$
+
+            \item \textbf{Propiedad Conmutativa}
+                \begin{itemize}
+                    \item $A \cap B = B \cap A$
+                    \item $A \cup B = B \cup A$
+                \end{itemize}
+
+            \item \textbf{Propiedad Asociativa}
+                \begin{itemize}
+                    \item $A \cap (B \cap C) = (A \cap B) \cap C$
+                    \item $A \cup (B \cup C) = (A \cup B) \cup C$
+                \end{itemize}
+
+            \item \textbf{Propiedad Distributiva}
+                \begin{itemize}
+                    \item $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
+                    \item $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+                \end{itemize}
+
+            \item \textbf{Leyes de Morgan}
+                \begin{itemize}
+                    \item $(A \cap B)^C = A^C \cup B^C$
+                    \item $(A \cup B)^C = A^C \cap B^C$
+                \end{itemize}
+
+            \item \textbf{Propiedad de los Neutros}
+                \begin{itemize}
+                    \item $A \cap U = A$
+                    \item $A \cup \emptyset = A$
+                \end{itemize}
+
+            \item \textbf{Propiedad de los Inversos}
+                \begin{itemize}
+                    \item $A \cap A^C = \emptyset$
+                    \item $A \cup A^C = U$
+                \end{itemize}
+
+            \item \textbf{Propiedad de Dominación}
+                \begin{itemize}
+                    \item $A \cap \emptyset = \emptyset$
+                    \item $A \cup U = U$
+                \end{itemize}
+
+            \item \textbf{Propiedad de Inepotencia}
+                \begin{itemize}
+                    \item $A \cap A = A$
+                    \item $A \cup A = A$
+                \end{itemize}
+
+            \item \textbf{Propiedad de Absorción}
+                \begin{itemize}
+                    \item $A \cap (A \cup B) = A$
+                    \item $A \cup (A \cap B) = A$
+                \end{itemize}
+
+        \end{itemize}
+
+
 
     % =====================================================
     % ============           CARDINALIDAD          ========
