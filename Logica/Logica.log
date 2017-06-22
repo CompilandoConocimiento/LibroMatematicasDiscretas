@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 JUN 2017 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 JUN 2017 14:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/Users/mac/Downloads/ApuntesMatematicasDiscretas/Conjuntos/Conjuntos.tex
-(/Users/mac/Downloads/ApuntesMatematicasDiscretas/Conjuntos/Conjuntos.tex
+**/Users/mac/Downloads/ApuntesMatematicasDiscretas/Logica/Logica.tex
+(/Users/mac/Downloads/ApuntesMatematicasDiscretas/Logica/Logica.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/report.cls
@@ -945,43 +945,49 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count182
 \LT@p@ftn=\toks39
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen185
+\lightrulewidth=\dimen186
+\cmidrulewidth=\dimen187
+\belowrulesep=\dimen188
+\belowbottomsep=\dimen189
+\aboverulesep=\dimen190
+\abovetopsep=\dimen191
+\cmidrulesep=\dimen192
+\cmidrulekern=\dimen193
+\defaultaddspace=\dimen194
+\@cmidla=\count183
+\@cmidlb=\count184
+\@aboverulesep=\dimen195
+\@belowrulesep=\dimen196
+\@thisruleclass=\count185
+\@lastruleclass=\count186
+\@thisrulewidth=\dimen197
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip69
+\f@ncyO@elh=\skip70
+\f@ncyO@erh=\skip71
+\f@ncyO@olh=\skip72
+\f@ncyO@orh=\skip73
+\f@ncyO@elf=\skip74
+\f@ncyO@erf=\skip75
+\f@ncyO@olf=\skip76
+\f@ncyO@orf=\skip77
+)
+(./Logica.aux
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+)
+\openout1 = `Logica.aux'.
 
-! LaTeX Error: Option clash for package xcolor.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38     \usepackage
-                    {booktabs}                                           %Le...
-
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.38     \usepackage
-                    {booktabs}                                           %Le...
-
-The package xcolor has already been loaded with options:
-  []
-There has now been an attempt to load it with options
-  [table]
-Adding the global options:
-  ,table
-to your \documentclass declaration may fix this.
-Try typing  <return>  to proceed.
-
- 
-Here is how much of TeX's memory you used:
- 17652 strings out of 493014
- 305525 string characters out of 6133351
- 378333 words of memory out of 5000000
- 21052 multiletter control sequences out of 15000+600000
- 4702 words of font info for 16 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,0n,52p,10491b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
-    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
 LaTeX Font Info:    ... okay on input line 105.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
@@ -1035,12 +1041,29 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count187
 )
-LaTeX Info: Redcount186
+LaTeX Info: Redefining \ref on input line 105.
+LaTeX Info: Redefining \pageref on input line 105.
+LaTeX Info: Redefining \nameref on input line 105.
+
+(./Logica.out) (./Logica.out)
+\@outlinefile=\write3
+\openout3 = `Logica.out'.
+
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count188
+\scratchdimen=\dimen198
+\scratchbox=\box57
+\nofMPsegments=\count189
+\nofMParguments=\count190
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count187
-\MPscratchDim=\dimen186
-\MPnumerator=\count188
-\makeMPintoPDFobject=\count189
+\MPscratchCnt=\count191
+\MPscratchDim=\dimen199
+\MPnumerator=\count192
+\makeMPintoPDFobject=\count193
 \everyMPtoPDFconversion=\toks41
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1057,12 +1080,12 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count190
+\c@lstlisting=\count194
 
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./Conjuntos.toc
+(./Logica.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
@@ -1070,7 +1093,8 @@ LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 3.
- (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for U+rsfs on input line 3.
@@ -1079,13 +1103,13 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 3.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ))
 \tf@toc=\write4
-\openout4 = `Conjuntos.toc'.
+\openout4 = `Logica.toc'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.136 \clearpage
+l.137 \clearpage
                  [1
 
 ]
@@ -1094,291 +1118,51 @@ Cap\'{\i }tulo 1.
 
 
 ]
-LaTeX Info: Redefining \. on input line 194.
-LaTeX Info: Redefining \% on input line 194.
-LaTeX Info: Redefining \. on input line 194.
-LaTeX Info: Redefining \% on input line 194.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
  [3
 
 ]
-LaTeX Info: Redefining \. on input line 246.
-LaTeX Info: Redefining \% on input line 246.
-LaTeX Info: Redefining \. on input line 246.
-LaTeX Info: Redefining \% on input line 246.
- [4
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 271--275
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
-
- []
-
-LaTeX Info: Redefining \. on input line 298.
-LaTeX Info: Redefining \% on input line 298.
-LaTeX Info: Redefining \. on input line 298.
-LaTeX Info: Redefining \% on input line 298.
-[5
-
-]
-LaTeX Info: Redefining \. on input line 344.
-LaTeX Info: Redefining \% on input line 344.
-LaTeX Info: Redefining \. on input line 344.
-LaTeX Info: Redefining \% on input line 344.
- [6
-
-]
-LaTeX Info: Redefining \. on input line 370.
-LaTeX Info: Redefining \% on input line 370.
-LaTeX Info: Redefining \. on input line 370.
-LaTeX Info: Redefining \% on input line 370.
- [7
-
-]
-LaTeX Info: Redefining \. on input line 411.
-LaTeX Info: Redefining \% on input line 411.
-LaTeX Info: Redefining \. on input line 411.
-LaTeX Info: Redefining \% on input line 411.
- [8
-
-]
-LaTeX Info: Redefining \. on input line 448.
-LaTeX Info: Redefining \% on input line 448.
-LaTeX Info: Redefining \. on input line 448.
-LaTeX Info: Redefining \% on input line 448.
- [9
-
-]
-Cap\'{\i }tulo 2.
-[10
-
-]
-LaTeX Info: Redefining \. on input line 489.
-LaTeX Info: Redefining \% on input line 489.
-LaTeX Info: Redefining \. on input line 489.
-LaTeX Info: Redefining \% on input line 489.
- [11
-
-
-]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.499 
-      
-? 
-! Emergency stop.
-<inserted text> 
-                $
-l.499 
-      
-End of file on the terminal!
-
- 
-Here is how much of TeX's memory you used:
- 18744 strings out of 493014
- 319717 string characters out of 6133351
- 398779 words of memory out of 5000000
- 22021 multiletter control sequences out of 15000+600000
- 23470 words of font info for 55 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10491b,470s stack positions out of 5000i,500n,10000p,2.
- [14
-
-]
-LaTeX Info: Redefining \. on input line 591.
-LaTeX Info: Redefining \% on input line 591.
-LaTeX Info: Redefining \. on input line 591.
-LaTeX Info: Redefining \% on input line 591.
- [15
-
-]
-LaTeX Info: Redefining \. on input line 611.
-LaTeX Info: Redefining \% on input line 611.
-LaTeX Info: Redefining \. on input line 611.
-LaTeX Info: Redefining \% on input line 611.
- [16
-
-]
-
-! LaTeX Error: \begin{equation*} on input line 625 ended by \end{equation}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.630             \end{equation}
-                                
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.630             \end{equation}
-                                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
- 
-Here is how much of TeX's memory you used:
- 18754 strings out of 493014
- 319969 string characters out of 6133351
- 398779 words of memory out of 5000000
- 22017 multiletter control sequences out of 15000+600000
- 23470 words of font info for 55 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10491b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
- \. on input line 644.
-LaTeX Info: Redefining \% on input line 644.
-
-
-LaTeX Warning: Hyper reference `sec:Index' on page 17 undefined on input line 6
-44.
-
-[17
-
-]
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.678                &  +,- & . & 0,1..9 & &
-                                            &  \\\midrule
-? 
-! Emergency stop.
-<recently read> \endtemplate 
-                             
-l.678                &  +,- & . & 0,1..9 & &
-                                            &  \\\midrule
-End of file on the terminal!
-
- 
-Here is how much of TeX's memory you used:
- 18729 strings out of 493014
- 319446 string characters out of 6133351
- 398681 words of memory out of 5000000
- 21994 multiletter control sequences out of 15000+600000
- 23470 words of font info for 55 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10491b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
-!
-roduced!
-nt)              Font shape `OMS/cmsy/m/n' tried instead on input line 804.
-LaTeX Info: Redefining \. on input line 853.
-LaTeX Info: Redefining \% on input line 853.
-LaTeX Info: Redefining \. on input line 853.
-LaTeX Info: Redefining \% on input line 853.
- [23
-
-]
-LaTeX Info: Redefining \. on input line 862.
-LaTeX Info: Redefining \% on input line 862.
-LaTeX Info: Redefining \. on input line 862.
-LaTeX Info: Redefining \% on input line 862.
-
-[24]
-! Undefined control sequence.
-l.871         \subssection
-                          {Propiedades usando SubConjuntos}
-? 
-! Emergency stop.
-l.871         \subssection
-                          {Propiedades usando SubConjuntos}
-End of file on the terminal!
-
- 
-Here is how much of TeX's memory you used:
- 18852 strings out of 493014
- 321159 string characters out of 6133351
- 401567 words of memory out of 5000000
- 22086 multiletter control sequences out of 15000+600000
- 23470 words of font info for 55 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10491b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
-o: Redefining \% on input line 974.
- [28
-
-]
-LaTeX Info: Redefining \. on input line 990.
-LaTeX Info: Redefining \% on input line 990.
-LaTeX Info: Redefining \. on input line 990.
-LaTeX Info: Redefining \% on input line 990.
- [29
-
-]
-LaTeX Info: Redefining \. on input line 1014.
-LaTeX Info: Redefining \% on input line 1014.
-LaTeX Info: Redefining \. on input line 1014.
-LaTeX Info: Redefining \% on input line 1014.
- [30
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1035.
-LaTeX Info: Redefining \. on input line 1035.
-LaTeX Info: Redefining \% on input line 1035.
-LaTeX Info: Redefining \. on input line 1035.
-LaTeX Info: Redefining \% on input line 1035.
- [31
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1035.
- (./Conjuntos.aux
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
+ (./Logica.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1035.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1035.
-
-Package rerunfilecheck Info: File `Conjuntos.out' has not changed.
-(rerunfilecheck)             Checksum: 0AB3DD197631452F9B08043D04AFAAE5;2437.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1035.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 165.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
+Package rerunfilecheck Info: File `Logica.out' has not changed.
+(rerunfilecheck)             Checksum: 95A8915F01E881635FF09B7CF8A83DF2;115.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 18895 strings out of 493014
- 321716 string characters out of 6133351
- 399544 words of memory out of 5000000
- 22097 multiletter control sequences out of 15000+600000
- 23470 words of font info for 55 fonts, out of 8000000 for 9000
+ 18729 strings out of 493014
+ 319540 string characters out of 6133351
+ 396498 words of memory out of 5000000
+ 22040 multiletter control sequences out of 15000+600000
+ 21256 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10491b,623s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section.0.0} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter.0} has been referenced but does not exist, 
-replaced by a fixed one
-
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2016/texmf-dist/
-fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on Conjuntos.pdf (32 pages, 315003 bytes).
+ 61i,12n,52p,10485b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
+Output written on Logica.pdf (4 pages, 143712 bytes).
 PDF statistics:
- 587 PDF objects out of 1000 (max. 8388607)
- 525 compressed objects within 6 object streams
- 111 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
 
