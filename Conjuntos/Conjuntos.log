@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 JUN 2017 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  22 JUN 2017 14:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -945,43 +945,49 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count182
 \LT@p@ftn=\toks39
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
+\heavyrulewidth=\dimen185
+\lightrulewidth=\dimen186
+\cmidrulewidth=\dimen187
+\belowrulesep=\dimen188
+\belowbottomsep=\dimen189
+\aboverulesep=\dimen190
+\abovetopsep=\dimen191
+\cmidrulesep=\dimen192
+\cmidrulekern=\dimen193
+\defaultaddspace=\dimen194
+\@cmidla=\count183
+\@cmidlb=\count184
+\@aboverulesep=\dimen195
+\@belowrulesep=\dimen196
+\@thisruleclass=\count185
+\@lastruleclass=\count186
+\@thisrulewidth=\dimen197
+)
+(/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip69
+\f@ncyO@elh=\skip70
+\f@ncyO@erh=\skip71
+\f@ncyO@olh=\skip72
+\f@ncyO@orh=\skip73
+\f@ncyO@elf=\skip74
+\f@ncyO@erf=\skip75
+\f@ncyO@olf=\skip76
+\f@ncyO@orf=\skip77
+)
+(./Conjuntos.aux
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+)
+\openout1 = `Conjuntos.aux'.
 
-! LaTeX Error: Option clash for package xcolor.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.38     \usepackage
-                    {booktabs}                                           %Le...
-
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.38     \usepackage
-                    {booktabs}                                           %Le...
-
-The package xcolor has already been loaded with options:
-  []
-There has now been an attempt to load it with options
-  [table]
-Adding the global options:
-  ,table
-to your \documentclass declaration may fix this.
-Try typing  <return>  to proceed.
-
- 
-Here is how much of TeX's memory you used:
- 17652 strings out of 493014
- 305525 string characters out of 6133351
- 378333 words of memory out of 5000000
- 21052 multiletter control sequences out of 15000+600000
- 4702 words of font info for 16 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,0n,52p,10491b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
-    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 105.
+LaTeX Font Info:    ... okay on input line 105.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 105.
 LaTeX Font Info:    ... okay on input line 105.
 LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 105.
@@ -1035,12 +1041,29 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count187
 )
-LaTeX Info: Redcount186
+LaTeX Info: Redefining \ref on input line 105.
+LaTeX Info: Redefining \pageref on input line 105.
+LaTeX Info: Redefining \nameref on input line 105.
+
+(./Conjuntos.out) (./Conjuntos.out)
+\@outlinefile=\write3
+\openout3 = `Conjuntos.out'.
+
+LaTeX Info: Redefining \. on input line 105.
+LaTeX Info: Redefining \% on input line 105.
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count188
+\scratchdimen=\dimen198
+\scratchbox=\box57
+\nofMPsegments=\count189
+\nofMParguments=\count190
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count187
-\MPscratchDim=\dimen186
-\MPnumerator=\count188
-\makeMPintoPDFobject=\count189
+\MPscratchCnt=\count191
+\MPscratchDim=\dimen199
+\MPnumerator=\count192
+\makeMPintoPDFobject=\count193
 \everyMPtoPDFconversion=\toks41
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1057,7 +1080,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count190
+\c@lstlisting=\count194
 
 [1
 
@@ -1077,230 +1100,223 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 3.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-))
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.29 ...dentidades y Propiedades}{25}{section.2.4}
+                                                   [1
+
+])
 \tf@toc=\write4
 \openout4 = `Conjuntos.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.136 \clearpage
-                 [1
-
-]
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
+ [2]
 Cap\'{\i }tulo 1.
-[2
+[3
 
 
 ]
-LaTeX Info: Redefining \. on input line 194.
-LaTeX Info: Redefining \% on input line 194.
-LaTeX Info: Redefining \. on input line 194.
-LaTeX Info: Redefining \% on input line 194.
- [3
-
-]
-LaTeX Info: Redefining \. on input line 246.
-LaTeX Info: Redefining \% on input line 246.
-LaTeX Info: Redefining \. on input line 246.
-LaTeX Info: Redefining \% on input line 246.
+LaTeX Info: Redefining \. on input line 195.
+LaTeX Info: Redefining \% on input line 195.
+LaTeX Info: Redefining \. on input line 195.
+LaTeX Info: Redefining \% on input line 195.
  [4
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 271--275
+LaTeX Info: Redefining \. on input line 247.
+LaTeX Info: Redefining \% on input line 247.
+LaTeX Info: Redefining \. on input line 247.
+LaTeX Info: Redefining \% on input line 247.
+ [5
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 272--276
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
 
-LaTeX Info: Redefining \. on input line 298.
-LaTeX Info: Redefining \% on input line 298.
-LaTeX Info: Redefining \. on input line 298.
-LaTeX Info: Redefining \% on input line 298.
-[5
+LaTeX Info: Redefining \. on input line 299.
+LaTeX Info: Redefining \% on input line 299.
+LaTeX Info: Redefining \. on input line 299.
+LaTeX Info: Redefining \% on input line 299.
+[6
 
 ]
-LaTeX Info: Redefining \. on input line 344.
-LaTeX Info: Redefining \% on input line 344.
-LaTeX Info: Redefining \. on input line 344.
-LaTeX Info: Redefining \% on input line 344.
- [6
-
-]
-LaTeX Info: Redefining \. on input line 370.
-LaTeX Info: Redefining \% on input line 370.
-LaTeX Info: Redefining \. on input line 370.
-LaTeX Info: Redefining \% on input line 370.
+LaTeX Info: Redefining \. on input line 345.
+LaTeX Info: Redefining \% on input line 345.
+LaTeX Info: Redefining \. on input line 345.
+LaTeX Info: Redefining \% on input line 345.
  [7
 
 ]
-LaTeX Info: Redefining \. on input line 411.
-LaTeX Info: Redefining \% on input line 411.
-LaTeX Info: Redefining \. on input line 411.
-LaTeX Info: Redefining \% on input line 411.
+LaTeX Info: Redefining \. on input line 371.
+LaTeX Info: Redefining \% on input line 371.
+LaTeX Info: Redefining \. on input line 371.
+LaTeX Info: Redefining \% on input line 371.
  [8
 
 ]
-LaTeX Info: Redefining \. on input line 448.
-LaTeX Info: Redefining \% on input line 448.
-LaTeX Info: Redefining \. on input line 448.
-LaTeX Info: Redefining \% on input line 448.
+LaTeX Info: Redefining \. on input line 412.
+LaTeX Info: Redefining \% on input line 412.
+LaTeX Info: Redefining \. on input line 412.
+LaTeX Info: Redefining \% on input line 412.
  [9
 
 ]
+LaTeX Info: Redefining \. on input line 449.
+LaTeX Info: Redefining \% on input line 449.
+LaTeX Info: Redefining \. on input line 449.
+LaTeX Info: Redefining \% on input line 449.
+ [10
+
+]
 Cap\'{\i }tulo 2.
-[10
+[11
 
 ]
-LaTeX Info: Redefining \. on input line 489.
-LaTeX Info: Redefining \% on input line 489.
-LaTeX Info: Redefining \. on input line 489.
-LaTeX Info: Redefining \% on input line 489.
- [11
+LaTeX Info: Redefining \. on input line 490.
+LaTeX Info: Redefining \% on input line 490.
+LaTeX Info: Redefining \. on input line 490.
+LaTeX Info: Redefining \% on input line 490.
+ [12
 
 
 ]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.499 
-      
-? 
-! Emergency stop.
-<inserted text> 
-                $
-l.499 
-      
-End of file on the terminal!
+LaTeX Info: Redefining \. on input line 530.
+LaTeX Info: Redefining \% on input line 530.
+LaTeX Info: Redefining \. on input line 530.
+LaTeX Info: Redefining \% on input line 530.
+ [13
 
- 
-Here is how much of TeX's memory you used:
- 18744 strings out of 493014
- 319717 string characters out of 6133351
- 398779 words of memory out of 5000000
- 22021 multiletter control sequences out of 15000+600000
- 23470 words of font info for 55 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10491b,470s stack positions out of 5000i,500n,10000p,2.
+]
+LaTeX Info: Redefining \. on input line 559.
+LaTeX Info: Redefining \% on input line 559.
+LaTeX Info: Redefining \. on input line 559.
+LaTeX Info: Redefining \% on input line 559.
  [14
 
 ]
-LaTeX Info: Redefining \. on input line 591.
-LaTeX Info: Redefining \% on input line 591.
-LaTeX Info: Redefining \. on input line 591.
-LaTeX Info: Redefining \% on input line 591.
+LaTeX Info: Redefining \. on input line 576.
+LaTeX Info: Redefining \% on input line 576.
+LaTeX Info: Redefining \. on input line 576.
+LaTeX Info: Redefining \% on input line 576.
  [15
 
 ]
-LaTeX Info: Redefining \. on input line 611.
-LaTeX Info: Redefining \% on input line 611.
-LaTeX Info: Redefining \. on input line 611.
-LaTeX Info: Redefining \% on input line 611.
+LaTeX Info: Redefining \. on input line 602.
+LaTeX Info: Redefining \% on input line 602.
+LaTeX Info: Redefining \. on input line 602.
+LaTeX Info: Redefining \% on input line 602.
  [16
 
 ]
-
-! LaTeX Error: \begin{equation*} on input line 625 ended by \end{equation}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.630             \end{equation}
-                                
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.630             \end{equation}
-                                
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
- 
-Here is how much of TeX's memory you used:
- 18754 strings out of 493014
- 319969 string characters out of 6133351
- 398779 words of memory out of 5000000
- 22017 multiletter control sequences out of 15000+600000
- 23470 words of font info for 55 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10491b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
- \. on input line 644.
-LaTeX Info: Redefining \% on input line 644.
-
-
-LaTeX Warning: Hyper reference `sec:Index' on page 17 undefined on input line 6
-44.
-
-[17
+LaTeX Info: Redefining \. on input line 624.
+LaTeX Info: Redefining \% on input line 624.
+LaTeX Info: Redefining \. on input line 624.
+LaTeX Info: Redefining \% on input line 624.
+ [17
 
 ]
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.678                &  +,- & . & 0,1..9 & &
-                                            &  \\\midrule
-? 
-! Emergency stop.
-<recently read> \endtemplate 
-                             
-l.678                &  +,- & . & 0,1..9 & &
-                                            &  \\\midrule
-End of file on the terminal!
+LaTeX Info: Redefining \. on input line 651.
+LaTeX Info: Redefining \% on input line 651.
+LaTeX Info: Redefining \. on input line 651.
+LaTeX Info: Redefining \% on input line 651.
+ [18
 
- 
-Here is how much of TeX's memory you used:
- 18729 strings out of 493014
- 319446 string characters out of 6133351
- 398681 words of memory out of 5000000
- 21994 multiletter control sequences out of 15000+600000
- 23470 words of font info for 55 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10491b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
-!
-roduced!
-nt)              Font shape `OMS/cmsy/m/n' tried instead on input line 804.
-LaTeX Info: Redefining \. on input line 853.
-LaTeX Info: Redefining \% on input line 853.
-LaTeX Info: Redefining \. on input line 853.
-LaTeX Info: Redefining \% on input line 853.
+]
+LaTeX Info: Redefining \. on input line 691.
+LaTeX Info: Redefining \% on input line 691.
+LaTeX Info: Redefining \. on input line 691.
+LaTeX Info: Redefining \% on input line 691.
+ [19
+
+]
+LaTeX Info: Redefining \. on input line 724.
+LaTeX Info: Redefining \% on input line 724.
+LaTeX Info: Redefining \. on input line 724.
+LaTeX Info: Redefining \% on input line 724.
+ [20
+
+]
+LaTeX Info: Redefining \. on input line 757.
+LaTeX Info: Redefining \% on input line 757.
+LaTeX Info: Redefining \. on input line 757.
+LaTeX Info: Redefining \% on input line 757.
+ [21
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 763--765
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 766--767
+
+ []
+
+LaTeX Info: Redefining \. on input line 798.
+LaTeX Info: Redefining \% on input line 798.
+LaTeX Info: Redefining \. on input line 798.
+LaTeX Info: Redefining \% on input line 798.
+[22
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 809.
+
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 809.
+LaTeX Info: Redefining \. on input line 831.
+LaTeX Info: Redefining \% on input line 831.
+LaTeX Info: Redefining \. on input line 831.
+LaTeX Info: Redefining \% on input line 831.
  [23
 
 ]
-LaTeX Info: Redefining \. on input line 862.
-LaTeX Info: Redefining \% on input line 862.
-LaTeX Info: Redefining \. on input line 862.
-LaTeX Info: Redefining \% on input line 862.
+LaTeX Info: Redefining \. on input line 869.
+LaTeX Info: Redefining \% on input line 869.
+LaTeX Info: Redefining \. on input line 869.
+LaTeX Info: Redefining \% on input line 869.
 
-[24]
-! Undefined control sequence.
-l.871         \subssection
-                          {Propiedades usando SubConjuntos}
-? 
-! Emergency stop.
-l.871         \subssection
-                          {Propiedades usando SubConjuntos}
-End of file on the terminal!
+[24
 
- 
-Here is how much of TeX's memory you used:
- 18852 strings out of 493014
- 321159 string characters out of 6133351
- 401567 words of memory out of 5000000
- 22086 multiletter control sequences out of 15000+600000
- 23470 words of font info for 55 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10491b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
-o: Redefining \% on input line 974.
+]
+LaTeX Info: Redefining \. on input line 909.
+LaTeX Info: Redefining \% on input line 909.
+LaTeX Info: Redefining \. on input line 909.
+LaTeX Info: Redefining \% on input line 909.
+ [25
+
+]
+LaTeX Info: Redefining \. on input line 926.
+LaTeX Info: Redefining \% on input line 926.
+LaTeX Info: Redefining \. on input line 926.
+LaTeX Info: Redefining \% on input line 926.
+ [26
+
+]
+LaTeX Info: Redefining \. on input line 950.
+LaTeX Info: Redefining \% on input line 950.
+LaTeX Info: Redefining \. on input line 950.
+LaTeX Info: Redefining \% on input line 950.
+ [27
+
+]
+LaTeX Info: Redefining \. on input line 974.
+LaTeX Info: Redefining \% on input line 974.
+LaTeX Info: Redefining \. on input line 974.
+LaTeX Info: Redefining \% on input line 974.
  [28
 
 ]
