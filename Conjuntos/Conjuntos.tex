@@ -435,8 +435,8 @@
         \subsubsection*{Ideas Importantes}
         Creo que resulta bastante obvio pero aquí hay algunas cosas que quizá te interesen.
         \begin{itemize}
-            \item $\phi^c = u$
-            \item $u^c = \phi$
+            \item $\phi^C = U$
+            \item $U^C = \phi$
         \end{itemize}
 
 
@@ -511,6 +511,8 @@
                 \begin{itemize}
                     \item $A \subseteq A$
                     \item Si $A = B$, entonces $A \subseteq B$
+                    \item Todos los conjuntos son subconjuntos de conjunto universo $U$
+                    \item $\emptyset$ es un subconjunto de cualquier conjunto
                 \end{itemize}
 
             \subsubsection{SubConjuntos Propios}
@@ -584,6 +586,8 @@
             Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
             que no pertenezcen a A.
 
+            También hay otra forma de definirlo como $A^C = U - A$
+
             \subsubsection{Conjunto Universo}
                 Si lo piensas detenidamente, aquí hay un problema y es que no te dije que es $U$, este
                 representa el conjunto universo, es decir, es aquel conjunto que del que todos los demás
@@ -609,6 +613,8 @@
             de A que no pertenezcen a B.
 
             A esta operación también se la conoce como complemento relativo.
+
+            También hay otra forma de definirlo como $A - B = A \cap B^C$
 
 
 
@@ -740,6 +746,9 @@
 
             \begin{itemize}
                 \item Si tu conjunto tiene $n$ elementos, tu conjunto potencia tendrá $2^n$ elementos.
+
+                \item Si $r < |A|$ entonces existen $\pVector{n\\r} = \frac{n!}{r!(n-r)!}$ subconjuntos
+                        de $A$ de cardinalidad $r$
             \end{itemize}
 
             % ====================
@@ -819,6 +828,8 @@
                     \item $(A \cup B)^C = A^C \cap B^C$
                 \end{itemize}
 
+            \clearpage
+
             \item \textbf{Propiedad de los Neutros}
                 \begin{itemize}
                     \item $A \cap U = A$
@@ -852,20 +863,75 @@
         \end{itemize}
 
 
+    % =====================================================
+    % ============           CARDINALIDAD          ========
+    % =====================================================
+    \clearpage
+    \section{Identidades y Propiedades}
+            
+        Ya conocemos su definición formal, incluso me dedique a poner algunas cosas super obvias en
+        la pagina de definción de cada uno de ellos, pero es que hay tantas propiedades super interesantes
+        que tenia que ponerles una sección propia para las mejores:
+
+
+        % =====================================
+        % ==========   SUBCONJUNTOS    ========
+        % =====================================
+        \subsection{Propiedades usando SubConjuntos}
+            
+            \subsubsection{Proposición}
+                Sea $A, B, C$ conjuntos cualesquiera tal que $A \subseteq B$. Entonces tenemos que:
+                \begin{equation*}
+                \begin{split}
+                    (A \cap C) &\subseteq (B \cap C)        \\
+                    (A \cup C) &\subseteq (B \cup C)
+                \end{split}
+                \end{equation*}
+
+            \subsubsection{Proposición}
+                Sea $A, B, C$ conjuntos cualesquiera. Si $A \subseteq B$ y $A \subseteq C$.
+                Entonces tenemos que:
+                \begin{equation*}
+                    A \subseteq (B \cap C)
+                \end{equation*}
+
+            \subsubsection{Proposición}
+                Sea $A, B, C$ conjuntos cualesquiera. Si $A \subseteq C$ y $B \subseteq C$.
+                Entonces tenemos que:
+                \begin{equation*}
+                    (A \cup B) \subseteq C
+                \end{equation*}
+
+
+        % =====================================
+        % =====   CONJUNTO POTENCIA    ========
+        % =====================================
+        \clearpage
+        \subsection{Propiedades usando Conjunto Potencia}
+            
+            \subsubsection{Proposición}
+                $P(A \cap B) = P(A) \cap P(B)$
+
+            \subsubsection{Proposición}
+                $P(A) \cup P(B) \subseteq P(A \cup B)$
+
+
+
+
+
 
     % =====================================================
     % ============           CARDINALIDAD          ========
     % =====================================================
     \clearpage
-    \section{Cardinalidad}
+    \section{Cardinalidad y sus Propiedades}
             
         Ok, vamos avanzando, ahora es la hora de ver una característica de los conjuntos.
         La Cardinalidad, que no es mas que una forma \emph{fancy} de decir el número de 
         elementos ó entes que contiene cierto conjunto.
 
-        Puedes verlo como una función que
-        recibe un conjunto cualquiera y te regresa un número \emph{(Bueno, tecnicamente también
-        esta el caso en el que la cardinalidad es infinita)}.
+        Puedes verlo como una función que recibe un conjunto cualquiera y te regresa
+        un número \emph{(Bueno, tecnicamente también sta el caso en el que la cardinalidad es infinita)}.
 
         Esta es la forma en que solemos expresar la cardinalidad de un conjunto cualquiera:
         \begin{equation}   
@@ -873,29 +939,93 @@
         \end{equation}
 
 
-        Ahora si, veamos algunas proposiciones super geniales:
+
+        % =====================================
+        % =====        COMPLEMENTOS      ======
+        % =====================================
+        \clearpage
+        \subsection{Propiedades usando Complemento}
+            
+            \subsubsection{Proposición}
+                Sea $A$ un conjunto cualquiera de un universo U, entonces tenemos que:
+                \begin{equation*}
+                    |A^C| = |U| - |A|
+                \end{equation*}  
+
+        % =====================================
+        % =====        SUBCONJUNTOS      ======
+        % =====================================
+        \subsection{Propiedades usando Subconjuntos}
+            
+            \subsubsection{Proposición}
+                Sea $A, B$ conjuntos cualesquiera. Si  $A \subseteq B$, entonces tenemos que:
+                \begin{equation*}
+                    |A| \leq |B|
+                \end{equation*}
 
 
+        % =====================================
+        % =====   UNION E INTERSECCION   ======
+        % =====================================
+        \clearpage
+        \subsection{Propiedades usando Unión e Intersección}
+            
+            \subsubsection{Proposición}
+                Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
+                \begin{equation*}
+                \begin{split}
+                    |A \cup B| &= |A| + |B| - |A \cap B|    \\  
+                    |A \cap B| &= |A| + |B| - |A \cup B|  
+                \end{split}
+                \end{equation*}
 
 
+        % =====================================
+        % =====           RESTA          ======
+        % =====================================
+        \clearpage
+        \subsection{Propiedades usando Resta}
+
+            \subsubsection{Proposición}
+                Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
+                \begin{equation*}
+                    |A - B| = |A| - |A \cap B|
+                \end{equation*}
 
 
-% =====================================================
-% ============        BIBLIOGRAPHY   ==================
-% =====================================================
-\clearpage
-\bibliographystyle{plain}
-	\begin{thebibliography}{9}
+        % =====================================
+        % ====     DIFERENCIA SIMETRICA   =====
+        % =====================================
+        \subsection{Propiedades usando Diferencia Simetrica}
 
-	% ============ REFERENCE #1 ========
-	\bibitem{Sitio1} 
-		ProbRob
-		\\\texttt{Youtube.com}
+            \subsubsection{Proposición}
+                Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
+                \begin{equation*}
+                    |A \Delta B| = |A| + |B| - 2|A \cap B|
+                \end{equation*}
 
+        % =====================================
+        % =====   PRODUCTO CARTESIANO     =====
+        % =====================================
+        \clearpage
+        \subsection{Propiedades usando Producto Cartesiano}
 
-	 
+            \subsubsection{Proposición}
+                Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
+                \begin{equation*}
+                    |A \times B| = |A| \cdot |B|
+                \end{equation*}
 
-\end{thebibliography}
+        % =====================================
+        % =====   CONJUNTO POTENCIA      ======
+        % =====================================
+        \subsection{Propiedades usando Conjunto Potencia}
+
+            \subsubsection{Proposición}
+                Sea $A$ conjunto cualquiera, tal que $|A| = n$ entonces tenemos que:
+                \begin{equation*}
+                    |P(A)| = 2^n
+                \end{equation*}
 
 
 

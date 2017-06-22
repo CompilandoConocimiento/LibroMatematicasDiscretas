@@ -26,4 +26,26 @@
 \contentsline {subsection}{\numberline {2.2.6}Producto Cartesiano}{19}{subsection.2.2.6}
 \contentsline {subsection}{\numberline {2.2.7}Conjunto Potencia}{21}{subsection.2.2.7}
 \contentsline {section}{\numberline {2.3}Leyes de los Conjuntos}{23}{section.2.3}
-\contentsline {section}{\numberline {2.4}Cardinalidad}{25}{section.2.4}
+\contentsline {section}{\numberline {2.4}Identidades y Propiedades}{25}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Propiedades usando SubConjuntos}{25}{subsection.2.4.1}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{25}{section*.23}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{25}{section*.24}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{25}{section*.25}
+\contentsline {subsection}{\numberline {2.4.2}Propiedades usando Conjunto Potencia}{26}{subsection.2.4.2}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{26}{section*.26}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{26}{section*.27}
+\contentsline {section}{\numberline {2.5}Cardinalidad y sus Propiedades}{27}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Propiedades usando Complemento}{28}{subsection.2.5.1}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{28}{section*.28}
+\contentsline {subsection}{\numberline {2.5.2}Propiedades usando Subconjuntos}{28}{subsection.2.5.2}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{28}{section*.29}
+\contentsline {subsection}{\numberline {2.5.3}Propiedades usando Uni\IeC {\'o}n e Intersecci\IeC {\'o}n}{29}{subsection.2.5.3}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{29}{section*.30}
+\contentsline {subsection}{\numberline {2.5.4}Propiedades usando Resta}{30}{subsection.2.5.4}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{30}{section*.31}
+\contentsline {subsection}{\numberline {2.5.5}Propiedades usando Diferencia Simetrica}{30}{subsection.2.5.5}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{30}{section*.32}
+\contentsline {subsection}{\numberline {2.5.6}Propiedades usando Producto Cartesiano}{31}{subsection.2.5.6}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{31}{section*.33}
+\contentsline {subsection}{\numberline {2.5.7}Propiedades usando Conjunto Potencia}{31}{subsection.2.5.7}
+\contentsline {subsubsection}{Proposici\IeC {\'o}n}{31}{section*.34}
