@@ -35,7 +35,8 @@
     \usepackage{tasks}                                              %Horizontal lists
     \usepackage{longtable}                                          %Lets make tables awesome
     \usepackage{booktabs}                                           %Lets make tables awesome
-
+    \usepackage{tabularx}                                           %Lets make tables awesome
+    \usepackage{multirow}                                           %Lets make tables awesome
 
     % *********   HEADERS AND FOOTERS ********
     \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
@@ -76,6 +77,10 @@
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
     \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
     \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
+
+    % =====  LOGIC  ==================
+    \DeclareMathOperator \doublearrow {\leftrightarrow}             %Use: \doublearrow for a double arrow
+    \newcommand \lequal {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lequal for a double arrow
 
     % =====  NUMBER THEORY  ==========
     \DeclareMathOperator \Naturals {\mathbb{N}}                     %Use: \Naturals por Notation
@@ -139,27 +144,337 @@
 % ======================================================================================
 % =============================       PRINCIPIOS BASICOS      ==========================
 % ======================================================================================
-\chapter{Principios Básicos}
+\chapter{Proposiciones y Conectores}
     \clearpage
 
     % =====================================================
     % ============           DEFINICION            ========
     % =====================================================
-    \section{Definición}
+    \section{Proposiciones}
+
+        La lógica es una forma sistemática de pensar que nos permite deducir nueva información desde la
+        información que ya conocemos.
+
+        Recuerda que la lógica es un proceso de deducir la información correctamente,
+        no sólo deducir la información correcta.
+
+        La lógica trabajo con algo llamado proposiciones, son como las funciones para
+        cálculo, o los lenguajes de programación para informática o los libros para la literatura.
+
+        Así que empecemos por ahí ... ¿Qué son?
+
 
         % =====================================
         % =========   ¿QUE SON?     ===========
         % =====================================
-        \subsection*{¿Qué son?}
-            Olvida todo lo que sabes sobre números. Olvídate de que sabes lo que es un número.
-            Aquí es donde empiezan las matemáticas. En vez de matemáticas con números,
-            vamos a hacer matemáticas con 'cosas'.
+        \subsection*{Definición}
+            
+            \textbf{Son proposiciones las frases que pueden adquirir un valor de verdadero o falso.}
+            
+            O dicho de manera formal:
 
-            Se denomina conjunto a la agrupación de entes o elementos, que poseen una o
-            varias características en común. 
+            \textbf{Es una oración aseverativa de la que tiene sentido decir que es verdadera o falsa}.\\
 
-            Un conjunto puede ser una agrupación de números, de vectores, de autos, de espacios vectoriales,
-            de objectos, de funciones e incluso un conjunto puede ser una agrupación de otros conjuntos.
+            Y cuando digo frase, me refiero a:
+            \begin{itemize}
+                \item Secuencia finita de signos con significado y sentido de ser calificado como verdadero o falso.
+                        (es decir una simple expresión matemática).
+
+                \item Expresión lingüística susceptible de ser calificada de verdadera o falsa.
+                        (es decir una frase aseverativa).
+            \end{itemize}
+
+
+        % =====================================
+        % ====   SENTENCIAS ABIERTAS    =======
+        % =====================================
+        \subsection*{Sentencias Abiertas}
+            Existen cosas que son parecidas a las proposiciones, pero no lo son exactamente, son cosas como:
+
+            $P(x)$: $x$ es un número par.
+
+            Puesto que la validez de $P(x)$ depende que número sea $x$, $P(x)$no es no totalmente cierta ni
+            totalmente falsa, por lo tanto no es una proposición.
+
+            Una oración como esta, cuya verdad depende del valor de una o más variables,
+            se llama sentencias abierta.
+
+
+
+
+
+            % ==========================
+            % =====   EJEMPLOS   =======
+            % ==========================
+            \clearpage
+            \subsection*{Ejemplo}
+
+
+                Por ejemplo son proposiciones frases como:
+                \begin{itemize}
+                    \item $2 + 3 = 4$
+                    \item Hay solamente 325 personas en Marte
+                    \item $\forall x, y \in \Naturals$ se tiene que $\MiniSpace x+y \in \Reals$
+                    \item Hoy es lunes
+                    \item $f(x+y) = f(x) + f(y)$
+                    \item Si x = 2 entonces 2x = 4
+                \end{itemize}
+
+                Pero no son cosas como:
+                \begin{itemize}
+                    \item ¡Ojalá no llueva hoy!
+                    \item Haz la tarea
+                    \item Este enunciado es falso
+                    \item Tomar una siesta
+                \end{itemize}
+
+
+
+        % =====================================
+        % ======   CLASIFICACION    ===========
+        % =====================================
+        \clearpage
+        \subsection{Teoremas, Colorario y Tautológias}
+            
+            \subsubsection*{Clasificación de Propiedades}
+
+                \begin{itemize}
+                    \item \textbf{Tautología}: Cuando para todos los valores posibles de un conjunto
+                            de proposiciones siempre será verdadero el conjunto.
+
+                    \item \textbf{Contradicción}: Cuando para todos los valores posibles de un conjunto
+                    de proposiciones esta será siempre falso.
+
+                    \item \textbf{Contingencia}: Una proposición “común” son básicamente todas las que
+                    no son ni tautologías ni contradicciones.
+                \end{itemize}
+
+            \subsubsection*{Notación}
+
+                Además a los matemáticas les encanta demostrar todo y cuando digo todo, es TODO, así que
+                aquí te dejo las diferencias entre varias palabras que se parecen:
+
+                \begin{itemize}
+                    \item \textbf{Proposición}: Enunciado que encierra un valor de verdad.
+
+                    \item \textbf{Axioma}: Principio tan claro y evidente que no necesita demostración.
+
+                    \item \textbf{Corolario}: Proposición demostrado que provoca una afirmación.
+
+                    \item \textbf{Demostración}: Razonamiento por el cuál se da prueba de la
+                        exactitud de una proposición.
+
+                    \item \textbf{Lema}: Proposición que es necesaria demostrar antes de
+                    establecer un teorema.
+
+                \end{itemize}
+
+
+    % =====================================================
+    % ============           CONECTORES            ========
+    % =====================================================
+    \clearpage
+    \section{Conectores Lógicos}
+
+        Los conectores nos permiten 'concatenar' proposiciones o crear proposiciones mas avanzadas. 
+        Veamos primero como solemos mostrarlos:
+
+        \begin{longtable}{p{35mm} || p{30mm} || p{80mm}}
+
+            % ==== HEADERS ============
+            \textbf{\large Conector}
+            &
+            \textbf{\large Nombres}
+            &
+            \textbf{\large Símbolos}
+            \\[1.5ex]
+            \hline\hline
+            & & \\                                                                    
+            \endhead                                                     
+
+            \large y  &  \large{p $\land$ q}                                    &
+
+            \begin{minipage}[t]{\textwidth}\begin{itemize}
+                \item \textbf{Conjunción de} p \textbf{y de} q
+            \end{itemize}\end{minipage}                                         \\[1.5ex]
+            
+            \hline & & \\ \large o  &  \large{p $\lor$ q}                       &
+            
+            \begin{minipage}[t]{\textwidth}\begin{itemize}
+                \item \textbf{Disyunción de} p \textbf{y de} q
+            \end{itemize}\end{minipage}                                         \\[1.5ex]
+
+
+            \hline & & \\ \large no  &  \large{$\lnot$ q}                       &
+
+            \begin{minipage}[t]{\textwidth}\begin{itemize}
+                \item \textbf{Negación de} P
+            \end{itemize}\end{minipage}                                         \\[1.5ex]
+
+            \hline & & \\ \large implica  &  \large{p $\to$ q}                  & 
+
+            \begin{minipage}[t]{\textwidth}\begin{itemize}
+                \small{
+                \item p \textbf{implica} q
+                \item \textbf{Si} p\textbf{, entonces} q
+                \item q \textbf{si} p
+                \item \textbf{Sólo si} q \textbf{entonces} p
+                \item p \textbf{sólo si} q
+                \item \textbf{Cuando} p\textbf{,} q
+                \item \textbf{Siempre que} q\textbf{,} p
+                \item q \textbf{siempre que} p
+                \item p \textbf{es una condición suficiente para} q
+                \item q \textbf{es una condición necesaria para} p
+                \item \textbf{Es necesario que} q \textbf{para} p
+                \item \textbf{Es suficiente que} p \textbf{para que} q
+                }\\
+            \end{itemize}\end{minipage}                                         \\[1.5ex]
+
+            \hline & & \\ \large si y solo si  &  \large{p $\doublearrow$ q}    &
+
+            \begin{minipage}[t]{\textwidth}\begin{itemize}
+                \item p \textbf{ssi} q
+                \item p \textbf{es equivalente a} q
+            \end{itemize}\end{minipage}                                         \\
+ 
+        \end{longtable}
+
+        % =====================================
+        % ======     NEGACION     ===========
+        % =====================================
+        \clearpage
+        \subsection{Negación}
+
+            Es un operador que opera sobre dos valores de verdad. Devuelve el 
+            inverso del valor de verdad de la proposición que le pases.
+
+            La conjunción es una de las compuertas más basicas. \\
+
+            \begin{tabular}{ |c|c|c| } 
+                \hline &&\\
+                \large{Nombre} & $p$ & $\lnot p$ \\[0.5em]
+                \hline
+                \multirow{2}{5em}{Negación}
+                & $F$ & $V$  \\ \cline{2-3}
+                & $V$ & $F$  \\ \cline{2-3}
+                \hline
+            \end{tabular}
+
+        % =====================================
+        % ======     CONJUNCION     ===========
+        % =====================================
+        \subsection{Conjunción}
+
+            Es un operador que opera sobre dos valores de verdad. Devuelve verdadero
+            \textbf{solo} cuando ambas son verdaderas, y falso en cualquier
+            otra combinación.
+
+            La conjunción es una de las compuertas más basicas. \\
+
+            \begin{tabular}{ |c|c|c|c|c| } 
+                \hline &&&\\
+                \large{Nombre} & $p$ & $q$ & $p \land q$ \\[0.5em]
+                \hline
+                \multirow{4}{5em}{Conjunción}
+                & $F$ & $F$ & $F$ \\ \cline{2-4}
+                & $F$ & $V$ & $F$ \\ \cline{2-4}
+                & $V$ & $F$ & $F$ \\ \cline{2-4}
+                & $V$ & $V$ & $V$ \\ 
+                \hline
+            \end{tabular}
+
+
+        % =====================================
+        % ======     DISYUNCION     ===========
+        % =====================================
+        \subsection{Disyunción}
+
+            Es un operador que opera sobre dos valores de verdad. Devuelve falso
+            \textbf{solo} cuando ambas son falsas, y verdadero en cualquier
+            otra combinación.
+
+            La conjunción es una de las compuertas más basicas. \\
+
+            \begin{tabular}{ |c|c|c|c|c| } 
+                \hline &&&\\
+                \large{Nombre} & $p$ & $q$ & $p \lor q$ \\[0.5em]
+                \hline
+                \multirow{4}{5em}{Disyunción}
+                & $F$ & $F$ & $F$ \\ \cline{2-4}
+                & $F$ & $V$ & $V$ \\ \cline{2-4}
+                & $V$ & $F$ & $V$ \\ \cline{2-4}
+                & $V$ & $V$ & $V$ \\ 
+                \hline
+            \end{tabular}
+
+
+
+
+
+        % =====================================
+        % ======     IMPLICACION    ===========
+        % =====================================
+        \clearpage
+        \subsection{Implicación}
+
+            Devuelve falso \textbf{solo} cuando la primera premisa es verdadera, pero la 
+            segunda es falsa, y verdadero en cualquier otra combinación.
+
+            Ve a $P \to Q$ como una promesa de que siempre que $P$ es verdadera, $Q$ será verdadera también.
+            Sólo hay una manera de romper esta promesa y que es si $P$ sea verdad y $Q$ es falso.\\
+
+
+            \begin{tabular}{ |c|c|c|c|c| } 
+                \hline &&&\\
+                \large{Nombre} & $p$ & $q$ & $p \to q$ \\[0.5em]
+                \hline
+                \multirow{4}{5em}{Disyunción}
+                & $F$ & $F$ & $V$ \\ \cline{2-4}
+                & $F$ & $V$ & $V$ \\ \cline{2-4}
+                & $V$ & $F$ & $F$ \\ \cline{2-4}
+                & $V$ & $V$ & $V$ \\ 
+                \hline
+            \end{tabular}\\[1.0em]
+
+            \subsubsection*{Ideas Importantes}
+
+                La implicación es creo yo la más importante de todas, y no es porque sea básica, 
+                es más: $p \to q$ es totalmente equivalente a $\lnot p \lor q$.
+
+                Usando la implicación hay algunas cosas famosas que deberías saber:
+
+                \begin{itemize}
+                    \item \textbf{Contrapositiva del Condicional}
+                            Esta equivalencia es muy importante, pues es muy usada para las demostraciones
+                            (no te preocupes Timmy, ya entenderas después).
+                            \begin{equation*}
+                                p \to q \lequal \lnot q \to \lnot p
+                            \end{equation*}
+
+                    \item \textbf{Implicaciones Famosas}
+                            No se a quién se le ocurrio ponerles nombres, pero creo que te combiene
+                            que las conozcas.
+
+                            \begin{tabular}{ |c|c|c| } 
+                                \hline &&\\
+                                \large{Nombre} & \large{Forma} & \large{Es equivalente con...}      \\[0.5em]
+                                \hline \hline
+                                
+                                \textbf{Condicional}    & $p \to q$             & Contrapositiva    \\ \hline
+                                \textbf{Contrapositiva} & $\lnot q \to \lnot p$ & Condicional       \\ \hline\hline 
+                                
+                                \textbf{Recíproca}      & $q \to p$             & Inversa           \\ \hline
+                                \textbf{Inversa}        & $\lnot p \to \lnot q$ & Recíproca         \\ \hline
+                            \end{tabular}
+                \end{itemize}
+
+
+
+
+
+
+
+
 
 
 \end{document}

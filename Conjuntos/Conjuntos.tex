@@ -747,8 +747,16 @@
             \begin{itemize}
                 \item Si tu conjunto tiene $n$ elementos, tu conjunto potencia tendrá $2^n$ elementos.
 
-                \item Si $r < |A|$ entonces existen $\pVector{n\\r} = \frac{n!}{r!(n-r)!}$ subconjuntos
+                \item Si $n < |A|$ entonces existen $\pVector{n\\r} = \frac{n!}{r!(n-r)!}$ subconjuntos
                         de $A$ de cardinalidad $r$
+
+                \item $P(\emptyset) = \{\emptyset\}$
+
+                \item $P( \{\emptyset\}) = \{\emptyset, \{\emptyset\} \}$
+
+                \item $A \in P(A)$
+                \item Solo si $A = \{\emptyset\}$ entonces $A \subseteq P(A)$,
+                en cualquier otro caso $A \nsubseteq P(A)$
             \end{itemize}
 
             % ====================
