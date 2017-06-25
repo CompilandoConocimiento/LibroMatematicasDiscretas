@@ -37,6 +37,7 @@
     \usepackage{booktabs}                                           %Lets make tables awesome
     \usepackage{tabularx}                                           %Lets make tables awesome
     \usepackage{multirow}                                           %Lets make tables awesome
+    \usepackage{multicol}                                           %Create multicolumns
 
     % *********   HEADERS AND FOOTERS ********
     \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
@@ -81,6 +82,7 @@
     % =====  LOGIC  ==================
     \DeclareMathOperator \doublearrow {\leftrightarrow}             %Use: \doublearrow for a double arrow
     \newcommand \lequal {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lequal for a double arrow
+    \newcommand \linfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lequal for a double arrow
 
     % =====  NUMBER THEORY  ==========
     \DeclareMathOperator \Naturals {\mathbb{N}}                     %Use: \Naturals por Notation
@@ -141,6 +143,15 @@
 
 \clearpage
 
+
+
+
+
+
+
+
+
+
 % ======================================================================================
 % =============================       PRINCIPIOS BASICOS      ==========================
 % ======================================================================================
@@ -191,15 +202,13 @@
         \subsection*{Sentencias Abiertas}
             Existen cosas que son parecidas a las proposiciones, pero no lo son exactamente, son cosas como:
 
-            $P(x)$: $x$ es un número par.
+            $p(x)$: $x$ es un número par.
 
-            Puesto que la validez de $P(x)$ depende que número sea $x$, $P(x)$no es no totalmente cierta ni
+            Puesto que la validez de $p(x)$ depende que número sea $x$, $p(x)$no es no totalmente cierta ni
             totalmente falsa, por lo tanto no es una proposición.
 
             Una oración como esta, cuya verdad depende del valor de una o más variables,
             se llama sentencias abierta.
-
-
 
 
 
@@ -296,25 +305,25 @@
 
             \begin{minipage}[t]{\textwidth}\begin{itemize}
                 \item \textbf{Conjunción de} p \textbf{y de} q
-            \end{itemize}\end{minipage}                                         \\[1.5ex]
+            \end{itemize}\end{minipage}                                                 \\[1.5ex]
             
-            \hline & & \\ \large o  &  \large{p $\lor$ q}                       &
+            \hline & & \\ \large o  &  \large{p $\lor$ q}                               &
             
             \begin{minipage}[t]{\textwidth}\begin{itemize}
                 \item \textbf{Disyunción de} p \textbf{y de} q
-            \end{itemize}\end{minipage}                                         \\[1.5ex]
+            \end{itemize}\end{minipage}                                                 \\[1.5ex]
 
 
-            \hline & & \\ \large no  &  \large{$\lnot$ q}                       &
+            \hline & & \\ \large no  &  \large{$\lnot$ q}                               &
 
             \begin{minipage}[t]{\textwidth}\begin{itemize}
                 \item \textbf{Negación de} P
-            \end{itemize}\end{minipage}                                         \\[1.5ex]
+            \end{itemize}\end{minipage}                                                 \\[1.5ex]
 
-            \hline & & \\ \large implica  &  \large{p $\to$ q}                  & 
+            \hline & & \\ \large implica  &  \large{p $\to$ q}                          & 
 
             \begin{minipage}[t]{\textwidth}\begin{itemize}
-                \small{
+            \small{
                 \item p \textbf{implica} q
                 \item \textbf{Si} p\textbf{, entonces} q
                 \item q \textbf{si} p
@@ -327,15 +336,19 @@
                 \item q \textbf{es una condición necesaria para} p
                 \item \textbf{Es necesario que} q \textbf{para} p
                 \item \textbf{Es suficiente que} p \textbf{para que} q
-                }\\
-            \end{itemize}\end{minipage}                                         \\[1.5ex]
+            }\\
+            \end{itemize}\end{minipage}                                                 \\[1.5ex]
 
-            \hline & & \\ \large si y solo si  &  \large{p $\doublearrow$ q}    &
+            \hline & & \\ \large si y solo si  &  \large{p $\doublearrow$ q}            &
 
             \begin{minipage}[t]{\textwidth}\begin{itemize}
+            \small{
                 \item p \textbf{ssi} q
                 \item p \textbf{es equivalente a} q
-            \end{itemize}\end{minipage}                                         \\
+                \item p \textbf{es una condición necesaria y suficiente para} q
+                \item \textbf{Para que} p \textbf{es necesario y suficiente que} q
+            }\\
+            \end{itemize}\end{minipage}                                                 \\
  
         \end{longtable}
 
@@ -343,12 +356,12 @@
         % ======     NEGACION     ===========
         % =====================================
         \clearpage
+
+        Las que siguen a continuación son lo que yo denomino más operaciones mas básicas en lógica.
+
         \subsection{Negación}
 
-            Es un operador que opera sobre dos valores de verdad. Devuelve el 
-            inverso del valor de verdad de la proposición que le pases.
-
-            La conjunción es una de las compuertas más basicas. \\
+            Devuelve el inverso del valor de verdad de la proposición que le pases.\\
 
             \begin{tabular}{ |c|c|c| } 
                 \hline &&\\
@@ -365,11 +378,8 @@
         % =====================================
         \subsection{Conjunción}
 
-            Es un operador que opera sobre dos valores de verdad. Devuelve verdadero
-            \textbf{solo} cuando ambas son verdaderas, y falso en cualquier
-            otra combinación.
-
-            La conjunción es una de las compuertas más basicas. \\
+            Devuelve verdadero \textbf{solo} cuando ambas son verdaderas, y falso en cualquier
+            otra combinación.\\
 
             \begin{tabular}{ |c|c|c|c|c| } 
                 \hline &&&\\
@@ -389,11 +399,8 @@
         % =====================================
         \subsection{Disyunción}
 
-            Es un operador que opera sobre dos valores de verdad. Devuelve falso
-            \textbf{solo} cuando ambas son falsas, y verdadero en cualquier
-            otra combinación.
-
-            La conjunción es una de las compuertas más basicas. \\
+            Devuelve falso \textbf{solo} cuando ambas son falsas, y verdadero en cualquier
+            otra combinación.\\
 
             \begin{tabular}{ |c|c|c|c|c| } 
                 \hline &&&\\
@@ -420,8 +427,8 @@
             Devuelve falso \textbf{solo} cuando la primera premisa es verdadera, pero la 
             segunda es falsa, y verdadero en cualquier otra combinación.
 
-            Ve a $P \to Q$ como una promesa de que siempre que $P$ es verdadera, $Q$ será verdadera también.
-            Sólo hay una manera de romper esta promesa y que es si $P$ sea verdad y $Q$ es falso.\\
+            Ve a $p \to q$ como una promesa de que siempre que $p$ es verdadera, $q$ será verdadera también.
+            Sólo hay una manera de romper esta promesa y que es si $P$ sea verdad y $q$ es falso.\\
 
 
             \begin{tabular}{ |c|c|c|c|c| } 
@@ -469,8 +476,503 @@
                 \end{itemize}
 
 
+        % =====================================
+        % ======     BICONDICIONAL    =========
+        % =====================================
+        \clearpage
+        \subsection{Bicondicional}
+
+            En lógica la idea de $(p \to q ) \land (q \to p)$ aparece tan seguido que decidimos darle su
+            propio símbolo $p \doublearrow q$.
+
+            Esta operación nos regresa verdadero \textbf{solo} cuando ambas premisas tengan el mismo valor de
+            verdad. Ojo no dije que ambas sean verdad, simplemente que si una es falsa, obliga a la otra a 
+            ser falsa.
+
+            Recuerda que sabemos que $p \to q$ se lee como 'p si q' y $q \to p$ se lee como 'p solo si q'.
+            Entonces nuestro nuevo operador recibe el original nombre de 'p si y solo si q' o de forma normal
+            'p ssi q'.
 
 
+
+    % =====================================================
+    % ============           DEFINICION            ========
+    % =====================================================
+    \section{Equivalente Lógico}
+
+        Llega a pasar en lógica que tenemos dos expresiones lógicas que al momento de ver su tabla de 
+        verdad vemos que son iguales en todos los valores de verdad de sus variables entonces podemos
+        decir que son logicamente equivalentes. Y solemos denotar eso con este símbolo $p \lequal q$.
+
+        Usamos este símbolo porque si $p$ y $q$ son logicamente equivalentes entonces $p \doublearrow q$
+        será siempre verdad, una tautología.
+
+        Esta idea es importante pues nos permite ver ideas que ya tenemos expresadas en la lógica de una
+        manera completamente nueva si es que a nosotros nos convienen más.
+
+        A continuación te muestro una tabla con las equivalencias lógicas mas comúnes.
+
+
+
+
+
+
+    % =====================================================
+    % ============    LEYES DE LOGICA            ==========
+    % =====================================================
+    \clearpage
+    \section{Leyes de Lógica}
+                
+            Sean $p, q, r$ sentencias lógicas y sea $T$ una tautológía y sea $F$ una contradicción.
+
+            \begin{itemize}
+                \item \textbf{Doble Complemento} \\
+                        $\lnot(\lnot p) \lequal p$
+
+                \item \textbf{Propiedad Conmutativa}
+                    \begin{itemize}
+                        \item $p \land q \lequal q \land p$
+                        \item $p \lor  q \lequal q \lor  p$
+                    \end{itemize}
+
+                \item \textbf{Propiedad Asociativa}
+                    \begin{itemize}
+                        \item $p \land (q \land r) \lequal (p \land q) \land C$
+                        \item $p \lor (q \lor r) \lequal (p \lor q) \lor C$
+                    \end{itemize}
+
+                \item \textbf{Propiedad Distributiva}
+                    \begin{itemize}
+                        \item $p \land (q \lor r) \lequal (p \land q) \lor (p \land r)$
+                        \item $p \lor (q \land r) \lequal (p \lor q) \land (p \lor r)$
+                    \end{itemize}
+
+                \item \textbf{Leyes de Morgan}
+                    \begin{itemize}
+                        \item $\lnot (p \land q) \lequal (\lnot p) \lor (\lnot q)$
+                        \item $\lnot (p \lor q) \lequal (\lnot p) \land (\lnot q)$
+                    \end{itemize}
+
+                \clearpage
+
+                \item \textbf{Propiedad de los Neutros}
+                    \begin{itemize}
+                        \item $p \land T \lequal p$
+                        \item $p \lor F \lequal p$
+                    \end{itemize}
+
+                \item \textbf{Propiedad de los Inversos}
+                    \begin{itemize}
+                        \item $p \land \lnot p \lequal F$
+                        \item $p \lor \lnot p \lequal T$
+                    \end{itemize}
+
+                \item \textbf{Propiedad de Dominación}
+                    \begin{itemize}
+                        \item $p \land F \lequal F$
+                        \item $p \lor T \lequal T$
+                    \end{itemize}
+
+                \item \textbf{Propiedad de Inepotencia}
+                    \begin{itemize}
+                        \item $p \land p \lequal p$
+                        \item $p \lor p \lequal p$
+                    \end{itemize}
+
+                \item \textbf{Propiedad de Absorción}
+                    \begin{itemize}
+                        \item $p \land (p \lor q) \lequal p$
+                        \item $p \lor (p \land q) \lequal p$
+                    \end{itemize}
+
+                \item \textbf{Propiedad de Contrapositiva}
+                    \begin{itemize}
+                        \item $p \to q \lequal \lnot q \to \lnot p$
+                        \item $p \doublearrow q  \lequal \lnot p \doublearrow \lnot q$
+                    \end{itemize}
+
+            \end{itemize}
+
+
+
+
+
+
+
+
+
+% ======================================================================================
+% ========================              INFERENCIAS             ========================
+% ======================================================================================
+\clearpage
+\chapter{Inferencias Lógicas}
+    \clearpage
+
+    
+    % =====================================================
+    % ============           INFERENCIAS           ========
+    % =====================================================
+    \section{Inferencias Lógicas}
+
+        La inferencia es la forma en la que obtenemos conclusiones en base a datos y declaraciones establecidas.
+        Esto se va a poner intenso, pero creo que esta definición vale la pena:
+
+        \subsubsection{Definición}
+
+            Podemos entonces definir que una inferencia lógica es un proposición $q$ que si le aplicamos
+            el condicional con la disyunción de todas las premisas sería una tautología.
+
+            Es decir:
+            \begin{equation}
+                [p_1 \land p_2 \land p_3 \dots \to q] \lequal T
+            \end{equation}
+
+            En español esto quiere decir que el hecho de que todas las premisas sean verdaderas obliga a
+            que $q$ sea verdadera, o en otra manera podemos decir que la inferencia lógica como: 
+            Dadas dos afirmaciones verdaderas podemos inferir que una tercera afirmación es verdadera.
+
+
+        \subsubsection{Ejemplo}
+            Supongamos que sabemos que una afirmación de la forma $p \to q$ es verdadera.
+            Esto nos dice que siempre que $p$ es verdadera, $q$ también será verdadera. 
+
+            Por sí mismo, $p \to q$ siendo verdadero no nos dice que $p$ o $q$ es verdadero
+            (ambos podrían ser falsos, o $p$ podría ser falso y $q$ verdadero).
+
+            Sin embargo, si además sabemos que $p$ es verdadera entonces debe ser que $q$ es verdadera.
+            Esto se llama una inferencia lógica: dadas dos afirmaciones verdaderas podemos inferir que una
+            tercera afirmación es verdadera.
+
+
+        % =====================================
+        % =====     INFERENCIAS BASICAS =======
+        % =====================================
+        \clearpage
+        \subsection{Inferencias Básicas}
+
+            Hay unas inferencias my importantes, sobretodo a la hora de demostrar algo, por eso les deje su propia
+            sección:
+
+            \begin{itemize}
+                \item
+                    \textbf{Contrapositiva de la Inferencia}\\
+                    $p \linfire q$ si y solo si $\lnot q \linfire \lnot p$
+
+                \item
+                    \textbf{Por Contradicción}\\
+                    $p \linfire q$ si y solo si $p \land \lnot q \linfire F$
+
+                \item
+                    \textbf{Por Corriento del Condicional}\\
+                    $p \linfire q \to r$ si y solo si $p \land q \linfire s$
+
+
+                \item
+                    \textbf{Disyunción}\\
+                    Si ya sabemos que $p \linfire q$ entonces sabremos que $p \land r \linfire q \land r$
+
+                \item
+                    \textbf{Conjunción}\\
+                    Si ya sabemos que $p \linfire q$ entonces sabremos que $p \lor r \linfire q \lor r$
+
+                \item
+                    \textbf{Condicional}\\
+                    Si ya sabemos que $p \linfire q$ entonces sabremos que $r \to p \linfire r \to q$
+
+                \item
+                    \textbf{Transitiva}\\
+                    Si ya sabemos que $p \linfire q$ y que $q \linfire r$ entonces sabremos que $p \linfire r$
+            \end{itemize}        
+
+           
+
+
+
+    % ====================================================
+    % ============    LEYES DE INFERENCIAS    ============
+    % ====================================================
+    \clearpage
+    \section{Reglas de Inferencias}
+
+        Hay unas inferencias my importantes, casi casi reglas, se las mostraré a continuación:\\
+
+        \begin{multicols}{2}
+            
+            \large{\textbf{Modus Poness (PP)}}
+                \begin{equation*}
+                \begin{split}
+                    &p \to q        \\
+                    &p              \\
+                    \midrule
+                    &\therefore q
+                \end{split}
+                \end{equation*}
+
+            \large{\textbf{Modus Tollens (TT)}}
+                \begin{equation*}
+                \begin{split}
+                    &p \to q        \\
+                    &\lnot q        \\
+                    \midrule
+                    &\therefore \lnot p
+                \end{split}
+                \end{equation*}
+
+        \end{multicols}
+
+        \bigskip
+
+        \begin{multicols}{2}
+            
+            \large{\textbf{Silogismo Hipotético}}
+                \begin{equation*}
+                \begin{split}
+                    &p \to q        \\
+                    &q \to r        \\
+                    \midrule
+                    &\therefore p \to r
+                \end{split}
+                \end{equation*}
+
+            \large{\textbf{Silogismo Disyuntivo}}
+                \begin{equation*}
+                \begin{split}
+                    &p \lor q       \\
+                    &\lnot p        \\
+                    \midrule
+                    &\therefore q
+                \end{split}
+                \end{equation*}
+
+        \end{multicols}
+
+        \bigskip
+
+        \begin{multicols}{2}
+            
+            \large{\textbf{Amplificación Disyuntiva}}
+                \begin{equation*}
+                \begin{split}
+                    &p              \\
+                    \midrule
+                    &\therefore p \lor q
+                \end{split}
+                \end{equation*}
+
+            \large{\textbf{Simplificación Conjuntiva}}
+                \begin{equation*}
+                \begin{split}
+                    &p \land q      \\
+                    \midrule
+                    &\therefore p
+                \end{split}
+                \end{equation*}
+
+        \end{multicols}
+
+
+
+        \clearpage
+
+        \large{\textbf{Regla de Conjunción}}
+        \begin{equation*}
+        \begin{split}
+            &p                  \\
+            &q                  \\
+            \midrule
+            &\therefore p \land q
+        \end{split}
+        \end{equation*}
+
+
+        \bigskip
+
+        \begin{multicols}{2}
+            
+            \large{\textbf{Ley del Dilema Constructivo (1)}}
+                \begin{equation*}
+                \begin{split}
+                    &p \to q             \\
+                    &r \to s             \\
+                    &p \land r           \\
+                    \midrule
+                    &\therefore q \land r
+                \end{split}
+                \end{equation*}
+
+            \large{\textbf{Ley del Dilema Constructivo (2)}}
+                \begin{equation*}
+                \begin{split}
+                    &p \to q             \\
+                    &r \to s             \\
+                    &p \lor r            \\
+                    \midrule
+                    &\therefore q \lor s
+                \end{split}
+                \end{equation*}
+
+        \end{multicols}
+
+        \bigskip
+
+        \begin{multicols}{2}
+            
+            \large{\textbf{Ley del Dilema Destructivo (1)}}
+                \begin{equation*}
+                \begin{split}
+                    &p \to q                \\
+                    &r \to s                \\
+                    &\lnot q \land \lnot s  \\
+                    \midrule
+                    &\therefore \lnot p \land \lnot r
+                \end{split}
+                \end{equation*}
+
+            \large{\textbf{Ley del Dilema Destructivo (2)}}
+                \begin{equation*}
+                \begin{split}
+                    &p \to q                \\
+                    &r \to s                \\
+                    &\lnot q \lor \lnot s   \\
+                    \midrule
+                    &\therefore \lnot p \lor \lnot r
+                \end{split}
+                \end{equation*}
+
+        \end{multicols}
+
+
+
+
+% ======================================================================================
+% ========================            CUANTIFICADORES           ========================
+% ======================================================================================
+\clearpage
+\chapter{Cuantificadores Lógicos}
+    \clearpage
+
+    % =====================================================
+    % ============      CUANTIFICADORES            ========
+    % =====================================================
+    \clearpage
+    \section{Cuantificadores}
+
+        Usar los conectores lógicos nos permiten traducir un teorema matemático en ideas lógicas, pero
+        añadiré unos nuevos símbolos que nos permitirán traducir aún más ideas.
+
+
+        \subsubsection{Sentencias Abiertas y Cuantificadores}
+            Los cuantificadores trabajan con sentencias abiertas (o también llamadas funciones lógicas),
+            son cosas que son parecidas a las proposiciones, pero no lo son exactamente, son cosas como:
+
+            $p(x)$: $x$ es un número par.
+
+            Puesto que la validez de $p(x)$ depende que número sea $x$, $p(x)$ no es no totalmente cierta ni
+            totalmente falsa, por lo tanto no es una proposición.
+
+            Los cuantificadores permiten la construcción de proposiciones a partir de oraciones abiertas,
+            bien sea particularizando o generalizando. Así, un cuantificador transforma una oración abierta,
+            en una proposición a la cual se le asigna un valor de verdad.
+
+            Es decir, los cuantificadores trabajan con sentencias abiertas, ya que al aplicarles un cuantificador
+            se vuelven una proposiciones normales.
+
+        \subsubsection{Cuantificadores Ocultos}
+            Ahora llegamos al punto muy importante. En matemáticas, la expresión $p(x) \linfire q(x)$
+            se entiende que en realidad hablamos de la oración $\forall x \in A, \MiniSpace p(x) \linfire q(x)$.
+
+            Si, lo se, matemáticos que les da flojera ser formales, aunque entiendelos, es tal común esta
+            clase de enunciados que se notaría tan repetetitivo.
+
+
+
+        % =====================================
+        % ====  CUANTIFICADOR UNIVERSAL   =====
+        % =====================================
+        \clearpage
+        \subsection{Cuantificador Universal}
+
+            Se utiliza para afirmar que \textbf{todos} los elementos de un conjunto $A$ cumplen con una 
+            propiedad determinada $p(x)$.
+
+            \begin{equation}
+                \forall x \in A,\MiniSpace p(x)
+            \end{equation}
+
+            Es normal en matemáticas básicas escuchar frases como $p(a)$ para una $a$ cualquiera, esto es
+            simplemente otra forma de decir $\forall x ,\MiniSpace p(x)$.\\
+
+            Otra forma de escribir el cuantificador universal $\forall x \in A,\MiniSpace p(x)$ es
+            escribir $(x \in A) \linfire p(x)$
+
+
+
+        % =====================================
+        % ====  CUANTIFICADOR EXISTENCIAL  ====
+        % =====================================
+        \subsection{Cuantificador Existencial}
+
+            Se utiliza para afirmar que \textbf{existe al menos un} elemento de un conjunto $A$ que 
+            cumple con una propiedad determinada $p(x)$.
+
+            \begin{equation}
+                \exists x \in A,\MiniSpace p(x)
+            \end{equation}
+
+            Es normal en matemáticas básicas escuchar frases como $p(a)$ para una $a$ específica, esto es
+            simplemente otra forma de decir $\exists x, \MiniSpace p(x)$
+
+
+
+    % =====================================================
+    % =======   LEYES DE CUANTIFICADORES      =============
+    % =====================================================
+    \clearpage
+    \section{Leyes de Cuantificadores}
+                
+            Sean $p_{(x)}$ sentencias abierta lógica, $A$ un conjunto que opera sobre $p(x)$ donde $x$ son
+            elementos de $A$ y sea $T$ una tautología y sea $F$ una contradicción.
+
+            \begin{itemize}
+                \item
+                \textbf{Negación del Universal} \\
+                $\lnot (\forall x \in A,\MiniSpace p(x)) \lequal \exists x \in A,\MiniSpace \lnot p(x)$
+
+                \item
+                \textbf{Negación del Existencial} \\
+                $\lnot (\exists x \in A,\MiniSpace p(x)) \lequal \forall x \in A,\MiniSpace \lnot p(x)$
+
+                \item \textbf{Cambio de Variables} \\
+                        $p(a) \lequal (p(x) \land (x=a))$
+                        
+                \item \textbf{Cuantificadores sobre Proposiciones} \\
+                        $\exists x, p \lequal \forall x, p \lequal p$
+
+                \item \textbf{Leyes Conmutativas para Cuantificador Existencial}
+
+                    \begin{itemize}
+
+                        \item
+                        $\exists x, [p(x) \lor q(x)] \lequal \exists x, p(x) \lor \exists x, q(x)$
+
+                        \item
+                        $\exists x, [p(x) \land q(x)] \linfire \exists x, p(x) \land \exists x, q(x)$
+
+                    \end{itemize}
+
+                \item \textbf{Leyes Conmutativas para Cuantificador Universal}
+
+                    \begin{itemize}
+                        
+                        \item
+                        $\forall x, [p(x) \land q(x)] \lequal \forall x, p(x) \land \forall x, q(x)$
+
+                        \item
+                        $\forall x, p(x) \lor \forall x, q(x) \linfire \forall x, [p(x) \lor q(x)]$
+
+                    \end{itemize}
+                    
+            \end{itemize}
 
 
 

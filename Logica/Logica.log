@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  24 JUN 2017 01:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  25 JUN 2017 00:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -987,16 +987,65 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen261
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+\c@tracingmulticols=\count188
+\mult@box=\box56
+\multicol@leftmargin=\dimen262
+\c@unbalance=\count189
+\c@collectmore=\count190
+\doublecol@number=\count191
+\multicoltolerance=\count192
+\multicolpretolerance=\count193
+\full@width=\dimen263
+\page@free=\dimen264
+\premulticols=\dimen265
+\postmulticols=\dimen266
+\multicolsep=\skip71
+\multicolbaselineskip=\skip72
+\partial@page=\box57
+\last@line=\box58
+\maxbalancingoverflow=\dimen267
+\mult@rightbox=\box59
+\mult@grightbox=\box60
+\mult@gfirstbox=\box61
+\mult@firstbox=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\c@columnbadness=\count194
+\c@finalcolumnbadness=\count195
+\last@try=\dimen268
+\multicolovershoot=\dimen269
+\multicolundershoot=\dimen270
+\mult@nat@firstbox=\box80
+\colbreak@box=\box81
+\mc@col@check@num=\count196
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-\fancy@headwidth=\skip71
-\f@ncyO@elh=\skip72
-\f@ncyO@erh=\skip73
-\f@ncyO@olh=\skip74
-\f@ncyO@orh=\skip75
-\f@ncyO@elf=\skip76
-\f@ncyO@erf=\skip77
-\f@ncyO@olf=\skip78
-\f@ncyO@orf=\skip79
+\fancy@headwidth=\skip73
+\f@ncyO@elh=\skip74
+\f@ncyO@erh=\skip75
+\f@ncyO@olh=\skip76
+\f@ncyO@orh=\skip77
+\f@ncyO@elf=\skip78
+\f@ncyO@erf=\skip79
+\f@ncyO@olf=\skip80
+\f@ncyO@orf=\skip81
 )
 (./Logica.aux
 LaTeX Info: Redefining \. on input line 23.
@@ -1004,20 +1053,20 @@ LaTeX Info: Redefining \% on input line 23.
 )
 \openout1 = `Logica.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 110.
-LaTeX Font Info:    ... okay on input line 110.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 112.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1053,39 +1102,39 @@ LaTeX Font Info:    ... okay on input line 110.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring OFF on input line 110.
+\AtBeginShipoutBox=\box82
+Package hyperref Info: Link coloring OFF on input line 112.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count188
+\c@section@level=\count197
 )
-LaTeX Info: Redefining \ref on input line 110.
-LaTeX Info: Redefining \pageref on input line 110.
-LaTeX Info: Redefining \nameref on input line 110.
+LaTeX Info: Redefining \ref on input line 112.
+LaTeX Info: Redefining \pageref on input line 112.
+LaTeX Info: Redefining \nameref on input line 112.
 
 (./Logica.out) (./Logica.out)
 \@outlinefile=\write3
 \openout3 = `Logica.out'.
 
-LaTeX Info: Redefining \. on input line 110.
-LaTeX Info: Redefining \% on input line 110.
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count189
-\scratchdimen=\dimen262
-\scratchbox=\box57
-\nofMPsegments=\count190
-\nofMParguments=\count191
+\scratchcounter=\count198
+\scratchdimen=\dimen271
+\scratchbox=\box83
+\nofMPsegments=\count199
+\nofMParguments=\count266
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count192
-\MPscratchDim=\dimen263
-\MPnumerator=\count193
-\makeMPintoPDFobject=\count194
+\MPscratchCnt=\count267
+\MPscratchDim=\dimen272
+\MPnumerator=\count268
+\makeMPintoPDFobject=\count269
 \everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1102,7 +1151,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count195
+\c@lstlisting=\count270
 
 [1
 
@@ -1131,7 +1180,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.142 \clearpage
+l.144 \clearpage
                  [1
 
 ]
@@ -1140,158 +1189,266 @@ Cap\'{\i }tulo 1.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
-LaTeX Info: Redefining \. on input line 209.
-LaTeX Info: Redefining \% on input line 209.
-LaTeX Info: Redefining \. on input line 209.
-LaTeX Info: Redefining \% on input line 209.
+LaTeX Info: Redefining \. on input line 218.
+LaTeX Info: Redefining \% on input line 218.
+LaTeX Info: Redefining \. on input line 218.
+LaTeX Info: Redefining \% on input line 218.
 [3
 
 ]
-LaTeX Info: Redefining \. on input line 236.
-LaTeX Info: Redefining \% on input line 236.
-LaTeX Info: Redefining \. on input line 236.
-LaTeX Info: Redefining \% on input line 236.
+LaTeX Info: Redefining \. on input line 245.
+LaTeX Info: Redefining \% on input line 245.
+LaTeX Info: Redefining \. on input line 245.
+LaTeX Info: Redefining \% on input line 245.
  [4
 
 ]
-LaTeX Info: Redefining \. on input line 276.
-LaTeX Info: Redefining \% on input line 276.
-LaTeX Info: Redefining \. on input line 276.
-LaTeX Info: Redefining \% on input line 276.
+LaTeX Info: Redefining \. on input line 285.
+LaTeX Info: Redefining \% on input line 285.
+LaTeX Info: Redefining \. on input line 285.
+LaTeX Info: Redefining \% on input line 285.
  [5
 
 ]
-Overfull \hbox (13.31746pt too wide) in alignment at lines 282--293
+Overfull \hbox (13.31746pt too wide) in alignment at lines 291--302
  [] [] [] 
  []
 
 
-Overfull \hbox (213.22542pt too wide) in paragraph at lines 297--299
+Overfull \hbox (213.22542pt too wide) in paragraph at lines 306--308
 []|[]|| 
  []
 
 
-Overfull \hbox (213.22542pt too wide) in paragraph at lines 303--305
+Overfull \hbox (213.22542pt too wide) in paragraph at lines 312--314
 []|[]|| 
  []
 
 
-Overfull \hbox (213.22542pt too wide) in paragraph at lines 310--312
+Overfull \hbox (213.22542pt too wide) in paragraph at lines 319--321
 []|[]|| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
+Underfull \hbox (badness 10000) in paragraph at lines 338--340
 
  []
 
 
-Overfull \hbox (213.22542pt too wide) in paragraph at lines 316--331
+Overfull \hbox (213.22542pt too wide) in paragraph at lines 325--340
 []|[]|| 
  []
 
 
-Overfull \hbox (213.22542pt too wide) in paragraph at lines 335--339
+Underfull \hbox (badness 10000) in paragraph at lines 349--351
+
+ []
+
+
+Overfull \hbox (213.22542pt too wide) in paragraph at lines 344--352
 []|[]| 
  []
 
 
-Overfull \hbox (13.31746pt too wide) in alignment at lines 293--340
+Overfull \hbox (13.31746pt too wide) in alignment at lines 302--353
  [] [] [] 
  []
 
-LaTeX Info: Redefining \. on input line 345.
-LaTeX Info: Redefining \% on input line 345.
-LaTeX Info: Redefining \. on input line 345.
-LaTeX Info: Redefining \% on input line 345.
+LaTeX Info: Redefining \. on input line 358.
+LaTeX Info: Redefining \% on input line 358.
+LaTeX Info: Redefining \. on input line 358.
+LaTeX Info: Redefining \% on input line 358.
 [6
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
+Underfull \hbox (badness 10000) in paragraph at lines 381--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+Underfull \hbox (badness 10000) in paragraph at lines 402--404
 
  []
 
-LaTeX Info: Redefining \. on input line 417.
-LaTeX Info: Redefining \% on input line 417.
-LaTeX Info: Redefining \. on input line 417.
-LaTeX Info: Redefining \% on input line 417.
+LaTeX Info: Redefining \. on input line 424.
+LaTeX Info: Redefining \% on input line 424.
+LaTeX Info: Redefining \. on input line 424.
+LaTeX Info: Redefining \% on input line 424.
 [7
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 423--425
+Underfull \hbox (badness 10000) in paragraph at lines 430--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--438
+Underfull \hbox (badness 10000) in paragraph at lines 434--445
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 480.
-LaTeX Info: Redefining \. on input line 480.
-LaTeX Info: Redefining \% on input line 480.
-LaTeX Info: Redefining \. on input line 480.
-LaTeX Info: Redefining \% on input line 480.
+LaTeX Info: Redefining \. on input line 482.
+LaTeX Info: Redefining \% on input line 482.
+LaTeX Info: Redefining \. on input line 482.
+LaTeX Info: Redefining \% on input line 482.
 [8
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 480.
+LaTeX Info: Redefining \. on input line 523.
+LaTeX Info: Redefining \% on input line 523.
+LaTeX Info: Redefining \. on input line 523.
+LaTeX Info: Redefining \% on input line 523.
+ [9
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 534.
+
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 534.
+LaTeX Info: Redefining \. on input line 556.
+LaTeX Info: Redefining \% on input line 556.
+LaTeX Info: Redefining \. on input line 556.
+LaTeX Info: Redefining \% on input line 556.
+ [10
+
+]
+LaTeX Info: Redefining \. on input line 607.
+LaTeX Info: Redefining \% on input line 607.
+LaTeX Info: Redefining \. on input line 607.
+LaTeX Info: Redefining \% on input line 607.
+
+[11
+
+]
+Cap\'{\i }tulo 2.
+[12
+
+
+]
+LaTeX Info: Redefining \. on input line 650.
+LaTeX Info: Redefining \% on input line 650.
+LaTeX Info: Redefining \. on input line 650.
+LaTeX Info: Redefining \% on input line 650.
+ [13
+
+]
+LaTeX Info: Redefining \. on input line 694.
+LaTeX Info: Redefining \% on input line 694.
+LaTeX Info: Redefining \. on input line 694.
+LaTeX Info: Redefining \% on input line 694.
+ [14
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 697--698
+
+ []
+
+LaTeX Info: Redefining \. on input line 775.
+LaTeX Info: Redefining \% on input line 775.
+LaTeX Info: Redefining \. on input line 775.
+LaTeX Info: Redefining \% on input line 775.
+[15
+
+]
+LaTeX Info: Redefining \. on input line 850.
+LaTeX Info: Redefining \% on input line 850.
+LaTeX Info: Redefining \. on input line 850.
+LaTeX Info: Redefining \% on input line 850.
+ [16
+
+]
+Cap\'{\i }tulo 3.
+[17
+
+
+]
+LaTeX Info: Redefining \. on input line 892.
+LaTeX Info: Redefining \% on input line 892.
+LaTeX Info: Redefining \. on input line 892.
+LaTeX Info: Redefining \% on input line 892.
+ [18
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 902--904
+
+ []
+
+LaTeX Info: Redefining \. on input line 930.
+LaTeX Info: Redefining \% on input line 930.
+LaTeX Info: Redefining \. on input line 930.
+LaTeX Info: Redefining \% on input line 930.
+[19
+
+]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 956.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 982.
+LaTeX Info: Redefining \. on input line 982.
+LaTeX Info: Redefining \% on input line 982.
+LaTeX Info: Redefining \. on input line 982.
+LaTeX Info: Redefining \% on input line 982.
+ [20
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 982.
  (./Logica.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 480.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 480.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 982.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 982.
 Package rerunfilecheck Info: File `Logica.out' has not changed.
-(rerunfilecheck)             Checksum: 16B2D7B0E29C3AD96468DA53844B5C8A;539.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 480.
+(rerunfilecheck)             Checksum: 5C91F26E167DE6F33B24ED1639D2BBF1;1360.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 982.
  ) 
 Here is how much of TeX's memory you used:
- 18879 strings out of 493014
- 321521 string characters out of 6133351
- 410641 words of memory out of 5000000
- 22161 multiletter control sequences out of 15000+600000
+ 19052 strings out of 493014
+ 324023 string characters out of 6133351
+ 416168 words of memory out of 5000000
+ 22297 multiletter control sequences out of 15000+600000
  25903 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10485b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,12n,52p,10485b,577s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-</usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></
-usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/
-local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/loca
-l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/te
-xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texl
-ive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/
-2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on Logica.pdf (9 pages, 231118 bytes).
+</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texliv
+e/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/cm-super/sfxc1728.pfb>
+Output written on Logica.pdf (21 pages, 301844 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 170 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 384 PDF objects out of 1000 (max. 8388607)
+ 334 compressed objects within 4 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
