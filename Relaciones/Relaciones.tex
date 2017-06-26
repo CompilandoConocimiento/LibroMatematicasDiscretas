@@ -1,0 +1,349 @@
+% ****************************************************************************************
+% ************************     	RELACIONES Y FUNCIONES   	  ****************************
+% ****************************************************************************************
+
+
+% =======================================================
+% =======         HEADER FOR DOCUMENT        ============
+% =======================================================
+    % *********   DOCUMENT ITSELF   **************
+    \documentclass[12pt]{report}                                    %Type of docuemtn and size of font
+    \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
+    \usepackage{ifthen}                                             %Allow simple programming
+    \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
+    \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
+    \author{Oscar Andrés Rosas}                                     %Who I am
+
+    % *********   LANGUAJE AND UFT-8   *********
+    \usepackage[spanish]{babel}                                     %Please use spanish
+    \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
+    \usepackage[T1]{fontenc}                                        %Please use spanish
+
+    % *********   MATH AND HIS STYLE  *********
+    \usepackage{amsthm, amssymb, amsfonts, mathrsfs}                %Make math beautiful
+    \usepackage[fleqn]{amsmath}                                     %Please make equations left
+    \usepackage{centernot}                                          %Allow me to negate a symbol
+    \decimalpoint                                                   %Use decimal point
+
+    % *********   GRAPHICS AND IMAGES *********
+    \usepackage{graphicx}                                           %Allow to create graphics
+    \usepackage{wrapfig}                                            %Allow to create images
+    \graphicspath{ {Graphics/} }                                    %Where are the images :D
+
+    % *********   LISTS AND TABLES ***********
+    \usepackage{listings}                                           %We will be using code here
+    \usepackage[inline]{enumitem}                                   %We will need to enumarate
+    \usepackage{tasks}                                              %Horizontal lists
+    \usepackage{longtable}                                          %Lets make tables awesome
+    \usepackage{booktabs}                                           %Lets make tables awesome
+    \usepackage{tabularx}                                           %Lets make tables awesome
+    \usepackage{multirow}                                           %Lets make tables awesome
+    \usepackage{multicol}                                           %Create multicolumns
+
+    % *********   HEADERS AND FOOTERS ********
+    \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
+    \pagestyle{fancy}                                               %Lets make awesome headers/footers
+    \setlength{\headheight}{16pt}                                   %Top line
+    \setlength{\parskip}{0.5em}                                     %Top line
+    \renewcommand{\footrulewidth}{0.5pt}                            %Bottom line
+
+    \lhead{                                                         %Left Header
+        \hyperlink{chapter.\arabic{chapter}}                        %Make a link to the current chapter
+        {\normalsize{\textsc{\nouppercase{\leftmark}}}}             %And fot it put the name
+    }
+
+    \rhead{                                                         %Right Header
+        \hyperlink{section.\arabic{chapter}.\arabic{section}}       %Make a link to the current chapter
+            {\footnotesize{\textsc{\nouppercase{\rightmark}}}}      %And fot it put the name
+    }
+
+    \rfoot{\textsc{\small{\hyperref[sec:Index]{Ve al Índice}}}}    %This will always be a footer  
+
+    \fancyfoot[L]{                                                  %Algoritm for a changing footer
+        \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
+            {\href{https://compilandoconocimiento.com/yo/}          %DO THIS:
+                {\footnotesize                                      %Send the page
+                    {\textsc{Oscar Andrés Rosas}}}}                 %Send the page
+            {\href{https://compilandoconocimiento.com}              %ELSE DO THIS: 
+                {\footnotesize                                      %Send the author
+                    {\textsc{Compilando Conocimiento}}}}            %Send the author
+    }
+    
+    
+    
+% ========================================
+% ===========   COMMANDS    ==============
+% ========================================
+
+    % =====  GENERAL MATH  ==========
+    \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
+    \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
+    \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
+
+    % =====  LOGIC  ==================
+    \DeclareMathOperator \doublearrow {\leftrightarrow}             %Use: \doublearrow for a double arrow
+    \newcommand \lequal {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lequal for a double arrow
+    \newcommand \linfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lequal for a double arrow
+
+    % =====  NUMBER THEORY  ==========
+    \DeclareMathOperator \Naturals {\mathbb{N}}                     %Use: \Naturals por Notation
+    \DeclareMathOperator \Integers {\mathbb{Z}}                     %Use: \Integers por Notation
+    \DeclareMathOperator \Racionals{\mathbb{Q}}                     %Use: \Racionals por Notation
+    \DeclareMathOperator \Reals {\mathbb{R}}                        %Use: \Reals por Notation
+    \DeclareMathOperator \Complexs {\mathbb{C}}                     %Use: \Complex por Notation
+
+    % === LINEAL ALGEBRA & VECTORS ===
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+
+    \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
+        \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
+    }
+    \newcommand{\lVector}[1]{                                       %Use: \lVector {Matrix Notation} use a abs 
+        \ensuremath{\begin{vmatrix}#1\end{vmatrix}}                 %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
+    }
+    \newcommand{\Vector}[1]{                                        %Use: \Vector {Matrix Notation} no parentesis
+        \ensuremath{\begin{matrix}#1\end{matrix}}                   %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
+    }
+
+
+
+% =====================================================
+% ============     	  COVER PAGE	   ================
+% =====================================================
+\begin{document}
+\begin{titlepage}
+
+	\center
+	% ============ UNIVERSITY NAME AND DATA =========
+	\textbf{\textsc{\Large Proyecto Compilando Conocimiento}}\\[1.0cm] 
+	\textsc{\Large Matemáticas Discretas}\\[1.0cm] 
+
+	% ============ NAME OF THE DOCUMENT  ============
+	\rule{\linewidth}{0.5mm} \\[1.0cm]
+		{ \huge \bfseries Relaciones Binarias}\\[1.0cm] 
+	\rule{\linewidth}{0.5mm} \\[2.0cm]
+	
+	% ====== SEMI TITLE ==========
+	{\LARGE Una Pequeña Introducción}\\[7cm] 
+	
+	% ============  MY INFORMATION  =================
+	\begin{center} \large
+	\textbf{\textsc{Autor:}}\\
+	Rosas Hernandez Oscar Andres
+	\end{center}
+
+	\vfill
+
+\end{titlepage}
+
+% =====================================================
+% ========                INDICE              =========
+% =====================================================
+\tableofcontents{}
+\label{sec:Index}
+
+\clearpage
+
+
+
+
+
+
+
+
+
+
+% ======================================================================================
+% =============================       PRINCIPIOS BASICOS      ==========================
+% ======================================================================================
+\chapter{Relaciones}
+    \clearpage
+
+    % =====================================================
+    % ============           DEFINICION            ========
+    % =====================================================
+    \section{Definición}
+
+        Una relación $R$ entre dos conjuntos $A$ y $B$ es ante todo otro conjunto, una relación binaria es aquella
+        que es en el fondo un conjunto de pares ordenados (x,y) donde $x$ es un elemento de $A$, y así mismo
+        $y$ es un elemento de $B$.
+
+        Este nuevo conjunto $R$ nos muestra como es que esta relacionados algunos (o todos) elementos de $A$ con
+        otros elementos de $B$.
+
+
+
+        % =====================================
+        % =========   ¿QUE SON?     ===========
+        % =====================================
+        \subsection*{Definiciones Formales}
+
+            Una Relación $R: A \to B$ es un subconjunto de $A \times B$.
+
+            Solemos escribir la proposición $(x, y) \in R$ como $x R y$ para que se vea más bonito.
+
+            Solemos escribir la proposición $(x, y) \notin R$ como $x\centernot{R}y$ para que se vea más bonito.
+
+
+
+
+
+        % =====================================
+        % ======   DOMINIO E IMAGEN    ========
+        % =====================================
+        \clearpage
+        \subsection{Dominio e Imagen}
+            
+            \subsubsection*{Dominio}
+
+                El dominio $D_R$ de una relación $R : A \to B$ es simplemente el subconjunto de $A$ que
+                contiene a todos los elementos que están relacionados hacia algun elemento de $B$.
+
+                \begin{equation}
+                    D_R = \{ a \in A \Such \exists b, \MiniSpace aRb \}
+                \end{equation}
+
+            \subsubsection*{Imagen}
+
+                También le llaman Contradominio o Rango, la Imagen $I_R$ de una relación $R : A \to B$
+                es simplemente el subconjunto de $B$ que contiene a todos los elementos que están
+                relacionados mediante $R$.
+
+                \begin{equation}
+                    I_R = \{ b \in B \Such \exists a, \MiniSpace aRb \}
+                \end{equation}
+
+
+        % ========================================
+        % ==  REFLEXIVA, SIMETRICA Y TRANSITIVA ==
+        % ========================================
+        \clearpage
+        \subsection{Reflexiva, Simétrica y Transitiva}
+
+        Vamos a definir estas propiedades para una $R: A \to A$.
+            
+            \subsubsection*{Reflexiva}
+
+                Una relación reflexiva es aquella en la que cualquier a tiene que estar relacionada consigo
+                misma.
+
+                \begin{equation}
+                    \forall a \in A, \MiniSpace aRa
+                \end{equation}
+
+            \subsubsection*{Simétrica}
+
+                Una relación simétrica es aquella en la que cualquier si existe $aRb$ existe $bRa$.
+
+                \begin{equation}
+                    \forall a,b \in A,\MiniSpace (aRb) \to (bRa)
+                \end{equation}
+
+            \subsubsection*{Transitiva}
+
+                Una relación reflexiva es aquella en la que cualquier a tiene que estar relacionada consigo
+                misma.
+
+                \begin{equation}
+                    \forall a,b,c \in A, \MiniSpace ((aRb) \land (bRa)) \linfire (aRc)
+                \end{equation}
+
+
+            \subsubsection*{Relación de Equivalencia}
+                Decimos que $R$ es una relación de equivalencia si es que se cumplen las 3 propiedades antes vistas
+
+
+  
+
+% ======================================================================================
+% =============================          FUNCIONES            ==========================
+% ======================================================================================
+\chapter{Funciones}
+    \clearpage    
+
+
+
+    % =====================================================
+    % ============           DEFINICION            ========
+    % =====================================================
+    \section{Definición}
+
+        Las funciones son más que meras descripciones de relaciones numéricas. En un sentido más general,
+        las funciones pueden comparar y relacionar diferentes tipos de estructuras matemáticas.
+
+        Es probable que vea una función como un tipo de fórmula que describe una relación entre dos
+        (o más) cantidades.
+
+        % =====================================
+        % =========   ¿QUE SON?     ===========
+        % =====================================
+        \subsubsection*{Definición Formal}
+
+        Digamos que tenemos una relación $f$ entre dos conjuntos $A$ y $B$.
+        Decimos que esta relación es una función si y solo si:
+
+        \begin{itemize}
+            \item Todo los elementos del dominio tienen un valor asignado:
+                \begin{equation}
+                    \forall a \in A, \exists b \in B, \MiniSpace afb
+                \end{equation}
+
+            \item Si $aRb_1$ y $aRb_2$ entonces $b_1 = b_2$
+
+        \end{itemize}
+
+        Pero no es la única forma de definirlo, otra forma que una función es una relación que 
+        cumple con la propiedad de que para cada $a \in A$, la relación $f$ contiene exactamente
+        un par ordenado de la forma $(a,b) \in f$.
+
+        Ya que solo existe un par ordenado para cada $a \in A$, entonces solemos escribir 
+        $aRb$ como $f(a) = b$.
+
+
+
+
+
+
+
+    % =====================================================
+    % ============   DOMINIO E IMAGEN    ==================
+    % =====================================================
+    \clearpage
+    \section{Dominio e Imagen}
+        
+        \subsubsection*{Dominio}
+
+            El dominio $D_f$ de una función $f : A \to B$ es simplemente el conjunto de $A$.
+
+            Digo, esto se deduce de la definición, ya que es el conjunto de todas las posibles
+            entradas.
+
+        \subsubsection*{Rango}
+
+            El Rango de una función $f : A \to B$ es el conjunto de todas las posibles salidas
+            de la función.
+
+            \begin{equation}
+                \text{Rango}_f = \{ b \in B \Such (a,b) \in f \} = = \{ f(a) \Such a \in A \}
+            \end{equation}
+
+
+
+
+
+
+    % =====================================================
+    % ========   INYECTIVAS Y SUPRAYECTIVAS   =============
+    % =====================================================
+    \clearpage
+    \section{Inyectivas, Suprayectivas y Biyectivas}
+        
+
+
+
+
+
+
+
+
+\end{document}
