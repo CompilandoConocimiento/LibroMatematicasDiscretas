@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 JUN 2017 15:09
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 JUN 2017 14:34
+>>>>>>> origin/master
 =======
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  27 JUN 2017 14:34
 >>>>>>> origin/master
@@ -519,11 +523,14 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 Package: textcmds 2012/08/02 v2.00
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 (/usr/local/texlive/2016/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
 \c@cp@cntr=\count103
 \cp@tempcnt=\count104
 )
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amscls/amsthm.sty
@@ -574,6 +581,7 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 \inf@bad=\count105
 LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count106
@@ -582,6 +590,8 @@ LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count108
 \DOTSCASE@=\count109
 =======
+=======
+>>>>>>> origin/master
 \inf@bad=\count103
 LaTeX Info: Redefining \frac on input line 199.
 \uproot@=\count104
@@ -589,6 +599,9 @@ LaTeX Info: Redefining \frac on input line 199.
 LaTeX Info: Redefining \overline on input line 297.
 \classnum@=\count106
 \DOTSCASE@=\count107
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
@@ -598,6 +611,7 @@ LaTeX Info: Redefining \cdots on input line 518.
 \big@size=\dimen118
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+<<<<<<< HEAD
 <<<<<<< HEAD
 \macc@depth=\count110
 \c@MaxMatrixCols=\count111
@@ -609,6 +623,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \column@=\count115
 \maxfields@=\count116
 =======
+=======
+>>>>>>> origin/master
 \macc@depth=\count108
 \c@MaxMatrixCols=\count109
 \dotsspace@=\muskip11
@@ -618,6 +634,9 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \row@=\count112
 \column@=\count113
 \maxfields@=\count114
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 \andhelp@=\toks28
 \eqnshift@=\dimen119
@@ -653,7 +672,11 @@ Package graphics Info: Driver file: pdftex.def on input line 96.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 <<<<<<< HEAD
+<<<<<<< HEAD
 \Gread@gobject=\count117
+=======
+\Gread@gobject=\count115
+>>>>>>> origin/master
 =======
 \Gread@gobject=\count115
 >>>>>>> origin/master
@@ -665,7 +688,11 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 \wrapoverhang=\dimen127
 \WF@size=\dimen128
 <<<<<<< HEAD
+<<<<<<< HEAD
 \c@WF@wrappedlines=\count118
+=======
+\c@WF@wrappedlines=\count116
+>>>>>>> origin/master
 =======
 \c@WF@wrappedlines=\count116
 >>>>>>> origin/master
@@ -674,6 +701,7 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
+<<<<<<< HEAD
 <<<<<<< HEAD
 \lst@mode=\count119
 \lst@gtempboxa=\box29
@@ -687,6 +715,8 @@ Package: wrapfig 2003/01/31  v 3.6
 \lst@newlines=\count123
 \lst@lineno=\count124
 =======
+=======
+>>>>>>> origin/master
 \lst@mode=\count117
 \lst@gtempboxa=\box29
 \lst@token=\toks32
@@ -698,14 +728,22 @@ Package: wrapfig 2003/01/31  v 3.6
 \lst@width=\dimen131
 \lst@newlines=\count121
 \lst@lineno=\count122
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 \lst@maxwidth=\dimen132
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 <<<<<<< HEAD
+<<<<<<< HEAD
 \c@lstnumber=\count125
 \lst@skipnumbers=\count126
+=======
+\c@lstnumber=\count123
+\lst@skipnumbers=\count124
+>>>>>>> origin/master
 =======
 \c@lstnumber=\count123
 \lst@skipnumbers=\count124
@@ -724,7 +762,11 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@toks=\toks33
 \enit@inbox=\box31
 <<<<<<< HEAD
+<<<<<<< HEAD
 \enitdp@description=\count127
+=======
+\enitdp@description=\count125
+>>>>>>> origin/master
 =======
 \enitdp@description=\count125
 >>>>>>> origin/master
@@ -744,6 +786,7 @@ L3 Module: l3str 2016/03/24 v6441 L3 Strings
 L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
 L3 Module: l3int 2016/03/24 v6441 L3 Integers
 <<<<<<< HEAD
+<<<<<<< HEAD
 \c_max_int=\count128
 \l_tmpa_int=\count129
 \l_tmpb_int=\count130
@@ -753,6 +796,8 @@ L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
 L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
 \g__prg_map_int=\count133
 =======
+=======
+>>>>>>> origin/master
 \c_max_int=\count126
 \l_tmpa_int=\count127
 \l_tmpb_int=\count128
@@ -761,6 +806,9 @@ L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
 L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
 L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
 \g__prg_map_int=\count131
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
 L3 Module: l3token 2016/04/03 v6470 L3 Experimental token manipulation
@@ -768,17 +816,23 @@ L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
 L3 Module: l3msg 2016/03/26 v6464 L3 Messages
 L3 Module: l3file 2016/03/25 v6458 L3 File and I/O operations
 <<<<<<< HEAD
+<<<<<<< HEAD
 \l_iow_line_count_int=\count134
 \l__iow_target_count_int=\count135
 \l__iow_current_line_int=\count136
 \l__iow_current_word_int=\count137
 \l__iow_current_indentation_int=\count138
 =======
+=======
+>>>>>>> origin/master
 \l_iow_line_count_int=\count132
 \l__iow_target_count_int=\count133
 \l__iow_current_line_int=\count134
 \l__iow_current_word_int=\count135
 \l__iow_current_indentation_int=\count136
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \c_zero_dim=\dimen134
@@ -801,6 +855,7 @@ L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \g_tmpb_muskip=\muskip17
 L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
 <<<<<<< HEAD
+<<<<<<< HEAD
 \g__keyval_level_int=\count139
 \l_keys_choice_int=\count140
 L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
@@ -814,6 +869,8 @@ L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
 \c__fp_Bigg_middle_shift_int=\count148
 \c__fp_Bigg_trailing_shift_int=\count149
 =======
+=======
+>>>>>>> origin/master
 \g__keyval_level_int=\count137
 \l_keys_choice_int=\count138
 L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
@@ -826,6 +883,9 @@ L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
 \c__fp_Bigg_leading_shift_int=\count145
 \c__fp_Bigg_middle_shift_int=\count146
 \c__fp_Bigg_trailing_shift_int=\count147
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
 \c_empty_box=\box32
@@ -877,7 +937,11 @@ L3 Module: l3luatex 2016/03/26 v6465 L3 Experimental LuaTeX-specific functions
 (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2016/03/26 v6465 L3 Experimental driver: PDF mode
 <<<<<<< HEAD
+<<<<<<< HEAD
 \l__driver_color_stack_int=\count150
+=======
+\l__driver_color_stack_int=\count148
+>>>>>>> origin/master
 =======
 \l__driver_color_stack_int=\count148
 >>>>>>> origin/master
@@ -885,6 +949,7 @@ File: l3pdfmode.def 2016/03/26 v6465 L3 Experimental driver: PDF mode
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2016/05/18 v6512 L3 Experimental document command parser
+<<<<<<< HEAD
 <<<<<<< HEAD
 \l__xparse_current_arg_int=\count151
 \l__xparse_m_args_int=\count152
@@ -910,6 +975,8 @@ Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
 \num@segments=\count162
 \num@segmentsi=\count163
 =======
+=======
+>>>>>>> origin/master
 \l__xparse_current_arg_int=\count149
 \l__xparse_m_args_int=\count150
 \l__xparse_mandatory_args_int=\count151
@@ -933,6 +1000,9 @@ Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
 \@dotbox=\box48
 \num@segments=\count160
 \num@segmentsi=\count161
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 \@datafile=\read1
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/cntformats/cntformats.sty
@@ -941,7 +1011,11 @@ Package: cntformats 2014/07/20 v0.7 A different way to read counters. (CN)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
 <<<<<<< HEAD
+<<<<<<< HEAD
 \etb@tempcnta=\count164
+=======
+\etb@tempcnta=\count162
+>>>>>>> origin/master
 =======
 \etb@tempcnta=\count162
 >>>>>>> origin/master
@@ -966,9 +1040,15 @@ ode.tex
 \pgfopts@list@add@b@toks=\toks38
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 \c@cnltx@tmpa=\count165
 \c@cnltx@tmpb=\count166
 \c@cnltx@tmpc=\count167
+=======
+\c@cnltx@tmpa=\count163
+\c@cnltx@tmpb=\count164
+\c@cnltx@tmpc=\count165
+>>>>>>> origin/master
 =======
 \c@cnltx@tmpa=\count163
 \c@cnltx@tmpb=\count164
@@ -1003,7 +1083,11 @@ Package: xtemplate 2016/05/18 v6512 L3 Experimental prototype document function
 s
 \l__xtemplate_tmp_dim=\dimen171
 <<<<<<< HEAD
+<<<<<<< HEAD
 \l__xtemplate_tmp_int=\count168
+=======
+\l__xtemplate_tmp_int=\count166
+>>>>>>> origin/master
 =======
 \l__xtemplate_tmp_int=\count166
 >>>>>>> origin/master
@@ -1014,6 +1098,7 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 )
 Package: tasks 2016/05/04 v0.11a Horizontalcolumnedlists (CN)
 <<<<<<< HEAD
+<<<<<<< HEAD
 \l__tasks_depth_int=\count169
 \g__tasks_int=\count170
 \g__tasks_total_items_int=\count171
@@ -1023,6 +1108,8 @@ Package: tasks 2016/05/04 v0.11a Horizontalcolumnedlists (CN)
 \g__tasks_current_row_num_int=\count175
 \l__tasks_item_columns_int=\count176
 =======
+=======
+>>>>>>> origin/master
 \l__tasks_depth_int=\count167
 \g__tasks_int=\count168
 \g__tasks_total_items_int=\count169
@@ -1031,6 +1118,9 @@ Package: tasks 2016/05/04 v0.11a Horizontalcolumnedlists (CN)
 \g__tasks_current_col_num_int=\count172
 \g__tasks_current_row_num_int=\count173
 \l__tasks_item_columns_int=\count174
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 \l__tasks_item_indent_dim=\dimen172
 \l__tasks_item_default_indent_dim=\dimen173
@@ -1047,9 +1137,15 @@ Package: tasks 2016/05/04 v0.11a Horizontalcolumnedlists (CN)
 \l__tasks_item_coffin=\box49
 \l__tasks_label_coffin=\box50
 <<<<<<< HEAD
+<<<<<<< HEAD
 \c@task=\count177
 \l__tasks_tmpa_int=\count178
 \l__tasks_tmpb_int=\count179
+=======
+\c@task=\count175
+\l__tasks_tmpa_int=\count176
+\l__tasks_tmpb_int=\count177
+>>>>>>> origin/master
 =======
 \c@task=\count175
 \l__tasks_tmpa_int=\count176
@@ -1103,7 +1199,11 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTpre=\skip67
 \LTpost=\skip68
 <<<<<<< HEAD
+<<<<<<< HEAD
 \LTchunksize=\count180
+=======
+\LTchunksize=\count178
+>>>>>>> origin/master
 =======
 \LTchunksize=\count178
 >>>>>>> origin/master
@@ -1113,15 +1213,21 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LT@foot=\box54
 \LT@lastfoot=\box55
 <<<<<<< HEAD
+<<<<<<< HEAD
 \LT@cols=\count181
 \LT@rows=\count182
 \c@LT@tables=\count183
 \c@LT@chunks=\count184
 =======
+=======
+>>>>>>> origin/master
 \LT@cols=\count179
 \LT@rows=\count180
 \c@LT@tables=\count181
 \c@LT@chunks=\count182
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 \LT@p@ftn=\toks39
 )
@@ -1138,6 +1244,7 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulekern=\dimen193
 \defaultaddspace=\dimen194
 <<<<<<< HEAD
+<<<<<<< HEAD
 \@cmidla=\count185
 \@cmidlb=\count186
 \@aboverulesep=\dimen195
@@ -1145,12 +1252,17 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@thisruleclass=\count187
 \@lastruleclass=\count188
 =======
+=======
+>>>>>>> origin/master
 \@cmidla=\count183
 \@cmidlb=\count184
 \@aboverulesep=\dimen195
 \@belowrulesep=\dimen196
 \@thisruleclass=\count185
 \@lastruleclass=\count186
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 \@thisrulewidth=\dimen197
 )
@@ -1171,7 +1283,11 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \TX@target=\dimen259
 \TX@delta=\dimen260
 <<<<<<< HEAD
+<<<<<<< HEAD
 \TX@cols=\count189
+=======
+\TX@cols=\count187
+>>>>>>> origin/master
 =======
 \TX@cols=\count187
 >>>>>>> origin/master
@@ -1183,6 +1299,7 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 <<<<<<< HEAD
+<<<<<<< HEAD
 \c@tracingmulticols=\count190
 \mult@box=\box56
 \multicol@leftmargin=\dimen262
@@ -1192,6 +1309,8 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \multicoltolerance=\count194
 \multicolpretolerance=\count195
 =======
+=======
+>>>>>>> origin/master
 \c@tracingmulticols=\count188
 \mult@box=\box56
 \multicol@leftmargin=\dimen262
@@ -1200,6 +1319,9 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \doublecol@number=\count191
 \multicoltolerance=\count192
 \multicolpretolerance=\count193
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 \full@width=\dimen263
 \page@free=\dimen264
@@ -1232,8 +1354,13 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \@tempa=\box78
 \@tempa=\box79
 <<<<<<< HEAD
+<<<<<<< HEAD
 \c@columnbadness=\count196
 \c@finalcolumnbadness=\count197
+=======
+\c@columnbadness=\count194
+\c@finalcolumnbadness=\count195
+>>>>>>> origin/master
 =======
 \c@columnbadness=\count194
 \c@finalcolumnbadness=\count195
@@ -1244,7 +1371,11 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \mult@nat@firstbox=\box80
 \colbreak@box=\box81
 <<<<<<< HEAD
+<<<<<<< HEAD
 \mc@col@check@num=\count198
+=======
+\mc@col@check@num=\count196
+>>>>>>> origin/master
 =======
 \mc@col@check@num=\count196
 >>>>>>> origin/master
@@ -1267,6 +1398,7 @@ LaTeX Info: Redefining \% on input line 23.
 \openout1 = `TeoriaDeNumeros.aux'.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
 LaTeX Font Info:    ... okay on input line 124.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
@@ -1282,6 +1414,8 @@ LaTeX Font Info:    ... okay on input line 124.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 124.
 LaTeX Font Info:    ... okay on input line 124.
 =======
+=======
+>>>>>>> origin/master
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
 LaTeX Font Info:    ... okay on input line 117.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
@@ -1296,6 +1430,9 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
 LaTeX Font Info:    ... okay on input line 117.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
 LaTeX Font Info:    ... okay on input line 117.
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 
 *geometry* driver: auto-detecting
@@ -1334,7 +1471,11 @@ LaTeX Font Info:    ... okay on input line 117.
 
 \AtBeginShipoutBox=\box82
 <<<<<<< HEAD
+<<<<<<< HEAD
 Package hyperref Info: Link coloring OFF on input line 124.
+=======
+Package hyperref Info: Link coloring OFF on input line 117.
+>>>>>>> origin/master
 =======
 Package hyperref Info: Link coloring OFF on input line 117.
 >>>>>>> origin/master
@@ -1345,23 +1486,30 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 <<<<<<< HEAD
+<<<<<<< HEAD
 \c@section@level=\count199
 )
 LaTeX Info: Redefining \ref on input line 124.
 LaTeX Info: Redefining \pageref on input line 124.
 LaTeX Info: Redefining \nameref on input line 124.
 =======
+=======
+>>>>>>> origin/master
 \c@section@level=\count197
 )
 LaTeX Info: Redefining \ref on input line 117.
 LaTeX Info: Redefining \pageref on input line 117.
 LaTeX Info: Redefining \nameref on input line 117.
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 
 (./TeoriaDeNumeros.out) (./TeoriaDeNumeros.out)
 \@outlinefile=\write3
 \openout3 = `TeoriaDeNumeros.out'.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 LaTeX Info: Redefining \. on input line 124.
 LaTeX Info: Redefining \% on input line 124.
@@ -1379,6 +1527,8 @@ LaTeX Info: Redefining \% on input line 124.
 \MPnumerator=\count270
 \makeMPintoPDFobject=\count271
 =======
+=======
+>>>>>>> origin/master
 LaTeX Info: Redefining \. on input line 117.
 LaTeX Info: Redefining \% on input line 117.
 
@@ -1394,6 +1544,9 @@ LaTeX Info: Redefining \% on input line 117.
 \MPscratchDim=\dimen272
 \MPnumerator=\count268
 \makeMPintoPDFobject=\count269
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 \everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -1412,7 +1565,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 <<<<<<< HEAD
+<<<<<<< HEAD
 \c@lstlisting=\count272
+=======
+\c@lstlisting=\count270
+>>>>>>> origin/master
 =======
 \c@lstlisting=\count270
 >>>>>>> origin/master
@@ -1446,7 +1603,11 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 <<<<<<< HEAD
+<<<<<<< HEAD
 l.156 \clearpage
+=======
+l.149 \clearpage
+>>>>>>> origin/master
 =======
 l.149 \clearpage
 >>>>>>> origin/master
@@ -1459,6 +1620,7 @@ Cap\'{\i }tulo 1.
 
 ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
@@ -1468,6 +1630,8 @@ LaTeX Info: Redefining \% on input line 246.
 LaTeX Info: Redefining \. on input line 246.
 LaTeX Info: Redefining \% on input line 246.
 =======
+=======
+>>>>>>> origin/master
 Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
@@ -1476,6 +1640,9 @@ LaTeX Info: Redefining \. on input line 222.
 LaTeX Info: Redefining \% on input line 222.
 LaTeX Info: Redefining \. on input line 222.
 LaTeX Info: Redefining \% on input line 222.
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 [3
 
@@ -1484,6 +1651,7 @@ Cap\'{\i }tulo 2.
 [4
 
 ]
+<<<<<<< HEAD
 <<<<<<< HEAD
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
 LaTeX Info: Redefining \. on input line 281.
@@ -1495,6 +1663,8 @@ LaTeX Info: Redefining \% on input line 281.
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
 =======
+=======
+>>>>>>> origin/master
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
 LaTeX Info: Redefining \. on input line 257.
 LaTeX Info: Redefining \% on input line 257.
@@ -1504,11 +1674,15 @@ LaTeX Info: Redefining \% on input line 257.
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
  (./TeoriaDeNumeros.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
@@ -1552,6 +1726,8 @@ PDF statistics:
  159 PDF objects out of 1000 (max. 8388607)
  127 compressed objects within 2 object streams
 =======
+=======
+>>>>>>> origin/master
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
 Package rerunfilecheck Info: File `TeoriaDeNumeros.out' has not changed.
@@ -1589,6 +1765,9 @@ Output written on TeoriaDeNumeros.pdf (6 pages, 195893 bytes).
 PDF statistics:
  143 PDF objects out of 1000 (max. 8388607)
  115 compressed objects within 2 object streams
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
  15 named destinations out of 1000 (max. 500000)
  33 words of extra memory for PDF output out of 10000 (max. 10000000)
