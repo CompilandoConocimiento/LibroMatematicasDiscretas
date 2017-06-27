@@ -19,13 +19,7 @@
     \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
     \usepackage[T1]{fontenc}                                        %Please use spanish
     \usepackage{textcmds}                                           %Allow us to use quoutes
-<<<<<<< HEAD
-<<<<<<< HEAD
     \usepackage{changepage}                                         %Allow us to use identate paragraphs
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
 
     % *********   MATH AND HIS STYLE  *********
     \usepackage{amsthm, amssymb, amsfonts, mathrsfs}                %Make math beautiful
@@ -85,8 +79,6 @@
 
     % =====  GENERAL TEXT  ==========
     \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
-<<<<<<< HEAD
-<<<<<<< HEAD
     \newenvironment{Indentation}[1][0.75em]                         %Use: \begin{Inde...}[Num]...\end{Inde...}
     {\begin{adjustwidth}{#1}{}}                                     %If you dont put nothing i will use 0.75 em
     {\end{adjustwidth}}                                             %This indentate a paragraph
@@ -94,12 +86,6 @@
     {\begin{adjustwidth}{#1}{}\begin{footnotesize}}                 %footnotesize size of letter by default
     {\end{footnotesize}\end{adjustwidth}}                           %that's it
         
-=======
-
->>>>>>> origin/master
-=======
-
->>>>>>> origin/master
     % =====  GENERAL MATH  ==========
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
     \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
@@ -224,33 +210,25 @@
                 \item Si $b|a$ y $b \neq 0$ entonces $q$ es único.
 
                 \item Si $b|a$ y $a \neq 0$ entonces $|b| \leq |a|$.
-<<<<<<< HEAD
-<<<<<<< HEAD
-                \begin{SmallIndentation}[1em]
-                    \textbf{Demostración}:
 
-                    Supongamos entonces que $b$ divide a $a$ y que $a \neq 0$, por lo tanto
-                    la frase $a = bq$ nos da mucha información, pues obliga a que $b$ y $q$
-                    no sean ninguno $0$, entonces tenemos que $a = bq$ donde $b \neq 0$ y 
-                    $q \neq 0$.
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
 
-                    Luego ya que no son 0, tenemos que $|q| \geq 1$ y $|b| \geq 1$, ya que sabemos
-                    como funcionan los números enteros tenemos que sin importar cuanto valgan $q$ y $b$
-                    se cumple que $|b||q| \geq |b|$ esto es lo mismo que $|bq| \geq |b|$ y sabemos que
-                    $a = bq$, por lo tanto tenemos que $|a| \geq |b|$.
+                        Supongamos entonces que $b$ divide a $a$ y que $a \neq 0$, por lo tanto
+                        la frase $a = bq$ nos da mucha información, pues obliga a que $b$ y $q$
+                        no sean ninguno $0$, entonces tenemos que $a = bq$ donde $b \neq 0$ y 
+                        $q \neq 0$.
 
-                    Esto es lo mismo que $|b| \leq |a|$
+                        Luego ya que no son 0, tenemos que $|q| \geq 1$ y $|b| \geq 1$, ya que sabemos
+                        como funcionan los números enteros tenemos que sin importar cuanto valgan $q$ y $b$
+                        se cumple que $|b||q| \geq |b|$ esto es lo mismo que $|bq| \geq |b|$ y sabemos que
+                        $a = bq$, por lo tanto tenemos que $|a| \geq |b|$.
 
-                \end{SmallIndentation}
+                        Esto es lo mismo que $|b| \leq |a|$
 
-=======
+                    \end{SmallIndentation}
 
-                
->>>>>>> origin/master
-=======
-
-                
->>>>>>> origin/master
             \end{itemize}
                 
 
