@@ -1,0 +1,259 @@
+% ****************************************************************************************
+% ************************     	RELACIONES Y FUNCIONES   	  ****************************
+% ****************************************************************************************
+
+
+% =======================================================
+% =======         HEADER FOR DOCUMENT        ============
+% =======================================================
+    % *********   DOCUMENT ITSELF   **************
+    \documentclass[12pt]{report}                                    %Type of docuemtn and size of font
+    \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
+    \usepackage{ifthen}                                             %Allow simple programming
+    \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
+    \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
+    \author{Oscar Andrés Rosas}                                     %Who I am
+
+    % *********   LANGUAJE AND UFT-8   *********
+    \usepackage[spanish]{babel}                                     %Please use spanish
+    \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
+    \usepackage[T1]{fontenc}                                        %Please use spanish
+    \usepackage{textcmds}                                           %Allow us to use quoutes
+
+    % *********   MATH AND HIS STYLE  *********
+    \usepackage{amsthm, amssymb, amsfonts, mathrsfs}                %Make math beautiful
+    \usepackage[fleqn]{amsmath}                                     %Please make equations left
+    \usepackage{centernot}                                          %Allow me to negate a symbol
+    \decimalpoint                                                   %Use decimal point
+
+    % *********   GRAPHICS AND IMAGES *********
+    \usepackage{graphicx}                                           %Allow to create graphics
+    \usepackage{wrapfig}                                            %Allow to create images
+    \graphicspath{ {Graphics/} }                                    %Where are the images :D
+
+    % *********   LISTS AND TABLES ***********
+    \usepackage{listings}                                           %We will be using code here
+    \usepackage[inline]{enumitem}                                   %We will need to enumarate
+    \usepackage{tasks}                                              %Horizontal lists
+    \usepackage{longtable}                                          %Lets make tables awesome
+    \usepackage{booktabs}                                           %Lets make tables awesome
+    \usepackage{tabularx}                                           %Lets make tables awesome
+    \usepackage{multirow}                                           %Lets make tables awesome
+    \usepackage{multicol}                                           %Create multicolumns
+
+    % *********   HEADERS AND FOOTERS ********
+    \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
+    \pagestyle{fancy}                                               %Lets make awesome headers/footers
+    \setlength{\headheight}{16pt}                                   %Top line
+    \setlength{\parskip}{0.5em}                                     %Top line
+    \renewcommand{\footrulewidth}{0.5pt}                            %Bottom line
+
+    \lhead{                                                         %Left Header
+        \hyperlink{chapter.\arabic{chapter}}                        %Make a link to the current chapter
+        {\normalsize{\textsc{\nouppercase{\leftmark}}}}             %And fot it put the name
+    }
+
+    \rhead{                                                         %Right Header
+        \hyperlink{section.\arabic{chapter}.\arabic{section}}       %Make a link to the current chapter
+            {\footnotesize{\textsc{\nouppercase{\rightmark}}}}      %And fot it put the name
+    }
+
+    \rfoot{\textsc{\small{\hyperref[sec:Index]{Ve al Índice}}}}    %This will always be a footer  
+
+    \fancyfoot[L]{                                                  %Algoritm for a changing footer
+        \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
+            {\href{https://compilandoconocimiento.com/yo/}          %DO THIS:
+                {\footnotesize                                      %Send the page
+                    {\textsc{Oscar Andrés Rosas}}}}                 %Send the page
+            {\href{https://compilandoconocimiento.com}              %ELSE DO THIS: 
+                {\footnotesize                                      %Send the author
+                    {\textsc{Compilando Conocimiento}}}}            %Send the author
+    }
+    
+    
+    
+% ========================================
+% ===========   COMMANDS    ==============
+% ========================================
+
+    % =====  GENERAL TEXT  ==========
+    \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
+
+    % =====  GENERAL MATH  ==========
+    \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
+    \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
+    \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
+
+    % =====  LOGIC  ==================
+    \DeclareMathOperator \doublearrow {\leftrightarrow}             %Use: \doublearrow for a double arrow
+    \newcommand \lequal {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lequal for a double arrow
+    \newcommand \linfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lequal for a double arrow
+
+    % =====  NUMBER THEORY  ==========
+    \DeclareMathOperator \Naturals {\mathbb{N}}                     %Use: \Naturals por Notation
+    \DeclareMathOperator \Integers {\mathbb{Z}}                     %Use: \Integers por Notation
+    \DeclareMathOperator \Racionals{\mathbb{Q}}                     %Use: \Racionals por Notation
+    \DeclareMathOperator \Reals {\mathbb{R}}                        %Use: \Reals por Notation
+    \DeclareMathOperator \Complexs {\mathbb{C}}                     %Use: \Complex por Notation
+
+    % === LINEAL ALGEBRA & VECTORS ===
+    \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+
+    \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
+        \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
+    }
+    \newcommand{\lVector}[1]{                                       %Use: \lVector {Matrix Notation} use a abs 
+        \ensuremath{\begin{vmatrix}#1\end{vmatrix}}                 %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
+    }
+    \newcommand{\Vector}[1]{                                        %Use: \Vector {Matrix Notation} no parentesis
+        \ensuremath{\begin{matrix}#1\end{matrix}}                   %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
+    }
+
+
+
+% =====================================================
+% ============     	  COVER PAGE	   ================
+% =====================================================
+\begin{document}
+\begin{titlepage}
+
+	\center
+	% ============ UNIVERSITY NAME AND DATA =========
+	\textbf{\textsc{\Large Proyecto Compilando Conocimiento}}\\[1.0cm] 
+	\textsc{\Large Matemáticas Discretas}\\[1.0cm] 
+
+	% ============ NAME OF THE DOCUMENT  ============
+	\rule{\linewidth}{0.5mm} \\[1.0cm]
+		{ \huge \bfseries Teoría de Números}\\[1.0cm] 
+	\rule{\linewidth}{0.5mm} \\[2.0cm]
+	
+	% ====== SEMI TITLE ==========
+	{\LARGE Una Pequeña Introducción}\\[7cm] 
+	
+	% ============  MY INFORMATION  =================
+	\begin{center} \large
+	\textbf{\textsc{Autor:}}\\
+	Rosas Hernandez Oscar Andres
+	\end{center}
+
+	\vfill
+
+\end{titlepage}
+
+% =====================================================
+% ========                INDICE              =========
+% =====================================================
+\tableofcontents{}
+\label{sec:Index}
+
+\clearpage
+
+
+
+
+
+
+
+
+
+
+% ======================================================================================
+% ===========================    ENTEROS Y NATURALES          ==========================
+% ======================================================================================
+\chapter{Enteros y Naturales}
+    \clearpage
+
+    % =====================================================
+    % ============        DIVISIBILIDAD            ========
+    % =====================================================
+    \section{Divisibilidad}
+
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
+
+        Dados dos números cualquiera $a, b \in \Integers$. Decimos que la proposición
+        \textbf{\Quote{b} divide a \Quote{a}} $b|a$ es verdad si y solo si 
+        $\exists q \in \Integers, \MiniSpace a = bq$.
+
+        % ==================================
+        % =========   ALTERNA     ==========
+        % ==================================
+        \subsection*{Definición Alterna}
+        Veamos que lo que de verdad nos estan preguntando si es que $\frac{a}{b} \in \Integers$.
+
+        Ya que de ser así eso quiere decir que podemos escribir a $a$ como $a = bq$.
+        Y con esto logramos ver que $\frac{bq}{b} = q$ y habiamos dicho que $q \in \Integers$.
+
+        Por lo tanto podemos resumir esto en que:
+        \Quote{a divide a b si y solo si es que $\frac{a}{b}$ continua estando en los enteros}
+        \begin{equation*}
+            b | a \lequal \frac{a}{b} \in \Integers
+        \end{equation*}\\[1.0em]
+
+
+
+        % ==================================
+        % ======   IMPORTANTES     =========
+        % ==================================
+        \subsection*{Ideas Imporantes}
+
+            \begin{itemize}
+                \item Si $b|a$ y $b \neq 0$ entonces $q$ es único.
+
+                \item Si $b|a$ y $a \neq 0$ entonces $|b| \leq |a|$.
+
+                
+            \end{itemize}
+                
+
+
+
+
+
+
+
+
+
+
+
+% ======================================================================================
+% =============================         COMBINATORIA          ==========================
+% ======================================================================================
+\chapter{Combinatoria}
+    \clearpage
+
+    % =====================================================
+    % ============           DEFINICION            ========
+    % =====================================================
+    \section{Definición}
+
+        Una relación $R$ entre dos conjuntos $A$ y $B$ es ante todo otro conjunto, una relación binaria es aquella
+        que es en el fondo un conjunto de pares ordenados (x,y) donde $x$ es un elemento de $A$, y así mismo
+        $y$ es un elemento de $B$.
+
+        Este nuevo conjunto $R$ nos muestra como es que esta relacionados algunos (o todos) elementos de $A$ con
+        otros elementos de $B$.
+
+
+
+        % =====================================
+        % =========   ¿QUE SON?     ===========
+        % =====================================
+        \subsection*{Definiciones Formales}
+
+            Una Relación $R: A \to B$ es un subconjunto de $A \times B$.
+
+            Solemos escribir la proposición $(x, y) \in R$ como $x R y$ para que se vea más bonito.
+
+            Solemos escribir la proposición $(x, y) \notin R$ como $x\centernot{R}y$ para que se vea más bonito.
+
+
+
+
+
+
+
+
+\end{document}
