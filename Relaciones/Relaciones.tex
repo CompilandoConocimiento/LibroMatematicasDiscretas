@@ -18,6 +18,7 @@
     \usepackage[spanish]{babel}                                     %Please use spanish
     \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
     \usepackage[T1]{fontenc}                                        %Please use spanish
+    \usepackage{textcmds}                                           %Allow us to use quoutes
 
     % *********   MATH AND HIS STYLE  *********
     \usepackage{amsthm, amssymb, amsfonts, mathrsfs}                %Make math beautiful
@@ -74,6 +75,9 @@
 % ========================================
 % ===========   COMMANDS    ==============
 % ========================================
+
+    % =====  GENERAL TEXT  ==========
+    \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
 
     % =====  GENERAL MATH  ==========
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
@@ -188,72 +192,161 @@
 
 
 
-        % =====================================
-        % ======   DOMINIO E IMAGEN    ========
-        % =====================================
-        \clearpage
-        \subsection{Dominio e Imagen}
+    % =====================================================
+    % ==============   DOMINIO E IMAGEN    ================
+    % =====================================================
+    \clearpage
+    \section{Dominio, Contradominio e Imagen}
             
-            \subsubsection*{Dominio}
+        \subsection*{Dominio}
 
-                El dominio $D_R$ de una relación $R : A \to B$ es simplemente el subconjunto de $A$ que
-                contiene a todos los elementos que están relacionados hacia algun elemento de $B$.
+            El dominio $D_R$ de una relación $R : A \to B$ es simplemente el subconjunto de $A$ que
+            contiene a todos los elementos que están relacionados hacia algun elemento de $B$.
 
-                \begin{equation}
-                    D_R = \{ a \in A \Such \exists b, \MiniSpace aRb \}
-                \end{equation}
+            \begin{equation}
+                D_R = \{ a \in A \Such \exists b, \MiniSpace aRb \}
+            \end{equation}
 
-            \subsubsection*{Imagen}
+        \subsection*{Imagen}
 
-                También le llaman Contradominio o Rango, la Imagen $I_R$ de una relación $R : A \to B$
-                es simplemente el subconjunto de $B$ que contiene a todos los elementos que están
-                relacionados mediante $R$.
+            También le llama Rango, la Imagen $I_R$ de una relación $R : A \to B$
+            es simplemente el subconjunto de $B$ que contiene a todos los elementos que están
+            relacionados mediante $R$.
 
-                \begin{equation}
-                    I_R = \{ b \in B \Such \exists a, \MiniSpace aRb \}
-                \end{equation}
+            \begin{equation}
+                I_R = \{ b \in B \Such \exists a, \MiniSpace aRb \}
+            \end{equation}
 
 
-        % ========================================
-        % ==  REFLEXIVA, SIMETRICA Y TRANSITIVA ==
-        % ========================================
-        \clearpage
-        \subsection{Reflexiva, Simétrica y Transitiva}
+
+
+    % =====================================================
+    % ========         RELACION INVERSA        ============
+    % =====================================================
+    \clearpage
+    \section{Relación Inversa}
+
+        Una relación inversa es bastante fácil de definir:
+
+        \begin{equation}
+            R^{-1} = \{ (b, a) \in (B \times A) \Such (a, b) \in R \}
+        \end{equation}
+
+
+
+
+
+    % ====================================================
+    % ========   REFLEXIVA, SIMETRICA Y TRANSITIVA   =====
+    % ====================================================
+    \clearpage
+    \section{Reflexiva, Simétrica y Transitiva}
 
         Vamos a definir estas propiedades para una $R: A \to A$.
             
-            \subsubsection*{Reflexiva}
+        % =============================
+        % =====     REFLEXIVA     =====
+        % =============================
+        \subsection{Reflexiva}
 
-                Una relación reflexiva es aquella en la que cualquier a tiene que estar relacionada consigo
-                misma.
+            Una relación reflexiva es aquella en la que cualquier $a$ tiene que estar relacionada
+            consigo misma.
 
-                \begin{equation}
-                    \forall a \in A, \MiniSpace aRa
-                \end{equation}
-
-            \subsubsection*{Simétrica}
-
-                Una relación simétrica es aquella en la que cualquier si existe $aRb$ existe $bRa$.
-
-                \begin{equation}
-                    \forall a,b \in A,\MiniSpace (aRb) \to (bRa)
-                \end{equation}
-
-            \subsubsection*{Transitiva}
-
-                Una relación reflexiva es aquella en la que cualquier a tiene que estar relacionada consigo
-                misma.
-
-                \begin{equation}
-                    \forall a,b,c \in A, \MiniSpace ((aRb) \land (bRa)) \linfire (aRc)
-                \end{equation}
+            \begin{equation}
+                \forall a \in A, \MiniSpace aRa
+            \end{equation}
 
 
-            \subsubsection*{Relación de Equivalencia}
-                Decimos que $R$ es una relación de equivalencia si es que se cumplen las 3 propiedades antes vistas
+        \subsection*{Cerradura Reflexiva}
+
+            Si te das cuenta la relación mas sencilla que es simétrica es bastante simple:
+            \begin{equation}
+                Id_A = \{ (a, a) \Such a \in A \}
+            \end{equation}
+
+
+            La cerradura reflexiva $Cl_R(R)$ de una relación $R$ es una relación que cumple con:
+
+            \begin{itemize}
+                \item Es reflexiva: $Cl_R(R)$ es reflexiva. 
+                \item R esta contenida en ella: $R \subseteq Cl_R(R)$
+                \item $Cl_R(R)$ es la relación mas pequeña posible: 
+                Si es que $S$ es reflexiva y $R \subseteq S$ entonces $Cl_R(R) \subseteq S$
+            \end{itemize}
+
+
+
+            De hecho si te das cuenta es muy sencillo encontrarla, pues
+            $Cl_R(R) = R \cup Id_A$.
+
+
+
+
+        % =============================
+        % =====     SIMETRICA     =====
+        % =============================
+        \clearpage
+        \subsection{Simétrica}
+
+            Una relación simétrica es aquella en la que cualquier si existe $aRb$ existe $bRa$.
+
+            \begin{equation}
+                \forall a,b \in A,\MiniSpace (aRb) \to (bRa)
+            \end{equation}
+
+
+            La cerradura simétrica $Cl_S(R)$ de una relación $R$ es una relación que cumple con:
+
+            \begin{itemize}
+                \item Es simétrica: $Cl_S(R)$ es simétrica. 
+                \item R esta contenida en ella: $R \subseteq Cl_S(R)$
+                \item $Cl_S(R)$ es la relación mas pequeña posible: 
+                Si es que $S$ es simétrica y $R \subseteq S$ entonces $Cl_S(R) \subseteq S$
+            \end{itemize}
+
+
+
+            De hecho si te das cuenta es muy sencillo encontrarla, pues
+            $Cl_S(R) = R \cup R^{-1}$.
+
+
+
+        % =============================
+        % =====     TRANSITIVA    =====
+        % =============================
+        \clearpage
+        \subsection{Transitiva}
+
+            Una relación transitiva es aquella en la que cualquier a tiene que estar relacionada consigo
+            misma.
+
+            \begin{equation}
+                \forall a,b,c \in A, \MiniSpace ((aRb) \land (bRa)) \linfire (aRc)
+            \end{equation}
+
+            La cerradura transitiva $Cl_T(R)$ de una relación $R$ es una relación que cumple con:
+
+            \begin{itemize}
+                \item Es transitiva: $Cl_T(R)$ es transitiva. 
+                \item R esta contenida en ella: $R \subseteq Cl_T(R)$
+                \item $Cl_T(R)$ es la relación mas pequeña posible: 
+                Si es que $S$ es transitiva y $R \subseteq S$ entonces $Cl_T(R) \subseteq S$
+            \end{itemize}
+
+
+        % =============================
+        % =====     EQUIVALENCIA  =====
+        % =============================
+        \clearpage
+        \subsection{Relación de Equivalencia}
+            Decimos que $R$ es una relación de equivalencia si es que se cumplen las 3 propiedades antes vistas
 
 
   
+
+
+
+
 
 % ======================================================================================
 % =============================          FUNCIONES            ==========================
@@ -273,6 +366,9 @@
 
         Es probable que vea una función como un tipo de fórmula que describe una relación entre dos
         (o más) cantidades.
+
+        Podemos definirlas de una manera informal como aquellas relaciones donde cada elemento de $A$ 
+        esta involucrado solo una vez en la relación.
 
         % =====================================
         % =========   ¿QUE SON?     ===========
@@ -318,9 +414,9 @@
             Digo, esto se deduce de la definición, ya que es el conjunto de todas las posibles
             entradas.
 
-        \subsubsection*{Rango}
+        \subsubsection*{Imagen}
 
-            El Rango de una función $f : A \to B$ es el conjunto de todas las posibles salidas
+            El Rango ó Imagen de una función $f : A \to B$ es el conjunto de todas las posibles salidas
             de la función.
 
             \begin{equation}
@@ -337,12 +433,167 @@
     % =====================================================
     \clearpage
     \section{Inyectivas, Suprayectivas y Biyectivas}
-        
+
+        \subsection{Biyectiva}
+
+            Son funciones muy especiales, son aquellas en las tanto son inyectivas como suprayectivas.
+            Pero veamos mas a fondo que es eso de que una función sea alguna de estas cosas.
+
+
+        \subsection{Funciones Inyectivas}
+
+            \Quote{Una función es aquella en la que una línea horizontal NUNCA toca más de un
+            punto de la función}.
+
+            Una función es inyectiva si a cada valor del conjunto dominio le corresponde un valor
+            distinto en el conjunto imágen, es decir en el que es imposible que la función mande
+            dos valores al mismo valor en $B$.
+
+            Es decir si es que es imposible que $f(a_1) = b$ y que también $f(a_2) = b$.
+
+            \begin{equation}
+               \forall x, y \in A, \MiniSpace (x \neq y) \linfire (f(x) \neq f(y))
+            \end{equation}
+
+
+            \subsection*{Demostraciones}
+            
+            Para lograr demostrar que una $f$ es inyectiva tenemos que demostrar que para
+            cualquiera combinación de elementos $x, y \in A$ se cumple que el hecho de que
+            sean diferentes infiere a que $f(x) \neq f(y)$.
+
+            \begin{itemize}
+                \item 
+                    \textbf{Demostración Directa}:
+
+                    Supón que $x, y \in A$ y que $x \neq y$
+                    \\
+                    $\cdots$
+                    \\
+                    Por lo tanto $f(x) \neq f(y)$
+
+                \item 
+                    \textbf{ContraPositiva}:
+
+                    Supón que $x, y \in A$ y que $f(x) = f(y)$
+                    \\
+                    $\cdots$
+                    \\
+                    Por lo tanto $x = y$
+
+            \end{itemize}
+
+
+        \clearpage
+        \subsection{Suprayectivas}
+
+            \Quote{Una función es aquella en la que una línea horizontal SIEMPRE toca mínimo          
+            punto de la función}.
+
+            Son funciones en las que cada elemento del rango tiene un element o en A.
+            Una función es suprayectiva si está aplicada sobre todo $B$.
+
+            \begin{equation}
+                \forall b \in B, \exists a \in A, \MiniSpace f(a) = b
+            \end{equation}
+
+
+        \clearpage
+        \subsection{Principio del Palomar}
+
+            Aquí hay una gran historia de porque se llama así este principio.
+
+            Supón que $A$ y $B$ son conjuntos finitos y que existe una $f: A \to B$ que es una función.
+
+            Entonces tenemos que:
+            \begin{itemize}
+                \item Si $|A| > |B|$, entonces $f$ no es inyectiva.
+                \item Si $|A| < |B|$, entonces $f$ no es suprayectiva.
+            \end{itemize}
 
 
 
 
 
+
+
+    % =====================================================
+    % ========         FUNCION INVERSA        =============
+    % =====================================================
+    \clearpage
+    \section{Función Inversa}
+
+        Aunque parecido, para que exista la relación inversa sea también una función, nuestra función original 
+        tendrá que ser biyectia.
+
+        Esta función inversa tiene una propiedad muy obvia:
+
+        \begin{equation}
+            \forall x \in A, \MiniSpace f^{-1}(f(x)) = x
+        \end{equation}
+
+        Y también otra obvia:
+
+        \begin{equation}
+            \forall y \in B, \MiniSpace f(f^{-1}(y)) = y
+        \end{equation}
+
+
+
+
+    % =====================================================
+    % ========         IMAGEN Y PREIMAGEN       ===========
+    % =====================================================
+    \clearpage
+    \section{Imagén y Preimagen}
+
+        Sea una función $f : A \to B$ y además $X \subseteq A$ y $Y \subseteq B$.  
+
+        \subsubsection{Imagén}
+            La imágen es a fin de cuentas un conjunto, de manera fomral:
+            \begin{equation} 
+                f(X) = \{ f(x) \Such x \in X \} 
+            \end{equation} 
+
+            Y es bastante obvio que $f(X) \subseteq B$.
+
+        \subsubsection{PreImagen}
+            La preimagen es a fin de cuentas un conjunto, y esta definido,
+            incluso aunque la función no sea invertible, esta esta definida
+            de manera fomral:
+            \begin{equation} 
+                f^{-1}(Y) = \{ x \in A \Such f(x) \in Y \} 
+            \end{equation} 
+
+            Y es bastante obvio que $f^{-1}(Y) \subseteq A$.
+
+
+
+
+
+    % =====================================================
+    % ========         CARDINALIDAD Y FUNCIONES      ======
+    % =====================================================
+    \clearpage
+    \section{Cardinalidad y Funciones}
+
+        Podemos definir la cardinalidad de los conjuntos de una mejor manera
+        usando la cardinalidad:
+
+        Los conjuntos tienen la misma cardinalidad $|A| = |B|$ si y solo si es que existe
+        una función biyectiva $f : A \to B$.
+
+
+        Gracias a esto podemos decir que:
+
+        \begin{itemize} 
+            \item $|\Naturals| = |\Integers| = |\Racionals| = \aleph_0$
+
+            \item $P(|\Naturals|) = |\Reals| = \aleph_1$
+
+            \item $P(|\Reals|) = \aleph_2$
+
+        \end{itemize} 
 
 
 
