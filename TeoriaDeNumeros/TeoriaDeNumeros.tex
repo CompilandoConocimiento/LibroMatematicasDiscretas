@@ -171,8 +171,21 @@
     \clearpage
 
     % =====================================================
+    % ==========     PRINCIPIO BUEN ORDEN        ==========
+    % =====================================================
+    \section{Principio de Buen Orden}
+
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
+
+
+
+    % =====================================================
     % ============        DIVISIBILIDAD            ========
     % =====================================================
+    \clearpage
     \section{Divisibilidad}
 
         % ==================================
@@ -327,6 +340,8 @@
 
                     \end{SmallIndentation}
 
+                \clearpage
+
                 \item Si $b|a$ y $b|c$ entonces $b|a+c$ y $b|a-c$
 
                     % ======== DEMOSTRACION ========
@@ -373,12 +388,129 @@
 
                 
 
+    % =====================================================
+    % ==========     ALGORITMO DE LA DIVISIÓN     =========
+    % =====================================================
+    \clearpage
+    \section{Algoritmo de División}
+
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
+
+            Dados dos enteros $a, b$ donde $b \neq 0$, existen otros dos 
+            enteros únicos $q, r$, donde $0 \leq r < |b|$ tal que se cumple:
+
+            \begin{equation}
+                a = bq+r
+            \end{equation}
+
+            Vemos que basicamente nos dice cuántas veces cabe $b$ en $a$ sin pasarse (esto 
+            es $q$) y cuantos le faltan para alcanzar a $a$ (esto es $r$).
+
+            % ======== DEMOSTRACION ========
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración}:
+
+                Esta sale del Principio de Buen Orden, el primer paso es crear
+                el conjunto $Residuos = \{a-|b|q \Such q \in \Integers, (a-|b|q) \geq 0 \}$.
+
+                Esto es un conjunto que basicamente contiene a los residuos, o visto de otra
+                manera a los números que salen como resultado de sumarle multiplos de $|b|$ a $a$
+                y que son mayores que 0.
+
+                Ahora gracias al principio de buen orden (y que $Residuos$ es el conjunto
+                de los Naturales más el cero) podemos llamar a $r$ al elemento mas pequeño
+                de este conjunto.
+
+                Ahora, gracias a la definición del conjunto $Residuos$ podemos decir que
+                $r=a-|b|q_1$ que es decir $a=|b|q_1+r$.
+
+                Ahora podemos poner esto como $a=bq+r$ donde si $b<0 \linfire q = -q_1$ y si
+                $b>0 \linfire q=q_1$.
+
+                Para ver que $0 \leq r < |b|$, bueno, es mayor o igual que $0$ porque pertenece a los
+                Naturales más el cero, ahora para ver que es menor que $|b|$, basta con ver que si no
+                fuera así  pasaría que $r-|b| \geq 0$ (donde $r$ es el elemento más pequeño del conjunto
+                $Residuos$) que es lo mismo que poner $(a-|b|q_1)-|b| \geq 0$ que es lo mismo que
+                $a-|b|(q_1+1)\geq 0$, ahora basta con ver que esa no es la $r$ más pequeña,
+                pues entonces si $a-|b|(q_1+1)\geq 0$, también $a-|b|q_1\geq 0$, por lo que la nueva $r_2$
+                (donde $r_2 = a-|b|q_1$), es mas pequeña que $r$, pero elegimos a $r$ como la más pequeña,
+                por lo tanto contradicción.
+
+                Y ya por fin, para demostrar que $q, r$ son únicos dados $a, b$, tendría que pasar
+                que $a=bq_1+r_1=bq_2+r_2$.
+
+                Recordemos que $r$ debe de ser única, pues $r$ es el menor elemento del conjunto
+                del que tendríamos que sacar a la otra, así que $r$ solo hay una.
+
+                Dado eso, tenemos que $a=bq_1+r=bq_2+r$ que es lo mismo que $bq_1=bq_2$
+                que es lo mismo que $q_1=q_2$ y bingo. Demostrado.
+            \end{SmallIndentation}
 
 
 
+        % ==================================
+        % ======   PAR E INPAR     =========
+        % ==================================
+        \clearpage
+        \subsection{Par e Inpar}
+
+            Dado un 2 como divisor, osea $b=2$, nuestra $r$ siempre será 0 ó 1.
+            Digo recuerda que $0\leq r < |b|$.
+
+            \subsubsection{Pares}
+                Por lo tanto puedo definir a un número entero par como aquellos números
+                que podemos escribirlos gracias al algoritmo de la división como
+                $2q+0$ o de manera más común como $2k$.
+
+                \begin{equation}
+                \begin{split}
+                    Pares &= \{a \in \Integers \Such a = 2q + 0, \MiniSpace q \in \Integers \}\\
+                    Pares &= \{2k \Such k \in \Integers\}
+                \end{split}
+                \end{equation}
+
+            \subsubsection{Inpares}
+                Por lo tanto puedo definir a un número entero inpar como aquellos números
+                que podemos escribirlos gracias al algoritmo de la división como
+                $2q+1$ o de manera más común como $2k+1$.
+
+                \begin{equation}
+                \begin{split}
+                    Pares &= \{a \in \Integers \Such a = 2q + 1, \MiniSpace q \in \Integers \}\\
+                    Pares &= \{2k+1 \Such k \in \Integers\}
+                \end{split}
+                \end{equation}
 
 
+            Y de esto sacamos algunas ideas bastante obvias:
 
+            % ==================================
+            % ======   IMPORTANTES     =========
+            % ==================================
+            \subsubsection{Ideas Importantes}
+            \begin{itemize}
+
+                \item Un número $n$ es un cuadrado $n=m^2$ si y solo si al aplicarle
+                el algoritmo de la división con $b=4$ implica que $r=1$ ó $r=0$.
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Si es un número par $m=2k$, entonces $(2k)^2$ que 
+                        es igual a $4k^2$ donde podemos decir que
+                        $n=4(k^2)+0$.
+
+                        Si es inpar $m=2k+1$, entonces $(2k+1)^2$ que 
+                        es igual a $4k^2+4k+1$ donde podemos decir que
+                        $n=4(k^2+k)+1$. 
+
+                    \end{SmallIndentation}
+
+                \end{itemize}
 
 
 
