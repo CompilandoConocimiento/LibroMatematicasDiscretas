@@ -413,8 +413,16 @@
             \begin{SmallIndentation}[1em]
                 \textbf{Demostración}:
 
-                Esta sale del Principio de Buen Orden, el primer paso es crear
-                el conjunto $Residuos = \{a-|b|q \Such q \in \Integers, (a-|b|q) \geq 0 \}$.
+                El primer paso es crear el conjunto
+                $Residuos = \{a-|b|q \Such q \in \Integers, (a-|b|q) \geq 0 \}$.
+
+                Ahora lo primero que tenemos que ver que es $|Residuos| \neq 0$. Para hacerlo
+                veamos un contraejemplo, es decir $a < |b|$, entonces intenta a $q=-1$
+                y vemos que $a+|b|$ siempre sera mayor o igual que $0$.
+                Si $a > |b|$, entonces intenta a $q=1$
+                y vemos que $a-|b|$ siempre sera mayor o igual que $0$.
+                Finalmente si $a = |b|$ cualquiera de los 2 ejemplos anteriores te sirven.
+                Por lo tanto mínimo $Residuos$ tiene mínimo un elemento.
 
                 Esto es un conjunto que basicamente contiene a los residuos, o visto de otra
                 manera a los números que salen como resultado de sumarle multiplos de $|b|$ a $a$
@@ -447,6 +455,7 @@
 
                 Dado eso, tenemos que $a=bq_1+r=bq_2+r$ que es lo mismo que $bq_1=bq_2$
                 que es lo mismo que $q_1=q_2$ y bingo. Demostrado.
+
             \end{SmallIndentation}
 
 
