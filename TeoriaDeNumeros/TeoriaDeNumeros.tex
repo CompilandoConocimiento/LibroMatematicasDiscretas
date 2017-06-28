@@ -314,6 +314,61 @@
                     \end{SmallIndentation}
 
 
+                \item Si $b|a$ y $a|c$ entonces $b|c$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Sabemos que $a=bq_1$, y $c=aq_2$ por lo tanto podemos sustituir, 
+                        $c=(bq_1)q_2$ que es lo mismo que $c=bq_3$, donde $q_3 = q_1q_2$
+                        donde $q_3 \in \Integers$. 
+                        Y ya que $c=bq_3$ podemos decir que $b|c$.
+
+                    \end{SmallIndentation}
+
+                \item Si $b|a$ y $b|c$ entonces $b|a+c$ y $b|a-c$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Sabemos que $a=bq_1$, y $c=bq_2$ por lo tanto podemos decir que
+                        sumar o restar ambas ecuaciones, lo que nos daría
+                        $a \pm c = bq_1 \pm bq_2$ que es lo mismo que
+                        $a \pm c = b (q_1 \pm q_2)$ por lo que podemos decir que $b|a \pm c$.
+
+                    \end{SmallIndentation}
+
+                \item Si $b|a$ entonces $b|ak$ $\forall k \in \Integers$.
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Sabemos que $a=bq$ por lo mismo podemos decir que
+                        $ak=b(qk)$ por lo tanto $b|ak$.
+
+                    \end{SmallIndentation}
+
+                \item $b|a$ si y solo si $b|-a$ si y solo si $-b|a$ si y solo si $-b|-a$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Sabemos que existe $q_1$ tal que $a=bq_1$ para nuestro primer ssi
+                        basta con decir que $-a=b(-q_1) = bq_2$ y listo, encontre a $q_2$
+                        con lo que puedo afirmar que $b|-a$.
+
+                        Para el segundo basta con ver que $a = -bq_3$ donde $q_3 = q_2$, con
+                        lo que puedo afirmar que $-b|a$.
+
+                        Para el último ssi basta con con ver que $-a=-bq_4$ donde $q_4=q_1$
+                        así que puedo afirmar que $-b|-a$.
+
+                    \end{SmallIndentation}
+
             \end{itemize}
 
                 
