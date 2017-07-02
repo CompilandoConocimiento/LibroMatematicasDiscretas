@@ -1,7 +1,14 @@
 \BOOKMARK [0][-]{chapter.1}{Enteros y Naturales}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Principio de Buen Orden}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Divisibilidad}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Algoritmo de Divisi\363n}{chapter.1}% 4
-\BOOKMARK [2][-]{subsection.1.3.1}{Par e Inpar}{section.1.3}% 5
-\BOOKMARK [0][-]{chapter.2}{Combinatoria}{}% 6
-\BOOKMARK [1][-]{section.2.1}{Definici\363n}{chapter.2}% 7
+\BOOKMARK [1][-]{section.1.2}{Algoritmo de Divisi\363n}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.1.2.1}{Par e Inpar}{section.1.2}% 4
+\BOOKMARK [1][-]{section.1.3}{Divisibilidad}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.3.1}{Ejemplos}{section.1.3}% 6
+\BOOKMARK [2][-]{subsection.1.3.2}{Propiedades de Divisilibidad}{section.1.3}% 7
+\BOOKMARK [1][-]{section.1.4}{M\341ximo Com\372n Divisor: GCD/MCD}{chapter.1}% 8
+\BOOKMARK [2][-]{subsection.1.4.1}{Propiedades de MCD/GCD}{section.1.4}% 9
+\BOOKMARK [2][-]{subsection.1.4.2}{Identidad de Bezout}{section.1.4}% 10
+\BOOKMARK [2][-]{subsection.1.4.3}{Propiedades de MCD/GCD: Bezout Edition}{section.1.4}% 11
+\BOOKMARK [2][-]{subsection.1.4.4}{Primos Relativos}{section.1.4}% 12
+\BOOKMARK [0][-]{chapter.2}{Combinatoria}{}% 13
+\BOOKMARK [1][-]{section.2.1}{Definici\363n}{chapter.2}% 14
