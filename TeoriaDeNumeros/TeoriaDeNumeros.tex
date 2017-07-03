@@ -182,6 +182,14 @@
 
 
 
+
+
+% ======================================================================================
+% ===========================         DIVISIBILIDAD           ==========================
+% ======================================================================================
+\chapter{Divisibilidad}
+    \clearpage
+
      
 
     % =====================================================
@@ -316,6 +324,7 @@
                     \end{SmallIndentation}
 
                 \end{itemize}
+
 
 
 
@@ -582,7 +591,6 @@
            
 
 
-
     % =====================================================
     % =====    MAXIMO COMUN DIVISOR : GCD /MCD     ========
     % =====================================================
@@ -810,6 +818,28 @@
                             Además es claro que $d$ divide a cualquier combinación lineal
                             de $a$,$b$ por ser un divisor común.
 
+                    \end{SmallIndentation}
+
+                \item La pareja de $m, n \in \Integers$ llamados coeficientes de Bezout, ya sabes
+                aquella que cumple que $GCD(a,b) = am+bn$, siempre serán coprimos.
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Sabemos que existen enteros $m,n$ tal que $d = am+bn$ por la
+                        identidad de Bezout, además como $d$ es un divisor común
+                        podemos escribir $a=dq_1$ $b=dq_2$ para algunos enteros $q_1,q_2$.
+
+                        Por lo que $d=am+bn = dmq_1 + dnq_2 = d(mq_1 +nq_2)$, por
+                        lo tanto tenemos que $1= mq_1 + nq_2$.
+
+                        Esto es muy importante, porque nos dice que los enteros $m$ y $n$
+                        son primos relativos (Dos enteros $a,b$ son primos relativos sí y sólo
+                        si,existen enteros $x,y \in \Integers$ tales que $1=am+bn$).
+
+                        Y bingo, ahí esta nuestra pareja de primos relativos.
+
                     \end{SmallIndentation} 
 
             \end{itemize}
@@ -822,12 +852,11 @@
         \clearpage
         \subsection{Primos Relativos}
 
-            Decimos que dos enteros $a$ y $b$ son primos relativos si $mcd(a,b) = 1$.
+            Decimos que dos enteros $a$ y $b$ son primos relativos o coprimos si $mcd(a,b) = 1$.
 
         % ==================================
         % ====   IDEAS INTERESANTES    =====
         % ==================================
-        \clearpage
         \subsection*{Ideas Interesantes}
             \begin{itemize}
 
@@ -844,20 +873,201 @@
                     \end{SmallIndentation} 
 
 
-                \item Sea $d=GCD(a,b)$ La pareja de $(\frac{a}{d},{b}{d})$ siempre son
+                \item Sea $d=GCD(a,b)$. La pareja de $(\frac{a}{d}, \frac{b}{d})$ siempre son
                 primos relativos.
 
                     % ======== DEMOSTRACION ========
                     \begin{SmallIndentation}[1em]
                         \textbf{Demostración}:
 
-                        
+                        Sabemos que existen enteros $m,n$ tal que $d = am+bn$ por la
+                        identidad de Bezout, además como $d$ es un divisor común
+                        podemos escribir $a=dq_1$ $b=dq_2$ para algunos enteros $q_1,q_2$.
+
+                        Por lo que $d=am+bn = dmq_1 + dnq_2 = d(mq_1 +nq_2)$, por
+                        lo tanto tenemos que $1= mq_1 + nq_2$.
+
+                        Esto es muy importante, porque nos dice que los enteros $q_1$ y $q_2$
+                        son primos relativos (Dos enteros $a,b$ son primos relativos sí y sólo
+                        si,existen enteros $x,y \in \Integers$ tales que $1=am+bn$).
+
+                        Por lo tanto basta con ver que $q_1=\frac{a}{d}$ y que $q_1=\frac{b}{d}$.
+
+                        Y bingo, ahí esta nuestra pareja de primos relativos.
+
                     \end{SmallIndentation} 
 
             \end{itemize}
 
 
 
+
+    % =====================================================
+    % =====          ALGORITMO DE EUCLIDES         ========
+    % =====================================================
+    \clearpage
+    \section{Algorítmo de Euclides}
+
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
+
+            Un algoritmo eficiente para calcular el máximo común divisor de dos enteros
+            se puede conseguir aplicando repetidamente el algoritmo de Euclides.
+
+            Si intentamos calcular $GCD(a,b)$ y sabemos del algoritmo de la división 
+            que $a=bq+r$ entonces podemos simplificar el problema ya que:
+            \begin{equation}
+                GCD(a,b) = GCD(b,r)
+            \end{equation}
+
+            Podemos seguir aplicando esta identidad hasta que el $GCD(a, b)$ séa muy
+            obvio.
+
+
+        % ======== DEMOSTRACION ========
+        \begin{SmallIndentation}[1em]
+            \textbf{Demostración}:
+
+            Esta afirmación es la importante: $GCD(a,b) = GCD(b,r)$ donde $r$ es el residuo
+            del algoritmo de la división donde $a=bq+r$.
+
+            Para probarla lo que haremos sera darnos cuenta que el conjunto de divisores
+            comunes de $a$ y $b$ será el mismo que el de $b$ y $r$.
+            Es decir para una $d$ cualquiera que sea un divisor común de $a$ y $b$ si y solo si
+            $d$ es un divisor de $b$ y de $r$.
+
+            Veamos que podemos probar esto gracias a que podemos verlo como una implicación de
+            dos lados.
+
+            Por un lado si $d$ es un divisor de $a$ y $b$, es decir $d|a$ y $d|b$
+            sabemos que $d|a-k$, es un resultado que ya habiamos probado, pero que
+            pasa si decimos que esa $k$ no es otra $bq$, ya que de $a=bq+r$ podemos 
+            ver como $r=a-bq = a-k$, con lo que vemos que $d|r$, por lo tanto
+            vimos que para cualquier $d$ que divida a $a,b$ también lo hará con $b,r$.
+
+            Por otro lado supón que $d$ es un divisor común de $b$ y $r$, entonces
+            $d|b$ y $d|r$, por lo tanto $d|bq$ y si ya sabemos que $d|bq$ entonces
+            también lo hace con $d|bq+r$, por lo tanto $d|a$, por lo tanto
+            vimos que para cualquier $d$ que divida a $b,r$ también lo hará con $a,b$.
+
+            Y si tienen exactamente los mismos elementos en cada conjunto de divisores
+            comunes entonces creo que es bastante obvio que el máximo elemento de cada
+            conjunto será el mismo, es decir, tienen el mismo GCD.
+
+        \end{SmallIndentation}
+
+
+        % ==================================
+        % =====   COMO APLICARLO    ========
+        % ==================================
+        \clearpage
+        \subsection{Como Aplicarlo}
+
+            Esto ya nos muestra una forma de calcular el máximo común divisor de dos
+            números $a,b$ de una manera más sencilla pues en principio $b,r$ son
+            números más pequeños.
+
+            \begin{itemize}
+                \item
+                    El primer paso es aplicar el algoritmo para la división:
+                    \begin{equation*}
+                        a = bq_1 +r_1 \Space 0 \leq r_1 < b
+                    \end{equation*}
+
+                    \begin{SmallIndentation}[1em]
+                        Si da la casualidad de que $r_1 = 0$ entonces $b|a$, por lo
+                        que $GCD(a,b) = b$. Y listo, encontrado.
+
+                        Si no tuvimos tanta suerte podemos al menos saber que
+                        $GCD(a,b) = GCD(b,r_1)$, así que volvemos a aplicar el
+                        algoritmo de la división.
+
+                    \end{SmallIndentation}
+
+                    
+                \item
+                    Ahora tenemos que 
+                    \begin{equation*}
+                        b = r_1q_2 +r_2 \Space 0 \leq r_2 < r_1
+                    \end{equation*}
+
+                    \begin{SmallIndentation}[1em]
+                        Si da la casualidad de que $r_2 = 0$ entonces $r_1|b$, por lo
+                        que $GCD(a,b) = GCD(b,r_1)=r_1$. Y listo, encontrado.
+
+                        Si no tuvimos tanta suerte podemos al menos saber que
+                        $GCD(b,r_1) = GCD(r_1,r_2)$, así que volvemos a aplicar el
+                        algoritmo de la división.
+
+                    \end{SmallIndentation}
+
+                    
+
+
+                \item
+                    Como los números encontrados satisfacen $0 \leq r_n < \cdots < r_2 < r_1$,
+                    vemos que este proceso terminar a lo mucho en $b$ pasos, es decir para algún
+                    $n \leq b$ debemos tener que $r_n=0$ y entonces:
+
+                    \begin{equation*}
+                    \begin{split}
+                        GCD(a,b)    &= GCD(b,r_1)           \\
+                                    &= GCD(r_1,r_2)         \\
+                                    &= \cdots               \\
+                                    &= GCD(r_{n-2},r_{n-1}) \\
+                                    &= GCD(r_{n-1}, 0)      \\
+                                    &= r_{n-1} 
+                    \end{split}
+                    \end{equation*}
+
+            \end{itemize}
+
+            En otras palabras, el máximo común divisor de $a,b$ es el último residuo distinto
+            de cero al aplicar repetidamente el algoritmo de la división como en proceso anterior.
+
+
+
+        % ==================================
+        % =====      EJEMPLO        ========
+        % ==================================
+        \clearpage
+        \subsection{Ejemplo}
+            Supón que tenemos que calcular el $GCD(2024, 748)$
+
+
+            \begin{itemize}
+                \item $GCD(2024, 748) = GCD(748, 528)$   donde $2024=748(2)+528$
+
+                \item $GCD(748, 528)  = GCD(528, 220)$   donde $748=528(1)+220$
+
+                \item $GCD(528, 220)  = GCD(220, 88)$    donde $528=220(2)+88$
+
+                \item $GCD(220, 88)   = GCD(88, 44)$     donde $220=88(2)+44$
+
+                \item $GCD(88, 44)    = GCD(44, 0) = 44$ donde $88=44(2)+0$
+            \end{itemize}
+
+            Y bingo, 44.
+
+
+
+
+
+        % ==================================
+        % ==  USARLO COEFICIENTES BEZUT  ===
+        % ==================================
+        \clearpage
+        \subsection{Usarlo para encontrar los Coeficientes de Bezout}
+
+            Nosotros sabemos que el máximo común divisor de dos números 
+            $GCD(a,b)=ax+by$ para algunos enteros $x,y$. Estos son conocidos
+            como los coeficientes de Bezout.
+
+            El algoritmo de Euclides también nos brinda una forma de encontrarlos.
+
+            Digamos que $r_n=0$, si $GCD(a,b)=r_{n-1}$ entonces
 
 
 
