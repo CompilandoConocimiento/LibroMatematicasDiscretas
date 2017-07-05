@@ -370,7 +370,7 @@
         \subsection*{Definición Alterna}
             Veamos que lo que de verdad nos estan preguntando si es que $\frac{a}{b} \in \Integers$.
 
-            \textbf{Podemos entonces enunciar que: \Quote{a divide a b si y solo si es que
+            \textbf{Podemos entonces enunciar que: \Quote{b divide a a si y solo si es que
             $\frac{a}{b}$ continua estando en los enteros}}.
 
 
@@ -919,7 +919,7 @@
             Si intentamos calcular $GCD(a,b)$ y sabemos del algoritmo de la división 
             que $a=bq+r$ entonces podemos simplificar el problema ya que:
             \begin{equation}
-                GCD(a,b) = GCD(b,r)
+                GCD(a,b) = GCD(b,r) = GCD(b, b\%a)
             \end{equation}
 
             Podemos seguir aplicando esta identidad hasta que el $GCD(a, b)$ séa muy
@@ -1059,27 +1059,245 @@
         % ==  USARLO COEFICIENTES BEZUT  ===
         % ==================================
         \clearpage
-        \subsection{Usarlo para encontrar los Coeficientes de Bezout}
+        \subsection{Algorítmo Extendido de Euclides}
 
-            Nosotros sabemos que el máximo común divisor de dos números 
-            $GCD(a,b)=ax+by$ para algunos enteros $x,y$. Estos son conocidos
-            como los coeficientes de Bezout.
+            Podemos añadir mas pasos al algoritmo de Euclides para darles
+            más utilidad. Esta utilidad es casi exclusiva para encontrar los
+            coeficientes de Bezout.
 
-            El algoritmo de Euclides también nos brinda una forma de encontrarlos.
+            Ya idea básica esta en que podemos despejar los residuos de cada paso
+            del algoritmo de Euclides original e ir sustituyendo cada uno de los residuos
+            ya que podremos ir describiendo cada uno como una combinación lineal de $a,b$,
+            cuando llegemos al último residuo, donde será cero, bastare con buscar la
+            combinación anterior para encontrar las $m,n$.
 
-            Digamos que $r_n=0$, si $GCD(a,b)=r_{n-1}$ entonces
+            Recuerda que la Identidad de Bezut nos dice que:
+            \begin{equation}
+                GCD(a,b) = am +bn \Space \text{donde} m,n \in \Integers
+            \end{equation}
+
+            Conocemos a $m,n$ como los coeficientes de Bezut.
+
+
+            % ======== DEMOSTRACION ========
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración}:
+
+                Supongamos que después de $n+1$ pasos del algoritmo de Euclides llegamos que
+                $r_{n+1}=0$.
+
+                Eso nos dice que $r_n=GCD(a,b)$. Después de todo, eso es todo lo que se
+                trata el algoritmo de Euclides.
+
+                Recuerda que $GCD(a,b) = GCD(b,r_1) = GCD(r_1,r_2)$ y así seguimos hasta que
+                $GCD(r_{n-2},r_{n-1}) = GCD(r_{n-1},r_n) = GCD(r_n,0) = r_n$
+
+                Recuerda que $a=bq+r$, es decir $r=a-bq$, pero recuerda que vimos que
+                $b_n = r_{n-1}$, que $a_n=r_{n-2}$ por lo tanto vemos que
+                $r_n=a-r_{n-1}q_n$ que es lo mismo que  $r_n = r_{n-2} - r_{n-1}q_n$.
+
+                Ests fórmula es muy importante, así que la voy a repetir $r_n = r_{n-2} - r_{n-1}q_n$.
+
+                Ok, ahora con la fórmula lista podemos en vez de hacerlo para $r_n$ hacerlo para
+                $r_{n-1}$, donde vemos que $r_{n-1} = r_{n-3} - r_{n-2}q_{n-1}$.
+
+                Ahora sustituyamos en la original:
+
+                $r_n = r_{n-2} - (r_{n-3} - r_{n-2}q_{n-1})q_n$\\
+                $r_n = (1+q_n q_{n-1})r_{n-2} + (-q_n)r_{n-3}$
+
+                Si te das cuenta lo que hemos hecho es poner a $r_n$, es decir el GCD como
+                una combinación lineal de los dos anteriores, y tu sabemos que si sigo
+                aplicando este proceso hasta que $r_n$ que descrito como combinación 
+                lineal de las r originales, es decir $a,b$.
+
+            \end{SmallIndentation}
 
 
 
 
 
 
+        % ==================================
+        % =====      EJEMPLO        ========
+        % ==================================
+        \clearpage
+        \subsection{Ejemplo}
+
+        % ======== DEMOSTRACION ========
+            \begin{SmallIndentation}[1em]
+                Supón que tenemos que calcular el $GCD(2024, 748)$
+                y también los coeficientes de Bezout.
+
+                Primero con el GCD, es decir con el algoritmo tradicional
+                tenemos que:
+
+                \begin{itemize}
+                    \item $GCD(2024, 748) = GCD(748, 528)$   donde $2024=748(2)+528$
+
+                    \item $GCD(748, 528)  = GCD(528, 220)$   donde $748=528(1)+220$
+
+                    \item $GCD(528, 220)  = GCD(220, 88)$    donde $528=220(2)+88$
+
+                    \item $GCD(220, 88)   = GCD(88, 44)$     donde $220=88(2)+44$
+
+                    \item $GCD(88, 44)    = GCD(44, 0) = 44$ donde $88=44(2)+0$
+                \end{itemize}
+
+                Y bingo, 44.
+
+
+                Ahora vayamos haciendo las combinaciones lineales, 
+                ten en cuenta que muchas veces hacen el algoritmo extendido empezando
+                por el último paso, hasta llegar a $a,b$, pero yo lo haré \Quote{al réves}
+                empezando por $a,b$ para llegar a $GCD(a,b)$, verás que lo entiendes mejor:
+
+
+                \begin{itemize}
+                    \item
+                        Empecemos por mostrar a los originales $a,b$ como combinación lineal
+                        de ellos:
+
+                        $2024 = 2024(1) + 748(0)$\\
+                        $748  = 2024(0) + 748(1)$
+
+                    \item
+                        Ahora podemos describir el primer paso del algoritmo como:\\
+                        $r = a - bq = 528 = 2024 - 748(2)$
+
+                        Y ahora sustituimos:\\
+                        $528 = 2024(1) + 748(-2)$
+
+
+                    \item
+                        Y lo hacemos para el segundo paso:\\
+                        $r = a - bq = 220 = 748 - 528(1)$
+
+                        Y ahora sustituimos:\\
+                        $220 = (2024(0) + 748(1)) - (2024(-1) + 748(-2)) = 2024(-1) + 748(3)$                    
+
+                    \item
+                        Y lo hacemos para el tercer paso:\\
+                        $r = a - bq = 88 = 528 - 220(2)$
+
+                        Y ahora sustituimos:\\
+                        $88 = (2024(1) + 748(-2)) - 2(2024(-1) + 748(3)) = 2024(3) + 748(-8)$    
+
+                    \item
+                        Y lo hacemos para el cuarto paso:\\
+                        $r = a - bq = 44 = 220 - 88(2)$
+
+                        Y ahora sustituimos:\\
+                        $44 = (2024(-1) + 748(3)) - 2(2024(3) + 748(-8)) = 2024(-7) + 748(19)$   
+
+                        Ahora llegamos a lo que queriamos 
+
+                \end{itemize}
+
+                Bingo $44 = 2024(-7) + 748(19)$ 
+
+            \end{SmallIndentation}
+
+
+            
+
+    % =====================================================
+    % =====    MINIMO COMUN MULTIPLO : MCM / LCM     ======
+    % =====================================================
+    \clearpage
+    \section{Mínimo Común Múltiplo: MCM/LCM}
+
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
+
+            Dados dos números cualquiera $a, b \in \Integers - \{0\}$.
+
+            Decimos que $c$ es un múltiplo común de $a,b$ si y solo si $a|c$ y $b|c$, es decir,
+            si y solo si $\frac{c}{a}$ y $\frac{c}{b}$ $\in \Integers$.
+
+            Consideramos al mínimo común múltiplo como la mínima $c \in \Naturals$ que cumple
+            con ser un múltiplo común.
+
+            % ======== IDEAS ========
+            \begin{SmallIndentation}[1em]
+                \textbf{Ideas}:
+
+                Si $ab \neq 0$, el conjunto múltiplos comunes positivos es distinto del vacío
+                y por lo tanto tiene un elemento mínimo. Este elemento es llamado el mínimo
+                común múltiplo de $a$ y $b$. Este es denotado por $MCM(a,b) = LCM(a,b)$.
+
+            \end{SmallIndentation}
+
+
+
+        % ==================================
+        % ======   PROPIEDADES     =========
+        % ==================================
+        \clearpage
+        \subsection{Propiedades de MCM/LCM}
+
+
+            \begin{itemize}
+
+                \item Siempre se cumple que $GCD(a,b) \cdot LCM(a,b) = |ab|$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Sea $d = GCD(a,b)$ y $m = LCM(a,b)$.
+
+                        Entonces $d|a$ (digo es un divisor), entonces $d|ak$, digamos que
+                        $k=b$, entonces $d|ab$, es decir, $\frac{ab}{d} \in \Integers$.
+
+                        Llamemos $m'$ a $\frac{ab}{d}$ ya que se parece al máximo común multiplo.
+
+                        Veamos que $a|\frac{ab}{d}$, que es lo mismo que decir
+                        $\frac{\frac{ab}{d}}{a} = \frac{\frac{ab}{d}}{\frac{a}{1}}$
+                        simplificando tenemos que $\frac{ab}{ad} = \frac{b}{d} \in \Integers$.
+                        Esta oración debe ser verdadera pues, sabemos que $d|b$,
+                        por lo tanto $\frac{b}{d} \in \Integers$. Es decir $m'$ es un multiplo
+                        de $a$.
+
+                        Podemos ver que algo parecido pasa con $b$, preguntar si $b|\frac{ab}{d}$
+                        es lo mismo que preguntar si  $\frac{\frac{ab}{d}}{b} = \frac{\frac{ab}{d}}{\frac{b}{1}}$
+                        simplicando tenemos que  $\frac{ab}{db} = \frac{a}{d} \in \Integers$.
+                        Esta oración debe ser verdadera pues, sabemos que $d|a$,
+                        por lo tanto $\frac{a}{d} \in \Integers$. Es decir $m'$ es un multiplo
+                        de $b$.
+
+                        Por lo tanto $m' \leq m$, es decir o $m'$ es el mínimo común multiplo
+                        o es mayor que el. Podemos expresar lo anterior también como 
+                        $\frac{ab}{d} \geq m = ab \geq md$.
+
+                        Por otro lado tenemos que por la identidad de Bezout $d=ax+by$,
+                        además sabemos que $m=as$ y $m=bt$ 
+
+                        Por lo que tenemos que 
+                        $dm = (ax+by)m = axm + bym = ax(bt) + by(as) = ab(xt+ys)$ llamemos
+                        $k=(xt+ys)$, por lo que tenemos que $dm = ab(k)$, es decir $ab|dm$
+                        y entonces recuerda que tenemos de las propiedades de divisibilidad
+                        que $|ab| \leq |dm|$, $d,m$ son siempre positivos, así que 
+                        $|ab| \leq dm$.
+
+                        Así que tenemos que $ab \geq md$, que es lo mismoq que $|ab| \geq md$
+                        y tenemos que  $|ab| \leq dm$. Por lo tanto $ab = dm$.
+
+
+                        Esta identidad es endemoniadamente útil, prueba por ejemplo con:
+                        $GCD(12,-30) \cdot LCM(12,-30) = |(-12)(30)|$
+
+                    \end{SmallIndentation}
+
+
+            \end{itemize}
 
 
 
 
-
-
+%No matter how many times you multiply zero, you won't get anywhere, so there isn't any lcm of zero
 
 
 
