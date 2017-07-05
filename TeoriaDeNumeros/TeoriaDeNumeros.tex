@@ -805,7 +805,7 @@
 
 
                 \item El conjunto $Combinaciones = \{ am+bn \Such m, n \in \Integers, \MiniSpace am+bn > 0 \}$.
-                es precisamente el conjunto de múltiplos de GCD(a,b).
+                es precisamente el conjunto de múltiplos de $GCD(a,b)$.
 
                     % ======== DEMOSTRACION ========
                     \begin{SmallIndentation}[1em]
@@ -1282,7 +1282,7 @@
                         que $|ab| \leq |dm|$, $d,m$ son siempre positivos, así que 
                         $|ab| \leq dm$.
 
-                        Así que tenemos que $ab \geq md$, que es lo mismoq que $|ab| \geq md$
+                        Así que tenemos que $ab \geq md$, que es lo mismo que $|ab| \geq md$
                         y tenemos que  $|ab| \leq dm$. Por lo tanto $ab = dm$.
 
 
@@ -1292,12 +1292,86 @@
                     \end{SmallIndentation}
 
 
+                \item Si $LCM(a,b) = |ab|$ implica que $(a,b) = 1$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Si $LCM(a,b) = |ab|$ recuerda que $GCD(a,b) \cdot LCM(a,b) = |ab|$
+                        Entonces $GCD(a,b) = \frac{|ab|}{LCM(a,b)}$ que ya dijimos que 
+                        $GCD(a,b) = \frac{|ab|}{|ab|} = 1$.
+
+                    \end{SmallIndentation}
+
             \end{itemize}
 
 
 
+    % =====================================================
+    % =======      ECUACIONES DIOFANTICAS         =========
+    % =====================================================
+    \clearpage
+    \section{Ecuaciones Diofanticas}
 
-%No matter how many times you multiply zero, you won't get anywhere, so there isn't any lcm of zero
+        Diofantos fue un matemático que vivió en Alexandria al rededor de 250 a.c.
+        Él fue el primero en estudiar soluciones a ecuaciones del tipo $ax+by=c$ en los enteros.
+
+        Esa es la única razón por las que las llamamos así, esto es todo amiguitos.
+
+
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
+
+            Una ecuación diofantinas es una ecuación del a forma $ax+by=c$ con
+            $a,b,c \in \Integers$.
+
+            Una solución de esta ecuación es un par de enteros $x_0, y_0$
+            que satisfacen la ecuación.
+
+
+        % ==================================
+        % ========  SOLUCION     ===========
+        % ==================================
+        \subsection*{Solución}
+
+            La ecuación $ax+by = c$ tiene solución si y sólo si, $GCD(a,b)|c$, es decir
+            si $\frac{c}{GCD(a,b)}$.
+
+            % ======== DEMOSTRACION ========
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración}:
+
+                En efecto, habíamos visto que un corolario de la demostración la identidad
+                de Bezut, es que
+                $Combinaciones = \{ am+bn \Such m, n \in \Integers, \MiniSpace am+bn > 0 \}$.
+                es precisamente el conjunto de múltiplos de $GCD(a,b)$.
+
+                Ahora sabemos que $d$ es el menor elemento de ese conjunto, y más aún,
+                que gracias a ese colorario que $d$ divide a cualquier elemento del conjunto.
+
+            \end{SmallIndentation}
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

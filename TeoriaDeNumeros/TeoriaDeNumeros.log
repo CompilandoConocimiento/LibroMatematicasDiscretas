@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 JUL 2017 00:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 JUL 2017 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1199,8 +1199,13 @@ l.156 \clearpage
                  [1
 
 ]
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
+LaTeX Info: Redefining \. on input line 156.
+LaTeX Info: Redefining \% on input line 156.
+ [2]
 Cap\'{\i }tulo 1.
-[2
+[3
 
 
 ]
@@ -1208,61 +1213,61 @@ LaTeX Info: Redefining \. on input line 190.
 LaTeX Info: Redefining \% on input line 190.
 LaTeX Info: Redefining \. on input line 190.
 LaTeX Info: Redefining \% on input line 190.
- [3
+ [4
 
 ]
 Cap\'{\i }tulo 2.
-[4
+[5
 
 ]
 LaTeX Info: Redefining \. on input line 270.
 LaTeX Info: Redefining \% on input line 270.
 LaTeX Info: Redefining \. on input line 270.
 LaTeX Info: Redefining \% on input line 270.
- [5
-
-
-]
-LaTeX Info: Redefining \. on input line 334.
-LaTeX Info: Redefining \% on input line 334.
-LaTeX Info: Redefining \. on input line 334.
-LaTeX Info: Redefining \% on input line 334.
  [6
 
+
 ]
-LaTeX Info: Redefining \. on input line 395.
-LaTeX Info: Redefining \% on input line 395.
-LaTeX Info: Redefining \. on input line 395.
-LaTeX Info: Redefining \% on input line 395.
+LaTeX Info: Redefining \. on input line 334.
+LaTeX Info: Redefining \% on input line 334.
+LaTeX Info: Redefining \. on input line 334.
+LaTeX Info: Redefining \% on input line 334.
  [7
 
 ]
-LaTeX Info: Redefining \. on input line 435.
-LaTeX Info: Redefining \% on input line 435.
-LaTeX Info: Redefining \. on input line 435.
-LaTeX Info: Redefining \% on input line 435.
+LaTeX Info: Redefining \. on input line 395.
+LaTeX Info: Redefining \% on input line 395.
+LaTeX Info: Redefining \. on input line 395.
+LaTeX Info: Redefining \% on input line 395.
  [8
 
 ]
-LaTeX Info: Redefining \. on input line 524.
-LaTeX Info: Redefining \% on input line 524.
-LaTeX Info: Redefining \. on input line 524.
-LaTeX Info: Redefining \% on input line 524.
+LaTeX Info: Redefining \. on input line 435.
+LaTeX Info: Redefining \% on input line 435.
+LaTeX Info: Redefining \. on input line 435.
+LaTeX Info: Redefining \% on input line 435.
  [9
 
 ]
-LaTeX Info: Redefining \. on input line 597.
-LaTeX Info: Redefining \% on input line 597.
-LaTeX Info: Redefining \. on input line 597.
-LaTeX Info: Redefining \% on input line 597.
+LaTeX Info: Redefining \. on input line 524.
+LaTeX Info: Redefining \% on input line 524.
+LaTeX Info: Redefining \. on input line 524.
+LaTeX Info: Redefining \% on input line 524.
  [10
+
+]
+LaTeX Info: Redefining \. on input line 597.
+LaTeX Info: Redefining \% on input line 597.
+LaTeX Info: Redefining \. on input line 597.
+LaTeX Info: Redefining \% on input line 597.
+ [11
 
 ]
 LaTeX Info: Redefining \. on input line 643.
 LaTeX Info: Redefining \% on input line 643.
 LaTeX Info: Redefining \. on input line 643.
 LaTeX Info: Redefining \% on input line 643.
- [11
+ [12
 
 ]
 Overfull \hbox (5.92177pt too wide) in paragraph at lines 701--702
@@ -1278,7 +1283,7 @@ LaTeX Info: Redefining \. on input line 724.
 LaTeX Info: Redefining \% on input line 724.
 LaTeX Info: Redefining \. on input line 724.
 LaTeX Info: Redefining \% on input line 724.
-[12
+[13
 
 ]
 Overfull \hbox (38.67673pt too wide) in paragraph at lines 742--744
@@ -1299,94 +1304,42 @@ LaTeX Info: Redefining \. on input line 784.
 LaTeX Info: Redefining \% on input line 784.
 LaTeX Info: Redefining \. on input line 784.
 LaTeX Info: Redefining \% on input line 784.
-[13
-
-]
-LaTeX Info: Redefining \. on input line 852.
-LaTeX Info: Redefining \% on input line 852.
-LaTeX Info: Redefining \. on input line 852.
-LaTeX Info: Redefining \% on input line 852.
- [14
-
-]
-LaTeX Info: Redefining \. on input line 908.
-LaTeX Info: Redefining \% on input line 908.
-LaTeX Info: Redefining \. on input line 908.
-LaTeX Info: Redefining \% on input line 908.
- [15
-
-]
-LaTeX Info: Redefining \. on input line 965.
-LaTeX Info: Redefining \% on input line 965.
-LaTeX Info: Redefining \. on input line 784.
-LaTeX Info: Redefining \% on input line 784.
-LaTeX Info: Redefining \. on input line 784.
-LaTeX Info: Redefining \% on input line 784.
-
-LaTeX Warning: Hyper reference `sec:Index' on page 13 undefined on input line 7
-84.
-
-[13
-
-]
-LaTeX Info: Redefining \. on input line 852.
-LaTeX Info: Redefining \% on input line 852.
-LaTeX Info: Redefining \. on input line 852.
-LaTeX Info: Redefining \% on input line 852.
-
-
-LaTeX Warning: Hyper reference `sec:Index' on page 14 undefined on input line 8
-52.
-
 [14
 
 ]
+LaTeX Info: Redefining \. on input line 852.
+LaTeX Info: Redefining \% on input line 852.
+LaTeX Info: Redefining \. on input line 852.
+LaTeX Info: Redefining \% on input line 852.
+ [15
+
+]
 LaTeX Info: Redefining \. on input line 908.
 LaTeX Info: Redefining \% on input line 908.
 LaTeX Info: Redefining \. on input line 908.
 LaTeX Info: Redefining \% on input line 908.
-
-
-LaTeX Warning: Hyper reference `sec:Index' on page 15 undefined on input line 9
-08.
-
-[15
+ [16
 
 ]
 LaTeX Info: Redefining \. on input line 965.
 LaTeX Info: Redefining \% on input line 965.
 LaTeX Info: Redefining \. on input line 965.
 LaTeX Info: Redefining \% on input line 965.
-
-
-LaTeX Warning: Hyper reference `sec:Index' on page 16 undefined on input line 9
-65.
-
-[16
+ [17
 
 ]
 LaTeX Info: Redefining \. on input line 1035.
 LaTeX Info: Redefining \% on input line 1035.
 LaTeX Info: Redefining \. on input line 1035.
 LaTeX Info: Redefining \% on input line 1035.
-
-
-LaTeX Warning: Hyper reference `sec:Index' on page 17 undefined on input line 1
-035.
-
-[17
+ [18
 
 ]
 LaTeX Info: Redefining \. on input line 1061.
 LaTeX Info: Redefining \% on input line 1061.
 LaTeX Info: Redefining \. on input line 1061.
 LaTeX Info: Redefining \% on input line 1061.
-
-
-LaTeX Warning: Hyper reference `sec:Index' on page 18 undefined on input line 1
-061.
-
-[18
+ [19
 
 ]
 Overfull \hbox (3.78593pt too wide) in paragraph at lines 1092--1094
@@ -1398,70 +1351,120 @@ ML/cmm/m/it/10 GCD\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r[]; r[]\OT1/cmr/m/n/10 ) =
 
  []
 
+LaTeX Info: Redefining \. on input line 1124.
+LaTeX Info: Redefining \% on input line 1124.
+LaTeX Info: Redefining \. on input line 1124.
+LaTeX Info: Redefining \% on input line 1124.
+[20
 
-! Package inputenc Error: Unicode char âˆ’ (U+2212)
-(inputenc)                not set up for use with LaTeX.
+]
+LaTeX Info: Redefining \. on input line 1207.
+LaTeX Info: Redefining \% on input line 1207.
+LaTeX Info: Redefining \. on input line 1207.
+LaTeX Info: Redefining \% on input line 1207.
+ [21
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1109                 \end{split}
-                                  
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.1109                 \end{split}
-                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+]
+LaTeX Info: Redefining \. on input line 1238.
+LaTeX Info: Redefining \% on input line 1238.
+LaTeX Info: Redefining \. on input line 1238.
+LaTeX Info: Redefining \% on input line 1238.
+ [22
 
- 
+]
+Overfull \hbox (29.70064pt too wide) in paragraph at lines 1289--1291
+[]\T1/cmr/m/n/10 Esta iden-ti-dad es en-de-mo-nia-da-men-te útil, prue-ba por e
+jem-plo con: $\OML/cmm/m/it/10 GCD\OT1/cmr/m/n/10 (12\OML/cmm/m/it/10 ; \OMS/cm
+sy/m/n/10 ^^@\OT1/cmr/m/n/10 30) \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/10 LCM\OT1/
+cmr/m/n/10 (12\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 30) =
+ []
+
+LaTeX Info: Redefining \. on input line 1314.
+LaTeX Info: Redefining \% on input line 1314.
+LaTeX Info: Redefining \. on input line 1314.
+LaTeX Info: Redefining \% on input line 1314.
+[23
+
+]
+LaTeX Info: Redefining \. on input line 1384.
+LaTeX Info: Redefining \% on input line 1384.
+LaTeX Info: Redefining \. on input line 1384.
+LaTeX Info: Redefining \% on input line 1384.
+ [24
+
+]
+Cap\'{\i }tulo 3.
+[25
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1419.
+LaTeX Info: Redefining \. on input line 1419.
+LaTeX Info: Redefining \% on input line 1419.
+LaTeX Info: Redefining \. on input line 1419.
+LaTeX Info: Redefining \% on input line 1419.
+ [26
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1419.
+ (./TeoriaDeNumeros.aux
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1419.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1419.
+
+Package rerunfilecheck Info: File `TeoriaDeNumeros.out' has not changed.
+(rerunfilecheck)             Checksum: 0130E7DBE327796E2F79BFE47D52C5AD;1586.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1419.
+ ) 
 Here is how much of TeX's memory you used:
- 19103 strings out of 493014
- 325051 string characters out of 6133351
- 409517 words of memory out of 5000000
- 22345 multiletter control sequences out of 15000+600000
+ 19154 strings out of 493014
+ 325528 string characters out of 6133351
+ 410595 words of memory out of 5000000
+ 22371 multiletter control sequences out of 15000+600000
  25756 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,12n,52p,10503b,575s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
-,575s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
- out of 493014
- 324946 string characters out of 6133351
- 409517 words of memory out of 5000000
- 22345 multiletter control sequences out of 15000+600000
- 25756 words of font info for 66 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10503b,575s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2016/texmf-dist/
-fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2016/texmf-dist/font
-s/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
-1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-public/cm-super/sfxc1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
-blic/cm-super/sfxc1728.pfb>
-Output written on TeoriaDeNumeros.pdf (25 pages, 384257 bytes).
+pdfTeX warning (dest): name{section.0.0} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.0} has been referenced but does not exist, 
+replaced by a fixed one
+
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
+r/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
+texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
+2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2016
+/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2016/texmf-d
+ist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2016/texmf-dis
+t/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
+1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
+public/cm-super/sfrm2074.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+blic/cm-super/sfxc1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
+ic/cm-super/sfxc1728.pfb>
+Output written on TeoriaDeNumeros.pdf (27 pages, 391843 bytes).
 PDF statistics:
- 456 PDF objects out of 1000 (max. 8388607)
- 396 compressed objects within 4 object streams
- 66 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 485 PDF objects out of 1000 (max. 8388607)
+ 422 compressed objects within 5 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 185 words of extra memory for PDF output out of 10000 (max. 10000000)
 
