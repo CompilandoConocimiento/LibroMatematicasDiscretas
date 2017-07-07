@@ -1489,7 +1489,7 @@
     % ======   IMPORTANTES     =========
     % ==================================
     \section{Proposiciones Importantes}
-    
+
         \begin{itemize}
 
             \item \textbf{Teorema de Euclides}:
@@ -1614,48 +1614,111 @@
     \clearpage
     \section{Teorema Fundamental de la Aritmética}
 
-            Un número $n \in \Naturals$ puede ser expresado como
-            un producto de primos.
+        Un número $n \in \Naturals$ puede ser expresado como
+        un producto de primos.
 
-            Notese que dicha factorización es única si no cuentas el 
-            orden.
+        Notese que dicha factorización es única si no cuentas el 
+        orden.
 
-            % ======== DEMOSTRACION ========
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración}:\\
-
-
-                \begin{Indentation}[0.75em]
-                    \textbf{Parte I}:
-                \end{Indentation}
-
-                \begin{Indentation}[1.25em]
-                    La demostración de la primera parte es mucho más sencilla
-                    de lo que parece:
-
-                    Suponemos que $n \in \Naturals$, si $n=1$ entonces $n$ es el
-                    producto de un conjunto vacío de primos.
-
-                    Si $n \in \Primes$, osea si $n$ es primo pues, pues ... Ya acabamos.
-
-                    Si $n$ no es primo entonces $n=ab$, y ahora en vez de enfocarnos en 
-                    $n$ lo hacemos en $a,b$.
-
-                    Por inducción tenemos que llegar a que $a,b$ es un primo o bien
-                    es el producto de dos naturales, y ahora analizamos a esos dos números...
-                    Si te das cuenta, es inducción y solo acaba cuando tanto $a$ como $b$ sean
-                    producto de primos.
-
-                    Por lo tanto $n$ es siempre producto de Primos.
-                \end{Indentation}
+        % ==================================
+        % ======   DEMOSTRACION     ========
+        % ==================================
+        \begin{SmallIndentation}[1em]
+            \textbf{Demostración}:\\
 
 
-                
-            \end{SmallIndentation}
+            \begin{Indentation}[0.75em]
+                \textbf{Parte I: Producto de Primos:}
+            \end{Indentation}
+
+            \begin{Indentation}[1.25em]
+                La demostración de la primera parte es mucho más sencilla
+                de lo que parece:
+
+                Suponemos que $n \in \Naturals$, si $n=1$ entonces $n$ es el
+                producto de un conjunto vacío de primos.
+
+                Si $n \in \Primes$, osea si $n$ es primo pues, pues ... Ya acabamos.
+
+                Si $n$ no es primo entonces $n=ab$, y ahora en vez de enfocarnos en 
+                $n$ lo hacemos en $a,b$.
+
+                Por inducción tenemos que llegar a que $a,b$ es un primo o bien
+                es el producto de dos naturales, y ahora analizamos a esos dos números...
+                Si te das cuenta, es inducción y solo acaba cuando tanto $a$ como $b$ sean
+                producto de primos.
+
+                Veríamos que por el principio de buen orden tenemos la secuencia que se
+                nos va formando $1 < a < b < n$ y si siguieramos y cambiaramos nombre
+                por consistencia $1 <\cdots<n_2<n_1<n$ tiene que terminar, no puede ser
+                una lista y por ende un proceso infinito.
+
+                Por lo tanto $n$ es siempre producto de Primos.
+            \end{Indentation}
+
+            \begin{Indentation}[0.75em]
+                \textbf{Parte II: Es Único:}
+            \end{Indentation}
+
+            \begin{Indentation}[1.25em]
+                Supongamos dos secuencias de primos que al multiplicarlos nos dan
+                a $n$, incluso supongamos que existe la posibilidad de que sea
+                diferente la cantidad de primos, esto estaría escrito como:
+
+                $n=p_1p_2p_3\dots p_r = q_1q_2q_3\dots q_s$ donde $r \leq s$
+
+                Ahora sabemos que $n$ no es más que esas dos secuencias, por 
+                lo tanto $p_1|n$, es decir $p_1|q_1q_2q_3\dots q_s$
+
+                El Teorema de Euclides (este: Si p es un primo y $p|ab$ entonces
+                eso implica que p divide mínimo a $a$ ó a $b$, es decir
+                $p|a \lor p|b$) implica que o bien $p_1=q_1$ ó bien
+                $p_1|q_2q_3\dots q_s$.
+
+                Así que por inducción veremos que $p_1=q_i$ para alguna
+                $1 \leq i \leq s$.
+
+                Entonces vemos que podemos cancelar a esa $p_1$ y a $q_i$ y vemos
+                que:
+
+                $p_2p_3\dots p_r = q_1q_2q_3\dots q_{i-1}q_{i+1} \dots q_s$
+
+                Repetimos este proceso de encontrar un compañero para alguna $p_x$
+                r veces.
+
+                Si $r < s$ entonces $q_{r+1} \dots q_s = 1$ no es posible,
+                por lo tanto $r=s$ y el conjunto de $p_x$ y $q_y$ son exactamente
+                el mismo, hemos terminado la prueba. ¡Yeah!
 
 
 
+            \end{Indentation}
+            
+        \end{SmallIndentation}
 
+
+
+        % ==================================
+        % =====   FACTORIZACION PRIMA   ====
+        % ==================================
+        \clearpage
+        \subsection{Factorización Prima}
+
+            Como vimos podemos escribir cualquier $n \in \Naturals$ como:
+
+            \begin{equation}
+                n = p_1 p_2 p_3 \dots p_s
+            \end{equation}
+
+            Estos $p_i$ no tienen porque ser diferentes todos, así que 
+            otra forma equivalente de escribirlos es como:
+
+            \begin{equation}
+                n = p_1^{\alpha_1}p_2^{\alpha_2} \dots p_s^{\alpha_s}
+                \Space
+                \text{ donde tenemos que }
+                \alpha_i \geq 0 \text{, y también } p_1 < p_2 < \dots < p_r
+            \end{equation}
 
 
 

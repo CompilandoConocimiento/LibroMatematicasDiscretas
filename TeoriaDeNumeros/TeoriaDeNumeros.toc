@@ -31,5 +31,6 @@
 \contentsline {section}{\numberline {3.3}Como Saber si $n \in \Primes $}{28}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Fuerza Bruta Inteligente}{28}{subsection.3.3.1}
 \contentsline {section}{\numberline {3.4}Teorema Fundamental de la Aritm\IeC {\'e}tica}{29}{section.3.4}
-\contentsline {chapter}{\numberline {4}Combinatoria}{30}{chapter.4}
-\contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{31}{section.4.1}
+\contentsline {subsection}{\numberline {3.4.1}Factorizaci\IeC {\'o}n Prima}{30}{subsection.3.4.1}
+\contentsline {chapter}{\numberline {4}Combinatoria}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{32}{section.4.1}
