@@ -537,6 +537,18 @@
 
                     \end{SmallIndentation}
 
+                \item Si $a|b$ y $a|b \pm c$ entonces $a|c$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Sabemos que $b=aq_1$, y $b \pm c=aq_2$, si restamos tenemos que
+                        $b \pm c -b = aq_2 - aq_1$, que es lo mismo que $\pm c = (q_2-q_1)a$,
+                        que es lo mismo que $c = \pm(q_2-q_1)a$ que es lo mismo que $c = q_3a$.
+
+                    \end{SmallIndentation}
+
                 \item Si $b|a$ entonces $b|ak$ $\forall k \in \Integers$.
 
                     % ======== DEMOSTRACION ========
@@ -1477,27 +1489,71 @@
     % ======   IMPORTANTES     =========
     % ==================================
     \section{Proposiciones Importantes}
-    \begin{itemize}
+    
+        \begin{itemize}
 
-        \item \textbf{Teorema de Euclides}:
-            Si p es un primo y $p|ab$ entonces eso implica que p divide mínimo
-            a $a$ ó a $b$, es decir $p|a \lor p|b$
+            \item \textbf{Teorema de Euclides}:
+                Si p es un primo y $p|ab$ entonces eso implica que p divide mínimo
+                a $a$ ó a $b$, es decir $p|a \lor p|b$
 
-            % ======== DEMOSTRACION ========
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración}:
+                % ======== DEMOSTRACION ========
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración}:
 
-                Esta es más fácil de lo que te imaginas, recuerda que si
-                $GCD(a,b) = 1$ y que $a|bc$, entonces $a|c$.
+                    Esta es más fácil de lo que te imaginas, recuerda que si
+                    $GCD(a,b) = 1$ y que $a|bc$, entonces $a|c$.
 
-                Ahora supongamos que $GCD(p,a) = 1$, es decir, que son primos
-                relativos, y si sabemos aparte que $p|ab$ entonces $p|b$.
+                    Ahora supongamos que $GCD(p,a) = 1$, es decir, que son primos
+                    relativos, y si sabemos aparte que $p|ab$ entonces $p|b$.
 
-                Por el otro lado si $GCD(p, a) \neq 1$ entonces existe un multiplo
-                común entre ellos y ya que $p$ es primo, tenemos que $a=kp$ por lo
-                tanto $p|a$.
+                    Por el otro lado si $GCD(p, a) \neq 1$ entonces existe un multiplo
+                    común entre ellos y ya que $p$ es primo, tenemos que $a=kp$ por lo
+                    tanto $p|a$.
 
-            \end{SmallIndentation}
+                \end{SmallIndentation}
+
+
+            \item Hay una cantidad infinita de primos ($|\Primes| = \infty$)
+
+                % ======== DEMOSTRACION ========
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración - Euclides Edition}:
+
+                    Este también es un resultado muy famoso e importante, así
+                    que veamoslo con detalle:
+
+                    La demostración es por contradicción.
+                    Supongamos que sólo hay un número finito, Sean estos 
+                    $MiniPrimos = \{ p_1, p_2, \dots, p_n\}$.
+
+                    Consideremos ahora el número $p'=p_1 \cdots p_n + 1$,
+                    pongamos esto como $p' = \prod_{n=1}^{n} p_k +1$
+
+                    Tenemos dos opciones, o $p$ es primo o $p$ no lo es.
+                    (lo se, me merezco un Nobel).
+
+                    Pero $p'$ no puede ser primo pues es más grande que
+                    todos los primos en la lista, así que si $p'$ fuera
+                    un primo indicaría que nuestra lista esta incompleta.
+
+                    Si fuera compuesto entonces es divisible por algún primo.
+                    Digamos que ese primo se llama $p_x$, ahora supongamos que 
+                    esta en el conjunto, eso indica que $p_x|p'$, que es lo
+                    mismo que poner $p_x|\prod_{n=1}^{n}p_k+1$ y ya que $p_x$ 
+                    esta dentro del conjunto de $MiniPrimos$, entonces
+                    $p_x|\prod_{n=1}^{n}p_k$. Si te das cuenta usando un teorema anterior
+                    (Si $a|b$ y $a|b+c$ entonces $a|c$) tenemos que $p_x|1$ lo cual es
+                    imposible pues implicaría que $1 = kp_x$ y eso simplemente no se puede.
+
+                    Por lo tanto $p_x$ no puede estar en $MiniPrimos$, así que el conjunto
+                    no esta completo.
+
+                    Si te das cuenta, sin importar que $p'$ sea o no primo, la conclusión
+                    siempre es la misma, el conjunto no esta completo, hay más primos.
+
+                    Siempre hay más primos.
+
+                \end{SmallIndentation}
 
         \end{itemize}
 
@@ -1549,6 +1605,71 @@
                     \end{SmallIndentation}
 
                 \end{itemize}
+
+
+
+    % =====================================================
+    % ======   TEOREMA FUNDAMENTAL DE ARITMETICA  =========
+    % =====================================================
+    \clearpage
+    \section{Teorema Fundamental de la Aritmética}
+
+            Un número $n \in \Naturals$ puede ser expresado como
+            un producto de primos.
+
+            Notese que dicha factorización es única si no cuentas el 
+            orden.
+
+            % ======== DEMOSTRACION ========
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración}:\\
+
+
+                \begin{Indentation}[0.75em]
+                    \textbf{Parte I}:
+                \end{Indentation}
+
+                \begin{Indentation}[1.25em]
+                    La demostración de la primera parte es mucho más sencilla
+                    de lo que parece:
+
+                    Suponemos que $n \in \Naturals$, si $n=1$ entonces $n$ es el
+                    producto de un conjunto vacío de primos.
+
+                    Si $n \in \Primes$, osea si $n$ es primo pues, pues ... Ya acabamos.
+
+                    Si $n$ no es primo entonces $n=ab$, y ahora en vez de enfocarnos en 
+                    $n$ lo hacemos en $a,b$.
+
+                    Por inducción tenemos que llegar a que $a,b$ es un primo o bien
+                    es el producto de dos naturales, y ahora analizamos a esos dos números...
+                    Si te das cuenta, es inducción y solo acaba cuando tanto $a$ como $b$ sean
+                    producto de primos.
+
+                    Por lo tanto $n$ es siempre producto de Primos.
+                \end{Indentation}
+
+
+                
+            \end{SmallIndentation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
