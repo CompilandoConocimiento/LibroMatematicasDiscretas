@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  5 JUL 2017 11:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  6 JUL 2017 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1067,20 +1067,20 @@ LaTeX Info: Redefining \% on input line 23.
 )
 \openout1 = `TeoriaDeNumeros.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 124.
-LaTeX Font Info:    ... okay on input line 124.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1117,7 +1117,7 @@ LaTeX Font Info:    ... okay on input line 124.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box82
-Package hyperref Info: Link coloring OFF on input line 124.
+Package hyperref Info: Link coloring OFF on input line 125.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1126,16 +1126,16 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count199
 )
-LaTeX Info: Redefining \ref on input line 124.
-LaTeX Info: Redefining \pageref on input line 124.
-LaTeX Info: Redefining \nameref on input line 124.
+LaTeX Info: Redefining \ref on input line 125.
+LaTeX Info: Redefining \pageref on input line 125.
+LaTeX Info: Redefining \nameref on input line 125.
 
 (./TeoriaDeNumeros.out) (./TeoriaDeNumeros.out)
 \@outlinefile=\write3
 \openout3 = `TeoriaDeNumeros.out'.
 
-LaTeX Info: Redefining \. on input line 124.
-LaTeX Info: Redefining \% on input line 124.
+LaTeX Info: Redefining \. on input line 125.
+LaTeX Info: Redefining \% on input line 125.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1187,32 +1187,31 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 3.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-))
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.28 ...{3}N\IeC {\'u}meros Primos}{26}{chapter.3}
+                                                   [1
+
+])
 \tf@toc=\write4
 \openout4 = `TeoriaDeNumeros.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.156 \clearpage
-                 [1
-
-]
-LaTeX Info: Redefining \. on input line 156.
-LaTeX Info: Redefining \% on input line 156.
-LaTeX Info: Redefining \. on input line 156.
-LaTeX Info: Redefining \% on input line 156.
+LaTeX Info: Redefining \. on input line 157.
+LaTeX Info: Redefining \% on input line 157.
+LaTeX Info: Redefining \. on input line 157.
+LaTeX Info: Redefining \% on input line 157.
  [2]
 Cap\'{\i }tulo 1.
 [3
 
 
 ]
-LaTeX Info: Redefining \. on input line 190.
-LaTeX Info: Redefining \% on input line 190.
-LaTeX Info: Redefining \. on input line 190.
-LaTeX Info: Redefining \% on input line 190.
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
+LaTeX Info: Redefining \. on input line 191.
+LaTeX Info: Redefining \% on input line 191.
  [4
 
 ]
@@ -1220,57 +1219,57 @@ Cap\'{\i }tulo 2.
 [5
 
 ]
-LaTeX Info: Redefining \. on input line 270.
-LaTeX Info: Redefining \% on input line 270.
-LaTeX Info: Redefining \. on input line 270.
-LaTeX Info: Redefining \% on input line 270.
+LaTeX Info: Redefining \. on input line 271.
+LaTeX Info: Redefining \% on input line 271.
+LaTeX Info: Redefining \. on input line 271.
+LaTeX Info: Redefining \% on input line 271.
  [6
 
 
 ]
-LaTeX Info: Redefining \. on input line 334.
-LaTeX Info: Redefining \% on input line 334.
-LaTeX Info: Redefining \. on input line 334.
-LaTeX Info: Redefining \% on input line 334.
+LaTeX Info: Redefining \. on input line 335.
+LaTeX Info: Redefining \% on input line 335.
+LaTeX Info: Redefining \. on input line 335.
+LaTeX Info: Redefining \% on input line 335.
  [7
 
 ]
-LaTeX Info: Redefining \. on input line 395.
-LaTeX Info: Redefining \% on input line 395.
-LaTeX Info: Redefining \. on input line 395.
-LaTeX Info: Redefining \% on input line 395.
+LaTeX Info: Redefining \. on input line 396.
+LaTeX Info: Redefining \% on input line 396.
+LaTeX Info: Redefining \. on input line 396.
+LaTeX Info: Redefining \% on input line 396.
  [8
 
 ]
-LaTeX Info: Redefining \. on input line 435.
-LaTeX Info: Redefining \% on input line 435.
-LaTeX Info: Redefining \. on input line 435.
-LaTeX Info: Redefining \% on input line 435.
+LaTeX Info: Redefining \. on input line 436.
+LaTeX Info: Redefining \% on input line 436.
+LaTeX Info: Redefining \. on input line 436.
+LaTeX Info: Redefining \% on input line 436.
  [9
 
 ]
-LaTeX Info: Redefining \. on input line 524.
-LaTeX Info: Redefining \% on input line 524.
-LaTeX Info: Redefining \. on input line 524.
-LaTeX Info: Redefining \% on input line 524.
+LaTeX Info: Redefining \. on input line 525.
+LaTeX Info: Redefining \% on input line 525.
+LaTeX Info: Redefining \. on input line 525.
+LaTeX Info: Redefining \% on input line 525.
  [10
 
 ]
-LaTeX Info: Redefining \. on input line 597.
-LaTeX Info: Redefining \% on input line 597.
-LaTeX Info: Redefining \. on input line 597.
-LaTeX Info: Redefining \% on input line 597.
+LaTeX Info: Redefining \. on input line 598.
+LaTeX Info: Redefining \% on input line 598.
+LaTeX Info: Redefining \. on input line 598.
+LaTeX Info: Redefining \% on input line 598.
  [11
 
 ]
-LaTeX Info: Redefining \. on input line 643.
-LaTeX Info: Redefining \% on input line 643.
-LaTeX Info: Redefining \. on input line 643.
-LaTeX Info: Redefining \% on input line 643.
+LaTeX Info: Redefining \. on input line 644.
+LaTeX Info: Redefining \% on input line 644.
+LaTeX Info: Redefining \. on input line 644.
+LaTeX Info: Redefining \% on input line 644.
  [12
 
 ]
-Overfull \hbox (5.92177pt too wide) in paragraph at lines 701--702
+Overfull \hbox (5.92177pt too wide) in paragraph at lines 702--703
 []\T1/cmr/m/n/12 Siempre se cum-ple que $\OML/cmm/m/it/12 GCD\OT1/cmr/m/n/12 (\
 OML/cmm/m/it/12 a; b\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 GCD\OT1/cmr/m/n/12 (\O
 MS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 a; b\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 GCD
@@ -1279,70 +1278,70 @@ MS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 a; b\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 GCD
 mm/m/it/12 a; \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 b\OT1/cmr/m/n/12 )$ 
  []
 
-LaTeX Info: Redefining \. on input line 724.
-LaTeX Info: Redefining \% on input line 724.
-LaTeX Info: Redefining \. on input line 724.
-LaTeX Info: Redefining \% on input line 724.
+LaTeX Info: Redefining \. on input line 725.
+LaTeX Info: Redefining \% on input line 725.
+LaTeX Info: Redefining \. on input line 725.
+LaTeX Info: Redefining \% on input line 725.
 [13
 
 ]
-Overfull \hbox (38.67673pt too wide) in paragraph at lines 742--744
+Overfull \hbox (38.67673pt too wide) in paragraph at lines 743--745
 []\T1/cmr/m/n/10 Ahora, con-cen-tre-mos en las com-bi-na-cio-nes li-nea-les que
  sean po-si-ti-vas, ha-ga-mos el con-jun-to $\OML/cmm/m/it/10 Combinaciones \OT
 1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (4.67328pt too wide) in paragraph at lines 760--764
+Overfull \hbox (4.67328pt too wide) in paragraph at lines 761--765
 []\T1/cmr/m/n/10 Si no te has da-do cuen-ta, es-ta de la for-ma $\OML/cmm/m/it/
 10 ax \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 by$\T1/cmr/m/n/10 , osea que $\OML/cmm
 /m/it/10 r$ \T1/cmr/m/n/10 tam-bién de-be-ría es-tar en $\OML/cmm/m/it/10 Combi
 naciones$\T1/cmr/m/n/10 ,
  []
 
-LaTeX Info: Redefining \. on input line 784.
-LaTeX Info: Redefining \% on input line 784.
-LaTeX Info: Redefining \. on input line 784.
-LaTeX Info: Redefining \% on input line 784.
+LaTeX Info: Redefining \. on input line 785.
+LaTeX Info: Redefining \% on input line 785.
+LaTeX Info: Redefining \. on input line 785.
+LaTeX Info: Redefining \% on input line 785.
 [14
 
 ]
-LaTeX Info: Redefining \. on input line 852.
-LaTeX Info: Redefining \% on input line 852.
-LaTeX Info: Redefining \. on input line 852.
-LaTeX Info: Redefining \% on input line 852.
+LaTeX Info: Redefining \. on input line 874.
+LaTeX Info: Redefining \% on input line 874.
+LaTeX Info: Redefining \. on input line 874.
+LaTeX Info: Redefining \% on input line 874.
  [15
 
 ]
-LaTeX Info: Redefining \. on input line 908.
-LaTeX Info: Redefining \% on input line 908.
-LaTeX Info: Redefining \. on input line 908.
-LaTeX Info: Redefining \% on input line 908.
+LaTeX Info: Redefining \. on input line 930.
+LaTeX Info: Redefining \% on input line 930.
+LaTeX Info: Redefining \. on input line 930.
+LaTeX Info: Redefining \% on input line 930.
  [16
 
 ]
-LaTeX Info: Redefining \. on input line 965.
-LaTeX Info: Redefining \% on input line 965.
-LaTeX Info: Redefining \. on input line 965.
-LaTeX Info: Redefining \% on input line 965.
+LaTeX Info: Redefining \. on input line 987.
+LaTeX Info: Redefining \% on input line 987.
+LaTeX Info: Redefining \. on input line 987.
+LaTeX Info: Redefining \% on input line 987.
  [17
 
 ]
-LaTeX Info: Redefining \. on input line 1035.
-LaTeX Info: Redefining \% on input line 1035.
-LaTeX Info: Redefining \. on input line 1035.
-LaTeX Info: Redefining \% on input line 1035.
+LaTeX Info: Redefining \. on input line 1057.
+LaTeX Info: Redefining \% on input line 1057.
+LaTeX Info: Redefining \. on input line 1057.
+LaTeX Info: Redefining \% on input line 1057.
  [18
 
 ]
-LaTeX Info: Redefining \. on input line 1061.
-LaTeX Info: Redefining \% on input line 1061.
-LaTeX Info: Redefining \. on input line 1061.
-LaTeX Info: Redefining \% on input line 1061.
+LaTeX Info: Redefining \. on input line 1083.
+LaTeX Info: Redefining \% on input line 1083.
+LaTeX Info: Redefining \. on input line 1083.
+LaTeX Info: Redefining \% on input line 1083.
  [19
 
 ]
-Overfull \hbox (3.78593pt too wide) in paragraph at lines 1092--1094
+Overfull \hbox (3.78593pt too wide) in paragraph at lines 1114--1116
 []\T1/cmr/m/n/10 Recuerda que $\OML/cmm/m/it/10 GCD\OT1/cmr/m/n/10 (\OML/cmm/m/
 it/10 a; b\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 GCD\OT1/cmr/m/n/10 (\OML/cmm/m/i
 t/10 b; r[]\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 GCD\OT1/cmr/m/n/10 (\OML/cmm/m/
@@ -1351,80 +1350,185 @@ ML/cmm/m/it/10 GCD\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r[]; r[]\OT1/cmr/m/n/10 ) =
 
  []
 
-LaTeX Info: Redefining \. on input line 1124.
-LaTeX Info: Redefining \% on input line 1124.
-LaTeX Info: Redefining \. on input line 1124.
-LaTeX Info: Redefining \% on input line 1124.
+LaTeX Info: Redefining \. on input line 1146.
+LaTeX Info: Redefining \% on input line 1146.
+LaTeX Info: Redefining \. on input line 1146.
+LaTeX Info: Redefining \% on input line 1146.
 [20
 
 ]
-LaTeX Info: Redefining \. on input line 1207.
-LaTeX Info: Redefining \% on input line 1207.
-LaTeX Info: Redefining \. on input line 1207.
-LaTeX Info: Redefining \% on input line 1207.
+LaTeX Info: Redefining \. on input line 1229.
+LaTeX Info: Redefining \% on input line 1229.
+LaTeX Info: Redefining \. on input line 1229.
+LaTeX Info: Redefining \% on input line 1229.
  [21
 
 ]
-LaTeX Info: Redefining \. on input line 1238.
-LaTeX Info: Redefining \% on input line 1238.
-LaTeX Info: Redefining \. on input line 1238.
-LaTeX Info: Redefining \% on input line 1238.
+LaTeX Info: Redefining \. on input line 1260.
+LaTeX Info: Redefining \% on input line 1260.
+LaTeX Info: Redefining \. on input line 1260.
+LaTeX Info: Redefining \% on input line 1260.
  [22
 
 ]
-Overfull \hbox (29.70064pt too wide) in paragraph at lines 1289--1291
+Overfull \hbox (29.70064pt too wide) in paragraph at lines 1311--1313
 []\T1/cmr/m/n/10 Esta iden-ti-dad es en-de-mo-nia-da-men-te útil, prue-ba por e
 jem-plo con: $\OML/cmm/m/it/10 GCD\OT1/cmr/m/n/10 (12\OML/cmm/m/it/10 ; \OMS/cm
 sy/m/n/10 ^^@\OT1/cmr/m/n/10 30) \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/10 LCM\OT1/
 cmr/m/n/10 (12\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 30) =
  []
 
-LaTeX Info: Redefining \. on input line 1314.
-LaTeX Info: Redefining \% on input line 1314.
-LaTeX Info: Redefining \. on input line 1314.
-LaTeX Info: Redefining \% on input line 1314.
+LaTeX Info: Redefining \. on input line 1336.
+LaTeX Info: Redefining \% on input line 1336.
+LaTeX Info: Redefining \. on input line 1336.
+LaTeX Info: Redefining \% on input line 1336.
 [23
 
 ]
-LaTeX Info: Redefining \. on input line 1384.
-LaTeX Info: Redefining \% on input line 1384.
-LaTeX Info: Redefining \. on input line 1384.
-LaTeX Info: Redefining \% on input line 1384.
+LaTeX Info: Redefining \. on input line 1383.
+LaTeX Info: Redefining \% on input line 1383.
+LaTeX Info: Redefining \. on input line 1383.
+LaTeX Info: Redefining \% on input line 1383.
  [24
 
 ]
+LaTeX Info: Redefining \. on input line 1454.
+LaTeX Info: Redefining \% on input line 1454.
+LaTeX Info: Redefining \. on input line 1454.
+LaTeX Info: Redefining \% on input line 1454.
+ [25
+
+]
 Cap\'{\i }tulo 3.
-[25
+[26
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1419.
-LaTeX Info: Redefining \. on input line 1419.
-LaTeX Info: Redefining \% on input line 1419.
-LaTeX Info: Redefining \. on input line 1419.
-LaTeX Info: Redefining \% on input line 1419.
- [26
+LaTeX Info: Redefining \. on input line 1511.
+LaTeX Info: Redefining \% on input line 1511.
+LaTeX Info: Redefining \. on input line 1511.
+LaTeX Info: Redefining \% on input line 1511.
+ [27
+
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1419.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\in' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathop' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathchardef' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\std@minus' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathcode' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                \kern 2.61018pt
+(hyperref)                removed on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathgroup' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\symoperators' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ifnextchar' on input line 1512.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1512.
+
+
+Package hyperref Warning: Composite letter `\textacute+3'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textacute' on input line 1512.
+
+
+Package hyperref Warning: Composite letter `\textdotaccent+"'
+(hyperref)                not defined in PD1 encoding,
+(hyperref)                removing `\textdotaccent' on input line 1512.
+
+LaTeX Info: Redefining \. on input line 1560.
+LaTeX Info: Redefining \% on input line 1560.
+LaTeX Info: Redefining \. on input line 1560.
+LaTeX Info: Redefining \% on input line 1560.
+[28
+
+]
+Cap\'{\i }tulo 4.
+[29
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1595.
+LaTeX Info: Redefining \. on input line 1595.
+LaTeX Info: Redefining \% on input line 1595.
+LaTeX Info: Redefining \. on input line 1595.
+LaTeX Info: Redefining \% on input line 1595.
+ [30
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1595.
  (./TeoriaDeNumeros.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1419.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1419.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1595.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1595.
 
 Package rerunfilecheck Info: File `TeoriaDeNumeros.out' has not changed.
-(rerunfilecheck)             Checksum: 0130E7DBE327796E2F79BFE47D52C5AD;1586.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1419.
+(rerunfilecheck)             Checksum: DA9EE4504E9FFFC5466C53FBCA6FE357;2076.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1595.
  ) 
 Here is how much of TeX's memory you used:
- 19154 strings out of 493014
- 325528 string characters out of 6133351
- 410595 words of memory out of 5000000
- 22371 multiletter control sequences out of 15000+600000
- 25756 words of font info for 66 fonts, out of 8000000 for 9000
+ 19185 strings out of 493014
+ 325916 string characters out of 6133351
+ 410619 words of memory out of 5000000
+ 22390 multiletter control sequences out of 15000+600000
+ 27467 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,12n,52p,10503b,575s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,14n,52p,10503b,605s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{section.0.0} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1461,10 +1565,10 @@ pe1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
 public/cm-super/sfrm2074.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
 blic/cm-super/sfxc1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
 ic/cm-super/sfxc1728.pfb>
-Output written on TeoriaDeNumeros.pdf (27 pages, 391843 bytes).
+Output written on TeoriaDeNumeros.pdf (31 pages, 405791 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 422 compressed objects within 5 object streams
- 73 named destinations out of 1000 (max. 500000)
- 185 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 550 PDF objects out of 1000 (max. 8388607)
+ 483 compressed objects within 5 object streams
+ 84 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

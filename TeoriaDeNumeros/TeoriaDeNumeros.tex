@@ -97,11 +97,12 @@
     \newcommand \linfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lequal for a double arrow
 
     % =====  NUMBER THEORY  ==========
-    \DeclareMathOperator \Naturals {\mathbb{N}}                     %Use: \Naturals por Notation
-    \DeclareMathOperator \Integers {\mathbb{Z}}                     %Use: \Integers por Notation
-    \DeclareMathOperator \Racionals{\mathbb{Q}}                     %Use: \Racionals por Notation
-    \DeclareMathOperator \Reals {\mathbb{R}}                        %Use: \Reals por Notation
-    \DeclareMathOperator \Complexs {\mathbb{C}}                     %Use: \Complex por Notation
+    \DeclareMathOperator \Naturals  {\mathbb{N}}                     %Use: \Naturals por Notation
+    \DeclareMathOperator \Primes    {\mathbb{P}}                     %Use: \Naturals por Notation
+    \DeclareMathOperator \Integers  {\mathbb{Z}}                     %Use: \Integers por Notation
+    \DeclareMathOperator \Racionals {\mathbb{Q}}                     %Use: \Racionals por Notation
+    \DeclareMathOperator \Reals     {\mathbb{R}}                     %Use: \Reals por Notation
+    \DeclareMathOperator \Complexs  {\mathbb{C}}                     %Use: \Complex por Notation
 
     % === LINEAL ALGEBRA & VECTORS ===
     \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
@@ -602,37 +603,37 @@
         % ==================================
         \subsection*{Definición Formal}
 
-        Dados dos números cualquiera $a, b \in \Integers$ pero con mínimo alguno de ellos dos diferentes
-        de 0. 
+            Dados dos números cualquiera $a, b \in \Integers$ pero con mínimo alguno de ellos dos diferentes
+            de 0. 
 
-        Entonces decimos que el máximo común divisor de $a$ y $b$ denotado por $MCD(a,b) = GCD(a,b)$
-        es el entero positivo $d$ que satisface:
+            Entonces decimos que el máximo común divisor de $a$ y $b$ denotado por $MCD(a,b) = GCD(a,b)$
+            es el entero positivo $d$ que satisface:
 
-        \begin{itemize}
-            \item $d|a$ y $d|b$
-            \item Si $c|a$ y $c|b$ entonces $c \leq d$.
-        \end{itemize}
+            \begin{itemize}
+                \item $d|a$ y $d|b$
+                \item Si $c|a$ y $c|b$ entonces $c \leq d$.
+            \end{itemize}
 
 
-        % ======== IDEAS ========
-        \begin{SmallIndentation}[1em]
-            \textbf{Ideas}:
+            % ======== IDEAS ========
+            \begin{SmallIndentation}[1em]
+                \textbf{Ideas}:
 
-            Decimos que $d$ es un división común de $a$ y $b$ si $(d|a) \land (d|b)$.
+                Decimos que $d$ es un división común de $a$ y $b$ si $(d|a) \land (d|b)$.
 
-            Ahora podemos construir el conjunto de los divisores comúnes.
-            $Divisores = \{ d \in \Integers \Such (d|a) \land (d|b) \}$
+                Ahora podemos construir el conjunto de los divisores comúnes.
+                $Divisores = \{ d \in \Integers \Such (d|a) \land (d|b) \}$
 
-            Ahora si, con todo esto listo, podemos ver que este conjunto nunca estará vació. 
-            como 1 es un divisón común de todos los enteros.
+                Ahora si, con todo esto listo, podemos ver que este conjunto nunca estará vació. 
+                como 1 es un divisón común de todos los enteros.
 
-            Ahora podemos ver que el conjunto no es infinito siempre que alguno de ellos no sea cero,
-            hay sólo una cantidad finita de divisores comunes positivos. Dentro de ellos hay uno
-            que es el mayor.
+                Ahora podemos ver que el conjunto no es infinito siempre que alguno de ellos no sea cero,
+                hay sólo una cantidad finita de divisores comunes positivos. Dentro de ellos hay uno
+                que es el mayor.
 
-            La segunda condición se asegura de que $d$ sea el máximo elemento dentro del conjunto.
+                La segunda condición se asegura de que $d$ sea el máximo elemento dentro del conjunto.
 
-        \end{SmallIndentation}
+            \end{SmallIndentation}
 
 
 
@@ -839,6 +840,27 @@
                         si,existen enteros $x,y \in \Integers$ tales que $1=am+bn$).
 
                         Y bingo, ahí esta nuestra pareja de primos relativos.
+
+                    \end{SmallIndentation} 
+
+
+                \item Supón $GCD(a,b) = 1$ y que $a|bc$, entonces $a|c$.
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Esta idea suena muy específica, pero creeme que es muy útil.
+
+                        Además demostrarlo es más sencillo de lo que te imaginas,
+                        sabemos que por la identidad de Bezout $am+bn = 1$,
+                        ahora multiplica todo por $c$ y tendremos que:
+                        $amc + bnc = c$.
+
+                        Además recuerda que $a|bc$, es decir $bc = aq$, por lo tanto
+                        podemos decir que $amc + aqc = c$ esto es lo mismo que $a(mc+qc) = c$
+                        por lo tanto podemos decir que $q=mc+qc$ y tener que $c = aq$, 
+                        es decir $a|c$. 
 
                     \end{SmallIndentation} 
 
@@ -1333,9 +1355,9 @@
 
 
         % ==================================
-        % ========  SOLUCION     ===========
+        % ===    COMO ES UNA SOLUCION  =====
         % ==================================
-        \subsection*{Solución}
+        \subsection{Soluciones}
 
             La ecuación $ax+by = c$ tiene solución si y sólo si, $GCD(a,b)|c$, es decir
             si $\frac{c}{GCD(a,b)}$.
@@ -1354,25 +1376,179 @@
 
             \end{SmallIndentation}
 
-            
+
+        % ===================================
+        % == COMO SON TODAS LAS SOLUCIONES ==
+        % ===================================
+        \clearpage
+        \subsection{Soluciones Generales}
+
+            Supón que $x_0, y_0$ es \textbf{una} solución a la ecuación $ax+ by = c$,
+            entonces todas las demás soluciones estarán dadas por:
+
+            \begin{itemize}
+                \item $x = x_0 + \dfrac{b}{d}t$
+                \item $y = y_0 - \dfrac{a}{d}t$
+            \end{itemize}
+
+            Donde $t \in \Integers$ y $d=GCD(a,b)$
+
+
+            % ======== DEMOSTRACION ========
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración}:
+
+                    Recuerda, ya sabemos que $ax_0 + by_0 = c$, ahora pongamos 
+                    las soluciones generales de regreso
+                    $ax_0 + by_0 = c = ax + by$.
+
+                    Podemos entonces ver que con Algebra llegaremos a que o bien
+                    $ax_0+by_0 = ax+by$ o a algo mucho más interesante:
+
+                    $a(x - x_0) = b(y_0 - y)$.
+
+                    Ahora recuerda que ya habíamos probado que si $d = GCD(a,b)$.
+                    La pareja de $\frac{a}{d}, \frac{b}{d}$ siempre son primos relativos.
+                    Ya que escribir esas fracciones se ve feo pongamos que $r = \frac{a}{d}$
+                    y $s = \frac{b}{d}$.
+
+                    Pasa algo muy divertido si intentamos dividir entre $d$ todo esto:
+                    $a(x - x_0) = b(y_0 - y)$ se convierte en
+                    $\frac{a}{d}(x - x_0) = \frac{b}{d}(y_0 - y)$, que es lo mismo que:
+
+                    $r(x - x_0) = s(y_0 - y)$
+
+                    Bajo esa ecuación puede ver que $s(y_0 - y) = rq$, donde $q=(x-x_0)$
+                    y $b=(y_0 - y)$ por lo tanto $r|sb$, ahora veamos que $GCD(r,s)=1$
+                    y que ya sabemos que $r|sb$ podemos aplicar un teorema que ya vimos
+                    antes que dice que \Quote{Supón $GCD(a,b) = 1$ y que $a|bc$,
+                    entonces $a|c$}. Y afirmar con ello que $r|b$, es decir:
+
+                    $r|(y_0 - y)$
+
+                    Esto es lo mismo que decir que $(y_0 - y) = rt$, podemos despejar a
+                    $y$ y tener que $y= y_0 - rt = y_0 - \frac{a}{GCD(a,b)}t$.
+
+                    Ahora hagamos algo parecido con $x$, recordemos que $r(x-x_0)=s(y_0-y)$
+
+                    Bajo esa ecuación puede ver que $sq = r(x-x_0)$, donde $q=(y_0-y)$
+                    y $b=(x_0-x)$ por lo tanto $s|rb$, ahora veamos que $GCD(r,s)=1$
+                    y que ya sabemos que $s|rb$ podemos aplicar un teorema que ya vimos
+                    antes que dice que \Quote{Supón $GCD(a,b) = 1$ y que $a|bc$,
+                    entonces $a|c$}. Y afirmar con ello que $s|b$, es decir:
+
+                    $s|(x - x_0)$
+
+                    Esto es lo mismo que decir que $(x-x_0) = st$, podemos despejar a
+                    $x$ y tener que $x= x_0 + st = x_0 + \frac{b}{GCD(a,b)}t$.
+
+            \end{SmallIndentation}
 
 
 
 
 
+% ======================================================================================
+% ===========================         NUMEROS PRIMOS          ==========================
+% ======================================================================================
+\chapter{Números Primos}
+    \clearpage
+
+     
+
+    % =====================================================
+    % ==========     ALGORITMO DE LA DIVISIÓN     =========
+    % =====================================================
+    \clearpage
+    \section{Definición}
+
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
+
+            Un número $p \in \Naturals$ es llamado número primo o simplemente
+            primo, \textbf{si sus únicos divisores positivos son 1 y p}.
+
+            Un entero mayor que 1 que no es primo es llamado compuesto.
+
+         
+    % ==================================
+    % ======   IMPORTANTES     =========
+    % ==================================
+    \section{Proposiciones Importantes}
+    \begin{itemize}
+
+        \item \textbf{Teorema de Euclides}:
+            Si p es un primo y $p|ab$ entonces eso implica que p divide mínimo
+            a $a$ ó a $b$, es decir $p|a \lor p|b$
+
+            % ======== DEMOSTRACION ========
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración}:
+
+                Esta es más fácil de lo que te imaginas, recuerda que si
+                $GCD(a,b) = 1$ y que $a|bc$, entonces $a|c$.
+
+                Ahora supongamos que $GCD(p,a) = 1$, es decir, que son primos
+                relativos, y si sabemos aparte que $p|ab$ entonces $p|b$.
+
+                Por el otro lado si $GCD(p, a) \neq 1$ entonces existe un multiplo
+                común entre ellos y ya que $p$ es primo, tenemos que $a=kp$ por lo
+                tanto $p|a$.
+
+            \end{SmallIndentation}
+
+        \end{itemize}
 
 
 
 
 
+    % ==================================
+    % ======   COMO ENCONTRARLOS   =====
+    % ==================================
+    \clearpage
+    \section{Como Saber si $n \in \Primes$}
+    
+        Dado un entero particular, ¿Cómo podemos saber si es primo o no?
+
+        Si el número es compuesto, ¿Cómo podemos encontrar un divisor no trivial?
 
 
+        % ===================================
+        % ====   CRIBA DE ESATOSTENES   =====
+        % ===================================
+        \subsection{Fuerza Bruta Inteligente}
 
+            La primera idea es verificar si todos los enteros menores son
+            divisores, si los únicos divisores son el 1 y el -1 entonces
+            el número será primo.
 
+            Este método es simple pero costoso en términos de cómputo. Sin
+            embargo hay una propiedad que nos podría facilitar el cálculo.
 
+            \begin{itemize}
 
+                \item Todo número compuesto $n$ tiene un divisor $a$ tal que
+                    $a \leq \sqrt{n}$
 
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
 
+                        En efecto, como n es compuesto, $n = ab$.
+
+                        Si $a = b$, es decir si es un cuadrado perfecto entonces
+                        $a = b = a^2 = \sqrt{n}$.
+
+                        En caso contrario podemos suponer, que $a<b$, si multiplicamos
+                        por $a$ tenemos que $a^2<ab$. Por lo tanto $a^2 < n$.
+                        Por lo que $a < \sqrt{n}$.
+
+                    \end{SmallIndentation}
+
+                \end{itemize}
 
 
 
