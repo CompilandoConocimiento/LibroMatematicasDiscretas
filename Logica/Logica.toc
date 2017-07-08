@@ -1,7 +1,7 @@
 \select@language {spanish}
 \contentsline {chapter}{\numberline {1}Proposiciones y Conectores}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Proposiciones}{3}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Teoremas, Colorario y Tautol\IeC {\'o}gias}{5}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Teoremas, Corolario y Tautol\IeC {\'o}gias}{5}{subsection.1.1.1}
 \contentsline {section}{\numberline {1.2}Conectores L\IeC {\'o}gicos}{6}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Negaci\IeC {\'o}n}{7}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}Conjunci\IeC {\'o}n}{7}{subsection.1.2.2}

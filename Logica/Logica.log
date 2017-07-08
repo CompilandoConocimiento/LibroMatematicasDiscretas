@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  28 JUN 2017 21:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  8 JUL 2017 17:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1410,7 +1410,7 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 982.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 982.
 Package rerunfilecheck Info: File `Logica.out' has not changed.
-(rerunfilecheck)             Checksum: 5C91F26E167DE6F33B24ED1639D2BBF1;1360.
+(rerunfilecheck)             Checksum: DCE188BA743251C3D9231D3267CD2066;1360.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 982.
  ) 
 Here is how much of TeX's memory you used:
@@ -1445,7 +1445,7 @@ e/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/
 exmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on Logica.pdf (21 pages, 301792 bytes).
+Output written on Logica.pdf (21 pages, 301799 bytes).
 PDF statistics:
  384 PDF objects out of 1000 (max. 8388607)
  334 compressed objects within 4 object streams
