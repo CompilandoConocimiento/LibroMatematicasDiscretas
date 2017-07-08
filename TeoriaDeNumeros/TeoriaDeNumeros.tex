@@ -1723,8 +1723,94 @@
 
 
 
+    % =====================================================
+    % ======   TEOREMA FUNDAMENTAL DE ARITMETICA  =========
+    % =====================================================
+    \clearpage
+    \section{Función Phi de Euler: $\phi$ }
+
+        Para un número $n \in \Naturals$ tenemos que:
+
+        \begin{equation}
+            \phi(n) = Card(\{ x \in \Naturals \Such x \leq n, \Space GCD(n,x) = 1 \})
+        \end{equation}
+ 
+        Es decir, $\phi(n)$ es la cantidad de naturales que son menores o iguales a
+        $n$ y que ademas son primos relativos.
 
 
+
+
+        % ==================================
+        % =====      EJEMPLO        ========
+        % ==================================
+        \clearpage
+        \subsection{Ejemplo}
+            
+            Supón que $n=9$ entonces tenemos que:
+
+            \begin{itemize}
+                \item $GCD(1, 9) = 1$
+                \item $GCD(2, 9) = 1$
+                \item $GCD(3, 9) = 3$
+                \item $GCD(4, 9) = 1$
+                \item $GCD(5, 9) = 1$
+                \item $GCD(6, 9) = 3$
+                \item $GCD(7, 9) = 1$
+                \item $GCD(8, 9) = 1$
+                \item $GCD(9, 9) = 9$
+            \end{itemize}
+
+            Si te das cuenta los primos relativos de 9 son $1,2,4,5,7,8$
+            por lo tanto $\phi(9) = 6$
+
+
+
+
+
+
+
+
+        % ==================================
+        % ======   IMPORTANTES     =========
+        % ==================================
+        \subsection{Proposiciones Importantes}
+
+            \begin{itemize}
+
+                \item Si $k > 1$ $\phi(k) < k$
+                
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Si $\phi(1)$ entonces $GCD(1,1) = 1$, por lo tanto
+                        $\phi(1)=1$.
+
+                        En otro caso sabemos que $GCD(k, k) = k$ por lo tanto
+                        es imposible que $\phi(k)=k$, así que $\phi(k) < k$
+
+                    \end{SmallIndentation}
+
+
+                \item $\phi(p) = p - 1$ si y solo si $p$ es primo
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Si $p$ es un número primo, entonces cada entero menor
+                        que $p$ es primo relativo con con $p$, así que 
+                        $\phi(p) = p-1$.
+
+                        Por otro lado si $p>1$ y $\phi(p) = p-1$ entonces $p$
+                        tiene que ser primo pues de lo contrario $p$ tiene
+                        un divisor $d$ tal que $1<d<p$ y entonces
+                        $\phi(n) \leq n-2$.
+
+                    \end{SmallIndentation}
+
+            \end{itemize}
 
 
 
@@ -1768,6 +1854,14 @@
             Solemos escribir la proposición $(x, y) \in R$ como $x R y$ para que se vea más bonito.
 
             Solemos escribir la proposición $(x, y) \notin R$ como $x\centernot{R}y$ para que se vea más bonito.
+
+
+
+
+
+
+
+
 
 
 
