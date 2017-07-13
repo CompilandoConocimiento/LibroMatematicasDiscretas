@@ -2077,11 +2077,6 @@
 
 
 
-
-
-
-
-
         % ==================================
         % ======    PROPIEDADES      =======
         % ==================================
@@ -2186,12 +2181,6 @@
 
 
 
-
-
-
-
-
-
         % ==================================
         % =====      A % B = MODULO   ======
         % ==================================
@@ -2214,6 +2203,107 @@
             lo solemos llamar $a \% b$.
 
 
-            Por lo tanto $a \% b = r$ donde $r=a-bq$.
+            Por lo tanto $a \% b = r$ donde $a =bq+r$ y $0 \leq r < b$.
 
+
+
+    % =====================================================
+    % ========            APLICACIONES            =========
+    % =====================================================
+    \section{Aplicaciones}
+
+
+        % ==================================
+        % ==   ENCONTRAR RESIDUO DE N   ====
+        % ==================================
+        \clearpage
+        \subsection{Encontrar el Residuo en un Numerote ($a^b$)}
+
+            Es muy común usar congruencias para encontrar el residuo de 
+            un númerotote (generalmente denotado de la forma $a^b$) al
+            divirlo entre alguna $n$.
+
+            La idea se basa en la propiedad que ya demostramos de congruencias:
+            \Quote{$a \equiv b \pmod{n}$ si y solo si ambos $a,b$ dejan el mismo
+            residio al ser dividido por $n$}.
+
+            \subsubsection*{Proceso:}
+
+            \begin{itemize}
+                \item Aplica el algoritmo de la división y llega a $a=nq+r$, de aquí tienes
+                    la proposición $a \equiv r \pmod{n}$
+
+                \item Empieza a elevar proposición anterior hasta llegar a:
+
+                    $a^k \equiv r^k \pmod{n}$ donde $r^k \equiv 1 \pmod{n}$
+
+
+                \item Ya que sabemos que $1^n=1$ entonces ya nos podremos acerca mucho más,
+                    ¿Pero cuanto?
+
+                    Aplica el algoritmo de la división y llega a $b = kq' + r'$, por lo
+                    tanto puedes escribir la proposición $a^{kq'} \equiv 1 \pmod{n}$
+
+                \item Finalmente puedes también decir que $a^{r'} \equiv r^{r'} \pmod{n}$,
+                por lo tanto si multiplicas las ultimas dos congruencias tenemos que
+                $a^{kq'}a^{r'} \equiv (1)(r^{r'})$ esto es lo mismo que
+                $a^{kq'+r'} \equiv r^{r'} \pmod{n}$
+
+                Por lo tanto $a^{b} \equiv r^{r'} \pmod{n}$. Donde $r^{r'} \pmod {n}$ es 
+                nuestra respuesta.
+
+            \end{itemize}
+
+
+
+            % =======================
+            % ====   EJEMPLOS   =====
+            % =======================
+            \clearpage
+            \subsection*{Ejemplos}
+
+                \begin{itemize}
+                    \item \large{Ejemplo 1:}
+                        Encontrar el residuo de dividir $17^{341}$ entre 5
+
+                        % ======== SOLUCIÓN ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Solución}:
+                            \begin{alignat*}{3}
+                                &\text{Sabemos que: }  
+                                && 17 \equiv 2                  && \pmod{5} \\
+                                &\text{Por lo que: }
+                                && 17^2 \equiv 2^2 = 4          && \pmod{5} \\
+                                &\text{y al cuadrado da: }
+                                && 17^4 \equiv 4^2 = 16         && \pmod{5} \\
+                                &\text{y recuerda que: }
+                                && 16 \equiv 1                  && \pmod{5} \\
+                                &\text{por lo tanto: }
+                                && 17^4 \equiv 1                && \pmod{5} \\
+                                &\text{y ya que $1^k=1$: }
+                                && (17^4)^{85} = 7^{4*85}\equiv 1^{85} =1   && \pmod{5} \\
+                                &\text{que es lo mismo que: }
+                                && 17^{340} \equiv 1            && \pmod{5} \\
+                                &\text{y multiplicando por la $1^a$ congruencia: }
+                                && (17^{340})(17) \equiv 1(2)   && \pmod{5} \\
+                                &\text{que es lo mismo que: }
+                                && 17^{341} \equiv 2            && \pmod{5} 
+                            \end{alignat*}
+
+                            Por lo tanto $17^{341}$ y $2$ dejan el mismo residuo al divirlos entre 5
+                        \end{SmallIndentation}
+
+
+
+
+
+
+                \end{itemize}
+
+
+               
+
+
+
+       
 \end{document}
