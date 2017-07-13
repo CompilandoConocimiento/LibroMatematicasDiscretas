@@ -41,3 +41,6 @@
 \contentsline {section}{\numberline {4.2}Anillo}{36}{section.4.2}
 \contentsline {chapter}{\numberline {5}Teor\IeC {\'\i }a de Congruencias}{37}{chapter.5}
 \contentsline {section}{\numberline {5.1}Congruencia M\IeC {\'o}dulo N}{38}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Relaci\IeC {\'o}n de Equivalencia}{38}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Propiedades}{39}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Modulo: $A \% B$}{40}{subsection.5.1.3}

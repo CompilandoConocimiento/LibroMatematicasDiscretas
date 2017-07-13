@@ -1990,9 +1990,6 @@
 \chapter{Teoría de Congruencias}
     \clearpage
 
-    Gauss introdujo en concepto de congruencias en su famoso libro de Disquisisiones
-    Aritméticas.
-
     % =====================================================
     % ========         CONGRUENCIA MODULO N       =========
     % =====================================================
@@ -2012,32 +2009,84 @@
 
             Si y solo si:
             \begin{equation}
-                n | a - b
+                n | (a - b)
             \end{equation}
 
 
-            La idea principal de este nombre se da por esta propiedad:
+            La idea principal de este nombre se da porque 2 enteros arbitrarios
+            $a,b \in \Integers$ son congruentes módulo $n$, esto es
+            $a \equiv b \pmod{n}$, si y sólo si $a$ y $b$ dejan el mismo
+            residuo al ser divididos por $n$. Esto lo demostraremos en las
+            siguientes páginas.
 
-            Dos enteros arbitrarios $a,b \in \Integers$ son congruentes módulo $n$,
-            esto es $a \equiv b \pmod{n}$, si y sólo si $a$ y $b$ dejan el mismo
-            residuo positivo al ser divididos por $n$.
 
-            % ======== DEMOSTRACION ========
-            \begin{SmallIndentation}[1em]
-                \textbf{Demostración}:
 
-                Si aplicamos el algoritmo de la división tenemos primero que $a=nq_1+r_1$
-                y $b=nq_2+r_2$ ademas sabemos que $a \equiv b \pmod{n}$, por lo tanto
-                $n|a-b$ es decir $a-b=kn$.
+        % ==================================
+        % ==   RELACION DE EQUIVALENCIA   ==
+        % ==================================
+        \subsection{Relación de Equivalencia}
 
-            \end{SmallIndentation}
+            La notación $\equiv$ es usada porque las caracteristicas de la
+            congruencia son muy muy parecidos a los de la igualdad ($=$), 
+            más exigentemente es porque es una relación de equivalencia.
+
+
+            \begin{itemize}
+                \item
+                    $ a \equiv a \pmod{n}$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Sabemos que $n|0$ por lo tanto $n|a-a$, por lo tanto
+                        $ a \equiv a \pmod{n}$
+
+                    \end{SmallIndentation}
+
+                \item
+                    Si $a \equiv b \pmod{n}$ entonces $b \equiv a \pmod{n}$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Si $a \equiv b \pmod{n}$ entonces $n | a - b$, por lo tanto
+                        $n | -(a - b)$, es decir $n|b-a$, por lo tanto $b \equiv a \pmod{n}$
+
+                    \end{SmallIndentation}
+
+
+                \item
+                    Si $a \equiv b \pmod{n}$ y $b \equiv c \pmod{n}$ entonces
+                    $a \equiv c \pmod{n}$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Si $a \equiv b \pmod{n}$ entonces $n | a - b$ y si
+                        $b \equiv c \pmod{n}$ entonces $n | b - c$ (y recuerda
+                        que si $b|a$ y $b|c$ entonces $b|a \pm c$) por lo tanto
+                        $n | (a-b)+(b-c)$, es decir $n|a-b+b-c$, es decir $n|a-c$
+                        por lo tanto $a \equiv c \pmod{n}$
+
+                    \end{SmallIndentation}
+
+            \end{itemize}
+
+
+
+
+
+
 
 
         % ==================================
         % ======    PROPIEDADES      =======
         % ==================================
         \clearpage
-        \subsection*{Propiedades}
+        \subsection{Propiedades}
 
             \begin{itemize}
 
@@ -2050,33 +2099,87 @@
                         Si $a \equiv b \pmod{n}$ entonces $n | a - b$, por lo tanto
                         $n | -(a - b)$, es decir $n|b-a$, por lo tanto $b \equiv a \pmod{n}$
 
+                        Y Si $b \equiv a \pmod{n}$ entonces $n | b - a$, por lo tanto
+                        $n | -(b - a)$, es decir $n|a-b$, por lo tanto $a \equiv b \pmod{n}$
+
                     \end{SmallIndentation}
 
-                \item Cualesquiera dos enteros son congruentes módulo 1
+                \item Para cualesquiera dos enteros $a,b$ son congruentes módulo 1
 
                     % ======== DEMOSTRACION ========
                     \begin{SmallIndentation}[1em]
                         \textbf{Demostración}:
 
-                        Esto es muy obvio, pues si $a \equiv b \pmod{1}$ entonces
-                        entonces $1|a-b$ y sabemos por propiedades de divisibilidad
-                        esta proposición siempre es verdadera.
+                        Esto es muy obvio pues $1|a-b$ (que es una proposición siempre
+                        verdadera) entonces $a \equiv b \pmod{1}$
 
                     \end{SmallIndentation}
 
-                \item Si $a=bq+r$ entonces $a \equiv r \pmod{b}$, es decir, todo
-                    entero es congruente a su residuo $r$ al ser dividido por $b$
-                    (módulo $b$).
+                \item $a \equiv r \pmod{n}$ si y solo si podemos escribir a $a$ como $a=nq+r$
+                    para alguna $q$.
+
+                    Es decir, todo entero es congruente a su residuo $r$ al ser dividido por $n$
+                    (módulo $n$).
+
+                    Otra forma común de encontrarlo es que
+                    $a=nq+b \lequal a \equiv b \pmod{n}$ 
+
 
                     % ======== DEMOSTRACION ========
                     \begin{SmallIndentation}[1em]
                         \textbf{Demostración}:
 
-                        Sabemos que $b|bq$, que es lo mismo que decir $b|bq+r-r$,
-                        que es lo mismo que $b|(bq+r)-r$, osea $b|a-r$. 
+                        $a \equiv r \pmod{n}$ si y solo si $n|a-r$ que es lo mismo
+                        que decir $a-r = kn = nq$ que es lo mismo que decir $a=nq+r$.
 
                     \end{SmallIndentation}
 
+                \item $a \equiv b \pmod{n}$, si y sólo si $a$ y $b$ dejan el mismo
+                    residuo al ser divididos por $n$.
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        $a \equiv b \pmod{n}$ si y solo si $a=nk+b$ para alguna $k$ (es
+                        la proposición de arriba), despejemos $b=a-kn$.
+
+                        Ahora apliquemos el algoritmo de la división $a=nq+r$, con $0<r<n$
+                        sustituimos y tenemos que $b=nq+r -kn$ que es lo mismo que decir
+                        $b=n(q-k)+r$ con lo que podemos ver que dejan el mismo residuo al 
+                        aplicar el algoritmo de la división con $n$.
+
+                    \end{SmallIndentation}
+
+
+                \item Si $a \equiv b \pmod{n}$ y $c \equiv d \pmod{n}$ entonces
+                        $a+c \equiv b+d \pmod{n}$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Podemos escribir que $a=nq_1+b$ y $c=nq_2+d$ si las sumamos tenemos que:
+                        $a+c=nq_1 + nq_2 + b+d$ esto es lo mismo que $(a+c)=n(q_1+q_2)+(b+d)$ tenemos que
+                        $(a+c) - (b+d) = n(q_1+q_2)$, por lo tanto $n|(a+c) - (b+d)$, es decir
+                        $a+c \equiv b+d \pmod{n}$.
+
+                    \end{SmallIndentation}
+
+                \item Si $a \equiv b \pmod{n}$ y $c \equiv d \pmod{n}$ entonces
+                        $ac \equiv bd \pmod{n}$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Podemos escribir que $a=nq_1+b$ y $c=nq_2+d$ si las multiplicamos tenemos que:
+                        $ac=(nq_1+b)(nq_2+d)$ esto es lo mismo que
+                        $(ac)=n^2q_1q_2 + dnq_1 + bnq_2 + bd$, por lo que tenemos que
+                        $(ac)=n(nq_1q_2+dq_1+bq_2) +bd$, por lo tanto $(ac) - (bd)=n(nq_1q_2+dq_1+bq_2)$
+                        es decir $n|(ac) - (bd)$, es decir $ac \equiv bd \pmod{n}$.
+
+                    \end{SmallIndentation}
 
             \end{itemize}
 
@@ -2089,6 +2192,28 @@
 
 
 
+        % ==================================
+        % =====      A % B = MODULO   ======
+        % ==================================
+        \clearpage
+        \subsection{Modulo: $A \% B$}
 
+            Recuerda las 2 proposición demostrada allá arriba:
+
+            \begin{itemize}
+                \item $a,b \in \Integers$ son congruentes módulo $n$,
+                    esto es $a \equiv b \pmod{n}$, si y sólo si $a$ y $b$
+                    dejan el mismo residuo al ser divididos por $n$.
+
+                \item $a \equiv r \pmod{n}$ si y solo si podemos escribir
+                    a $a$ como $a=nq+r$ para alguna $q$.
+             \end{itemize} 
+
+            Por esta razón el residuo de un número $a$ cuando es divido por $n$
+            (que es el mismo número el residuo que deja $b$ al dividirlo entre $n$)
+            lo solemos llamar $a \% b$.
+
+
+            Por lo tanto $a \% b = r$ donde $r=a-bq$.
 
 \end{document}
