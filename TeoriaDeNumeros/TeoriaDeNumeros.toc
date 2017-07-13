@@ -1,5 +1,5 @@
 \select@language {spanish}
-\contentsline {chapter}{\numberline {1}Enteros y Naturales}{3}{chapter.1}
+\contentsline {chapter}{\numberline {1}Naturales}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Principio de Buen Orden}{4}{section.1.1}
 \contentsline {chapter}{\numberline {2}Divisibilidad}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Algoritmo de Divisi\IeC {\'o}n}{6}{section.2.1}
@@ -12,28 +12,32 @@
 \contentsline {subsection}{\numberline {2.2.2}Propiedades de Divisilibidad}{10}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}M\IeC {\'a}ximo Com\IeC {\'u}n Divisor: GCD/MCD}{12}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Propiedades de MCD/GCD}{13}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Identidad de Bezout}{14}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Propiedades de MCD/GCD: Bezout Edition}{15}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Primos Relativos}{16}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}Algor\IeC {\'\i }tmo de Euclides}{17}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Como Aplicarlo}{18}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Ejemplo}{19}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Algor\IeC {\'\i }tmo Extendido de Euclides}{20}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Ejemplo}{21}{subsection.2.4.4}
-\contentsline {section}{\numberline {2.5}M\IeC {\'\i }nimo Com\IeC {\'u}n M\IeC {\'u}ltiplo: MCM/LCM}{22}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Propiedades de MCM/LCM}{23}{subsection.2.5.1}
-\contentsline {section}{\numberline {2.6}Ecuaciones Diofanticas}{24}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Soluciones}{24}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Soluciones Generales}{25}{subsection.2.6.2}
-\contentsline {chapter}{\numberline {3}N\IeC {\'u}meros Primos}{26}{chapter.3}
-\contentsline {section}{\numberline {3.1}Definici\IeC {\'o}n}{27}{section.3.1}
-\contentsline {section}{\numberline {3.2}Proposiciones Importantes}{27}{section.3.2}
-\contentsline {section}{\numberline {3.3}Como Saber si $n \in \Primes $}{28}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Fuerza Bruta Inteligente}{28}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Teorema Fundamental de la Aritm\IeC {\'e}tica}{29}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Factorizaci\IeC {\'o}n Prima}{30}{subsection.3.4.1}
-\contentsline {section}{\numberline {3.5}Funci\IeC {\'o}n Phi de Euler: $\phi $ }{31}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Ejemplo}{32}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Proposiciones Importantes}{32}{subsection.3.5.2}
-\contentsline {chapter}{\numberline {4}Combinatoria}{33}{chapter.4}
-\contentsline {section}{\numberline {4.1}Definici\IeC {\'o}n}{34}{section.4.1}
+\contentsline {subsection}{\numberline {2.3.2}Identidad de Bezout}{15}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Propiedades de MCD/GCD: Bezout Edition}{16}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Primos Relativos}{17}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Algor\IeC {\'\i }tmo de Euclides}{18}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Como Aplicarlo}{19}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Ejemplo}{20}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Algor\IeC {\'\i }tmo Extendido de Euclides}{21}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Ejemplo}{22}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}M\IeC {\'\i }nimo Com\IeC {\'u}n M\IeC {\'u}ltiplo: MCM/LCM}{23}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Propiedades de MCM/LCM}{24}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.6}Ecuaciones Diofanticas}{25}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Soluciones}{25}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Soluciones Generales}{26}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Funci\IeC {\'o}n Phi de Euler: $\phi $ }{27}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Ejemplo}{28}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Proposiciones Importantes}{28}{subsection.2.7.2}
+\contentsline {chapter}{\numberline {3}N\IeC {\'u}meros Primos}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}Definici\IeC {\'o}n}{30}{section.3.1}
+\contentsline {section}{\numberline {3.2}Proposiciones Importantes}{30}{section.3.2}
+\contentsline {section}{\numberline {3.3}Como Saber si $n \in \Primes $}{31}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Fuerza Bruta Inteligente}{31}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Teorema Fundamental de la Aritm\IeC {\'e}tica}{32}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Factorizaci\IeC {\'o}n Prima}{33}{subsection.3.4.1}
+\contentsline {chapter}{\numberline {4}Grupos, Anillos y Campos}{34}{chapter.4}
+\contentsline {section}{\numberline {4.1}Grupo}{35}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Grupo Abeliano}{35}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Anillo}{36}{section.4.2}
+\contentsline {chapter}{\numberline {5}Teor\IeC {\'\i }a de Congruencias}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Congruencia M\IeC {\'o}dulo N}{38}{section.5.1}

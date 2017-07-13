@@ -168,7 +168,7 @@
 % ======================================================================================
 % ===========================    ENTEROS Y NATURALES          ==========================
 % ======================================================================================
-\chapter{Enteros y Naturales}
+\chapter{Naturales}
     \clearpage
 
     % =====================================================
@@ -711,6 +711,8 @@
                     \end{SmallIndentation} 
 
 
+                \clearpage
+
                 \item Siempre se cumple que $GCD(a,b) = GCD(-a,b) = GCD(a,-b) = GCD(-a,-b)$
 
                     % ======== DEMOSTRACION ========
@@ -723,6 +725,36 @@
                         si $c|-a$ y $c|-b$ ya habiamos dicho que $c\leq d$.
 
                         Literalmente no hay otra forma. Demostrado.
+
+                    \end{SmallIndentation} 
+
+
+                \item El $GCD(a,b) = GCD(a, b \pm ka)$ donde $k \in \Naturals$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+                        
+                        Vamos a hacer una primera aproximación diciendo que $GCD(a,b)=GCD(a,\pm b)$, ya 
+                        si se demostrará que eso fuera cierto, creo que es obvio que puedes aplicar el 
+                        proceso varias veces para llegar a $GCD(a,b) = GCD(a, \pm kb)$ donde
+                        $k \in \Naturals$.
+
+                        Para hacerlo lo que vamos a demostrar es que ambos conjuntos de divisores, el
+                        primero el de $a,b$ (llamemoslo $Divisores1$) y el de $a, b \pm a$ ($Divisores2$)
+                        es el mismo conjunto.
+
+                        Si $x \in Divisores1$ entonces sabemos que $x|a$ y $x|b$, entonces gracias a una
+                        propiedad de divisibilidad ya demostre antes (Si $b|a$ y $b|c$ entonces $b|a\pm c$)
+                        sabemos que $x|a \pm b$, es decir $x \in Divisores2$. Además, si $y \in Divisores2$
+                        entonces $y|a$ y $y|a \pm b$, por lo tanto (sabiendo que Si $a|b$ y $a|b \pm c$
+                        entonces $a|c$) $y|b$, por lo tanto $y \in Divisores1$. Por lo que vemos que son el
+                        mismo conjunto.
+
+                        Si son el mismo conjunto de divisores naturales, tendrán el mismo máximo elemento.
+                        ¡Bingo!
+
+                        
 
                     \end{SmallIndentation} 
 
@@ -1460,6 +1492,106 @@
 
 
 
+
+    % =====================================================
+    % ======   TEOREMA FUNDAMENTAL DE ARITMETICA  =========
+    % =====================================================
+    \clearpage
+    \section{Función Phi de Euler: $\phi$ }
+
+        Para un número $n \in \Naturals$ tenemos que:
+
+        \begin{equation}
+            \phi(n) = 
+                Card(
+                    \{ x \in \Naturals \Such
+                        GCD(n, x) = 1
+                        \text{ y además } x \leq n
+                    \}
+                )
+        \end{equation}
+ 
+        Es decir, $\phi(n)$ es la cantidad de naturales que son menores o iguales a
+        $n$ y que ademas son primos relativos.
+
+
+
+
+        % ==================================
+        % =====      EJEMPLO        ========
+        % ==================================
+        \clearpage
+        \subsection{Ejemplo}
+            
+            Supón que $n=9$ entonces tenemos que:
+
+            \begin{itemize}
+                \item $GCD(1, 9) = 1$
+                \item $GCD(2, 9) = 1$
+                \item $GCD(3, 9) = 3$
+                \item $GCD(4, 9) = 1$
+                \item $GCD(5, 9) = 1$
+                \item $GCD(6, 9) = 3$
+                \item $GCD(7, 9) = 1$
+                \item $GCD(8, 9) = 1$
+                \item $GCD(9, 9) = 9$
+            \end{itemize}
+
+            Si te das cuenta los primos relativos de 9 son $1,2,4,5,7,8$
+            por lo tanto $\phi(9) = 6$
+
+
+
+
+
+
+
+
+        % ==================================
+        % ======   IMPORTANTES     =========
+        % ==================================
+        \subsection{Proposiciones Importantes}
+
+            \begin{itemize}
+
+                \item Si $k > 1$ entonces $\phi(k) < k$
+                
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Si $\phi(1)$ entonces $GCD(1,1) = 1$, por lo tanto
+                        $\phi(1)=1$.
+
+                        En otro caso sabemos que $GCD(k, k) = k$ por lo tanto
+                        es imposible que $\phi(k)=k$, así que $\phi(k) < k$
+
+                    \end{SmallIndentation}
+
+
+                \item $\phi(p) = p - 1$ si y solo si $p$ es primo
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Si $p$ es un número primo, entonces cada entero menor
+                        que $p$ es primo relativo con con $p$, así que 
+                        $\phi(p) = p-1$.
+
+                        Por otro lado si $p>1$ y $\phi(p) = p-1$ entonces $p$
+                        tiene que ser primo pues de lo contrario $p$ tiene
+                        un divisor $d$ tal que $1<d<p$ y entonces
+                        $\phi(n) \leq n-2$.
+
+                    \end{SmallIndentation}
+
+            \end{itemize}
+
+
+
+
+
 % ======================================================================================
 % ===========================         NUMEROS PRIMOS          ==========================
 % ======================================================================================
@@ -1723,141 +1855,230 @@
 
 
 
+
+
+
+
+
+% ======================================================================================
+% ===================          ANILLOS, CAMPOS Y GRUPOS             ====================
+% ======================================================================================
+\chapter{Grupos, Anillos y Campos}
+    \clearpage
+
+
     % =====================================================
-    % ======   TEOREMA FUNDAMENTAL DE ARITMETICA  =========
+    % ==========              GRUPOS              =========
     % =====================================================
     \clearpage
-    \section{Función Phi de Euler: $\phi$ }
+    \section{Grupo}
 
-        Para un número $n \in \Naturals$ tenemos que:
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
 
-        \begin{equation}
-            \phi(n) = Card(\{ x \in \Naturals \Such x \leq n, \Space GCD(n,x) = 1 \})
-        \end{equation}
- 
-        Es decir, $\phi(n)$ es la cantidad de naturales que son menores o iguales a
-        $n$ y que ademas son primos relativos.
+            Un grupo es una combinación de tres elementos que van de la mano:
+            \begin{itemize}
+                \item
+                    \textbf{Conjunto Base:}
 
+                    \begin{SmallIndentation}[1em]
+                        Un conjunto llamado $G$ que no este vacío (daaa!)
+                    \end{SmallIndentation}
+
+
+                \item
+                    \textbf{Relación Maestra:}
+
+                    \begin{SmallIndentation}[1em]
+                        
+                        Una relación entre $R: (G \times  G) \to G$, es decir,
+                        es una relación que recibe dos elementos de $G$ (o más
+                        específicos un par ordenado) y te regresa un nuevo
+                        elemento de $G$.
+
+                        Vamos a suponer que esta relación tendrá la misma notación
+                        que la multiplicación para que se vea mas normal:
+                        $(a)(b) = c \MiniSpace$ donde $a, b, c \in G$
+
+                        Por lo tanto este grupo será cerrado con respecto a esa
+                        operación.
+
+                        Esta relación tiene que cumplir que sea asociativa, es
+                        decir $\forall a, b, c \in G, \MiniSpace (ab)c = a(bc)$
+
+                    \end{SmallIndentation}
+
+                
+
+                \item
+                    \textbf{Elemento Identidad para $R$:}
+
+                    \begin{SmallIndentation}[1em]
+                        Tendrá que existir un solo elemento llamado $1 \in G$
+                        que cumpla con las siguientes caracteristicas: 
+                        
+                        \begin{itemize}
+                            \item \textbf{Es neutro con respecto a esa operación:}
+                                $\forall a \in G, \MiniSpace 1a = a1 = a$
+
+                            \item \textbf{Existen inversos:}
+                                $\forall a \in G, \MiniSpace \exists b \in G, \MiniSpace ab=ba=1$
+                        \end{itemize}
+                    \end{SmallIndentation}
+
+            \end{itemize}
 
 
 
         % ==================================
-        % =====      EJEMPLO        ========
+        % =====     GRUPO ABELIANO     =====
+        % ==================================
+        \subsection{Grupo Abeliano}
+
+            Un Grupo Abeliano es aquel grupo donde tenemos que:
+
+            $\forall a, b \in G, \MiniSpace ab = ba$
+
+
+
+    % =====================================================
+    % ==========              ANILLOS             =========
+    % =====================================================
+    \clearpage
+    \section{Anillo}
+
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
+
+            Un Anillo es un conjunto $G$ que viene equipado con dos relaciones
+            $R_1$ y $R_2$, (la que me referiré con las notaciones de la suma
+            y la multiplicación).
+
+            Donde se cumple que:
+
+            \begin{itemize}
+                \item \textbf{$G$ es un grupo con respecto a $+$}
+
+                \item \textbf{$G$ es un grupo con respecto a $*$}
+
+                \item
+                    \textbf{Propiedad Distrivutiva}
+                    
+                    \begin{SmallIndentation}[1em]
+                        Se cumple la propiedad especial en la que:
+                        $\forall a, b, c \in G, \MiniSpace a(b+c)= ab +ac$
+                    \end{SmallIndentation}
+
+            \end{itemize}
+
+
+
+
+
+
+
+
+
+
+% ======================================================================================
+% ===================        CONGRUENCIA & ENTEROS MODULO N         ====================
+% ======================================================================================
+\chapter{Teoría de Congruencias}
+    \clearpage
+
+    Gauss introdujo en concepto de congruencias en su famoso libro de Disquisisiones
+    Aritméticas.
+
+    % =====================================================
+    % ========         CONGRUENCIA MODULO N       =========
+    % =====================================================
+    \section{Congruencia Módulo N}
+
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
+
+            Si tenemos dos elementos $a, b \in \Integers$ y $n \in \Naturals$
+            entonces decirmos que $a$ es \textbf{congruente} a $b$ \textbf{modulo n}
+            que escribimos como:
+            \begin{equation}
+                a \equiv b \pmod{n}
+            \end{equation}
+
+            Si y solo si:
+            \begin{equation}
+                n | a - b
+            \end{equation}
+
+
+            La idea principal de este nombre se da por esta propiedad:
+
+            Dos enteros arbitrarios $a,b \in \Integers$ son congruentes módulo $n$,
+            esto es $a \equiv b \pmod{n}$, si y sólo si $a$ y $b$ dejan el mismo
+            residuo positivo al ser divididos por $n$.
+
+            % ======== DEMOSTRACION ========
+            \begin{SmallIndentation}[1em]
+                \textbf{Demostración}:
+
+                Si aplicamos el algoritmo de la división tenemos primero que $a=nq_1+r_1$
+                y $b=nq_2+r_2$ ademas sabemos que $a \equiv b \pmod{n}$, por lo tanto
+                $n|a-b$ es decir $a-b=kn$.
+
+            \end{SmallIndentation}
+
+
+        % ==================================
+        % ======    PROPIEDADES      =======
         % ==================================
         \clearpage
-        \subsection{Ejemplo}
-            
-            Supón que $n=9$ entonces tenemos que:
-
-            \begin{itemize}
-                \item $GCD(1, 9) = 1$
-                \item $GCD(2, 9) = 1$
-                \item $GCD(3, 9) = 3$
-                \item $GCD(4, 9) = 1$
-                \item $GCD(5, 9) = 1$
-                \item $GCD(6, 9) = 3$
-                \item $GCD(7, 9) = 1$
-                \item $GCD(8, 9) = 1$
-                \item $GCD(9, 9) = 9$
-            \end{itemize}
-
-            Si te das cuenta los primos relativos de 9 son $1,2,4,5,7,8$
-            por lo tanto $\phi(9) = 6$
-
-
-
-
-
-
-
-
-        % ==================================
-        % ======   IMPORTANTES     =========
-        % ==================================
-        \subsection{Proposiciones Importantes}
+        \subsection*{Propiedades}
 
             \begin{itemize}
 
-                \item Si $k > 1$ $\phi(k) < k$
-                
-                    % ======== DEMOSTRACION ========
-                    \begin{SmallIndentation}[1em]
-                        \textbf{Demostración}:
-
-                        Si $\phi(1)$ entonces $GCD(1,1) = 1$, por lo tanto
-                        $\phi(1)=1$.
-
-                        En otro caso sabemos que $GCD(k, k) = k$ por lo tanto
-                        es imposible que $\phi(k)=k$, así que $\phi(k) < k$
-
-                    \end{SmallIndentation}
-
-
-                \item $\phi(p) = p - 1$ si y solo si $p$ es primo
+                \item $a \equiv b \pmod{n}$ si y solo si $b \equiv a \pmod{n}$
 
                     % ======== DEMOSTRACION ========
                     \begin{SmallIndentation}[1em]
                         \textbf{Demostración}:
 
-                        Si $p$ es un número primo, entonces cada entero menor
-                        que $p$ es primo relativo con con $p$, así que 
-                        $\phi(p) = p-1$.
-
-                        Por otro lado si $p>1$ y $\phi(p) = p-1$ entonces $p$
-                        tiene que ser primo pues de lo contrario $p$ tiene
-                        un divisor $d$ tal que $1<d<p$ y entonces
-                        $\phi(n) \leq n-2$.
+                        Si $a \equiv b \pmod{n}$ entonces $n | a - b$, por lo tanto
+                        $n | -(a - b)$, es decir $n|b-a$, por lo tanto $b \equiv a \pmod{n}$
 
                     \end{SmallIndentation}
 
+                \item Cualesquiera dos enteros son congruentes módulo 1
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Esto es muy obvio, pues si $a \equiv b \pmod{1}$ entonces
+                        entonces $1|a-b$ y sabemos por propiedades de divisibilidad
+                        esta proposición siempre es verdadera.
+
+                    \end{SmallIndentation}
+
+                \item Si $a=bq+r$ entonces $a \equiv r \pmod{b}$, es decir, todo
+                    entero es congruente a su residuo $r$ al ser dividido por $b$
+                    (módulo $b$).
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Sabemos que $b|bq$, que es lo mismo que decir $b|bq+r-r$,
+                        que es lo mismo que $b|(bq+r)-r$, osea $b|a-r$. 
+
+                    \end{SmallIndentation}
+
+
             \end{itemize}
-
-
-
-
-
-
-
-
-
-
-
-
-
-% ======================================================================================
-% =============================         COMBINATORIA          ==========================
-% ======================================================================================
-\chapter{Combinatoria}
-    \clearpage
-
-    % =====================================================
-    % ============           DEFINICION            ========
-    % =====================================================
-    \section{Definición}
-
-        Una relación $R$ entre dos conjuntos $A$ y $B$ es ante todo otro conjunto, una relación binaria es aquella
-        que es en el fondo un conjunto de pares ordenados (x,y) donde $x$ es un elemento de $A$, y así mismo
-        $y$ es un elemento de $B$.
-
-        Este nuevo conjunto $R$ nos muestra como es que esta relacionados algunos (o todos) elementos de $A$ con
-        otros elementos de $B$.
-
-
-
-        % =====================================
-        % =========   ¿QUE SON?     ===========
-        % =====================================
-        \subsection*{Definiciones Formales}
-
-            Una Relación $R: A \to B$ es un subconjunto de $A \times B$.
-
-            Solemos escribir la proposición $(x, y) \in R$ como $x R y$ para que se vea más bonito.
-
-            Solemos escribir la proposición $(x, y) \notin R$ como $x\centernot{R}y$ para que se vea más bonito.
-
-
-
-
 
 
 
