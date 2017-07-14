@@ -1859,124 +1859,18 @@
 
 
 
-
 % ======================================================================================
-% ===================          ANILLOS, CAMPOS Y GRUPOS             ====================
+% ===================              ALGORITMOS COOL                  ====================
 % ======================================================================================
-\chapter{Grupos, Anillos y Campos}
+\chapter{Algoritmos Útiles}
     \clearpage
 
-
     % =====================================================
-    % ==========              GRUPOS              =========
+    % ========        EXPONENCIACION BINARIA      =========
     % =====================================================
-    \clearpage
-    \section{Grupo}
+    \section{Exponenciación Binaria}
 
-        % ==================================
-        % =========   FORMAL     ===========
-        % ==================================
-        \subsection*{Definición Formal}
-
-            Un grupo es una combinación de tres elementos que van de la mano:
-            \begin{itemize}
-                \item
-                    \textbf{Conjunto Base:}
-
-                    \begin{SmallIndentation}[1em]
-                        Un conjunto llamado $G$ que no este vacío (daaa!)
-                    \end{SmallIndentation}
-
-
-                \item
-                    \textbf{Relación Maestra:}
-
-                    \begin{SmallIndentation}[1em]
-                        
-                        Una relación entre $R: (G \times  G) \to G$, es decir,
-                        es una relación que recibe dos elementos de $G$ (o más
-                        específicos un par ordenado) y te regresa un nuevo
-                        elemento de $G$.
-
-                        Vamos a suponer que esta relación tendrá la misma notación
-                        que la multiplicación para que se vea mas normal:
-                        $(a)(b) = c \MiniSpace$ donde $a, b, c \in G$
-
-                        Por lo tanto este grupo será cerrado con respecto a esa
-                        operación.
-
-                        Esta relación tiene que cumplir que sea asociativa, es
-                        decir $\forall a, b, c \in G, \MiniSpace (ab)c = a(bc)$
-
-                    \end{SmallIndentation}
-
-                
-
-                \item
-                    \textbf{Elemento Identidad para $R$:}
-
-                    \begin{SmallIndentation}[1em]
-                        Tendrá que existir un solo elemento llamado $1 \in G$
-                        que cumpla con las siguientes caracteristicas: 
-                        
-                        \begin{itemize}
-                            \item \textbf{Es neutro con respecto a esa operación:}
-                                $\forall a \in G, \MiniSpace 1a = a1 = a$
-
-                            \item \textbf{Existen inversos:}
-                                $\forall a \in G, \MiniSpace \exists b \in G, \MiniSpace ab=ba=1$
-                        \end{itemize}
-                    \end{SmallIndentation}
-
-            \end{itemize}
-
-
-
-        % ==================================
-        % =====     GRUPO ABELIANO     =====
-        % ==================================
-        \subsection{Grupo Abeliano}
-
-            Un Grupo Abeliano es aquel grupo donde tenemos que:
-
-            $\forall a, b \in G, \MiniSpace ab = ba$
-
-
-
-    % =====================================================
-    % ==========              ANILLOS             =========
-    % =====================================================
-    \clearpage
-    \section{Anillo}
-
-        % ==================================
-        % =========   FORMAL     ===========
-        % ==================================
-        \subsection*{Definición Formal}
-
-            Un Anillo es un conjunto $G$ que viene equipado con dos relaciones
-            $R_1$ y $R_2$, (la que me referiré con las notaciones de la suma
-            y la multiplicación).
-
-            Donde se cumple que:
-
-            \begin{itemize}
-                \item \textbf{$G$ es un grupo con respecto a $+$}
-
-                \item \textbf{$G$ es un grupo con respecto a $*$}
-
-                \item
-                    \textbf{Propiedad Distrivutiva}
-                    
-                    \begin{SmallIndentation}[1em]
-                        Se cumple la propiedad especial en la que:
-                        $\forall a, b, c \in G, \MiniSpace a(b+c)= ab +ac$
-                    \end{SmallIndentation}
-
-            \end{itemize}
-
-
-
+    
 
 
 
@@ -2214,43 +2108,54 @@
 
 
         % ==================================
-        % ==   ENCONTRAR RESIDUO DE N   ====
+        % ==   EXPONENCIACION MODULAR   ====
         % ==================================
         \clearpage
-        \subsection{Encontrar el Residuo en un Numerote ($a^b$)}
+        \subsection{Exponenciación Modular: $b^e \equiv s \pmod {n}$}
 
-            Es muy común usar congruencias para encontrar el residuo de 
-            un númerotote (generalmente denotado de la forma $a^b$) al
-            divirlo entre alguna $n$.
+            Es muy común usar congruencias para encontrar el residuo $s$ de 
+            un númerotote (generalmente denotado de la forma $b^e$) al
+            divirlo entre alguna $n$, donde $0 \leq c < n$.
+
+            Usamos $b$ de base, $e$ de expontente y $s$ de solución.
 
             La idea se basa en la propiedad que ya demostramos de congruencias:
             \Quote{$a \equiv b \pmod{n}$ si y solo si ambos $a,b$ dejan el mismo
             residio al ser dividido por $n$}.
 
-            \subsubsection*{Proceso:}
+            Este proceso, de encontrar $s$ dado un número $b^e$ y un módulo $n$
+            es bastante fácil y rápido, incluso cuando el número es endemoniadamente
+            grande, pero el proceso inverso, encontrar $e$ dado una base $b$ y un
+            módulo $n$. Esto lo hace perfecto para la criptografía.
+
+
+
+
+
+            \subsubsection*{Forma 1:}
 
             \begin{itemize}
-                \item Aplica el algoritmo de la división y llega a $a=nq+r$, de aquí tienes
-                    la proposición $a \equiv r \pmod{n}$
+                \item Aplica el algoritmo de la división y llega a $b=nq+r$, de aquí tienes
+                    la proposición $b \equiv r \pmod{n}$
 
                 \item Empieza a elevar proposición anterior hasta llegar a:
 
-                    $a^k \equiv r^k \pmod{n}$ donde $r^k \equiv 1 \pmod{n}$
+                    $b^k \equiv r^k \pmod{n}$ donde $r^k \equiv 1 \pmod{n}$
 
 
                 \item Ya que sabemos que $1^n=1$ entonces ya nos podremos acerca mucho más,
                     ¿Pero cuanto?
 
-                    Aplica el algoritmo de la división y llega a $b = kq' + r'$, por lo
-                    tanto puedes escribir la proposición $a^{kq'} \equiv 1 \pmod{n}$
+                    Aplica el algoritmo de la división y llega a $e = kq' + r'$, por lo
+                    tanto puedes escribir la proposición $b^{kq'} \equiv 1 \pmod{n}$
 
-                \item Finalmente puedes también decir que $a^{r'} \equiv r^{r'} \pmod{n}$,
-                por lo tanto si multiplicas las ultimas dos congruencias tenemos que
-                $a^{kq'}a^{r'} \equiv (1)(r^{r'})$ esto es lo mismo que
-                $a^{kq'+r'} \equiv r^{r'} \pmod{n}$
+                \item Finalmente puedes también decir que $b^{r'} \equiv r^{r'} \pmod{n}$,
+                    por lo tanto si multiplicas las ultimas dos congruencias tenemos que
+                    $b^{kq'}b^{r'} \equiv (1)(r^{r'})$ esto es lo mismo que
+                    $b^{kq'+r'} \equiv r^{r'} \pmod{n}$
 
-                Por lo tanto $a^{b} \equiv r^{r'} \pmod{n}$. Donde $r^{r'} \pmod {n}$ es 
-                nuestra respuesta.
+                    Por lo tanto $b^e \equiv r^{r'} \pmod{n}$. Donde $r^{r'} \pmod {n}$ es 
+                    nuestra respuesta.
 
             \end{itemize}
 
@@ -2293,15 +2198,132 @@
                             Por lo tanto $17^{341}$ y $2$ dejan el mismo residuo al divirlos entre 5
                         \end{SmallIndentation}
 
-
-
-
-
-
                 \end{itemize}
 
 
                
+
+
+% ======================================================================================
+% ===================          ANILLOS, CAMPOS Y GRUPOS             ====================
+% ======================================================================================
+\chapter{Grupos, Anillos y Campos}
+    \clearpage
+
+
+    % =====================================================
+    % ==========              GRUPOS              =========
+    % =====================================================
+    \clearpage
+    \section{Grupo}
+
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
+
+            Un grupo es una combinación de tres elementos que van de la mano:
+            \begin{itemize}
+                \item
+                    \textbf{Conjunto Base:}
+
+                    \begin{SmallIndentation}[1em]
+                        Un conjunto llamado $G$ que no este vacío (daaa!)
+                    \end{SmallIndentation}
+
+
+                \item
+                    \textbf{Relación Maestra:}
+
+                    \begin{SmallIndentation}[1em]
+                        
+                        Una relación entre $R: (G \times  G) \to G$, es decir,
+                        es una relación que recibe dos elementos de $G$ (o más
+                        específicos un par ordenado) y te regresa un nuevo
+                        elemento de $G$.
+
+                        Vamos a suponer que esta relación tendrá la misma notación
+                        que la multiplicación para que se vea mas normal:
+                        $(a)(b) = c \MiniSpace$ donde $a, b, c \in G$
+
+                        Por lo tanto este grupo será cerrado con respecto a esa
+                        operación.
+
+                        Esta relación tiene que cumplir que sea asociativa, es
+                        decir $\forall a, b, c \in G, \MiniSpace (ab)c = a(bc)$
+
+                    \end{SmallIndentation}
+
+                
+
+                \item
+                    \textbf{Elemento Identidad para $R$:}
+
+                    \begin{SmallIndentation}[1em]
+                        Tendrá que existir un solo elemento llamado $1 \in G$
+                        que cumpla con las siguientes caracteristicas: 
+                        
+                        \begin{itemize}
+                            \item \textbf{Es neutro con respecto a esa operación:}
+                                $\forall a \in G, \MiniSpace 1a = a1 = a$
+
+                            \item \textbf{Existen inversos:}
+                                $\forall a \in G, \MiniSpace \exists b \in G, \MiniSpace ab=ba=1$
+                        \end{itemize}
+                    \end{SmallIndentation}
+
+            \end{itemize}
+
+
+
+        % ==================================
+        % =====     GRUPO ABELIANO     =====
+        % ==================================
+        \subsection{Grupo Abeliano}
+
+            Un Grupo Abeliano es aquel grupo donde tenemos que:
+
+            $\forall a, b \in G, \MiniSpace ab = ba$
+
+
+
+    % =====================================================
+    % ==========              ANILLOS             =========
+    % =====================================================
+    \clearpage
+    \section{Anillo}
+
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
+
+            Un Anillo es un conjunto $G$ que viene equipado con dos relaciones
+            $R_1$ y $R_2$, (la que me referiré con las notaciones de la suma
+            y la multiplicación).
+
+            Donde se cumple que:
+
+            \begin{itemize}
+                \item \textbf{$G$ es un grupo con respecto a $+$}
+
+                \item \textbf{$G$ es un grupo con respecto a $*$}
+
+                \item
+                    \textbf{Propiedad Distrivutiva}
+                    
+                    \begin{SmallIndentation}[1em]
+                        Se cumple la propiedad especial en la que:
+                        $\forall a, b, c \in G, \MiniSpace a(b+c)= ab +ac$
+                    \end{SmallIndentation}
+
+            \end{itemize}
+
+
+
+
+
+
 
 
 
