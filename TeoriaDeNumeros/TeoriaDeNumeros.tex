@@ -1893,24 +1893,33 @@
 
             Este método es bastante sencillo:
 
-            \begin{itemize}
-                \item   Inicializa tu respuesta a ser 0
-                \item   Convierte el exponente en base 2
+            \begin{SmallIndentation}[1em]
+                
+                \begin{itemize}
+                    \item   Inicializa tu respuesta a ser 0
+                    \item   Convierte el exponente en base 2
 
-                \item Para cada digito del exponente en base 2 (Iniciando con
-                      el más significativo):
-                    
-                    \begin{itemize}
-                        \item Si es 1: Nueva Respuesta = Respuesta$^2$ * Base 
-                        \item Si es 0: Nueva Respuesta = Respuesta$^2$ 
-                    \end{itemize}
-            \end{itemize}
+                    \item Para cada digito del exponente en base 2 (Iniciando con
+                          el menos significativo):
+                        
+                        \begin{itemize}
+                            \item Si es 1: Nueva Respuesta = Respuesta$^2$ * Base 
+                            \item Si es 0: Nueva Respuesta = Respuesta$^2$ 
+                        \end{itemize}
+                \end{itemize}
+
+            \end{SmallIndentation}
+
+
+            
 
 
         % =======================================
         % ========        EJEMPLOS      =========
         % =======================================
         \subsection*{Ejemplo Método 1}
+
+
 
             Este ejemplo nos muestra como usar esta propiedad para elevar más rápido, por ejemplo para encontrar
             $x^{13}$ solo tenemos que seguir el algoritmo suponiendo que recuerdas que $13_{10} = 1101_{2}$:
@@ -1921,11 +1930,16 @@
                 \textbf{Solución}:
 
                 \begin{alignat*}{3}
-                    &\text{Inicializamos : }                    && respuesta = 1                        &&  \text{Ahora mismo: } respuesta = x^0  \\
-                    &\text{Como $1^{er}$ dígito es 1:  }        && respuesta = respuesta^2 * x          &&  \text{Ahora mismo: } respuesta = x^1  \\
-                    &\text{Como $2^{do}$ dígito es 1:  }        && respuesta = respuesta^2 * x          &&  \text{Ahora mismo: } respuesta = x^3  \\
-                    &\text{Como $3^{er}$ dígito es 0:  }        && respuesta = respuesta^2              &&  \text{Ahora mismo: } respuesta = x^6  \\
-                    &\text{Como $4^{er}$ dígito es 1:  }\Space  && respuesta = respuesta^2 * x    \Space&&  \text{Ahora mismo: } respuesta = x^13 \\
+                    &\text{Inicializamos : }                    
+                        && respuesta = 1                        &&  \text{Ahora mismo: } respuesta = x^0  \\
+                    &\text{Como $1^{er}$ dígito es 1:  } 
+                        && respuesta = respuesta^2 * x          &&  \text{Ahora mismo: } respuesta = x^1  \\
+                    &\text{Como $2^{do}$ dígito es 1:  }
+                        && respuesta = respuesta^2 * x          &&  \text{Ahora mismo: } respuesta = x^3  \\
+                    &\text{Como $3^{er}$ dígito es 0:  }
+                        && respuesta = respuesta^2              &&  \text{Ahora mismo: } respuesta = x^6  \\
+                    &\text{Como $4^{er}$ dígito es 1:  } \Space 
+                        && respuesta = respuesta^2 * x   \Space &&  \text{Ahora mismo: } respuesta = x^{13} \\
                 \end{alignat*}
 
             \end{SmallIndentation}
@@ -1941,21 +1955,26 @@
 
             Este método es bastante sencillo:
 
-            \begin{itemize}
-                \item   Inicializa tu respuesta a ser 0
-                \item   Inicializa tu auxiliar a ser b
-                \item   Convierte el exponente en base 2
+            \begin{SmallIndentation}[1em]
+                
+                \begin{itemize}
+                    \item   Inicializa tu respuesta a ser 0
+                    \item   Inicializa tu auxiliar a ser b
+                    \item   Convierte el exponente en base 2
 
-                \item Para cada digito del exponente en base 2 (Iniciando con
-                      el más significativo):
-                    
-                    \begin{itemize}
-                        \item Si es 1:
-                                Nueva Respuesta = Respuesta * Auxiliar y Nuevo Auxiliar = Auxiliar$^2$
-                        \item Si es 0:
-                                Nuevo Auxiliar = Auxiliar$^2$
-                    \end{itemize}
-            \end{itemize}
+                    \item Para cada digito del exponente en base 2 (Iniciando con
+                          el menos significativo):
+                        
+                        \begin{itemize}
+                            \item Si es 1:
+                                    Nueva Respuesta = Respuesta * Auxiliar y Nuevo Auxiliar = Auxiliar$^2$
+                            \item Si es 0:
+                                    Nuevo Auxiliar = Auxiliar$^2$
+                        \end{itemize}
+                \end{itemize}
+
+            \end{SmallIndentation}
+
 
 
         % =======================================
@@ -1972,11 +1991,16 @@
                 \textbf{Solución}:
 
                 \begin{alignat*}{3}
-                    &\text{Inicializamos : }              && res = 1 \text{ y } aux = x        &&  \text{Ahora: } res = x^0 \text{ y } aux = x    \\
-                    &\text{$1^{er}$ dígito es 1: }        && res=res*x \text{ y } aux=aux^2    &&  \text{Ahora: } res = x^1 \text{ y } aux = x^2  \\
-                    &\text{$2^{do}$ dígito es 0: }        && aux=aux^2                         &&  \text{Ahora: } res = x^1 \text{ y } aux = x^4  \\
-                    &\text{$3^{er}$ dígito es 1: }        && res=res*x \text{ y } aux=aux^2    &&  \text{Ahora: } res = x^5 \text{ y } aux = x^8  \\
-                    &\text{$4^{er}$ dígito es 1: }\Space  && res=res*x\text{ y }aux=aux^2\Space&&  \text{Ahora: } res = x^13 \text{ y } aux = x^{16}  
+                    &\text{Inicializamos : }
+                        && res = 1 \text{ y } aux = x         &&  \text{Ahora: } res = x^0 \text{ y } aux = x    \\
+                    &\text{$1^{er}$ dígito es 1: }
+                        && res=res*x \text{ y } aux=aux^2     &&  \text{Ahora: } res = x^1 \text{ y } aux = x^2  \\
+                    &\text{$2^{do}$ dígito es 0: }
+                        && aux=aux^2                          &&  \text{Ahora: } res = x^1 \text{ y } aux = x^4  \\
+                    &\text{$3^{er}$ dígito es 1: }
+                        && res=res*x \text{ y } aux=aux^2     &&  \text{Ahora: } res = x^5 \text{ y } aux = x^8  \\
+                    &\text{$4^{er}$ dígito es 1: }     \Space
+                        && res=res*x\text{ y }aux=aux^2\Space &&  \text{Ahora: } res = x^{13} \text{ y } aux = x^{16}  
                 \end{alignat*}
 
             \end{SmallIndentation}
@@ -2210,16 +2234,17 @@
 
 
 
+
     % =====================================================
     % ========            APLICACIONES            =========
     % =====================================================
+    \clearpage
     \section{Aplicaciones}
 
 
         % ==================================
         % ==   EXPONENCIACION MODULAR   ====
         % ==================================
-        \clearpage
         \subsection{Exponenciación Modular: $b^e \equiv s \pmod {n}$}
 
             Es muy común usar congruencias para encontrar el residuo $s$ de 
@@ -2240,77 +2265,152 @@
 
 
 
+            % =======================================
+            % ======    METODO EXP BINARIA      =====
+            % =======================================
+            \subsection*{Método 1: Exponenciación Binaria}
 
-            \subsubsection*{Forma 1:}
+                Este método es bastante sencillo y se basa en la exponenciación binaria, digo
+                literalmente es el mismo algoritmo, lo único diferente es que hablamos de congruencias
+
+                \begin{SmallIndentation}[1em]
+                    
+                    \begin{itemize}
+                        \item   Inicializa tu respuesta a ser 0
+                        \item   Inicializa tu auxiliar a ser b
+                        \item   Convierte el exponente en base 2
+
+                        \item Para cada digito del exponente en base 2 (Iniciando con
+                              el menos significativo):
+                            
+                            \begin{itemize}
+                                \item Si es 1:
+                                        Nueva Respuesta = Respuesta * Auxiliar (mod n) y Nuevo Auxiliar = Auxiliar$^2$ (mod n)
+                                \item Si es 0:
+                                        Nuevo Auxiliar = Auxiliar$^2$ (mod n)
+                            \end{itemize}
+                    \end{itemize}
+
+                \end{SmallIndentation}
+
+
+            % =======================================
+            % =====     METODO 2: ALTERNO       =====
+            % =======================================
+            \clearpage
+            \subsection*{Método 2: Alterno}
+
+                Este método es bastante sencillo:
+
+                \begin{SmallIndentation}[1em]
+                    
+                    \begin{itemize}
+                        \item Aplica el algoritmo de la división y llega a $b=nq+r$, de aquí tienes
+                            la proposición $b \equiv r \pmod{n}$
+
+                        \item Empieza a elevar proposición anterior hasta llegar a:
+
+                            $b^k \equiv r^k \pmod{n}$ donde $r^k \equiv 1 \pmod{n}$
+
+
+                        \item Ya que sabemos que $1^n=1$ entonces ya nos podremos acerca mucho más,
+                            ¿Pero cuanto?
+
+                            Aplica el algoritmo de la división y llega a $e = kq' + r'$, por lo
+                            tanto puedes escribir la proposición $b^{kq'} \equiv 1 \pmod{n}$
+
+                        \item Finalmente puedes también decir que $b^{r'} \equiv r^{r'} \pmod{n}$,
+                            por lo tanto si multiplicas las ultimas dos congruencias tenemos que
+                            $b^{kq'}b^{r'} \equiv (1)(r^{r'})$ esto es lo mismo que
+                            $b^{kq'+r'} \equiv r^{r'} \pmod{n}$
+
+                            Por lo tanto $b^e \equiv r^{r'} \pmod{n}$. Donde $r^{r'} \pmod {n}$ es 
+                            nuestra respuesta.
+                    \end{itemize}
+
+                \end{SmallIndentation}
+
+
+            % =======================================
+            % ========        EJEMPLOS      =========
+            % =======================================
+            \subsubsection*{Ejemplo Método 2}
+
+                    \begin{itemize}
+                        \item \large{Ejemplo 1:}
+                            Encontrar el residuo de dividir $17^{341}$ entre 5
+
+                            % ======== SOLUCIÓN ========
+                            \begin{SmallIndentation}[1em]
+                                \textbf{Solución}:
+                                \begin{alignat*}{3}
+                                    &\text{Sabemos que: }  
+                                    && 17 \equiv 2                  && \pmod{5} \\
+                                    &\text{Por lo que: }
+                                    && 17^2 \equiv 2^2 = 4          && \pmod{5} \\
+                                    &\text{y al cuadrado da: }
+                                    && 17^4 \equiv 4^2 = 16         && \pmod{5} \\
+                                    &\text{y recuerda que: }
+                                    && 16 \equiv 1                  && \pmod{5} \\
+                                    &\text{por lo tanto: }
+                                    && 17^4 \equiv 1                && \pmod{5} \\
+                                    &\text{y ya que $1^k=1$: }
+                                    && (17^4)^{85} = 7^{4*85}\equiv 1^{85} =1   && \pmod{5} \\
+                                    &\text{que es lo mismo que: }
+                                    && 17^{340} \equiv 1            && \pmod{5} \\
+                                    &\text{y multiplicando por la $1^a$ congruencia: }\Space
+                                    && (17^{340})(17) \equiv 1(2)   && \pmod{5} \\
+                                    &\text{que es lo mismo que: }
+                                    && 17^{341} \equiv 2            && \pmod{5} 
+                                \end{alignat*}
+
+                                Por lo tanto $17^{341}$ y $2$ dejan el mismo residuo al divirlos entre 5
+                            \end{SmallIndentation}
+
+                    \end{itemize}
+
+
+        % ====================================
+        % == CONGRUENCIAS Y DIVISIBILIDAD   ==
+        % ====================================
+        \clearpage
+        \subsection{Encontrar si $n$ es divisible entre $m$ con Congruencias}
 
             \begin{itemize}
-                \item Aplica el algoritmo de la división y llega a $b=nq+r$, de aquí tienes
-                    la proposición $b \equiv r \pmod{n}$
 
-                \item Empieza a elevar proposición anterior hasta llegar a:
+                \item Un número $n \in \Integers$ es divisble entre 3 si y solo si
+                    la suma de digitos (en base 10) de $n$ es divisible entre 3.
 
-                    $b^k \equiv r^k \pmod{n}$ donde $r^k \equiv 1 \pmod{n}$
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
 
+                        Antes que nada, recuerda que a $n$ lo puedes escribir como
+                        $n = a(10^0) + b(10^1) + c(10^2) + \dots$ donde
+                        $a, b, c, \dots \in \Naturals$ son los dígitos de $n$.
 
-                \item Ya que sabemos que $1^n=1$ entonces ya nos podremos acerca mucho más,
-                    ¿Pero cuanto?
+                        Ahora, también recuerda que $10 \equiv 1 \pmod{3}$.
 
-                    Aplica el algoritmo de la división y llega a $e = kq' + r'$, por lo
-                    tanto puedes escribir la proposición $b^{kq'} \equiv 1 \pmod{n}$
+                        Ahora $3|n$ si y solo si $n \equiv 0 \pmod{3}$ y esto pasa si
+                        y solo si $a(10^0) + b(10^1) + c(10^2) + \dots \equiv 0 \pmod{3}$
+                        (esto es una propiedad que vimos antes) y como recuerdas
+                        ($10 \equiv 1 \pmod{3}$) tenemos que esto ocurre si y solo si:
+                        $a + b + c + \dots \equiv 0 \pmod{3}$, esto es lo mismo que
+                        $3|a+b+c+\dots$.
 
-                \item Finalmente puedes también decir que $b^{r'} \equiv r^{r'} \pmod{n}$,
-                    por lo tanto si multiplicas las ultimas dos congruencias tenemos que
-                    $b^{kq'}b^{r'} \equiv (1)(r^{r'})$ esto es lo mismo que
-                    $b^{kq'+r'} \equiv r^{r'} \pmod{n}$
+                        Es decir, un número $n \in \Integers$ es divisble entre 3 si y solo si
+                        la suma de digitos de $n$ es divisible entre 3.
 
-                    Por lo tanto $b^e \equiv r^{r'} \pmod{n}$. Donde $r^{r'} \pmod {n}$ es 
-                    nuestra respuesta.
+                    \end{SmallIndentation}
 
             \end{itemize}
 
 
 
-            % =======================
-            % ====   EJEMPLOS   =====
-            % =======================
-            \clearpage
-            \subsection*{Ejemplos}
-
-                \begin{itemize}
-                    \item \large{Ejemplo 1:}
-                        Encontrar el residuo de dividir $17^{341}$ entre 5
-
-                        % ======== SOLUCIÓN ========
-                        \begin{SmallIndentation}[1em]
-                            \textbf{Solución}:
-                            \begin{alignat*}{3}
-                                &\text{Sabemos que: }  
-                                && 17 \equiv 2                  && \pmod{5} \\
-                                &\text{Por lo que: }
-                                && 17^2 \equiv 2^2 = 4          && \pmod{5} \\
-                                &\text{y al cuadrado da: }
-                                && 17^4 \equiv 4^2 = 16         && \pmod{5} \\
-                                &\text{y recuerda que: }
-                                && 16 \equiv 1                  && \pmod{5} \\
-                                &\text{por lo tanto: }
-                                && 17^4 \equiv 1                && \pmod{5} \\
-                                &\text{y ya que $1^k=1$: }
-                                && (17^4)^{85} = 7^{4*85}\equiv 1^{85} =1   && \pmod{5} \\
-                                &\text{que es lo mismo que: }
-                                && 17^{340} \equiv 1            && \pmod{5} \\
-                                &\text{y multiplicando por la $1^a$ congruencia: }
-                                && (17^{340})(17) \equiv 1(2)   && \pmod{5} \\
-                                &\text{que es lo mismo que: }
-                                && 17^{341} \equiv 2            && \pmod{5} 
-                            \end{alignat*}
-
-                            Por lo tanto $17^{341}$ y $2$ dejan el mismo residuo al divirlos entre 5
-                        \end{SmallIndentation}
-
-                \end{itemize}
 
 
-               
+
+
 
 
 % ======================================================================================
