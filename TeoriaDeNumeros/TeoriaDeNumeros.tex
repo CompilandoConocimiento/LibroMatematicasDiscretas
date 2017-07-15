@@ -1870,7 +1870,116 @@
     % =====================================================
     \section{Exponenciación Binaria}
 
-    
+        Este es un algoritmo que te permite multiplicar más rápido, literalmente, ese es 
+        su objetivo, se basa en que si tiene un número como $b^e$ y quieres calcularlo
+        en vez de multiplicar $b$ $e$ veces, puedes ocupar la exponenciación binaria, 
+        que se basa en la observación de que:
+
+        \begin{equation}
+        \begin{split}
+            \text{Si n es inpar: }  &   b^e = b (b^2)^{\frac{e-1}{2}}   \\
+            \text{Si n es par: }    &   b^e = b (b^2)^{\frac{e}{2}}
+        \end{split}
+        \end{equation}
+
+
+        Ahora usando esto podemos crear 2 métodos alternos:
+
+        % =======================================
+        % ========     METODO 1         =========
+        % =======================================
+        \clearpage
+        \subsection*{Método 1}
+
+            Este método es bastante sencillo:
+
+            \begin{itemize}
+                \item   Inicializa tu respuesta a ser 0
+                \item   Convierte el exponente en base 2
+
+                \item Para cada digito del exponente en base 2 (Iniciando con
+                      el más significativo):
+                    
+                    \begin{itemize}
+                        \item Si es 1: Nueva Respuesta = Respuesta$^2$ * Base 
+                        \item Si es 0: Nueva Respuesta = Respuesta$^2$ 
+                    \end{itemize}
+            \end{itemize}
+
+
+        % =======================================
+        % ========        EJEMPLOS      =========
+        % =======================================
+        \subsection*{Ejemplo Método 1}
+
+            Este ejemplo nos muestra como usar esta propiedad para elevar más rápido, por ejemplo para encontrar
+            $x^{13}$ solo tenemos que seguir el algoritmo suponiendo que recuerdas que $13_{10} = 1101_{2}$:
+
+
+            % ======== SOLUCIÓN ========
+            \begin{SmallIndentation}[1em]
+                \textbf{Solución}:
+
+                \begin{alignat*}{3}
+                    &\text{Inicializamos : }                    && respuesta = 1                        &&  \text{Ahora mismo: } respuesta = x^0  \\
+                    &\text{Como $1^{er}$ dígito es 1:  }        && respuesta = respuesta^2 * x          &&  \text{Ahora mismo: } respuesta = x^1  \\
+                    &\text{Como $2^{do}$ dígito es 1:  }        && respuesta = respuesta^2 * x          &&  \text{Ahora mismo: } respuesta = x^3  \\
+                    &\text{Como $3^{er}$ dígito es 0:  }        && respuesta = respuesta^2              &&  \text{Ahora mismo: } respuesta = x^6  \\
+                    &\text{Como $4^{er}$ dígito es 1:  }\Space  && respuesta = respuesta^2 * x    \Space&&  \text{Ahora mismo: } respuesta = x^13 \\
+                \end{alignat*}
+
+            \end{SmallIndentation}
+
+            
+
+
+        % =======================================
+        % ========     METODO 2         =========
+        % =======================================
+        \clearpage
+        \subsection*{Método 2}
+
+            Este método es bastante sencillo:
+
+            \begin{itemize}
+                \item   Inicializa tu respuesta a ser 0
+                \item   Inicializa tu auxiliar a ser b
+                \item   Convierte el exponente en base 2
+
+                \item Para cada digito del exponente en base 2 (Iniciando con
+                      el más significativo):
+                    
+                    \begin{itemize}
+                        \item Si es 1:
+                                Nueva Respuesta = Respuesta * Auxiliar y Nuevo Auxiliar = Auxiliar$^2$
+                        \item Si es 0:
+                                Nuevo Auxiliar = Auxiliar$^2$
+                    \end{itemize}
+            \end{itemize}
+
+
+        % =======================================
+        % ========        EJEMPLOS      =========
+        % =======================================
+        \subsection*{Ejemplo Método 2}
+
+            Este ejemplo nos muestra como usar esta propiedad para elevar más rápido, por ejemplo para encontrar
+            $x^{13}$ solo tenemos que seguir el algoritmo suponiendo que recuerdas que $13_{10} = 1101_{2}$:
+
+
+            % ======== SOLUCIÓN ========
+            \begin{SmallIndentation}[1em]
+                \textbf{Solución}:
+
+                \begin{alignat*}{3}
+                    &\text{Inicializamos : }              && res = 1 \text{ y } aux = x        &&  \text{Ahora: } res = x^0 \text{ y } aux = x    \\
+                    &\text{$1^{er}$ dígito es 1: }        && res=res*x \text{ y } aux=aux^2    &&  \text{Ahora: } res = x^1 \text{ y } aux = x^2  \\
+                    &\text{$2^{do}$ dígito es 0: }        && aux=aux^2                         &&  \text{Ahora: } res = x^1 \text{ y } aux = x^4  \\
+                    &\text{$3^{er}$ dígito es 1: }        && res=res*x \text{ y } aux=aux^2    &&  \text{Ahora: } res = x^5 \text{ y } aux = x^8  \\
+                    &\text{$4^{er}$ dígito es 1: }\Space  && res=res*x\text{ y }aux=aux^2\Space&&  \text{Ahora: } res = x^13 \text{ y } aux = x^{16}  
+                \end{alignat*}
+
+            \end{SmallIndentation}
 
 
 
