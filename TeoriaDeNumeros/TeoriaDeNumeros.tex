@@ -2014,7 +2014,7 @@
 % ======================================================================================
 % ===================        CONGRUENCIA & ENTEROS MODULO N         ====================
 % ======================================================================================
-\chapter{Teoría de Congruencias}
+\chapter{Congruencias}
     \clearpage
 
     % =====================================================
@@ -2051,6 +2051,7 @@
         % ==================================
         % ==   RELACION DE EQUIVALENCIA   ==
         % ==================================
+        \clearpage
         \subsection{Relación de Equivalencia}
 
             La notación $\equiv$ es usada porque las caracteristicas de la
@@ -2101,6 +2102,17 @@
                     \end{SmallIndentation}
 
             \end{itemize}
+
+            Recuerda algo muy muy importante:
+
+            Una relación de equivalencia $R$ (en este caso la Congruencia Módulo N)
+            sobre un conjunto $A$ (en este caso $\Integers$) produce una partición
+            del conjunto en subconjuntos disjuntos, llamados \textbf{Clases de
+            Equivalencia}, cada uno de ellos formados por elementos que están
+            relacionados entre sí.
+
+            Esta partición se representa por $A \backslash R$ y se llama
+            \textbf{Conjunto Cociente}.
 
 
 
@@ -2203,6 +2215,20 @@
 
                     \end{SmallIndentation}
 
+                \clearpage
+
+                \item Si $GCD(c, n) = 1$ y $ac \equiv bc \pmod{n}$ entonces $a \equiv b \pmod{n}$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Por definicición tenemos que $n|ac-bc$, es decir $n|c(a-b)$ y recuerda la
+                        propiedad que demostramos (supoón $GCD(a, b) = 1$ y que $a|bc$, entonces $a|c$)
+                        por lo tanto $n|a-b$, que es lo mismo que $a \equiv b \pmod{n}$.
+
+                    \end{SmallIndentation}
+
             \end{itemize}
 
 
@@ -2212,7 +2238,7 @@
         % =====      A % B = MODULO   ======
         % ==================================
         \clearpage
-        \subsection{Modulo: $A \% B$}
+        \subsection{Módulo: $A \% B$}
 
             Recuerda las 2 proposición demostrada allá arriba:
 
@@ -2233,177 +2259,255 @@
             Por lo tanto $a \% b = r$ donde $a =bq+r$ y $0 \leq r < b$.
 
 
+    % =====================================================
+    % ========         EXPONENCIACION MODULAR     =========
+    % =====================================================
+    \section{Exponenciación Modular: $b^e \equiv s \pmod {n}$}
+
+        Es muy común usar congruencias para encontrar el residuo $s$ de 
+        un númerotote (generalmente denotado de la forma $b^e$) al
+        divirlo entre alguna $n$, donde $0 \leq c < n$.
+
+        Usamos $b$ de base, $e$ de expontente y $s$ de solución.
+
+        La idea se basa en la propiedad que ya demostramos de congruencias:
+        \Quote{$a \equiv b \pmod{n}$ si y solo si ambos $a,b$ dejan el mismo
+        residio al ser dividido por $n$}.
+
+        Este proceso, de encontrar $s$ dado un número $b^e$ y un módulo $n$
+        es bastante fácil y rápido, incluso cuando el número es endemoniadamente
+        grande, pero el proceso inverso, encontrar $e$ dado una base $b$ y un
+        módulo $n$. Esto lo hace perfecto para la criptografía.
+
+
+
+
+        % =======================================
+        % ======    METODO EXP BINARIA      =====
+        % =======================================
+        \subsection*{Método 1: Exponenciación Binaria}
+
+            Este método es bastante sencillo y se basa en la exponenciación binaria, digo
+            literalmente es el mismo algoritmo, lo único diferente es que hablamos de congruencias
+
+            \begin{SmallIndentation}[1em]
+                
+                \begin{itemize}
+                    \item   Inicializa tu respuesta a ser 0
+                    \item   Inicializa tu auxiliar a ser b
+                    \item   Convierte el exponente en base 2
+
+                    \item Para cada digito del exponente en base 2 (Iniciando con
+                          el menos significativo):
+                        
+                        \begin{itemize}
+                            \item Si es 1:
+                                    Nueva Respuesta = Respuesta * Auxiliar (mod n) y Nuevo Auxiliar = Auxiliar$^2$ (mod n)
+                            \item Si es 0:
+                                    Nuevo Auxiliar = Auxiliar$^2$ (mod n)
+                        \end{itemize}
+                \end{itemize}
+
+            \end{SmallIndentation}
+
+
+        % =======================================
+        % =====     METODO 2: ALTERNO       =====
+        % =======================================
+        \clearpage
+        \subsection*{Método 2: Alterno}
+
+            Este método es bastante sencillo:
+
+            \begin{SmallIndentation}[1em]
+                
+                \begin{itemize}
+                    \item Aplica el algoritmo de la división y llega a $b=nq+r$, de aquí tienes
+                        la proposición $b \equiv r \pmod{n}$
+
+                    \item Empieza a elevar proposición anterior hasta llegar a:
+
+                        $b^k \equiv r^k \pmod{n}$ donde $r^k \equiv 1 \pmod{n}$
+
+
+                    \item Ya que sabemos que $1^n=1$ entonces ya nos podremos acerca mucho más,
+                        ¿Pero cuanto?
+
+                        Aplica el algoritmo de la división y llega a $e = kq' + r'$, por lo
+                        tanto puedes escribir la proposición $b^{kq'} \equiv 1 \pmod{n}$
+
+                    \item Finalmente puedes también decir que $b^{r'} \equiv r^{r'} \pmod{n}$,
+                        por lo tanto si multiplicas las ultimas dos congruencias tenemos que
+                        $b^{kq'}b^{r'} \equiv (1)(r^{r'})$ esto es lo mismo que
+                        $b^{kq'+r'} \equiv r^{r'} \pmod{n}$
+
+                        Por lo tanto $b^e \equiv r^{r'} \pmod{n}$. Donde $r^{r'} \pmod {n}$ es 
+                        nuestra respuesta.
+                \end{itemize}
+
+            \end{SmallIndentation}
+
+
+        % =======================================
+        % ========        EJEMPLOS      =========
+        % =======================================
+        \subsubsection*{Ejemplo Método 2}
+
+                \begin{itemize}
+                    \item \large{Ejemplo 1:}
+                        Encontrar el residuo de dividir $17^{341}$ entre 5
+
+                        % ======== SOLUCIÓN ========
+                        \begin{SmallIndentation}[1em]
+                            \textbf{Solución}:
+                            \begin{alignat*}{3}
+                                &\text{Sabemos que: }  
+                                && 17 \equiv 2                  && \pmod{5} \\
+                                &\text{Por lo que: }
+                                && 17^2 \equiv 2^2 = 4          && \pmod{5} \\
+                                &\text{y al cuadrado da: }
+                                && 17^4 \equiv 4^2 = 16         && \pmod{5} \\
+                                &\text{y recuerda que: }
+                                && 16 \equiv 1                  && \pmod{5} \\
+                                &\text{por lo tanto: }
+                                && 17^4 \equiv 1                && \pmod{5} \\
+                                &\text{y ya que $1^k=1$: }
+                                && (17^4)^{85} = 7^{4*85}\equiv 1^{85} =1   && \pmod{5} \\
+                                &\text{que es lo mismo que: }
+                                && 17^{340} \equiv 1            && \pmod{5} \\
+                                &\text{y multiplicando por la $1^a$ congruencia: }\Space
+                                && (17^{340})(17) \equiv 1(2)   && \pmod{5} \\
+                                &\text{que es lo mismo que: }
+                                && 17^{341} \equiv 2            && \pmod{5} 
+                            \end{alignat*}
+
+                            Por lo tanto $17^{341}$ y $2$ dejan el mismo residuo al divirlos entre 5
+                        \end{SmallIndentation}
+
+                \end{itemize}
+
 
 
     % =====================================================
-    % ========            APLICACIONES            =========
+    % ========   CONGRUENCIAS Y DIVISIBILIDAD    =========
     % =====================================================
     \clearpage
-    \section{Aplicaciones}
+    \section{Encontrar si $n$ es divisible entre $m$ usando Congruencias}
 
+        \begin{itemize}
 
-        % ==================================
-        % ==   EXPONENCIACION MODULAR   ====
-        % ==================================
-        \subsection{Exponenciación Modular: $b^e \equiv s \pmod {n}$}
+            \item Un número $n \in \Integers$ es divisble entre 3 si y solo si
+                la suma de digitos (en base 10) de $n$ es divisible entre 3.
 
-            Es muy común usar congruencias para encontrar el residuo $s$ de 
-            un númerotote (generalmente denotado de la forma $b^e$) al
-            divirlo entre alguna $n$, donde $0 \leq c < n$.
-
-            Usamos $b$ de base, $e$ de expontente y $s$ de solución.
-
-            La idea se basa en la propiedad que ya demostramos de congruencias:
-            \Quote{$a \equiv b \pmod{n}$ si y solo si ambos $a,b$ dejan el mismo
-            residio al ser dividido por $n$}.
-
-            Este proceso, de encontrar $s$ dado un número $b^e$ y un módulo $n$
-            es bastante fácil y rápido, incluso cuando el número es endemoniadamente
-            grande, pero el proceso inverso, encontrar $e$ dado una base $b$ y un
-            módulo $n$. Esto lo hace perfecto para la criptografía.
-
-
-
-
-            % =======================================
-            % ======    METODO EXP BINARIA      =====
-            % =======================================
-            \subsection*{Método 1: Exponenciación Binaria}
-
-                Este método es bastante sencillo y se basa en la exponenciación binaria, digo
-                literalmente es el mismo algoritmo, lo único diferente es que hablamos de congruencias
-
+                % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
-                    
-                    \begin{itemize}
-                        \item   Inicializa tu respuesta a ser 0
-                        \item   Inicializa tu auxiliar a ser b
-                        \item   Convierte el exponente en base 2
+                    \textbf{Demostración}:
 
-                        \item Para cada digito del exponente en base 2 (Iniciando con
-                              el menos significativo):
-                            
-                            \begin{itemize}
-                                \item Si es 1:
-                                        Nueva Respuesta = Respuesta * Auxiliar (mod n) y Nuevo Auxiliar = Auxiliar$^2$ (mod n)
-                                \item Si es 0:
-                                        Nuevo Auxiliar = Auxiliar$^2$ (mod n)
-                            \end{itemize}
-                    \end{itemize}
+                    Antes que nada, recuerda que a $n$ lo puedes escribir como
+                    $n = a(10^0) + b(10^1) + c(10^2) + \dots$ donde
+                    $a, b, c, \dots \in \Naturals$ son los dígitos de $n$.
+
+                    Ahora, también recuerda que $10 \equiv 1 \pmod{3}$.
+
+                    Ahora $3|n$ si y solo si $n \equiv 0 \pmod{3}$ y esto pasa si
+                    y solo si $a(10^0) + b(10^1) + c(10^2) + \dots \equiv 0 \pmod{3}$
+                    (esto es una propiedad que vimos antes) y como recuerdas
+                    ($10 \equiv 1 \pmod{3}$) tenemos que esto ocurre si y solo si:
+                    $a + b + c + \dots \equiv 0 \pmod{3}$, esto es lo mismo que
+                    $3|a+b+c+\dots$.
+
+                    Es decir, un número $n \in \Integers$ es divisble entre 3 si y solo si
+                    la suma de digitos de $n$ es divisible entre 3.
 
                 \end{SmallIndentation}
 
+        \end{itemize}
 
-            % =======================================
-            % =====     METODO 2: ALTERNO       =====
-            % =======================================
-            \clearpage
-            \subsection*{Método 2: Alterno}
 
-                Este método es bastante sencillo:
 
+
+    % =====================================================
+    % ========       ECUACIONES MODULO N          =========
+    % =====================================================
+    \clearpage
+    \section{Ecuaciones Módulo N}
+
+        Esta sección nos ayudará a resolver ecuaciónes pero con
+        congruencias de la forma
+
+        \begin{equation}
+            ax \equiv b \pmod{n}
+        \end{equation}
+
+        E incluso a saber si es que no existe dicha solución.
+
+        % =======================================
+        % ======    PROPIEDADES UTILES      =====
+        % =======================================
+        \begin{itemize}
+
+            \item Un número $n \in \Integers$ es divisble entre 3 si y solo si
+                la suma de digitos (en base 10) de $n$ es divisible entre 3.
+
+                % ======== DEMOSTRACION ========
                 \begin{SmallIndentation}[1em]
-                    
-                    \begin{itemize}
-                        \item Aplica el algoritmo de la división y llega a $b=nq+r$, de aquí tienes
-                            la proposición $b \equiv r \pmod{n}$
+                    \textbf{Demostración}:
 
-                        \item Empieza a elevar proposición anterior hasta llegar a:
+                    Antes que nada, recuerda que a $n$ lo puedes escribir como
+                    $n = a(10^0) + b(10^1) + c(10^2) + \dots$ donde
+                    $a, b, c, \dots \in \Naturals$ son los dígitos de $n$.
 
-                            $b^k \equiv r^k \pmod{n}$ donde $r^k \equiv 1 \pmod{n}$
+                    Ahora, también recuerda que $10 \equiv 1 \pmod{3}$.
 
+                    Ahora $3|n$ si y solo si $n \equiv 0 \pmod{3}$ y esto pasa si
+                    y solo si $a(10^0) + b(10^1) + c(10^2) + \dots \equiv 0 \pmod{3}$
+                    (esto es una propiedad que vimos antes) y como recuerdas
+                    ($10 \equiv 1 \pmod{3}$) tenemos que esto ocurre si y solo si:
+                    $a + b + c + \dots \equiv 0 \pmod{3}$, esto es lo mismo que
+                    $3|a+b+c+\dots$.
 
-                        \item Ya que sabemos que $1^n=1$ entonces ya nos podremos acerca mucho más,
-                            ¿Pero cuanto?
-
-                            Aplica el algoritmo de la división y llega a $e = kq' + r'$, por lo
-                            tanto puedes escribir la proposición $b^{kq'} \equiv 1 \pmod{n}$
-
-                        \item Finalmente puedes también decir que $b^{r'} \equiv r^{r'} \pmod{n}$,
-                            por lo tanto si multiplicas las ultimas dos congruencias tenemos que
-                            $b^{kq'}b^{r'} \equiv (1)(r^{r'})$ esto es lo mismo que
-                            $b^{kq'+r'} \equiv r^{r'} \pmod{n}$
-
-                            Por lo tanto $b^e \equiv r^{r'} \pmod{n}$. Donde $r^{r'} \pmod {n}$ es 
-                            nuestra respuesta.
-                    \end{itemize}
+                    Es decir, un número $n \in \Integers$ es divisble entre 3 si y solo si
+                    la suma de digitos de $n$ es divisible entre 3.
 
                 \end{SmallIndentation}
 
-
-            % =======================================
-            % ========        EJEMPLOS      =========
-            % =======================================
-            \subsubsection*{Ejemplo Método 2}
-
-                    \begin{itemize}
-                        \item \large{Ejemplo 1:}
-                            Encontrar el residuo de dividir $17^{341}$ entre 5
-
-                            % ======== SOLUCIÓN ========
-                            \begin{SmallIndentation}[1em]
-                                \textbf{Solución}:
-                                \begin{alignat*}{3}
-                                    &\text{Sabemos que: }  
-                                    && 17 \equiv 2                  && \pmod{5} \\
-                                    &\text{Por lo que: }
-                                    && 17^2 \equiv 2^2 = 4          && \pmod{5} \\
-                                    &\text{y al cuadrado da: }
-                                    && 17^4 \equiv 4^2 = 16         && \pmod{5} \\
-                                    &\text{y recuerda que: }
-                                    && 16 \equiv 1                  && \pmod{5} \\
-                                    &\text{por lo tanto: }
-                                    && 17^4 \equiv 1                && \pmod{5} \\
-                                    &\text{y ya que $1^k=1$: }
-                                    && (17^4)^{85} = 7^{4*85}\equiv 1^{85} =1   && \pmod{5} \\
-                                    &\text{que es lo mismo que: }
-                                    && 17^{340} \equiv 1            && \pmod{5} \\
-                                    &\text{y multiplicando por la $1^a$ congruencia: }\Space
-                                    && (17^{340})(17) \equiv 1(2)   && \pmod{5} \\
-                                    &\text{que es lo mismo que: }
-                                    && 17^{341} \equiv 2            && \pmod{5} 
-                                \end{alignat*}
-
-                                Por lo tanto $17^{341}$ y $2$ dejan el mismo residuo al divirlos entre 5
-                            \end{SmallIndentation}
-
-                    \end{itemize}
+        \end{itemize}
 
 
-        % ====================================
-        % == CONGRUENCIAS Y DIVISIBILIDAD   ==
-        % ====================================
-        \clearpage
-        \subsection{Encontrar si $n$ es divisible entre $m$ con Congruencias}
 
-            \begin{itemize}
 
-                \item Un número $n \in \Integers$ es divisble entre 3 si y solo si
-                    la suma de digitos (en base 10) de $n$ es divisible entre 3.
+    % =====================================================
+    % ========       ARITMETICA MODULAR           =========
+    % =====================================================
+    \clearpage
+    \section{Aritmética Modular: Clases $\Integers_n$ y $[a]_n$}
 
-                    % ======== DEMOSTRACION ========
-                    \begin{SmallIndentation}[1em]
-                        \textbf{Demostración}:
+        % ==================================
+        % =========   FORMAL     ===========
+        % ==================================
+        \subsection*{Definición Formal}
 
-                        Antes que nada, recuerda que a $n$ lo puedes escribir como
-                        $n = a(10^0) + b(10^1) + c(10^2) + \dots$ donde
-                        $a, b, c, \dots \in \Naturals$ son los dígitos de $n$.
+            Podemos ser aburridos y serios y hacer dos definiciones formales
+            para sacarlas del camino y decir que:
 
-                        Ahora, también recuerda que $10 \equiv 1 \pmod{3}$.
+            \subsubsection*{Clase Congruencias Modulo N}
 
-                        Ahora $3|n$ si y solo si $n \equiv 0 \pmod{3}$ y esto pasa si
-                        y solo si $a(10^0) + b(10^1) + c(10^2) + \dots \equiv 0 \pmod{3}$
-                        (esto es una propiedad que vimos antes) y como recuerdas
-                        ($10 \equiv 1 \pmod{3}$) tenemos que esto ocurre si y solo si:
-                        $a + b + c + \dots \equiv 0 \pmod{3}$, esto es lo mismo que
-                        $3|a+b+c+\dots$.
+                Una Clase Congruencia Modulo N (k) es un conjunto que cumple con:
 
-                        Es decir, un número $n \in \Integers$ es divisble entre 3 si y solo si
-                        la suma de digitos de $n$ es divisible entre 3.
+                \begin{equation}
+                    [k]_n = \{ x \in \Integers \Such x \equiv a \pmod{n} \}
+                \end{equation}
 
-                    \end{SmallIndentation}
+                Es decir, es un conjunto que contiene a todos los enteros que con
+                congruentes modulo n con k.
 
-            \end{itemize}
+                O dicho más bonito, es el conjunto de todos los enteros que al aplicar
+                el algoritmo de la división ($x = kq+r$) obtienen la misma $r$.\\
+
+            \subsubsection*{Conjunto de Congruencias Modulo N: $\Integers_n$}
+
+                El conjunto de Congruencias Modulo N (de verdad a nadie se le ocurrio 
+                un nombre mas bonito)  
 
 
 

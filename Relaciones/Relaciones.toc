@@ -8,6 +8,7 @@
 \contentsline {subsection}{\numberline {1.4.2}Sim\IeC {\'e}trica}{7}{subsection.1.4.2}
 \contentsline {subsection}{\numberline {1.4.3}Transitiva}{8}{subsection.1.4.3}
 \contentsline {subsection}{\numberline {1.4.4}Relaci\IeC {\'o}n de Equivalencia}{9}{subsection.1.4.4}
+\contentsline {subsubsection}{Clases de Equivalencia}{9}{section*.6}
 \contentsline {chapter}{\numberline {2}Funciones}{10}{chapter.2}
 \contentsline {section}{\numberline {2.1}Definici\IeC {\'o}n}{11}{section.2.1}
 \contentsline {section}{\numberline {2.2}Dominio e Imagen}{12}{section.2.2}
@@ -18,6 +19,6 @@
 \contentsline {subsection}{\numberline {2.3.4}Principio del Palomar}{15}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}Funci\IeC {\'o}n Inversa}{16}{section.2.4}
 \contentsline {section}{\numberline {2.5}Imag\IeC {\'e}n y Preimagen}{17}{section.2.5}
-\contentsline {subsubsection}{Imag\IeC {\'e}n}{17}{section*.10}
-\contentsline {subsubsection}{PreImagen}{17}{section*.11}
+\contentsline {subsubsection}{Imag\IeC {\'e}n}{17}{section*.11}
+\contentsline {subsubsection}{PreImagen}{17}{section*.12}
 \contentsline {section}{\numberline {2.6}Cardinalidad y Funciones}{18}{section.2.6}
