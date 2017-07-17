@@ -2052,7 +2052,7 @@
         % ==   RELACION DE EQUIVALENCIA   ==
         % ==================================
         \clearpage
-        \subsection{Relación de Equivalencia}
+        \subsection{Congruencia: Una Relación de Equivalencia}
 
             La notación $\equiv$ es usada porque las caracteristicas de la
             congruencia son muy muy parecidos a los de la igualdad ($=$), 
@@ -2113,6 +2113,8 @@
 
             Esta partición se representa por $A \backslash R$ y se llama
             \textbf{Conjunto Cociente}.
+
+            Hablaremos de ellas más adelante.
 
 
 
@@ -2224,7 +2226,23 @@
                         \textbf{Demostración}:
 
                         Por definicición tenemos que $n|ac-bc$, es decir $n|c(a-b)$ y recuerda la
-                        propiedad que demostramos (supoón $GCD(a, b) = 1$ y que $a|bc$, entonces $a|c$)
+                        propiedad que demostramos (supón $GCD(a, b) = 1$ y que $a|bc$, entonces $a|c$)
+                        por lo tanto $n|a-b$, que es lo mismo que $a \equiv b \pmod{n}$.
+
+                    \end{SmallIndentation}
+
+                \item Si $ac \equiv bc \pmod{n}$ entonces $a \equiv b \pmod{\frac{n}{GCD(c,p)}}$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Sabemos que $n|ac-bc$, es decir $n|c(a-b)$.
+
+                        Ademas sabemos que $GCD()$ 
+
+                        y recuerda la
+                        propiedad que demostramos (supón $GCD(a, b) = 1$ y que $a|bc$, entonces $a|c$)
                         por lo tanto $n|a-b$, que es lo mismo que $a \equiv b \pmod{n}$.
 
                     \end{SmallIndentation}
@@ -2389,10 +2407,25 @@
 
 
     % =====================================================
-    % ========   CONGRUENCIAS Y DIVISIBILIDAD    =========
+    % ========   CONGRUENCIAS Y DIVISIBILIDAD     =========
     % =====================================================
     \clearpage
-    \section{Encontrar si $n$ es divisible entre $m$ usando Congruencias}
+    \section{Criterios de Divisibilidad}
+
+        Gracias a las congruencias podemos ver mcuho más fácil si un $n$ enorme
+        es divisible.
+
+        Antes que nada vamos a trabajar con los dígitos de $n$ como en base 10,
+        así que antes vamos a explicar que son los dígitos siendo rigurosos matematicamente
+        hablando:
+
+        \begin{equation}
+        \begin{split}
+            n &= a_0(10^0) + a_1(10^1) + a_2(10^2) + \dots + a_k(10^k)          \\
+            n &= \sum_{i=0}^{k} a_i 10^i \Space \text{ con } 0 \leq a_i \leq 9
+        \end{split}
+        \end{equation}
+
 
         \begin{itemize}
 
@@ -2404,17 +2437,16 @@
                     \textbf{Demostración}:
 
                     Antes que nada, recuerda que a $n$ lo puedes escribir como
-                    $n = a(10^0) + b(10^1) + c(10^2) + \dots$ donde
-                    $a, b, c, \dots \in \Naturals$ son los dígitos de $n$.
+                    $n = a_0(10^0) + a_1(10^1) + a_2(10^2) + \dots + a_k(10^k)$.
 
                     Ahora, también recuerda que $10 \equiv 1 \pmod{3}$.
 
-                    Ahora $3|n$ si y solo si $n \equiv 0 \pmod{3}$ y esto pasa si
-                    y solo si $a(10^0) + b(10^1) + c(10^2) + \dots \equiv 0 \pmod{3}$
-                    (esto es una propiedad que vimos antes) y como recuerdas
-                    ($10 \equiv 1 \pmod{3}$) tenemos que esto ocurre si y solo si:
-                    $a + b + c + \dots \equiv 0 \pmod{3}$, esto es lo mismo que
-                    $3|a+b+c+\dots$.
+                    Ahora $3|n$ si y solo si $n \equiv 0 \pmod{3}$ y recuerda
+                    que podemos poner a $n$ escrito de otra forma:
+                    $a_0(10^0) + a_1(10^1) + a_2(10^2) + \dots + a_k(10^k) \equiv 0 \pmod{3}$
+                    y como recuerdas ($10 \equiv 1 \pmod{3}$) tenemos que esto ocurre
+                    si y solo si:  $a_0 + a_1 +\dots +a_k \equiv 0 \pmod{3}$, esto es lo mismo que
+                    $3|a_0+a_1+a_2+\dots$.
 
                     Es decir, un número $n \in \Integers$ es divisble entre 3 si y solo si
                     la suma de digitos de $n$ es divisible entre 3.
@@ -2480,23 +2512,35 @@
     % ========       ARITMETICA MODULAR           =========
     % =====================================================
     \clearpage
-    \section{Aritmética Modular: Clases $\Integers_n$ y $[a]_n$}
+    \section{Aritmética Modular: Clases $[a]_n$ y $\Integers_n$}
+
+        Recuerda algo muy muy importante (no importa que ya te lo dijera):
+
+        Una relación de equivalencia $R$ (en este caso la Congruencia Módulo N)
+        sobre un conjunto $A$ (en este caso $\Integers$) produce una partición
+        del conjunto en subconjuntos disjuntos, llamados \textbf{Clases de
+        Equivalencia}, cada uno de ellos formados por elementos que están
+        relacionados entre sí.
+
+        Esta partición se representa por $A \backslash R$ y se llama
+        \textbf{Conjunto Cociente}.
+
 
         % ==================================
         % =========   FORMAL     ===========
         % ==================================
         \subsection*{Definición Formal}
 
-            Podemos ser aburridos y serios y hacer dos definiciones formales
-            para sacarlas del camino y decir que:
+            \subsubsection*{Clase de Equivalencia: Congruencias Modulo N ($[k]_n$)}
 
-            \subsubsection*{Clase Congruencias Modulo N}
-
-                Una Clase Congruencia Modulo N (k) es un conjunto que cumple con:
-
+                Una Clase de Equivalencia de Congruencia Modulo N (k) es un conjunto
+                que cumple con:
                 \begin{equation}
-                    [k]_n = \{ x \in \Integers \Such x \equiv a \pmod{n} \}
+                    [k]_n = \overline{K_n} = \{ x \in \Integers \Such x \equiv k \pmod{n} \}
                 \end{equation}
+
+                Y obviamente elegimos a las $k$ positivas más pequeñas, es decir 
+                $0 \leq k < n$.
 
                 Es decir, es un conjunto que contiene a todos los enteros que con
                 congruentes modulo n con k.
@@ -2504,12 +2548,19 @@
                 O dicho más bonito, es el conjunto de todos los enteros que al aplicar
                 el algoritmo de la división ($x = kq+r$) obtienen la misma $r$.\\
 
-            \subsubsection*{Conjunto de Congruencias Modulo N: $\Integers_n$}
+            \subsubsection*{Conjunto Cociente: Congruencias Modulo N ($\Integers_n$)}
 
                 El conjunto de Congruencias Modulo N (de verdad a nadie se le ocurrio 
                 un nombre mas bonito)  
 
+                Es  un conjunto que contiene a todos las posibles Clases de Equivalencia
+                (sabemos que serán $n$ clases distintas) puesto que hay $n$ posibles residuos
+                desde $0 \leq r < n$.
 
+                \begin{equation}
+                    \Integers \backslash n \Integers = 
+                        \Integers_n = \{ [0]_n , [1]_n, [2]_n, \dots  [n-1]_n\}
+                \end{equation}
 
 
 
