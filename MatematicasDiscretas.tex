@@ -18,10 +18,12 @@
     \usepackage[spanish]{babel}                                     %Please use spanish
     \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
     \usepackage[T1]{fontenc}                                        %Please use spanish
+    \usepackage{textcmds}                                           %Allow us to use quoutes
 
     % *********   MATH AND HIS STYLE  *********
     \usepackage{amsthm, amssymb, amsfonts, mathrsfs}                %Make math beautiful
     \usepackage[fleqn]{amsmath}                                     %Please make equations left
+    \usepackage{centernot}                                          %Allow me to negate a symbol
     \decimalpoint                                                   %Use decimal point
 
     % *********   GRAPHICS AND IMAGES *********
@@ -73,6 +75,9 @@
 % ========================================
 % ===========   COMMANDS    ==============
 % ========================================
+
+    % =====  GENERAL TEXT  ==========
+    \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
 
     % =====  GENERAL MATH  ==========
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
@@ -155,825 +160,2202 @@
 
 
 
-% ======================================================================================
-% =============================       PRINCIPIOS BASICOS      ==========================
-% ======================================================================================
-\chapter{Proposiciones y Conectores}
+    % ======================================================================================
+    % =============================       PRINCIPIOS BASICOS      ==========================
+    % ======================================================================================
+    \chapter{Proposiciones y Conectores}
+        \clearpage
+
+        % =====================================================
+        % ============           DEFINICION            ========
+        % =====================================================
+        \section{Proposiciones}
+
+            La lógica es una forma sistemática de pensar que nos permite deducir nueva información desde la
+            información que ya conocemos.
+
+            Recuerda que la lógica es un proceso de deducir la información correctamente,
+            no sólo deducir la información correcta.
+
+            La lógica trabajo con algo llamado proposiciones, son como las funciones para
+            cálculo, o los lenguajes de programación para informática o los libros para la literatura.
+
+            Así que empecemos por ahí ... ¿Qué son?
+
+
+            % =====================================
+            % =========   ¿QUE SON?     ===========
+            % =====================================
+            \subsection*{Definición}
+                
+                \textbf{Son proposiciones las frases que pueden adquirir un valor de verdadero o falso.}
+                
+                O dicho de manera formal:
+
+                \textbf{Es una oración aseverativa de la que tiene sentido decir que es verdadera o falsa}.\\
+
+                Y cuando digo frase, me refiero a:
+                \begin{itemize}
+                    \item Secuencia finita de signos con significado y sentido de ser calificado como verdadero o falso.
+                            (es decir una simple expresión matemática).
+
+                    \item Expresión lingüística susceptible de ser calificada de verdadera o falsa.
+                            (es decir una frase aseverativa).
+                \end{itemize}
+
+
+            % =====================================
+            % ====   SENTENCIAS ABIERTAS    =======
+            % =====================================
+            \subsection*{Sentencias Abiertas}
+                Existen cosas que son parecidas a las proposiciones, pero no lo son exactamente, son cosas como:
+
+                $p(x)$: $x$ es un número par.
+
+                Puesto que la validez de $p(x)$ depende que número sea $x$, $p(x)$no es no totalmente cierta ni
+                totalmente falsa, por lo tanto no es una proposición.
+
+                Una oración como esta, cuya verdad depende del valor de una o más variables,
+                se llama sentencias abierta.
+
+
+
+                % ==========================
+                % =====   EJEMPLOS   =======
+                % ==========================
+                \clearpage
+                \subsection*{Ejemplo}
+
+
+                    Por ejemplo son proposiciones frases como:
+                    \begin{itemize}
+                        \item $2 + 3 = 4$
+                        \item Hay solamente 325 personas en Marte
+                        \item $\forall x, y \in \Naturals$ se tiene que $\MiniSpace x+y \in \Reals$
+                        \item Hoy es lunes
+                        \item $f(x+y) = f(x) + f(y)$
+                        \item Si x = 2 entonces 2x = 4
+                    \end{itemize}
+
+                    Pero no son cosas como:
+                    \begin{itemize}
+                        \item ¡Ojalá no llueva hoy!
+                        \item Haz la tarea
+                        \item Este enunciado es falso
+                        \item Tomar una siesta
+                    \end{itemize}
+
+
+
+            % =====================================
+            % ======   CLASIFICACION    ===========
+            % =====================================
+            \clearpage
+            \subsection{Teoremas, Corolario y Tautológias}
+                
+                \subsubsection*{Clasificación de Propiedades}
+
+                    \begin{itemize}
+                        \item \textbf{Tautología}: Cuando para todos los valores posibles de un conjunto
+                                de proposiciones siempre será verdadero el conjunto.
+
+                        \item \textbf{Contradicción}: Cuando para todos los valores posibles de un conjunto
+                        de proposiciones esta será siempre falso.
+
+                        \item \textbf{Contingencia}: Una proposición “común” son básicamente todas las que
+                        no son ni tautologías ni contradicciones.
+                    \end{itemize}
+
+                \subsubsection*{Notación}
+
+                    Además a los matemáticas les encanta demostrar todo y cuando digo todo, es TODO, así que
+                    aquí te dejo las diferencias entre varias palabras que se parecen:
+
+                    \begin{itemize}
+                        \item \textbf{Proposición}: Enunciado que encierra un valor de verdad.
+
+                        \item \textbf{Axioma}: Principio tan claro y evidente que no necesita demostración.
+
+                        \item \textbf{Corolario}: Proposición demostrado que provoca una afirmación.
+
+                        \item \textbf{Demostración}: Razonamiento por el cuál se da prueba de la
+                            exactitud de una proposición.
+
+                        \item \textbf{Lema}: Proposición que es necesaria demostrar antes de
+                        establecer un teorema.
+
+                    \end{itemize}
+
+
+        % =====================================================
+        % ============           CONECTORES            ========
+        % =====================================================
+        \clearpage
+        \section{Conectores Lógicos}
+
+            Los conectores nos permiten 'concatenar' proposiciones o crear proposiciones mas avanzadas. 
+            Veamos primero como solemos mostrarlos:
+
+            \begin{longtable}{p{35mm} || p{30mm} || p{80mm}}
+
+                % ==== HEADERS ============
+                \textbf{\large Conector}
+                &
+                \textbf{\large Nombres}
+                &
+                \textbf{\large Símbolos}
+                \\[1.5ex]
+                \hline\hline
+                & & \\                                                                    
+                \endhead                                                     
+
+                \large y  &  \large{p $\land$ q}                                    &
+
+                \begin{minipage}[t]{\textwidth}\begin{itemize}
+                    \item \textbf{Conjunción de} p \textbf{y de} q
+                \end{itemize}\end{minipage}                                                 \\[1.5ex]
+                
+                \hline & & \\ \large o  &  \large{p $\lor$ q}                               &
+                
+                \begin{minipage}[t]{\textwidth}\begin{itemize}
+                    \item \textbf{Disyunción de} p \textbf{y de} q
+                \end{itemize}\end{minipage}                                                 \\[1.5ex]
+
+
+                \hline & & \\ \large no  &  \large{$\lnot$ q}                               &
+
+                \begin{minipage}[t]{\textwidth}\begin{itemize}
+                    \item \textbf{Negación de} P
+                \end{itemize}\end{minipage}                                                 \\[1.5ex]
+
+                \hline & & \\ \large implica  &  \large{p $\to$ q}                          & 
+
+                \begin{minipage}[t]{\textwidth}\begin{itemize}
+                \small{
+                    \item p \textbf{implica} q
+                    \item \textbf{Si} p\textbf{, entonces} q
+                    \item q \textbf{si} p
+                    \item \textbf{Sólo si} q \textbf{entonces} p
+                    \item p \textbf{sólo si} q
+                    \item \textbf{Cuando} p\textbf{,} q
+                    \item \textbf{Siempre que} q\textbf{,} p
+                    \item q \textbf{siempre que} p
+                    \item p \textbf{es una condición suficiente para} q
+                    \item q \textbf{es una condición necesaria para} p
+                    \item \textbf{Es necesario que} q \textbf{para} p
+                    \item \textbf{Es suficiente que} p \textbf{para que} q
+                }\\
+                \end{itemize}\end{minipage}                                                 \\[1.5ex]
+
+                \hline & & \\ \large si y solo si  &  \large{p $\doublearrow$ q}            &
+
+                \begin{minipage}[t]{\textwidth}\begin{itemize}
+                \small{
+                    \item p \textbf{ssi} q
+                    \item p \textbf{es equivalente a} q
+                    \item p \textbf{es una condición necesaria y suficiente para} q
+                    \item \textbf{Para que} p \textbf{es necesario y suficiente que} q
+                }\\
+                \end{itemize}\end{minipage}                                                 \\
+     
+            \end{longtable}
+
+            % =====================================
+            % ======     NEGACION     ===========
+            % =====================================
+            \clearpage
+
+            Las que siguen a continuación son lo que yo denomino más operaciones mas básicas en lógica.
+
+            \subsection{Negación}
+
+                Devuelve el inverso del valor de verdad de la proposición que le pases.\\
+
+                \begin{tabular}{ |c|c|c| } 
+                    \hline &&\\
+                    \large{Nombre} & $p$ & $\lnot p$ \\[0.5em]
+                    \hline
+                    \multirow{2}{5em}{Negación}
+                    & $F$ & $V$  \\ \cline{2-3}
+                    & $V$ & $F$  \\ \cline{2-3}
+                    \hline
+                \end{tabular}
+
+            % =====================================
+            % ======     CONJUNCION     ===========
+            % =====================================
+            \subsection{Conjunción}
+
+                Devuelve verdadero \textbf{solo} cuando ambas son verdaderas, y falso en cualquier
+                otra combinación.\\
+
+                \begin{tabular}{ |c|c|c|c|c| } 
+                    \hline &&&\\
+                    \large{Nombre} & $p$ & $q$ & $p \land q$ \\[0.5em]
+                    \hline
+                    \multirow{4}{5em}{Conjunción}
+                    & $F$ & $F$ & $F$ \\ \cline{2-4}
+                    & $F$ & $V$ & $F$ \\ \cline{2-4}
+                    & $V$ & $F$ & $F$ \\ \cline{2-4}
+                    & $V$ & $V$ & $V$ \\ 
+                    \hline
+                \end{tabular}
+
+
+            % =====================================
+            % ======     DISYUNCION     ===========
+            % =====================================
+            \subsection{Disyunción}
+
+                Devuelve falso \textbf{solo} cuando ambas son falsas, y verdadero en cualquier
+                otra combinación.\\
+
+                \begin{tabular}{ |c|c|c|c|c| } 
+                    \hline &&&\\
+                    \large{Nombre} & $p$ & $q$ & $p \lor q$ \\[0.5em]
+                    \hline
+                    \multirow{4}{5em}{Disyunción}
+                    & $F$ & $F$ & $F$ \\ \cline{2-4}
+                    & $F$ & $V$ & $V$ \\ \cline{2-4}
+                    & $V$ & $F$ & $V$ \\ \cline{2-4}
+                    & $V$ & $V$ & $V$ \\ 
+                    \hline
+                \end{tabular}
+
+
+
+
+
+            % =====================================
+            % ======     IMPLICACION    ===========
+            % =====================================
+            \clearpage
+            \subsection{Implicación}
+
+                Devuelve falso \textbf{solo} cuando la primera premisa es verdadera, pero la 
+                segunda es falsa, y verdadero en cualquier otra combinación.
+
+                Ve a $p \to q$ como una promesa de que siempre que $p$ es verdadera, $q$ será verdadera también.
+                Sólo hay una manera de romper esta promesa y que es si $P$ sea verdad y $q$ es falso.\\
+
+
+                \begin{tabular}{ |c|c|c|c|c| } 
+                    \hline &&&\\
+                    \large{Nombre} & $p$ & $q$ & $p \to q$ \\[0.5em]
+                    \hline
+                    \multirow{4}{5em}{Disyunción}
+                    & $F$ & $F$ & $V$ \\ \cline{2-4}
+                    & $F$ & $V$ & $V$ \\ \cline{2-4}
+                    & $V$ & $F$ & $F$ \\ \cline{2-4}
+                    & $V$ & $V$ & $V$ \\ 
+                    \hline
+                \end{tabular}\\[1.0em]
+
+                \subsubsection*{Ideas Importantes}
+
+                    La implicación es creo yo la más importante de todas, y no es porque sea básica, 
+                    es más: $p \to q$ es totalmente equivalente a $\lnot p \lor q$.
+
+                    Usando la implicación hay algunas cosas famosas que deberías saber:
+
+                    \begin{itemize}
+                        \item \textbf{Contrapositiva del Condicional}
+                                Esta equivalencia es muy importante, pues es muy usada para las demostraciones
+                                (no te preocupes Timmy, ya entenderas después).
+                                \begin{equation*}
+                                    p \to q \lequal \lnot q \to \lnot p
+                                \end{equation*}
+
+                        \item \textbf{Implicaciones Famosas}
+                                No se a quién se le ocurrio ponerles nombres, pero creo que te combiene
+                                que las conozcas.
+
+                                \begin{tabular}{ |c|c|c| } 
+                                    \hline &&\\
+                                    \large{Nombre} & \large{Forma} & \large{Es equivalente con...}      \\[0.5em]
+                                    \hline \hline
+                                    
+                                    \textbf{Condicional}    & $p \to q$             & Contrapositiva    \\ \hline
+                                    \textbf{Contrapositiva} & $\lnot q \to \lnot p$ & Condicional       \\ \hline\hline 
+                                    
+                                    \textbf{Recíproca}      & $q \to p$             & Inversa           \\ \hline
+                                    \textbf{Inversa}        & $\lnot p \to \lnot q$ & Recíproca         \\ \hline
+                                \end{tabular}
+                    \end{itemize}
+
+
+            % =====================================
+            % ======     BICONDICIONAL    =========
+            % =====================================
+            \clearpage
+            \subsection{Bicondicional}
+
+                En lógica la idea de $(p \to q ) \land (q \to p)$ aparece tan seguido que decidimos darle su
+                propio símbolo $p \doublearrow q$.
+
+                Esta operación nos regresa verdadero \textbf{solo} cuando ambas premisas tengan el mismo valor de
+                verdad. Ojo no dije que ambas sean verdad, simplemente que si una es falsa, obliga a la otra a 
+                ser falsa.
+
+                Recuerda que sabemos que $p \to q$ se lee como 'p si q' y $q \to p$ se lee como 'p solo si q'.
+                Entonces nuestro nuevo operador recibe el original nombre de 'p si y solo si q' o de forma normal
+                'p ssi q'.
+
+
+
+        % =====================================================
+        % ============           DEFINICION            ========
+        % =====================================================
+        \section{Equivalente Lógico}
+
+            Llega a pasar en lógica que tenemos dos expresiones lógicas que al momento de ver su tabla de 
+            verdad vemos que son iguales en todos los valores de verdad de sus variables entonces podemos
+            decir que son logicamente equivalentes. Y solemos denotar eso con este símbolo $p \lequal q$.
+
+            Usamos este símbolo porque si $p$ y $q$ son logicamente equivalentes entonces $p \doublearrow q$
+            será siempre verdad, una tautología.
+
+            Esta idea es importante pues nos permite ver ideas que ya tenemos expresadas en la lógica de una
+            manera completamente nueva si es que a nosotros nos convienen más.
+
+            A continuación te muestro una tabla con las equivalencias lógicas mas comúnes.
+
+
+
+
+
+
+        % =====================================================
+        % ============    LEYES DE LOGICA            ==========
+        % =====================================================
+        \clearpage
+        \section{Leyes de Lógica}
+                    
+                Sean $p, q, r$ sentencias lógicas y sea $T$ una tautológía y sea $F$ una contradicción.
+
+                \begin{itemize}
+                    \item \textbf{Doble Complemento} \\
+                            $\lnot(\lnot p) \lequal p$
+
+                    \item \textbf{Propiedad Conmutativa}
+                        \begin{itemize}
+                            \item $p \land q \lequal q \land p$
+                            \item $p \lor  q \lequal q \lor  p$
+                        \end{itemize}
+
+                    \item \textbf{Propiedad Asociativa}
+                        \begin{itemize}
+                            \item $p \land (q \land r) \lequal (p \land q) \land C$
+                            \item $p \lor (q \lor r) \lequal (p \lor q) \lor C$
+                        \end{itemize}
+
+                    \item \textbf{Propiedad Distributiva}
+                        \begin{itemize}
+                            \item $p \land (q \lor r) \lequal (p \land q) \lor (p \land r)$
+                            \item $p \lor (q \land r) \lequal (p \lor q) \land (p \lor r)$
+                        \end{itemize}
+
+                    \item \textbf{Leyes de Morgan}
+                        \begin{itemize}
+                            \item $\lnot (p \land q) \lequal (\lnot p) \lor (\lnot q)$
+                            \item $\lnot (p \lor q) \lequal (\lnot p) \land (\lnot q)$
+                        \end{itemize}
+
+                    \clearpage
+
+                    \item \textbf{Propiedad de los Neutros}
+                        \begin{itemize}
+                            \item $p \land T \lequal p$
+                            \item $p \lor F \lequal p$
+                        \end{itemize}
+
+                    \item \textbf{Propiedad de los Inversos}
+                        \begin{itemize}
+                            \item $p \land \lnot p \lequal F$
+                            \item $p \lor \lnot p \lequal T$
+                        \end{itemize}
+
+                    \item \textbf{Propiedad de Dominación}
+                        \begin{itemize}
+                            \item $p \land F \lequal F$
+                            \item $p \lor T \lequal T$
+                        \end{itemize}
+
+                    \item \textbf{Propiedad de Inepotencia}
+                        \begin{itemize}
+                            \item $p \land p \lequal p$
+                            \item $p \lor p \lequal p$
+                        \end{itemize}
+
+                    \item \textbf{Propiedad de Absorción}
+                        \begin{itemize}
+                            \item $p \land (p \lor q) \lequal p$
+                            \item $p \lor (p \land q) \lequal p$
+                        \end{itemize}
+
+                    \item \textbf{Propiedad de Contrapositiva}
+                        \begin{itemize}
+                            \item $p \to q \lequal \lnot q \to \lnot p$
+                            \item $p \doublearrow q  \lequal \lnot p \doublearrow \lnot q$
+                        \end{itemize}
+
+                \end{itemize}
+
+
+
+
+    % ======================================================================================
+    % ========================              INFERENCIAS             ========================
+    % ======================================================================================
     \clearpage
+    \chapter{Inferencias Lógicas}
+        \clearpage
 
-    % =====================================================
-    % ============           DEFINICION            ========
-    % =====================================================
-    \section{Proposiciones}
+        
+        % =====================================================
+        % ============           INFERENCIAS           ========
+        % =====================================================
+        \section{Inferencias Lógicas}
 
-        La lógica es una forma sistemática de pensar que nos permite deducir nueva información desde la
-        información que ya conocemos.
+            La inferencia es la forma en la que obtenemos conclusiones en base a datos y declaraciones establecidas.
+            Esto se va a poner intenso, pero creo que esta definición vale la pena:
 
-        Recuerda que la lógica es un proceso de deducir la información correctamente,
-        no sólo deducir la información correcta.
+            \subsubsection{Definición}
 
-        La lógica trabajo con algo llamado proposiciones, son como las funciones para
-        cálculo, o los lenguajes de programación para informática o los libros para la literatura.
+                Podemos entonces definir que una inferencia lógica es un proposición $q$ que si le aplicamos
+                el condicional con la disyunción de todas las premisas sería una tautología.
 
-        Así que empecemos por ahí ... ¿Qué son?
+                Es decir:
+                \begin{equation}
+                    [p_1 \land p_2 \land p_3 \dots \to q] \lequal T
+                \end{equation}
+
+                En español esto quiere decir que el hecho de que todas las premisas sean verdaderas obliga a
+                que $q$ sea verdadera, o en otra manera podemos decir que la inferencia lógica como: 
+                Dadas dos afirmaciones verdaderas podemos inferir que una tercera afirmación es verdadera.
 
 
-        % =====================================
-        % =========   ¿QUE SON?     ===========
-        % =====================================
-        \subsection*{Definición}
-            
-            \textbf{Son proposiciones las frases que pueden adquirir un valor de verdadero o falso.}
-            
-            O dicho de manera formal:
+            \subsubsection{Ejemplo}
+                Supongamos que sabemos que una afirmación de la forma $p \to q$ es verdadera.
+                Esto nos dice que siempre que $p$ es verdadera, $q$ también será verdadera. 
 
-            \textbf{Es una oración aseverativa de la que tiene sentido decir que es verdadera o falsa}.\\
+                Por sí mismo, $p \to q$ siendo verdadero no nos dice que $p$ o $q$ es verdadero
+                (ambos podrían ser falsos, o $p$ podría ser falso y $q$ verdadero).
 
-            Y cuando digo frase, me refiero a:
+                Sin embargo, si además sabemos que $p$ es verdadera entonces debe ser que $q$ es verdadera.
+                Esto se llama una inferencia lógica: dadas dos afirmaciones verdaderas podemos inferir que una
+                tercera afirmación es verdadera.
+
+
+            % =====================================
+            % =====     INFERENCIAS BASICAS =======
+            % =====================================
+            \clearpage
+            \subsection{Inferencias Básicas}
+
+                Hay unas inferencias my importantes, sobretodo a la hora de demostrar algo, por eso les deje su propia
+                sección:
+
+                \begin{itemize}
+                    \item
+                        \textbf{Contrapositiva de la Inferencia}\\
+                        $p \linfire q$ si y solo si $\lnot q \linfire \lnot p$
+
+                    \item
+                        \textbf{Por Contradicción}\\
+                        $p \linfire q$ si y solo si $p \land \lnot q \linfire F$
+
+                    \item
+                        \textbf{Por Corriento del Condicional}\\
+                        $p \linfire q \to r$ si y solo si $p \land q \linfire s$
+
+
+                    \item
+                        \textbf{Disyunción}\\
+                        Si ya sabemos que $p \linfire q$ entonces sabremos que $p \land r \linfire q \land r$
+
+                    \item
+                        \textbf{Conjunción}\\
+                        Si ya sabemos que $p \linfire q$ entonces sabremos que $p \lor r \linfire q \lor r$
+
+                    \item
+                        \textbf{Condicional}\\
+                        Si ya sabemos que $p \linfire q$ entonces sabremos que $r \to p \linfire r \to q$
+
+                    \item
+                        \textbf{Transitiva}\\
+                        Si ya sabemos que $p \linfire q$ y que $q \linfire r$ entonces sabremos que $p \linfire r$
+                \end{itemize}        
+
+               
+
+
+
+        % ====================================================
+        % ============    LEYES DE INFERENCIAS    ============
+        % ====================================================
+        \clearpage
+        \section{Reglas de Inferencias}
+
+            Hay unas inferencias my importantes, casi casi reglas, se las mostraré a continuación:\\
+
+            \begin{multicols}{2}
+                
+                \large{\textbf{Modus Poness (PP)}}
+                    \begin{equation*}
+                    \begin{split}
+                        &p \to q        \\
+                        &p              \\
+                        \midrule
+                        &\therefore q
+                    \end{split}
+                    \end{equation*}
+
+                \large{\textbf{Modus Tollens (TT)}}
+                    \begin{equation*}
+                    \begin{split}
+                        &p \to q        \\
+                        &\lnot q        \\
+                        \midrule
+                        &\therefore \lnot p
+                    \end{split}
+                    \end{equation*}
+
+            \end{multicols}
+
+            \bigskip
+
+            \begin{multicols}{2}
+                
+                \large{\textbf{Silogismo Hipotético}}
+                    \begin{equation*}
+                    \begin{split}
+                        &p \to q        \\
+                        &q \to r        \\
+                        \midrule
+                        &\therefore p \to r
+                    \end{split}
+                    \end{equation*}
+
+                \large{\textbf{Silogismo Disyuntivo}}
+                    \begin{equation*}
+                    \begin{split}
+                        &p \lor q       \\
+                        &\lnot p        \\
+                        \midrule
+                        &\therefore q
+                    \end{split}
+                    \end{equation*}
+
+            \end{multicols}
+
+            \bigskip
+
+            \begin{multicols}{2}
+                
+                \large{\textbf{Amplificación Disyuntiva}}
+                    \begin{equation*}
+                    \begin{split}
+                        &p              \\
+                        \midrule
+                        &\therefore p \lor q
+                    \end{split}
+                    \end{equation*}
+
+                \large{\textbf{Simplificación Conjuntiva}}
+                    \begin{equation*}
+                    \begin{split}
+                        &p \land q      \\
+                        \midrule
+                        &\therefore p
+                    \end{split}
+                    \end{equation*}
+
+            \end{multicols}
+
+
+
+            \clearpage
+
+            \large{\textbf{Regla de Conjunción}}
+            \begin{equation*}
+            \begin{split}
+                &p                  \\
+                &q                  \\
+                \midrule
+                &\therefore p \land q
+            \end{split}
+            \end{equation*}
+
+
+            \bigskip
+
+            \begin{multicols}{2}
+                
+                \large{\textbf{Ley del Dilema Constructivo}}
+                    \begin{equation*}
+                    \begin{split}
+                        &p \to q             \\
+                        &r \to s             \\
+                        &p \land r           \\
+                        \midrule
+                        &\therefore q \land r
+                    \end{split}
+                    \end{equation*}
+
+                \large{\textbf{Ley del Dilema Constructivo}}
+                    \begin{equation*}
+                    \begin{split}
+                        &p \to q             \\
+                        &r \to s             \\
+                        &p \lor r            \\
+                        \midrule
+                        &\therefore q \lor s
+                    \end{split}
+                    \end{equation*}
+
+            \end{multicols}
+
+            \bigskip
+
+            \begin{multicols}{2}
+                
+                \large{\textbf{Ley del Dilema Destructivo}}
+                    \begin{equation*}
+                    \begin{split}
+                        &p \to q                \\
+                        &r \to s                \\
+                        &\lnot q \land \lnot s  \\
+                        \midrule
+                        &\therefore \lnot p \land \lnot r
+                    \end{split}
+                    \end{equation*}
+
+                \large{\textbf{Ley del Dilema Destructivo}}
+                    \begin{equation*}
+                    \begin{split}
+                        &p \to q                \\
+                        &r \to s                \\
+                        &\lnot q \lor \lnot s   \\
+                        \midrule
+                        &\therefore \lnot p \lor \lnot r
+                    \end{split}
+                    \end{equation*}
+
+            \end{multicols}
+
+
+
+
+    % ======================================================================================
+    % ========================            CUANTIFICADORES           ========================
+    % ======================================================================================
+    \clearpage
+    \chapter{Cuantificadores Lógicos}
+        \clearpage
+
+        % =====================================================
+        % ============      CUANTIFICADORES            ========
+        % =====================================================
+        \clearpage
+        \section{Cuantificadores}
+
+            Usar los conectores lógicos nos permiten traducir un teorema matemático en ideas lógicas, pero
+            añadiré unos nuevos símbolos que nos permitirán traducir aún más ideas.
+
+
+            \subsubsection{Sentencias Abiertas y Cuantificadores}
+                Los cuantificadores trabajan con sentencias abiertas (o también llamadas funciones lógicas),
+                son cosas que son parecidas a las proposiciones, pero no lo son exactamente, son cosas como:
+
+                $p(x)$: $x$ es un número par.
+
+                Puesto que la validez de $p(x)$ depende que número sea $x$, $p(x)$ no es no totalmente cierta ni
+                totalmente falsa, por lo tanto no es una proposición.
+
+                Los cuantificadores permiten la construcción de proposiciones a partir de oraciones abiertas,
+                bien sea particularizando o generalizando. Así, un cuantificador transforma una oración abierta,
+                en una proposición a la cual se le asigna un valor de verdad.
+
+                Es decir, los cuantificadores trabajan con sentencias abiertas, ya que al aplicarles un cuantificador
+                se vuelven una proposiciones normales.
+
+            \subsubsection{Cuantificadores Ocultos}
+                Ahora llegamos al punto muy importante. En matemáticas, la expresión $p(x) \linfire q(x)$
+                se entiende que en realidad hablamos de la oración $\forall x \in A, \MiniSpace p(x) \linfire q(x)$.
+
+                Si, lo se, matemáticos que les da flojera ser formales, aunque entiendelos, es tal común esta
+                clase de enunciados que se notaría tan repetetitivo.
+
+
+
+            % =====================================
+            % ====  CUANTIFICADOR UNIVERSAL   =====
+            % =====================================
+            \clearpage
+            \subsection{Cuantificador Universal}
+
+                Se utiliza para afirmar que \textbf{todos} los elementos de un conjunto $A$ cumplen con una 
+                propiedad determinada $p(x)$.
+
+                \begin{equation}
+                    \forall x \in A,\MiniSpace p(x)
+                \end{equation}
+
+                Es normal en matemáticas básicas escuchar frases como $p(a)$ para una $a$ cualquiera, esto es
+                simplemente otra forma de decir $\forall x ,\MiniSpace p(x)$.\\
+
+                Otra forma de escribir el cuantificador universal $\forall x \in A,\MiniSpace p(x)$ es
+                escribir $(x \in A) \linfire p(x)$
+
+
+
+            % =====================================
+            % ====  CUANTIFICADOR EXISTENCIAL  ====
+            % =====================================
+            \subsection{Cuantificador Existencial}
+
+                Se utiliza para afirmar que \textbf{existe al menos un} elemento de un conjunto $A$ que 
+                cumple con una propiedad determinada $p(x)$.
+
+                \begin{equation}
+                    \exists x \in A,\MiniSpace p(x)
+                \end{equation}
+
+                Es normal en matemáticas básicas escuchar frases como $p(a)$ para una $a$ específica, esto es
+                simplemente otra forma de decir $\exists x, \MiniSpace p(x)$
+
+
+
+        % =====================================================
+        % =======   LEYES DE CUANTIFICADORES      =============
+        % =====================================================
+        \clearpage
+        \section{Leyes de Cuantificadores}
+                    
+                Sean $p_{(x)}$ sentencias abierta lógica, $A$ un conjunto que opera sobre $p(x)$ donde $x$ son
+                elementos de $A$ y sea $T$ una tautología y sea $F$ una contradicción.
+
+                \begin{itemize}
+                    \item
+                    \textbf{Negación del Universal} \\
+                    $\lnot (\forall x \in A,\MiniSpace p(x)) \lequal \exists x \in A,\MiniSpace \lnot p(x)$
+
+                    \item
+                    \textbf{Negación del Existencial} \\
+                    $\lnot (\exists x \in A,\MiniSpace p(x)) \lequal \forall x \in A,\MiniSpace \lnot p(x)$
+
+                    \item \textbf{Cambio de Variables} \\
+                            $p(a) \lequal (p(x) \land (x=a))$
+                            
+                    \item \textbf{Cuantificadores sobre Proposiciones} \\
+                            $\exists x, p \lequal \forall x, p \lequal p$
+
+                    \item \textbf{Leyes Conmutativas para Cuantificador Existencial}
+
+                        \begin{itemize}
+
+                            \item
+                            $\exists x, [p(x) \lor q(x)] \lequal \exists x, p(x) \lor \exists x, q(x)$
+
+                            \item
+                            $\exists x, [p(x) \land q(x)] \linfire \exists x, p(x) \land \exists x, q(x)$
+
+                        \end{itemize}
+
+                    \item \textbf{Leyes Conmutativas para Cuantificador Universal}
+
+                        \begin{itemize}
+                            
+                            \item
+                            $\forall x, [p(x) \land q(x)] \lequal \forall x, p(x) \land \forall x, q(x)$
+
+                            \item
+                            $\forall x, p(x) \lor \forall x, q(x) \linfire \forall x, [p(x) \lor q(x)]$
+
+                        \end{itemize}
+                        
+                \end{itemize}
+
+
+
+
+
+
+
+
+
+
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+% ////////////////////////////////////////       CONJUNTOS           /////////////////////////////////////////////////
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+\part{Conjuntos}
+
+    % ======================================================================================
+    % =============================       PRINCIPIOS BASICOS      ==========================
+    % ======================================================================================
+    \chapter{Principios Básicos}
+        \clearpage
+
+        % =====================================================
+        % ============           DEFINICION            ========
+        % =====================================================
+        \section{Definición}
+
+            % =====================================
+            % =========   ¿QUE SON?     ===========
+            % =====================================
+            \subsection*{¿Qué son?}
+                Olvida todo lo que sabes sobre números. Olvídate de que sabes lo que es un número.
+                Aquí es donde empiezan las matemáticas. En vez de matemáticas con números,
+                vamos a hacer matemáticas con 'cosas'.
+
+                Se denomina conjunto a la agrupación de entes o elementos, que poseen una o
+                varias características en común. 
+
+                Un conjunto puede ser una agrupación de números, de vectores, de autos, de espacios vectoriales,
+                de objectos, de funciones e incluso un conjunto puede ser una agrupación de otros conjuntos.
+
+
+                % =====================================
+                % =====   IDEAS IMPORTANTES    ========
+                % =====================================
+                \subsection*{Ideas Importantes}
+
+                Lo conjuntos generalmente son denotados por letras mayúsculas, como $A, B, C, \cdots$, mientras
+                que las letras minusculas como $a, b, c, \cdots x, y, z$ se usan para representar elementos
+                de un conjunto.
+
+
+                Quiza los conjuntos más importantes que verás a lo largo de estos apuntes son:
+
+                \begin{itemize}
+                    \item $\Naturals$ : Representa al conjunto de todos los naturales, ya sabes
+                            números como \\$1, 2, 3, \cdots$
+                    \item $\Integers$ : Representa al conjunto de todos los enteros, ya sabes
+                            números como \\$\cdots, -1, 0, 1, \cdots$
+                    \item $\Racionals$ : Representa al conjunto de todos los racionales, ya sabes
+                            números como \\$\frac{1}{1}, \frac{1}{2}, \frac{23}{72}, \cdots$
+                    \item $\Reals$ : Representa al conjunto de todos los reales, ya sabes
+                            números como \\$\frac{3}{2}, -\pi, 3, \cdots$
+                    \item $\Complexs$ : Representa al conjunto de todos los complejos, ya sabes
+                            números como \\$3 + 2i, \pi i, 3, \cdots$
+                \end{itemize}
+
+                
+
+            % =====================================
+            % =========  ¿COMO DEFINIRLO?  ========
+            % =====================================
+            \clearpage
+            \section{¿Cómo Definirlo?}
+
+
+                % =====================================
+                % =========   PERTENCIA     ===========
+                % =====================================
+                \subsection{Pertencia}
+
+                Creo que el símbolo más importante al hablar de conjuntos es este: $x \in A $. Esto quiere decir,
+                el elemento x \textbf{pertenece} al Conjunto A.
+
+                
+                Y de la misma manera puedes usar el símbolo $\notin$ que significa \textbf{no pertenece}.
+
+
+                % =====================================
+                % ====   FORMAS DE DECLARAR   =========
+                % =====================================
+                \subsection{Notación Básica}
+
+                    La notación más común para declarar o hablar de un conjunto es colocar los elementos de esta
+                    manera : $ A = \{\ \text{Elementos de A} \}$.
+
+                    Puedes entonces hacer algo como:
+
+                    \begin{itemize}
+                        \item Enumerar TODOS los elementos o entes que forman el conjunto :
+                        \\$A = \{a, e, i, o, u\}$
+
+                        \item Enumerar un patrón de los elementos o entes que forman el conjunto :
+                        \\$A = \{+2, -4, +8, -16, \cdots \}$
+                    \end{itemize}
+
+
+                    Recuerda también:
+
+                    \begin{itemize}
+                        \item Los elementos repetidos no cuentan, si ya esta un elemento dentro del
+                            conjunto, da lo mismo que lo vuelvas a enumerar.\\
+                            $A = \{a, e, i, o, u\} = \{a, a, e, i, o, u\}$
+
+                        \item No importa el orden en el me muestres los elementos,
+                            solo importa que esten dentro.\\
+                            $A = \{a, e, i, o, u\} = \{u, a, i, e, o\}$
+                    \end{itemize}
+
+
+
+                % =====================================
+                % ====   FORMAS DE DECLARAR   =========
+                % =====================================
+                \clearpage
+                \subsection{Notación Formal} 
+
+                    Esta notación tiene un nombre genial en inglés, se le conoce como \textbf{Set Builder Notation},
+                    esta notación es la que sueles encontrar en los libros. 
+
+                    Se ve fea al principio pero te da toda la información que necesitas.
+
+                    Veamos como formarla poco a poco:
+
+                    Lo primero que hacemos es elegir una letra minúscula (de forma normal, no es ninguna regla)
+                    que representará a cualquier elemento al azar del conjunto, por ejemplo usemos la $x$.
+
+                    También solemos usar la línea vertical, de esta forma: $P_1 | P_2$ que se lee como: 
+                    $P_1$ tal que $P_2$.  
+
+                    \subsubsection*{Formas Básica}
+
+                        Ahora si, veamos como se ve esta notación:
+                        \begin{equation}   
+                            A = \{ x \Such x \dots \}
+                        \end{equation}
+
+                        Esto es la base y esto es lo que nos quiere decir:
+
+                        Definimos cierto conjunto, al que llamaremos $A$ como la agrupación de todas las $x$
+                        (es decir cada x es un elemento, un ente) tal que cumplen ciertas características
+                        (eso es lo que significa esos puntitos, ahí deberías poner las reglas que tenga
+                        tu conjunto). \\
+
+                        Por ejemplo podemos poner algo como:
+
+                        $B = \{ x \Such x \in \Naturals, \MiniSpace x < 4 \}$\\
+
+                        B es el conjunto de todas las $x$ tal que $x$ pertenece a los Naturales
+                        y $x$ es menor que 4.
+
+
+                    \subsubsection*{Formas Alternas}
+                    
+                        También es común ver la característica que pertenece a cierto conjunto mayor
+                        antes de la línea vertical.
+
+                        Entonces el ejemplo anterior se vería como:
+
+                        $B = \{ x \in \Naturals \Such x < 4 \} = \{ x \Such x \in \Naturals, \MiniSpace x < 4 \} $
+
+
+                    
+                % =====================================
+                % ====          EJEMPLOS      =========
+                % =====================================
+                \clearpage
+                \subsection{Ejemplos} 
+
+                % ==================
+                % ===  EJEMPLO   ===
+                % ==================
+                \subsubsection*{Ejemplo 1:}
+
+                    Veamos por ejemplo como definir el Conjunto $C_2$ como aquel que contenga a
+                    TODOS las vocales:
+
+                    \begin{equation*}   
+                    \begin{split}   
+                        C_2 &= \{ Vocales \}       \\
+                        C_2 &= \{a, e, i, o, u \}
+                    \end{split}   
+                    \end{equation*}
+
+                    Si te das cuenta, podemos definirlos de muchas maneras.
+
+
+                % ==================
+                % ===  EJEMPLO   ===
+                % ==================
+                \subsubsection*{Ejemplo 2:}
+
+                    Veamos por ejemplo como definir el Conjunto $C$ \emph{(lo sé me muero con
+                    mi creatividad para los nombres)} como aquel que contenga a TODOS los números
+                    reales negativos:
+
+                    \begin{equation*}   
+                        C = \{ x \in \Reals |\quad x < 0 \}
+                    \end{equation*}
+
+                    \textbf{En Lenguaje normal:\\}
+                    Esto lo podemos leer como $C$ es el conjunto \emph{(es decir todo lo que esta
+                    entre parentesís)} de todas las $x$ que pertenezcan al los números reales
+                    \emph{(eso quiere decir el $x \in \Reals$)} tal que (eso lo representamos
+                    como: $|$) $x$ es menor que 0 \emph{(esa es nuestra condición para
+                    encontrar si alguna $x$ pertenece a nuestro conjunto)}.
+
+
+
+        % =====================================================
+        % ============        CLASIFICACION            ========
+        % =====================================================
+        \clearpage
+        \section{Clasificación}
+                
+            Podemos clasificar de muchas maneras a los conjuntos, veamos las más comunes:
+
+            \textbf{\large \\Tamaño}
+
             \begin{itemize}
-                \item Secuencia finita de signos con significado y sentido de ser calificado como verdadero o falso.
-                        (es decir una simple expresión matemática).
+                \item \textbf{Finito}:
+                    Si tiene una colección que se pueda contar, aunque sea difícil.
 
-                \item Expresión lingüística susceptible de ser calificada de verdadera o falsa.
-                        (es decir una frase aseverativa).
+                    Por ejemplo, el conjunto de juguetes incluye todos los tipos de
+                    juguetes que hay en el mundo. Aunque sea difícil, se podrían contar
+                    todos los tipos de juguetes del mundo, por lo que es finito.
+
+                \item \textbf{Infinito}:
+                    Si tiene una colección que no se pueda terminar de contar nunca.
+
+                    Por ejemplo, el conjunto de todos los números pares, que son
+                    infinitos, es un conjunto infinito.
             \end{itemize}
 
 
-        % =====================================
-        % ====   SENTENCIAS ABIERTAS    =======
-        % =====================================
-        \subsection*{Sentencias Abiertas}
-            Existen cosas que son parecidas a las proposiciones, pero no lo son exactamente, son cosas como:
-
-            $p(x)$: $x$ es un número par.
-
-            Puesto que la validez de $p(x)$ depende que número sea $x$, $p(x)$no es no totalmente cierta ni
-            totalmente falsa, por lo tanto no es una proposición.
-
-            Una oración como esta, cuya verdad depende del valor de una o más variables,
-            se llama sentencias abierta.
-
-
-
-            % ==========================
-            % =====   EJEMPLOS   =======
-            % ==========================
-            \clearpage
-            \subsection*{Ejemplo}
-
-
-                Por ejemplo son proposiciones frases como:
-                \begin{itemize}
-                    \item $2 + 3 = 4$
-                    \item Hay solamente 325 personas en Marte
-                    \item $\forall x, y \in \Naturals$ se tiene que $\MiniSpace x+y \in \Reals$
-                    \item Hoy es lunes
-                    \item $f(x+y) = f(x) + f(y)$
-                    \item Si x = 2 entonces 2x = 4
-                \end{itemize}
-
-                Pero no son cosas como:
-                \begin{itemize}
-                    \item ¡Ojalá no llueva hoy!
-                    \item Haz la tarea
-                    \item Este enunciado es falso
-                    \item Tomar una siesta
-                \end{itemize}
-
-
-
-        % =====================================
-        % ======   CLASIFICACION    ===========
-        % =====================================
+        % =====================================================
+        % ============        CONJUNTO VACIO        ===========
+        % =====================================================
         \clearpage
-        \subsection{Teoremas, Corolario y Tautológias}
-            
-            \subsubsection*{Clasificación de Propiedades}
+        \section{Conjunto Vacío}
+                
+            Ok, ya sabemos que un conjunto es un grupo de elementos, pero ...
+            ¿Cómo represento a un conjunto en el que no hay nada?
 
-                \begin{itemize}
-                    \item \textbf{Tautología}: Cuando para todos los valores posibles de un conjunto
-                            de proposiciones siempre será verdadero el conjunto.
+            Como una caja vacía.
 
-                    \item \textbf{Contradicción}: Cuando para todos los valores posibles de un conjunto
-                    de proposiciones esta será siempre falso.
+            De hecho, me gusta, hablemos de el Conjunto vacío como un caja vacía.
 
-                    \item \textbf{Contingencia}: Una proposición “común” son básicamente todas las que
-                    no son ni tautologías ni contradicciones.
-                \end{itemize}
+            \subsubsection*{Definición}
+            Llamemos $\phi$ como aquel conjunto tal que $\phi = \{ \}$ es decir el conjunto que no
+            tiene elementos.
 
-            \subsubsection*{Notación}
-
-                Además a los matemáticas les encanta demostrar todo y cuando digo todo, es TODO, así que
-                aquí te dejo las diferencias entre varias palabras que se parecen:
-
-                \begin{itemize}
-                    \item \textbf{Proposición}: Enunciado que encierra un valor de verdad.
-
-                    \item \textbf{Axioma}: Principio tan claro y evidente que no necesita demostración.
-
-                    \item \textbf{Corolario}: Proposición demostrado que provoca una afirmación.
-
-                    \item \textbf{Demostración}: Razonamiento por el cuál se da prueba de la
-                        exactitud de una proposición.
-
-                    \item \textbf{Lema}: Proposición que es necesaria demostrar antes de
-                    establecer un teorema.
-
-                \end{itemize}
-
-
-    % =====================================================
-    % ============           CONECTORES            ========
-    % =====================================================
-    \clearpage
-    \section{Conectores Lógicos}
-
-        Los conectores nos permiten 'concatenar' proposiciones o crear proposiciones mas avanzadas. 
-        Veamos primero como solemos mostrarlos:
-
-        \begin{longtable}{p{35mm} || p{30mm} || p{80mm}}
-
-            % ==== HEADERS ============
-            \textbf{\large Conector}
-            &
-            \textbf{\large Nombres}
-            &
-            \textbf{\large Símbolos}
-            \\[1.5ex]
-            \hline\hline
-            & & \\                                                                    
-            \endhead                                                     
-
-            \large y  &  \large{p $\land$ q}                                    &
-
-            \begin{minipage}[t]{\textwidth}\begin{itemize}
-                \item \textbf{Conjunción de} p \textbf{y de} q
-            \end{itemize}\end{minipage}                                                 \\[1.5ex]
-            
-            \hline & & \\ \large o  &  \large{p $\lor$ q}                               &
-            
-            \begin{minipage}[t]{\textwidth}\begin{itemize}
-                \item \textbf{Disyunción de} p \textbf{y de} q
-            \end{itemize}\end{minipage}                                                 \\[1.5ex]
-
-
-            \hline & & \\ \large no  &  \large{$\lnot$ q}                               &
-
-            \begin{minipage}[t]{\textwidth}\begin{itemize}
-                \item \textbf{Negación de} P
-            \end{itemize}\end{minipage}                                                 \\[1.5ex]
-
-            \hline & & \\ \large implica  &  \large{p $\to$ q}                          & 
-
-            \begin{minipage}[t]{\textwidth}\begin{itemize}
-            \small{
-                \item p \textbf{implica} q
-                \item \textbf{Si} p\textbf{, entonces} q
-                \item q \textbf{si} p
-                \item \textbf{Sólo si} q \textbf{entonces} p
-                \item p \textbf{sólo si} q
-                \item \textbf{Cuando} p\textbf{,} q
-                \item \textbf{Siempre que} q\textbf{,} p
-                \item q \textbf{siempre que} p
-                \item p \textbf{es una condición suficiente para} q
-                \item q \textbf{es una condición necesaria para} p
-                \item \textbf{Es necesario que} q \textbf{para} p
-                \item \textbf{Es suficiente que} p \textbf{para que} q
-            }\\
-            \end{itemize}\end{minipage}                                                 \\[1.5ex]
-
-            \hline & & \\ \large si y solo si  &  \large{p $\doublearrow$ q}            &
-
-            \begin{minipage}[t]{\textwidth}\begin{itemize}
-            \small{
-                \item p \textbf{ssi} q
-                \item p \textbf{es equivalente a} q
-                \item p \textbf{es una condición necesaria y suficiente para} q
-                \item \textbf{Para que} p \textbf{es necesario y suficiente que} q
-            }\\
-            \end{itemize}\end{minipage}                                                 \\
- 
-        \end{longtable}
-
-        % =====================================
-        % ======     NEGACION     ===========
-        % =====================================
-        \clearpage
-
-        Las que siguen a continuación son lo que yo denomino más operaciones mas básicas en lógica.
-
-        \subsection{Negación}
-
-            Devuelve el inverso del valor de verdad de la proposición que le pases.\\
-
-            \begin{tabular}{ |c|c|c| } 
-                \hline &&\\
-                \large{Nombre} & $p$ & $\lnot p$ \\[0.5em]
-                \hline
-                \multirow{2}{5em}{Negación}
-                & $F$ & $V$  \\ \cline{2-3}
-                & $V$ & $F$  \\ \cline{2-3}
-                \hline
-            \end{tabular}
-
-        % =====================================
-        % ======     CONJUNCION     ===========
-        % =====================================
-        \subsection{Conjunción}
-
-            Devuelve verdadero \textbf{solo} cuando ambas son verdaderas, y falso en cualquier
-            otra combinación.\\
-
-            \begin{tabular}{ |c|c|c|c|c| } 
-                \hline &&&\\
-                \large{Nombre} & $p$ & $q$ & $p \land q$ \\[0.5em]
-                \hline
-                \multirow{4}{5em}{Conjunción}
-                & $F$ & $F$ & $F$ \\ \cline{2-4}
-                & $F$ & $V$ & $F$ \\ \cline{2-4}
-                & $V$ & $F$ & $F$ \\ \cline{2-4}
-                & $V$ & $V$ & $V$ \\ 
-                \hline
-            \end{tabular}
-
-
-        % =====================================
-        % ======     DISYUNCION     ===========
-        % =====================================
-        \subsection{Disyunción}
-
-            Devuelve falso \textbf{solo} cuando ambas son falsas, y verdadero en cualquier
-            otra combinación.\\
-
-            \begin{tabular}{ |c|c|c|c|c| } 
-                \hline &&&\\
-                \large{Nombre} & $p$ & $q$ & $p \lor q$ \\[0.5em]
-                \hline
-                \multirow{4}{5em}{Disyunción}
-                & $F$ & $F$ & $F$ \\ \cline{2-4}
-                & $F$ & $V$ & $V$ \\ \cline{2-4}
-                & $V$ & $F$ & $V$ \\ \cline{2-4}
-                & $V$ & $V$ & $V$ \\ 
-                \hline
-            \end{tabular}
-
-
-
-
-
-        % =====================================
-        % ======     IMPLICACION    ===========
-        % =====================================
-        \clearpage
-        \subsection{Implicación}
-
-            Devuelve falso \textbf{solo} cuando la primera premisa es verdadera, pero la 
-            segunda es falsa, y verdadero en cualquier otra combinación.
-
-            Ve a $p \to q$ como una promesa de que siempre que $p$ es verdadera, $q$ será verdadera también.
-            Sólo hay una manera de romper esta promesa y que es si $P$ sea verdad y $q$ es falso.\\
-
-
-            \begin{tabular}{ |c|c|c|c|c| } 
-                \hline &&&\\
-                \large{Nombre} & $p$ & $q$ & $p \to q$ \\[0.5em]
-                \hline
-                \multirow{4}{5em}{Disyunción}
-                & $F$ & $F$ & $V$ \\ \cline{2-4}
-                & $F$ & $V$ & $V$ \\ \cline{2-4}
-                & $V$ & $F$ & $F$ \\ \cline{2-4}
-                & $V$ & $V$ & $V$ \\ 
-                \hline
-            \end{tabular}\\[1.0em]
+            Solemos usar este simbolo por su parecido con un cero, pero recuerda no es un cero, simplemente
+            es una forma de denotar al conjunto vacío.
 
             \subsubsection*{Ideas Importantes}
+            Listo, eso es casí todo, además te gustará que te recuerde las siguientes
+            proposiciones:
 
-                La implicación es creo yo la más importante de todas, y no es porque sea básica, 
-                es más: $p \to q$ es totalmente equivalente a $\lnot p \lor q$.
+            \begin{itemize}
+                \item $|\phi| = 0$ : 
+                        Esto quiere decir que la cardinalidad \emph{(es decir
+                        la cantidad de elementos)} del conjunto vacío es la misma que 
+                        la cantidad de galletas en una caja vacía de galletas, osea 0.
 
-                Usando la implicación hay algunas cosas famosas que deberías saber:
+                \item $\phi \neq \{\phi\}$: 
+                        Esto quiere decir que no es lo mismo hablar del conjunto
+                        vacío que de hablar de un conjunto cualquiera que contiene al
+                        conjunto vacío.
+
+                        Es decir simplemente no es lo mismo tener una caja vacía que una caja
+                        con una caja vacía dentro \emph{(si lo piensas la segunda caja ya 
+                        no esta completamente vacía)}
+            \end{itemize}
+
+
+        % =====================================================
+        % ============        CONJUNTO UNIVERSO      ==========
+        % =====================================================
+        \clearpage
+        \section{Conjunto Universo}
+            
+            Como podemos imaginarnos, tenía que existir un término inverso, digamos que estamos
+            analizando y agrupando animales por su habitad, entonces tenemos muchos conjuntos cool
+            como animales del bosque o marinos, pero también tenemos a un mega conjunto que llamamos
+            universo donde tenemos a todos los animales.
+
+            Muchas veces a la hora de hablar sobre conjuntos solemos definirlos sobre un universo.
+
+            Podemos ver muchaS analogías, veamos a ver cual te gusta más:
+
+            \begin{itemize}
+                \item Es como si el universo fuera el padre, entonces las hijas son nuestros conjuntos
+                \item Es como si el universo una caja de cereal, entonces nuestros conjuntos son grupos de cereales
+                    que estaban dentro de la caja.
+            \end{itemize}
+
+
+            \subsubsection*{Definición}
+            Un conjunto universo es aquel conjunto que contiene a cualquier conjunto del que estemos hablando.
+
+
+            \subsubsection*{Ideas Importantes}
+            Creo que resulta bastante obvio pero aquí hay algunas cosas que quizá te interesen.
+            \begin{itemize}
+                \item $\phi^C = U$
+                \item $U^C = \phi$
+            \end{itemize}
+
+
+
+
+
+    % ======================================================================================
+    % ============================      ALGEBRA CON CONJUNTOS     ==========================
+    % ======================================================================================
+    \chapter{Álgebra y Operaciones}
+        \clearpage
+
+
+        % =====================================================
+        % ============        RELACIONES               ========
+        % =====================================================
+        \clearpage
+        \section{Relaciones}
+
+            Es muy importante que ademas de hablar de los conjuntos hablemos de las relaciones
+            que existen entre los dos conjuntos.
+
+
+            % =================================
+            % ======    EQUIVALENCIA    =======
+            % =================================
+            \subsection{Equivalencia}
+
+                Creo que esta relación es más que obvia, tanto que ya la he usado sin darme cuenta
+                porque considero que es de lo más obvio.
+
+                Que dos conjuntos sea iguales quiere decir que ambos conjuntos contiene \textbf{exactamente}
+                los mismos elementos.
+
+                Ve entonces que ahora tiene mucho sentido las ideas que puse antes:
 
                 \begin{itemize}
-                    \item \textbf{Contrapositiva del Condicional}
-                            Esta equivalencia es muy importante, pues es muy usada para las demostraciones
-                            (no te preocupes Timmy, ya entenderas después).
-                            \begin{equation*}
-                                p \to q \lequal \lnot q \to \lnot p
-                            \end{equation*}
+                    \item Los elementos repetidos no cuentan, si ya esta un elemento dentro del
+                        conjunto, da lo mismo que lo vuelvas a enumerar.\\
+                        $A = \{a, e, i, o, u\} = \{a, a, e, i, o, u\}$
 
-                    \item \textbf{Implicaciones Famosas}
-                            No se a quién se le ocurrio ponerles nombres, pero creo que te combiene
-                            que las conozcas.
-
-                            \begin{tabular}{ |c|c|c| } 
-                                \hline &&\\
-                                \large{Nombre} & \large{Forma} & \large{Es equivalente con...}      \\[0.5em]
-                                \hline \hline
-                                
-                                \textbf{Condicional}    & $p \to q$             & Contrapositiva    \\ \hline
-                                \textbf{Contrapositiva} & $\lnot q \to \lnot p$ & Condicional       \\ \hline\hline 
-                                
-                                \textbf{Recíproca}      & $q \to p$             & Inversa           \\ \hline
-                                \textbf{Inversa}        & $\lnot p \to \lnot q$ & Recíproca         \\ \hline
-                            \end{tabular}
+                    \item No importa el orden en el me muestres los elementos,
+                        solo importa que esten dentro.\\
+                        $A = \{a, e, i, o, u\} = \{u, a, i, e, o\}$
                 \end{itemize}
 
 
-        % =====================================
-        % ======     BICONDICIONAL    =========
-        % =====================================
+            % =================================
+            % ======    SUBCONJUNTOS    =======
+            % =================================
+            \clearpage
+            \subsection{Subconjuntos}
+
+                Esta es la relación mas importante siento yo, porque será la que mas ocupemos a lo largo
+                del tiempo.
+
+                Que el A sea un subconjunto de B quiere decir que \textbf{todos} los elementos de A
+                también son elementos de B.
+
+                \subsubsection{Definición}
+
+                    Una forma más formal de definirlo es que $x \in A \to x \in B$
+
+                    Esta idea es muy inteligente, pues nos dice que un el hecho de que
+                    un elemento pertenezca a A infiere o nos obliga a que ese mismo
+                    elemento pertenezca a B.
+
+
+                \subsubsection{Proposiciones}
+
+                    Algunas proposiciones muy obvias son que:
+                    \begin{itemize}
+                        \item $A \subseteq A$
+                        \item Si $A = B$, entonces $A \subseteq B$
+                        \item Todos los conjuntos son subconjuntos de conjunto universo $U$
+                        \item $\emptyset$ es un subconjunto de cualquier conjunto
+                    \end{itemize}
+
+                \subsubsection{SubConjuntos Propios}
+
+                    Solemos usar la idea de un subconjunto propio $A \subset B$ si es que sabemos ya que:
+                    $A \subseteq B$ y $A \neq B$
+
+
+
+
+
+        % =====================================================
+        % ============           OPERACIONES           ========
+        % =====================================================
         \clearpage
-        \subsection{Bicondicional}
+        \section{Operaciones}
 
-            En lógica la idea de $(p \to q ) \land (q \to p)$ aparece tan seguido que decidimos darle su
-            propio símbolo $p \doublearrow q$.
+            Podemos hacer operaciones con los conjuntos de una manera muy similiar a como hacemos
+            operaciones con los números normales, tu defines una operación, y la haces entre dos conjuntos
+            y esta te dará un nuevo conjunto,  pero aquí siento que son incluso más divertidas.
 
-            Esta operación nos regresa verdadero \textbf{solo} cuando ambas premisas tengan el mismo valor de
-            verdad. Ojo no dije que ambas sean verdad, simplemente que si una es falsa, obliga a la otra a 
-            ser falsa.
+            Te presentaré estas operaciones una a una y te mostraré con mas detalle cada una, así 
+            que vamos, empecemos:
 
-            Recuerda que sabemos que $p \to q$ se lee como 'p si q' y $q \to p$ se lee como 'p solo si q'.
-            Entonces nuestro nuevo operador recibe el original nombre de 'p si y solo si q' o de forma normal
-            'p ssi q'.
+            % =================================
+            % ======    INTERSECCION    =======
+            % =================================
+            \subsection{Intersección}
 
+                Lo mejor de dos mundos, veamos como seleccionar a los elementos en común con operaciones
+                de conjuntos.
 
+                \begin{equation}
+                    A \cap B = \{ x \Such x \in A \text{ y también } x \in B \}
+                \end{equation}
 
-    % =====================================================
-    % ============           DEFINICION            ========
-    % =====================================================
-    \section{Equivalente Lógico}
-
-        Llega a pasar en lógica que tenemos dos expresiones lógicas que al momento de ver su tabla de 
-        verdad vemos que son iguales en todos los valores de verdad de sus variables entonces podemos
-        decir que son logicamente equivalentes. Y solemos denotar eso con este símbolo $p \lequal q$.
-
-        Usamos este símbolo porque si $p$ y $q$ son logicamente equivalentes entonces $p \doublearrow q$
-        será siempre verdad, una tautología.
-
-        Esta idea es importante pues nos permite ver ideas que ya tenemos expresadas en la lógica de una
-        manera completamente nueva si es que a nosotros nos convienen más.
-
-        A continuación te muestro una tabla con las equivalencias lógicas mas comúnes.
+                Esta operación basicamente nos da un conjunto en el que estan \textbf{solo} los elementos
+                que bien pertenezcan a A y también que pertenezcan a B.
 
 
+            % =================================
+            % ======        UNION       =======
+            % =================================
+            \clearpage
+            \subsection{Unión}
+
+                La unión representa la fuerza, así que veamos que representa la unión cuando estemos
+                hablando de conjuntos.
+
+                \begin{equation}
+                    A \cup B = \{ x \Such x \in A \text{ ó bien } x \in B \}
+                \end{equation}
+
+                Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+                que bien pertenezcan a A o bien que pertenezcan a B.
+
+
+            % =================================
+            % ======   COMPLEMENTO      =======
+            % =================================
+            \clearpage
+            \subsection{Complemento}
+
+                Todo lo que no seas tu, así que veamos que representa el complemento cuando estemos
+                hablando de conjuntos.
+
+                \begin{equation}
+                    A^C = \overline A = \{ x \in U \Such x \notin A \}
+                \end{equation}
+
+                Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+                que no pertenezcen a A.
+
+                También hay otra forma de definirlo como $A^C = U - A$
+
+                \subsubsection{Conjunto Universo}
+                    Si lo piensas detenidamente, aquí hay un problema y es que no te dije que es $U$, este
+                    representa el conjunto universo, es decir, es aquel conjunto que del que todos los demás
+                    son subconjuntos.
+
+                    Es importantes especificar cual es tu conjunto universo.
+
+
+            % =================================
+            % ======      RESTA         =======
+            % =================================
+            \clearpage
+            \subsection{Resta}
+
+                No quiero nada que ver contigo, así que veamos que representa la resta cuando estemos
+                hablando de conjuntos.
+
+                \begin{equation}
+                    A - B = A \char`\\ B = \{ x \Such x \in A \text{ y también }  x \notin B \}
+                \end{equation}
+
+                Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+                de A que no pertenezcen a B.
+
+                A esta operación también se la conoce como complemento relativo.
+
+                También hay otra forma de definirlo como $A - B = A \cap B^C$
 
 
 
+            % =================================
+            % ==    DIFERENCIA SIMETRICA   ====
+            % =================================
+            \clearpage
+            \subsection{Diferencia Simétrica}
 
-    % =====================================================
-    % ============    LEYES DE LOGICA            ==========
-    % =====================================================
-    \clearpage
-    \section{Leyes de Lógica}
+                El XOR de los conjuntos, así que veamos que representa la diferencia simétrica cuando estemos
+                hablando de conjuntos.
+
+                \begin{equation}
+                    A \Delta B = \{ x \Such x \in A \cup B \text{ y también }  x \notin A \cap B \}
+                \end{equation}
+
+                Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+                que pertenezcen a $A$ y a $B$, pero no a ambos.
+
+                Ve que de la definición se tiene que:
+                \begin{equation*}
+                \begin{split}
+                    A \Delta B &= (A \cup B) - ( A \cap B) \\
+                    A \Delta B &= (A - B) \cup ( B - A)
+                \end{split}
+                \end{equation*}
+
+                De hecho de la útima proposición sale su nombre, es una diferencia simétrica.
+
+
+            % =================================
+            % ==    PRODUCTO CARTESIANO    ====
+            % =================================
+            \clearpage
+            \subsection{Producto Cartesiano}
+
+                Esta es la base de lo que se conoce como es plano cartesiano, y es quizá
+                la operación mas útil que vas a conocer a lo largo de estos textos,
+                veamos específicamente porque:
+
+                \subsubsection*{N-Tuplas}
+
+                    El resultado de un producto cartesiano es un conjunto formado de n-tuplas,
+                    cada n-tuplas es una agrupación ordenada de elementos.
+                    Por ejemplo $(a,b)$ ó $(x,y,z)$.
+
+                    Al ser un ente ordenado $(a,b) \neq (b,a)$
+
+                    La n en su nombre solo nos dice la cantidad de elementos que tiene cada tupla.
+
+
+                \subsubsection*{Definición}
+
+                    Esta operación basicamente nos da un conjunto en el que estan \textbf{todas} las n-tuplas
+                    donde su primer elemento pertenece a $A$ y su segundo elemento pertenece a $B$.
+
+                    \begin{equation}
+                        A \times B = \{ (a, b) \Such a \in A \text{ y también } b \in B \}
+                    \end{equation}
+
+                \subsubsection*{Ideas Importantes}
+
+                \begin{itemize}
+                    \item Ve que de la definición se tiene que $ A \times B \neq B \times A$
+
+                    \item También de manera común solemos simplificar $A \times A$ como $A^2$
+
+                    \item Un elemento de $A \times B \times C$ es $((a,b),c) = (a,(b,c)) = (a,b,c)$
+                \end{itemize}
+
+                % ====================
+                % ==    EJEMPLOS  ====
+                % ====================
+                \clearpage
+                \subsection*{Ejemplo}
+
+                    Podemos hacer uso de una tabla para encontrar todos los elementos del producto
+                    cartesiano.
+
+                    Veamos por ejemplo $A = \{a, b, c\}$ y $B = \{ x, y, z\}$
+
+                    \begin{tabular}{r ||c |c | c  }
+                       $A \times B$ & $x$ & $y$ & $z$ \\
+                       \midrule
+                      
+                       $a$ &  $(a, x)$  &  $(a, y)$  &  $(a, z)$  \\
+                       $b$ &  $(b, x)$  &  $(b, y)$  &  $(b, z)$  \\
+                       $c$ &  $(c, x)$  &  $(c, y)$  &  $(c, z)$  \\
+                     
+                    \end{tabular}
+
+                    Entonces : 
+                    \begin{equation*}
+                        A \times B = 
+                        \{
+                            (a, x) , (a, y) , (a, z) ,
+                            (b, x) , (b, y) , (b, z) ,
+                            (c, x) , (c, y) , (c, z) 
+                        \}
+                    \end{equation*}
+
+
+
+            % =================================
+            % ==    CONJUNTO POTENCIA      ====
+            % =================================
+            \clearpage
+            \subsection{Conjunto Potencia}
+
+                El conjunto que contiene a todos los subconjuntos posibles. 
+
+                Esta operación es diferente en el sentido de que no toma sus elementos del conjunto
+                que toma como entrada, sino que usa esos elementos para combinarlos y crear subconjuntos
+                que son los elementos de esta nueva operación.
+
+                Ok, ok, quizá me puse muy intenso con el párrafo de arriba, veamos un poco más calmado
+                como es que funciona.
+
+                \subsubsection*{Definición}
+
+                    Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los
+                    conjuntos que son subconjuntos de tu conjunto original.
+
+                    \begin{equation}
+                        P(A) = \{ A' \Such A' \subseteq A \}
+                    \end{equation}
+
+                \subsubsection*{Ideas Importantes}
+
+                \begin{itemize}
+                    \item Si tu conjunto tiene $n$ elementos, tu conjunto potencia tendrá $2^n$ elementos.
+
+                    \item Si $n < |A|$ entonces existen $\pVector{n\\r} = \frac{n!}{r!(n-r)!}$ subconjuntos
+                            de $A$ de cardinalidad $r$
+
+                    \item $P(\emptyset) = \{\emptyset\}$
+
+                    \item $P( \{\emptyset\}) = \{\emptyset, \{\emptyset\} \}$
+
+                    \item $A \in P(A)$
+                    \item Solo si $A = \{\emptyset\}$ entonces $A \subseteq P(A)$,
+                    en cualquier otro caso $A \nsubseteq P(A)$
+                \end{itemize}
+
+                % ====================
+                % ==    EJEMPLOS  ====
+                % ====================
+                \clearpage
+                \subsection*{Ejemplo}
+
+                    Podemos hacer uso de una tabla y el binario para encontrar todos los
+                    elementos del conjunto potencia.
+
+                    Si quieres crear un conjunto potencia, escribe la sucesión de números binarios de $n$ cifras,
+                    y con cada número haz un subconjunto: Cuando haya un $'1'$, añade el elemento que corresponde.\\
+
+                    Veamos por ejemplo $A = \{a, b, c\}$ \\
+
+
+                    \begin{tabular}{c | c  }
+                       $a b c$ & SubConjuntos       \\
+                       \midrule
+                      
+                       $0 0 0$ &  $\{ \}$           \\
+                       $0 0 1$ &  $\{ c \}$         \\
+                       $0 1 0$ &  $\{ b \}$         \\
+                       $0 1 1$ &  $\{ b, c \}$      \\
+                       $1 0 0$ &  $\{ a \}$         \\
+                       $1 0 1$ &  $\{ a, c \}$      \\
+                       $1 1 0$ &  $\{ a, b \}$      \\
+                       $1 1 1$ &  $\{ a, b, c \}$   \\
+                     
+                    \end{tabular}
+
+                    Entonces : 
+                    \begin{equation*}
+                        P(A) = 
+                        \{
+                            \{ \}, \{ c \}, \{ b \}, \{ b, c \}, 
+                            \{ a \}, \{ a, c \}, \{ a, b \}, \{ a, b, c \}
+                        \}
+                    \end{equation*}
+
+
+
+        % =====================================================
+        % ========         LEYES DE CONJUNTOS          ========
+        % =====================================================
+        \clearpage
+        \section{Leyes de los Conjuntos}
                 
-            Sean $p, q, r$ sentencias lógicas y sea $T$ una tautológía y sea $F$ una contradicción.
+            Sean $A, B, C$ conjuntos de un universo $U$, entonces tenemos las siguientes propiedades:
 
             \begin{itemize}
                 \item \textbf{Doble Complemento} \\
-                        $\lnot(\lnot p) \lequal p$
+                        $(A^C)^C = A$
 
                 \item \textbf{Propiedad Conmutativa}
                     \begin{itemize}
-                        \item $p \land q \lequal q \land p$
-                        \item $p \lor  q \lequal q \lor  p$
+                        \item $A \cap B = B \cap A$
+                        \item $A \cup B = B \cup A$
                     \end{itemize}
 
                 \item \textbf{Propiedad Asociativa}
                     \begin{itemize}
-                        \item $p \land (q \land r) \lequal (p \land q) \land C$
-                        \item $p \lor (q \lor r) \lequal (p \lor q) \lor C$
+                        \item $A \cap (B \cap C) = (A \cap B) \cap C$
+                        \item $A \cup (B \cup C) = (A \cup B) \cup C$
                     \end{itemize}
 
                 \item \textbf{Propiedad Distributiva}
                     \begin{itemize}
-                        \item $p \land (q \lor r) \lequal (p \land q) \lor (p \land r)$
-                        \item $p \lor (q \land r) \lequal (p \lor q) \land (p \lor r)$
+                        \item $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
+                        \item $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
                     \end{itemize}
 
                 \item \textbf{Leyes de Morgan}
                     \begin{itemize}
-                        \item $\lnot (p \land q) \lequal (\lnot p) \lor (\lnot q)$
-                        \item $\lnot (p \lor q) \lequal (\lnot p) \land (\lnot q)$
+                        \item $(A \cap B)^C = A^C \cup B^C$
+                        \item $(A \cup B)^C = A^C \cap B^C$
                     \end{itemize}
 
                 \clearpage
 
                 \item \textbf{Propiedad de los Neutros}
                     \begin{itemize}
-                        \item $p \land T \lequal p$
-                        \item $p \lor F \lequal p$
+                        \item $A \cap U = A$
+                        \item $A \cup \emptyset = A$
                     \end{itemize}
 
                 \item \textbf{Propiedad de los Inversos}
                     \begin{itemize}
-                        \item $p \land \lnot p \lequal F$
-                        \item $p \lor \lnot p \lequal T$
+                        \item $A \cap A^C = \emptyset$
+                        \item $A \cup A^C = U$
                     \end{itemize}
 
                 \item \textbf{Propiedad de Dominación}
                     \begin{itemize}
-                        \item $p \land F \lequal F$
-                        \item $p \lor T \lequal T$
+                        \item $A \cap \emptyset = \emptyset$
+                        \item $A \cup U = U$
                     \end{itemize}
 
                 \item \textbf{Propiedad de Inepotencia}
                     \begin{itemize}
-                        \item $p \land p \lequal p$
-                        \item $p \lor p \lequal p$
+                        \item $A \cap A = A$
+                        \item $A \cup A = A$
                     \end{itemize}
 
                 \item \textbf{Propiedad de Absorción}
                     \begin{itemize}
-                        \item $p \land (p \lor q) \lequal p$
-                        \item $p \lor (p \land q) \lequal p$
-                    \end{itemize}
-
-                \item \textbf{Propiedad de Contrapositiva}
-                    \begin{itemize}
-                        \item $p \to q \lequal \lnot q \to \lnot p$
-                        \item $p \doublearrow q  \lequal \lnot p \doublearrow \lnot q$
+                        \item $A \cap (A \cup B) = A$
+                        \item $A \cup (A \cap B) = A$
                     \end{itemize}
 
             \end{itemize}
 
 
-
-
-% ======================================================================================
-% ========================              INFERENCIAS             ========================
-% ======================================================================================
-\clearpage
-\chapter{Inferencias Lógicas}
-    \clearpage
-
-    
-    % =====================================================
-    % ============           INFERENCIAS           ========
-    % =====================================================
-    \section{Inferencias Lógicas}
-
-        La inferencia es la forma en la que obtenemos conclusiones en base a datos y declaraciones establecidas.
-        Esto se va a poner intenso, pero creo que esta definición vale la pena:
-
-        \subsubsection{Definición}
-
-            Podemos entonces definir que una inferencia lógica es un proposición $q$ que si le aplicamos
-            el condicional con la disyunción de todas las premisas sería una tautología.
-
-            Es decir:
-            \begin{equation}
-                [p_1 \land p_2 \land p_3 \dots \to q] \lequal T
-            \end{equation}
-
-            En español esto quiere decir que el hecho de que todas las premisas sean verdaderas obliga a
-            que $q$ sea verdadera, o en otra manera podemos decir que la inferencia lógica como: 
-            Dadas dos afirmaciones verdaderas podemos inferir que una tercera afirmación es verdadera.
-
-
-        \subsubsection{Ejemplo}
-            Supongamos que sabemos que una afirmación de la forma $p \to q$ es verdadera.
-            Esto nos dice que siempre que $p$ es verdadera, $q$ también será verdadera. 
-
-            Por sí mismo, $p \to q$ siendo verdadero no nos dice que $p$ o $q$ es verdadero
-            (ambos podrían ser falsos, o $p$ podría ser falso y $q$ verdadero).
-
-            Sin embargo, si además sabemos que $p$ es verdadera entonces debe ser que $q$ es verdadera.
-            Esto se llama una inferencia lógica: dadas dos afirmaciones verdaderas podemos inferir que una
-            tercera afirmación es verdadera.
-
-
-        % =====================================
-        % =====     INFERENCIAS BASICAS =======
-        % =====================================
+        % =====================================================
+        % ============           CARDINALIDAD          ========
+        % =====================================================
         \clearpage
-        \subsection{Inferencias Básicas}
-
-            Hay unas inferencias my importantes, sobretodo a la hora de demostrar algo, por eso les deje su propia
-            sección:
-
-            \begin{itemize}
-                \item
-                    \textbf{Contrapositiva de la Inferencia}\\
-                    $p \linfire q$ si y solo si $\lnot q \linfire \lnot p$
-
-                \item
-                    \textbf{Por Contradicción}\\
-                    $p \linfire q$ si y solo si $p \land \lnot q \linfire F$
-
-                \item
-                    \textbf{Por Corriento del Condicional}\\
-                    $p \linfire q \to r$ si y solo si $p \land q \linfire s$
-
-
-                \item
-                    \textbf{Disyunción}\\
-                    Si ya sabemos que $p \linfire q$ entonces sabremos que $p \land r \linfire q \land r$
-
-                \item
-                    \textbf{Conjunción}\\
-                    Si ya sabemos que $p \linfire q$ entonces sabremos que $p \lor r \linfire q \lor r$
-
-                \item
-                    \textbf{Condicional}\\
-                    Si ya sabemos que $p \linfire q$ entonces sabremos que $r \to p \linfire r \to q$
-
-                \item
-                    \textbf{Transitiva}\\
-                    Si ya sabemos que $p \linfire q$ y que $q \linfire r$ entonces sabremos que $p \linfire r$
-            \end{itemize}        
-
-           
-
-
-
-    % ====================================================
-    % ============    LEYES DE INFERENCIAS    ============
-    % ====================================================
-    \clearpage
-    \section{Reglas de Inferencias}
-
-        Hay unas inferencias my importantes, casi casi reglas, se las mostraré a continuación:\\
-
-        \begin{multicols}{2}
-            
-            \large{\textbf{Modus Poness (PP)}}
-                \begin{equation*}
-                \begin{split}
-                    &p \to q        \\
-                    &p              \\
-                    \midrule
-                    &\therefore q
-                \end{split}
-                \end{equation*}
-
-            \large{\textbf{Modus Tollens (TT)}}
-                \begin{equation*}
-                \begin{split}
-                    &p \to q        \\
-                    &\lnot q        \\
-                    \midrule
-                    &\therefore \lnot p
-                \end{split}
-                \end{equation*}
-
-        \end{multicols}
-
-        \bigskip
-
-        \begin{multicols}{2}
-            
-            \large{\textbf{Silogismo Hipotético}}
-                \begin{equation*}
-                \begin{split}
-                    &p \to q        \\
-                    &q \to r        \\
-                    \midrule
-                    &\therefore p \to r
-                \end{split}
-                \end{equation*}
-
-            \large{\textbf{Silogismo Disyuntivo}}
-                \begin{equation*}
-                \begin{split}
-                    &p \lor q       \\
-                    &\lnot p        \\
-                    \midrule
-                    &\therefore q
-                \end{split}
-                \end{equation*}
-
-        \end{multicols}
-
-        \bigskip
-
-        \begin{multicols}{2}
-            
-            \large{\textbf{Amplificación Disyuntiva}}
-                \begin{equation*}
-                \begin{split}
-                    &p              \\
-                    \midrule
-                    &\therefore p \lor q
-                \end{split}
-                \end{equation*}
-
-            \large{\textbf{Simplificación Conjuntiva}}
-                \begin{equation*}
-                \begin{split}
-                    &p \land q      \\
-                    \midrule
-                    &\therefore p
-                \end{split}
-                \end{equation*}
-
-        \end{multicols}
-
-
-
-        \clearpage
-
-        \large{\textbf{Regla de Conjunción}}
-        \begin{equation*}
-        \begin{split}
-            &p                  \\
-            &q                  \\
-            \midrule
-            &\therefore p \land q
-        \end{split}
-        \end{equation*}
-
-
-        \bigskip
-
-        \begin{multicols}{2}
-            
-            \large{\textbf{Ley del Dilema Constructivo}}
-                \begin{equation*}
-                \begin{split}
-                    &p \to q             \\
-                    &r \to s             \\
-                    &p \land r           \\
-                    \midrule
-                    &\therefore q \land r
-                \end{split}
-                \end{equation*}
-
-            \large{\textbf{Ley del Dilema Constructivo}}
-                \begin{equation*}
-                \begin{split}
-                    &p \to q             \\
-                    &r \to s             \\
-                    &p \lor r            \\
-                    \midrule
-                    &\therefore q \lor s
-                \end{split}
-                \end{equation*}
-
-        \end{multicols}
-
-        \bigskip
-
-        \begin{multicols}{2}
-            
-            \large{\textbf{Ley del Dilema Destructivo}}
-                \begin{equation*}
-                \begin{split}
-                    &p \to q                \\
-                    &r \to s                \\
-                    &\lnot q \land \lnot s  \\
-                    \midrule
-                    &\therefore \lnot p \land \lnot r
-                \end{split}
-                \end{equation*}
-
-            \large{\textbf{Ley del Dilema Destructivo}}
-                \begin{equation*}
-                \begin{split}
-                    &p \to q                \\
-                    &r \to s                \\
-                    &\lnot q \lor \lnot s   \\
-                    \midrule
-                    &\therefore \lnot p \lor \lnot r
-                \end{split}
-                \end{equation*}
-
-        \end{multicols}
-
-
-
-
-% ======================================================================================
-% ========================            CUANTIFICADORES           ========================
-% ======================================================================================
-\clearpage
-\chapter{Cuantificadores Lógicos}
-    \clearpage
-
-    % =====================================================
-    % ============      CUANTIFICADORES            ========
-    % =====================================================
-    \clearpage
-    \section{Cuantificadores}
-
-        Usar los conectores lógicos nos permiten traducir un teorema matemático en ideas lógicas, pero
-        añadiré unos nuevos símbolos que nos permitirán traducir aún más ideas.
-
-
-        \subsubsection{Sentencias Abiertas y Cuantificadores}
-            Los cuantificadores trabajan con sentencias abiertas (o también llamadas funciones lógicas),
-            son cosas que son parecidas a las proposiciones, pero no lo son exactamente, son cosas como:
-
-            $p(x)$: $x$ es un número par.
-
-            Puesto que la validez de $p(x)$ depende que número sea $x$, $p(x)$ no es no totalmente cierta ni
-            totalmente falsa, por lo tanto no es una proposición.
-
-            Los cuantificadores permiten la construcción de proposiciones a partir de oraciones abiertas,
-            bien sea particularizando o generalizando. Así, un cuantificador transforma una oración abierta,
-            en una proposición a la cual se le asigna un valor de verdad.
-
-            Es decir, los cuantificadores trabajan con sentencias abiertas, ya que al aplicarles un cuantificador
-            se vuelven una proposiciones normales.
-
-        \subsubsection{Cuantificadores Ocultos}
-            Ahora llegamos al punto muy importante. En matemáticas, la expresión $p(x) \linfire q(x)$
-            se entiende que en realidad hablamos de la oración $\forall x \in A, \MiniSpace p(x) \linfire q(x)$.
-
-            Si, lo se, matemáticos que les da flojera ser formales, aunque entiendelos, es tal común esta
-            clase de enunciados que se notaría tan repetetitivo.
-
-
-
-        % =====================================
-        % ====  CUANTIFICADOR UNIVERSAL   =====
-        % =====================================
-        \clearpage
-        \subsection{Cuantificador Universal}
-
-            Se utiliza para afirmar que \textbf{todos} los elementos de un conjunto $A$ cumplen con una 
-            propiedad determinada $p(x)$.
-
-            \begin{equation}
-                \forall x \in A,\MiniSpace p(x)
-            \end{equation}
-
-            Es normal en matemáticas básicas escuchar frases como $p(a)$ para una $a$ cualquiera, esto es
-            simplemente otra forma de decir $\forall x ,\MiniSpace p(x)$.\\
-
-            Otra forma de escribir el cuantificador universal $\forall x \in A,\MiniSpace p(x)$ es
-            escribir $(x \in A) \linfire p(x)$
-
-
-
-        % =====================================
-        % ====  CUANTIFICADOR EXISTENCIAL  ====
-        % =====================================
-        \subsection{Cuantificador Existencial}
-
-            Se utiliza para afirmar que \textbf{existe al menos un} elemento de un conjunto $A$ que 
-            cumple con una propiedad determinada $p(x)$.
-
-            \begin{equation}
-                \exists x \in A,\MiniSpace p(x)
-            \end{equation}
-
-            Es normal en matemáticas básicas escuchar frases como $p(a)$ para una $a$ específica, esto es
-            simplemente otra forma de decir $\exists x, \MiniSpace p(x)$
-
-
-
-    % =====================================================
-    % =======   LEYES DE CUANTIFICADORES      =============
-    % =====================================================
-    \clearpage
-    \section{Leyes de Cuantificadores}
+        \section{Identidades y Propiedades}
                 
-            Sean $p_{(x)}$ sentencias abierta lógica, $A$ un conjunto que opera sobre $p(x)$ donde $x$ son
-            elementos de $A$ y sea $T$ una tautología y sea $F$ una contradicción.
+            Ya conocemos su definición formal, incluso me dedique a poner algunas cosas super obvias en
+            la pagina de definción de cada uno de ellos, pero es que hay tantas propiedades super interesantes
+            que tenia que ponerles una sección propia para las mejores:
+
+
+            % =====================================
+            % ==========   SUBCONJUNTOS    ========
+            % =====================================
+            \subsection{Propiedades usando SubConjuntos}
+                
+                \subsubsection{Proposición}
+                    Sea $A, B, C$ conjuntos cualesquiera tal que $A \subseteq B$. Entonces tenemos que:
+                    \begin{equation*}
+                    \begin{split}
+                        (A \cap C) &\subseteq (B \cap C)        \\
+                        (A \cup C) &\subseteq (B \cup C)
+                    \end{split}
+                    \end{equation*}
+
+                \subsubsection{Proposición}
+                    Sea $A, B, C$ conjuntos cualesquiera. Si $A \subseteq B$ y $A \subseteq C$.
+                    Entonces tenemos que:
+                    \begin{equation*}
+                        A \subseteq (B \cap C)
+                    \end{equation*}
+
+                \subsubsection{Proposición}
+                    Sea $A, B, C$ conjuntos cualesquiera. Si $A \subseteq C$ y $B \subseteq C$.
+                    Entonces tenemos que:
+                    \begin{equation*}
+                        (A \cup B) \subseteq C
+                    \end{equation*}
+
+
+            % =====================================
+            % =====   CONJUNTO POTENCIA    ========
+            % =====================================
+            \clearpage
+            \subsection{Propiedades usando Conjunto Potencia}
+                
+                \subsubsection{Proposición}
+                    $P(A \cap B) = P(A) \cap P(B)$
+
+                \subsubsection{Proposición}
+                    $P(A) \cup P(B) \subseteq P(A \cup B)$
+
+
+
+
+
+
+        % =====================================================
+        % ============           CARDINALIDAD          ========
+        % =====================================================
+        \clearpage
+        \section{Cardinalidad y sus Propiedades}
+                
+            Ok, vamos avanzando, ahora es la hora de ver una característica de los conjuntos.
+            La Cardinalidad, que no es mas que una forma \emph{fancy} de decir el número de 
+            elementos ó entes que contiene cierto conjunto.
+
+            Puedes verlo como una función que recibe un conjunto cualquiera y te regresa
+            un número \emph{(Bueno, tecnicamente también sta el caso en el que la cardinalidad es infinita)}.
+
+            Esta es la forma en que solemos expresar la cardinalidad de un conjunto cualquiera:
+            \begin{equation}   
+                |A| = \#A = Card(A)
+            \end{equation}
+
+            PD: Como te imaginas las propiedades no sirven de nada si es que alguno de tus conjuntos
+            tiene una cardinalidad infinita, así que voy a suponer por obviedad que todos los siguientes
+            conjuntos son finitos, que sino tendría que especificarlo a cada 4 palabras.
+
+
+
+            % =====================================
+            % =====        COMPLEMENTOS      ======
+            % =====================================
+            \clearpage
+            \subsection{Propiedades usando Complemento}
+                
+                \subsubsection{Proposición}
+                    Sea $A$ un conjunto cualquiera de un universo U, entonces tenemos que:
+                    \begin{equation*}
+                        |A^C| = |U| - |A|
+                    \end{equation*}  
+
+            % =====================================
+            % =====        SUBCONJUNTOS      ======
+            % =====================================
+            \subsection{Propiedades usando Subconjuntos}
+                
+                \subsubsection{Proposición}
+                    Sea $A, B$ conjuntos cualesquiera. Si  $A \subseteq B$, entonces tenemos que:
+                    \begin{equation*}
+                        |A| \leq |B|
+                    \end{equation*}
+
+
+            % =====================================
+            % =====   UNION E INTERSECCION   ======
+            % =====================================
+            \clearpage
+            \subsection{Propiedades usando Unión e Intersección}
+                
+                \subsubsection{Proposición}
+                    Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
+                    \begin{equation*}
+                    \begin{split}
+                        |A \cup B| &= |A| + |B| - |A \cap B|    \\  
+                        |A \cap B| &= |A| + |B| - |A \cup B|  
+                    \end{split}
+                    \end{equation*}
+
+
+            % =====================================
+            % =====           RESTA          ======
+            % =====================================
+            \clearpage
+            \subsection{Propiedades usando Resta}
+
+                \subsubsection{Proposición}
+                    Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
+                    \begin{equation*}
+                        |A - B| = |A| - |A \cap B|
+                    \end{equation*}
+
+
+            % =====================================
+            % ====     DIFERENCIA SIMETRICA   =====
+            % =====================================
+            \subsection{Propiedades usando Diferencia Simetrica}
+
+                \subsubsection{Proposición}
+                    Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
+                    \begin{equation*}
+                        |A \Delta B| = |A| + |B| - 2|A \cap B|
+                    \end{equation*}
+
+            % =====================================
+            % =====   PRODUCTO CARTESIANO     =====
+            % =====================================
+            \clearpage
+            \subsection{Propiedades usando Producto Cartesiano}
+
+                \subsubsection{Proposición}
+                    Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
+                    \begin{equation*}
+                        |A \times B| = |A| \cdot |B|
+                    \end{equation*}
+
+            % =====================================
+            % =====   CONJUNTO POTENCIA      ======
+            % =====================================
+            \subsection{Propiedades usando Conjunto Potencia}
+
+                \subsubsection{Proposición}
+                    Sea $A$ conjunto cualquiera, tal que $|A| = n$ entonces tenemos que:
+                    \begin{equation*}
+                        |P(A)| = 2^n
+                    \end{equation*}
+
+
+
+
+
+
+
+
+
+
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+% /////////////////////////////////       RELACIONES  Y FUNCIONES        /////////////////////////////////////////////
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+\part{Relaciones y Funciones}
+
+
+
+    % ======================================================================================
+    % =============================       PRINCIPIOS BASICOS      ==========================
+    % ======================================================================================
+    \chapter{Relaciones}
+        \clearpage
+
+        % =====================================================
+        % ============           DEFINICION            ========
+        % =====================================================
+        \section{Definición}
+
+            Una relación $R$ entre dos conjuntos $A$ y $B$ es ante todo otro conjunto, una relación binaria es aquella
+            que es en el fondo un conjunto de pares ordenados (x,y) donde $x$ es un elemento de $A$, y así mismo
+            $y$ es un elemento de $B$.
+
+            Este nuevo conjunto $R$ nos muestra como es que esta relacionados algunos (o todos) elementos de $A$ con
+            otros elementos de $B$.
+
+
+
+            % =====================================
+            % =========   ¿QUE SON?     ===========
+            % =====================================
+            \subsection*{Definiciones Formales}
+
+                Una Relación $R: A \to B$ es un subconjunto de $A \times B$.
+
+                Solemos escribir la proposición $(x, y) \in R$ como $x R y$ para que se vea más bonito.
+
+                Solemos escribir la proposición $(x, y) \notin R$ como $x\centernot{R}y$ para que se vea más bonito.
+
+
+
+
+
+        % =====================================================
+        % ==============   DOMINIO E IMAGEN    ================
+        % =====================================================
+        \clearpage
+        \section{Dominio, Contradominio e Imagen}
+                
+            \subsection*{Dominio}
+
+                El dominio $D_R$ de una relación $R : A \to B$ es simplemente el subconjunto de $A$ que
+                contiene a todos los elementos que están relacionados hacia algun elemento de $B$.
+
+                \begin{equation}
+                    D_R = \{ a \in A \Such \exists b, \MiniSpace aRb \}
+                \end{equation}
+
+            \subsection*{Imagen}
+
+                También le llama Rango, la Imagen $I_R$ de una relación $R : A \to B$
+                es simplemente el subconjunto de $B$ que contiene a todos los elementos que están
+                relacionados mediante $R$.
+
+                \begin{equation}
+                    I_R = \{ b \in B \Such \exists a, \MiniSpace aRb \}
+                \end{equation}
+
+
+
+
+        % =====================================================
+        % ========         RELACION INVERSA        ============
+        % =====================================================
+        \clearpage
+        \section{Relación Inversa}
+
+            Una relación inversa es bastante fácil de definir:
+
+            \begin{equation}
+                R^{-1} = \{ (b, a) \in (B \times A) \Such (a, b) \in R \}
+            \end{equation}
+
+
+
+
+
+        % ====================================================
+        % ========   REFLEXIVA, SIMETRICA Y TRANSITIVA   =====
+        % ====================================================
+        \clearpage
+        \section{Reflexiva, Simétrica y Transitiva}
+
+            Vamos a definir estas propiedades para una $R: A \to A$.
+                
+            % =============================
+            % =====     REFLEXIVA     =====
+            % =============================
+            \subsection{Reflexiva}
+
+                Una relación reflexiva es aquella en la que cualquier $a$ tiene que estar relacionada
+                consigo misma.
+
+                \begin{equation}
+                    \forall a \in A, \MiniSpace aRa
+                \end{equation}
+
+
+            \subsection*{Cerradura Reflexiva}
+
+                Si te das cuenta la relación mas sencilla que es simétrica es bastante simple:
+                \begin{equation}
+                    Id_A = \{ (a, a) \Such a \in A \}
+                \end{equation}
+
+
+                La cerradura reflexiva $Cl_R(R)$ de una relación $R$ es una relación que cumple con:
+
+                \begin{itemize}
+                    \item Es reflexiva: $Cl_R(R)$ es reflexiva. 
+                    \item R esta contenida en ella: $R \subseteq Cl_R(R)$
+                    \item $Cl_R(R)$ es la relación mas pequeña posible: 
+                    Si es que $S$ es reflexiva y $R \subseteq S$ entonces $Cl_R(R) \subseteq S$
+                \end{itemize}
+
+
+
+                De hecho si te das cuenta es muy sencillo encontrarla, pues
+                $Cl_R(R) = R \cup Id_A$.
+
+
+
+
+            % =============================
+            % =====     SIMETRICA     =====
+            % =============================
+            \clearpage
+            \subsection{Simétrica}
+
+                Una relación simétrica es aquella en la que cualquier si existe $aRb$ existe $bRa$.
+
+                \begin{equation}
+                    \forall a,b \in A,\MiniSpace (aRb) \to (bRa)
+                \end{equation}
+
+
+                La cerradura simétrica $Cl_S(R)$ de una relación $R$ es una relación que cumple con:
+
+                \begin{itemize}
+                    \item Es simétrica: $Cl_S(R)$ es simétrica. 
+                    \item R esta contenida en ella: $R \subseteq Cl_S(R)$
+                    \item $Cl_S(R)$ es la relación mas pequeña posible: 
+                    Si es que $S$ es simétrica y $R \subseteq S$ entonces $Cl_S(R) \subseteq S$
+                \end{itemize}
+
+
+
+                De hecho si te das cuenta es muy sencillo encontrarla, pues
+                $Cl_S(R) = R \cup R^{-1}$.
+
+
+
+            % =============================
+            % =====     TRANSITIVA    =====
+            % =============================
+            \clearpage
+            \subsection{Transitiva}
+
+                Una relación transitiva es aquella en la que cualquier a tiene que estar relacionada consigo
+                misma.
+
+                \begin{equation}
+                    \forall a,b,c \in A, \MiniSpace ((aRb) \land (bRa)) \linfire (aRc)
+                \end{equation}
+
+                La cerradura transitiva $Cl_T(R)$ de una relación $R$ es una relación que cumple con:
+
+                \begin{itemize}
+                    \item Es transitiva: $Cl_T(R)$ es transitiva. 
+                    \item R esta contenida en ella: $R \subseteq Cl_T(R)$
+                    \item $Cl_T(R)$ es la relación mas pequeña posible: 
+                    Si es que $S$ es transitiva y $R \subseteq S$ entonces $Cl_T(R) \subseteq S$
+                \end{itemize}
+
+
+            % =============================
+            % =====     EQUIVALENCIA  =====
+            % =============================
+            \clearpage
+            \subsection{Relación de Equivalencia}
+                Decimos que $R$ es una relación de equivalencia si es que se cumplen las 3 propiedades antes vistas.
+
+
+            \subsubsection{Clases de Equivalencia}
+
+                Una relación de equivalencia $R$ sobre un conjunto $A$ produce una partición
+                del conjunto en subconjuntos disjuntos, llamados \textbf{Clases de
+                Equivalencia}, cada uno de ellos formados por elementos que están
+                relacionados entre sí.
+
+                Esta partición se representa por $A \backslash R$ y se llama
+                \textbf{Conjunto Cociente}.
+
+
+
+
+
+
+    % ======================================================================================
+    % =============================          FUNCIONES            ==========================
+    % ======================================================================================
+    \chapter{Funciones}
+        \clearpage    
+
+
+
+        % =====================================================
+        % ============           DEFINICION            ========
+        % =====================================================
+        \section{Definición}
+
+            Las funciones son más que meras descripciones de relaciones numéricas. En un sentido más general,
+            las funciones pueden comparar y relacionar diferentes tipos de estructuras matemáticas.
+
+            Es probable que vea una función como un tipo de fórmula que describe una relación entre dos
+            (o más) cantidades.
+
+            Podemos definirlas de una manera informal como aquellas relaciones donde cada elemento de $A$ 
+            esta involucrado solo una vez en la relación.
+
+            % =====================================
+            % =========   ¿QUE SON?     ===========
+            % =====================================
+            \subsubsection*{Definición Formal}
+
+            Digamos que tenemos una relación $f$ entre dos conjuntos $A$ y $B$.
+            Decimos que esta relación es una función si y solo si:
 
             \begin{itemize}
-                \item
-                \textbf{Negación del Universal} \\
-                $\lnot (\forall x \in A,\MiniSpace p(x)) \lequal \exists x \in A,\MiniSpace \lnot p(x)$
+                \item Todo los elementos del dominio tienen un valor asignado:
+                    \begin{equation}
+                        \forall a \in A, \exists b \in B, \MiniSpace afb
+                    \end{equation}
 
-                \item
-                \textbf{Negación del Existencial} \\
-                $\lnot (\exists x \in A,\MiniSpace p(x)) \lequal \forall x \in A,\MiniSpace \lnot p(x)$
+                \item Si $aRb_1$ y $aRb_2$ entonces $b_1 = b_2$
 
-                \item \textbf{Cambio de Variables} \\
-                        $p(a) \lequal (p(x) \land (x=a))$
-                        
-                \item \textbf{Cuantificadores sobre Proposiciones} \\
-                        $\exists x, p \lequal \forall x, p \lequal p$
-
-                \item \textbf{Leyes Conmutativas para Cuantificador Existencial}
-
-                    \begin{itemize}
-
-                        \item
-                        $\exists x, [p(x) \lor q(x)] \lequal \exists x, p(x) \lor \exists x, q(x)$
-
-                        \item
-                        $\exists x, [p(x) \land q(x)] \linfire \exists x, p(x) \land \exists x, q(x)$
-
-                    \end{itemize}
-
-                \item \textbf{Leyes Conmutativas para Cuantificador Universal}
-
-                    \begin{itemize}
-                        
-                        \item
-                        $\forall x, [p(x) \land q(x)] \lequal \forall x, p(x) \land \forall x, q(x)$
-
-                        \item
-                        $\forall x, p(x) \lor \forall x, q(x) \linfire \forall x, [p(x) \lor q(x)]$
-
-                    \end{itemize}
-                    
             \end{itemize}
 
+            Pero no es la única forma de definirlo, otra forma que una función es una relación que 
+            cumple con la propiedad de que para cada $a \in A$, la relación $f$ contiene exactamente
+            un par ordenado de la forma $(a,b) \in f$.
+
+            Ya que solo existe un par ordenado para cada $a \in A$, entonces solemos escribir 
+            $aRb$ como $f(a) = b$.
 
 
+
+
+
+
+
+        % =====================================================
+        % ============   DOMINIO E IMAGEN    ==================
+        % =====================================================
+        \clearpage
+        \section{Dominio e Imagen}
+            
+            \subsubsection*{Dominio}
+
+                El dominio $D_f$ de una función $f : A \to B$ es simplemente el conjunto de $A$.
+
+                Digo, esto se deduce de la definición, ya que es el conjunto de todas las posibles
+                entradas.
+
+            \subsubsection*{Imagen}
+
+                El Rango ó Imagen de una función $f : A \to B$ es el conjunto de todas las posibles salidas
+                de la función.
+
+                \begin{equation}
+                    \text{Rango}_f = \{ b \in B \Such (a,b) \in f \} = = \{ f(a) \Such a \in A \}
+                \end{equation}
+
+
+
+
+
+
+        % =====================================================
+        % ========   INYECTIVAS Y SUPRAYECTIVAS   =============
+        % =====================================================
+        \clearpage
+        \section{Inyectivas, Suprayectivas y Biyectivas}
+
+            \subsection{Biyectiva}
+
+                Son funciones muy especiales, son aquellas en las tanto son inyectivas como suprayectivas.
+                Pero veamos mas a fondo que es eso de que una función sea alguna de estas cosas.
+
+
+            \subsection{Funciones Inyectivas}
+
+                \Quote{Una función es aquella en la que una línea horizontal NUNCA toca más de un
+                punto de la función}.
+
+                Una función es inyectiva si a cada valor del conjunto dominio le corresponde un valor
+                distinto en el conjunto imágen, es decir en el que es imposible que la función mande
+                dos valores al mismo valor en $B$.
+
+                Es decir si es que es imposible que $f(a_1) = b$ y que también $f(a_2) = b$.
+
+                \begin{equation}
+                   \forall x, y \in A, \MiniSpace (x \neq y) \linfire (f(x) \neq f(y))
+                \end{equation}
+
+
+                \subsection*{Demostraciones}
+                
+                Para lograr demostrar que una $f$ es inyectiva tenemos que demostrar que para
+                cualquiera combinación de elementos $x, y \in A$ se cumple que el hecho de que
+                sean diferentes infiere a que $f(x) \neq f(y)$.
+
+                \begin{itemize}
+                    \item 
+                        \textbf{Demostración Directa}:
+
+                        Supón que $x, y \in A$ y que $x \neq y$
+                        \\
+                        $\cdots$
+                        \\
+                        Por lo tanto $f(x) \neq f(y)$
+
+                    \item 
+                        \textbf{ContraPositiva}:
+
+                        Supón que $x, y \in A$ y que $f(x) = f(y)$
+                        \\
+                        $\cdots$
+                        \\
+                        Por lo tanto $x = y$
+
+                \end{itemize}
+
+
+            \clearpage
+            \subsection{Suprayectivas}
+
+                \Quote{Una función es aquella en la que una línea horizontal SIEMPRE toca mínimo          
+                punto de la función}.
+
+                Son funciones en las que cada elemento del rango tiene un element o en A.
+                Una función es suprayectiva si está aplicada sobre todo $B$.
+
+                \begin{equation}
+                    \forall b \in B, \exists a \in A, \MiniSpace f(a) = b
+                \end{equation}
+
+
+            \clearpage
+            \subsection{Principio del Palomar}
+
+                Aquí hay una gran historia de porque se llama así este principio.
+
+                Supón que $A$ y $B$ son conjuntos finitos y que existe una $f: A \to B$ que es una función.
+
+                Entonces tenemos que:
+                \begin{itemize}
+                    \item Si $|A| > |B|$, entonces $f$ no es inyectiva.
+                    \item Si $|A| < |B|$, entonces $f$ no es suprayectiva.
+                \end{itemize}
+
+
+
+
+
+
+
+        % =====================================================
+        % ========         FUNCION INVERSA        =============
+        % =====================================================
+        \clearpage
+        \section{Función Inversa}
+
+            Aunque parecido, para que exista la relación inversa sea también una función, nuestra función original 
+            tendrá que ser biyectia.
+
+            Esta función inversa tiene una propiedad muy obvia:
+
+            \begin{equation}
+                \forall x \in A, \MiniSpace f^{-1}(f(x)) = x
+            \end{equation}
+
+            Y también otra obvia:
+
+            \begin{equation}
+                \forall y \in B, \MiniSpace f(f^{-1}(y)) = y
+            \end{equation}
+
+
+
+
+        % =====================================================
+        % ========         IMAGEN Y PREIMAGEN       ===========
+        % =====================================================
+        \clearpage
+        \section{Imagén y Preimagen}
+
+            Sea una función $f : A \to B$ y además $X \subseteq A$ y $Y \subseteq B$.  
+
+            \subsubsection{Imagén}
+                La imágen es a fin de cuentas un conjunto, de manera fomral:
+                \begin{equation} 
+                    f(X) = \{ f(x) \Such x \in X \} 
+                \end{equation} 
+
+                Y es bastante obvio que $f(X) \subseteq B$.
+
+            \subsubsection{PreImagen}
+                La preimagen es a fin de cuentas un conjunto, y esta definido,
+                incluso aunque la función no sea invertible, esta esta definida
+                de manera fomral:
+                \begin{equation} 
+                    f^{-1}(Y) = \{ x \in A \Such f(x) \in Y \} 
+                \end{equation} 
+
+                Y es bastante obvio que $f^{-1}(Y) \subseteq A$.
+
+
+
+
+
+        % =====================================================
+        % ========         CARDINALIDAD Y FUNCIONES      ======
+        % =====================================================
+        \clearpage
+        \section{Cardinalidad y Funciones}
+
+            Podemos definir la cardinalidad de los conjuntos de una mejor manera
+            usando la cardinalidad:
+
+            Los conjuntos tienen la misma cardinalidad $|A| = |B|$ si y solo si es que existe
+            una función biyectiva $f : A \to B$.
+
+
+            Gracias a esto podemos decir que:
+
+            \begin{itemize} 
+                \item $|\Naturals| = |\Integers| = |\Racionals| = \aleph_0$
+
+                \item $P(|\Naturals|) = |\Reals| = \aleph_1$
+
+                \item $P(|\Reals|) = \aleph_2$
+
+            \end{itemize} 
 
 
 

@@ -19,3 +19,59 @@
 \BOOKMARK [2][-]{subsection.3.1.1}{Cuantificador Universal}{section.3.1}% 19
 \BOOKMARK [2][-]{subsection.3.1.2}{Cuantificador Existencial}{section.3.1}% 20
 \BOOKMARK [1][-]{section.3.2}{Leyes de Cuantificadores}{chapter.3}% 21
+\BOOKMARK [-1][-]{part.2}{II Conjuntos}{}% 22
+\BOOKMARK [0][-]{chapter.4}{Principios B\341sicos}{part.2}% 23
+\BOOKMARK [1][-]{section.4.1}{Definici\363n}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.2}{\277C\363mo Definirlo?}{chapter.4}% 25
+\BOOKMARK [2][-]{subsection.4.2.1}{Pertencia}{section.4.2}% 26
+\BOOKMARK [2][-]{subsection.4.2.2}{Notaci\363n B\341sica}{section.4.2}% 27
+\BOOKMARK [2][-]{subsection.4.2.3}{Notaci\363n Formal}{section.4.2}% 28
+\BOOKMARK [2][-]{subsection.4.2.4}{Ejemplos}{section.4.2}% 29
+\BOOKMARK [1][-]{section.4.3}{Clasificaci\363n}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.4}{Conjunto Vac\355o}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.5}{Conjunto Universo}{chapter.4}% 32
+\BOOKMARK [0][-]{chapter.5}{\301lgebra y Operaciones}{part.2}% 33
+\BOOKMARK [1][-]{section.5.1}{Relaciones}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.1.1}{Equivalencia}{section.5.1}% 35
+\BOOKMARK [2][-]{subsection.5.1.2}{Subconjuntos}{section.5.1}% 36
+\BOOKMARK [1][-]{section.5.2}{Operaciones}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.2.1}{Intersecci\363n}{section.5.2}% 38
+\BOOKMARK [2][-]{subsection.5.2.2}{Uni\363n}{section.5.2}% 39
+\BOOKMARK [2][-]{subsection.5.2.3}{Complemento}{section.5.2}% 40
+\BOOKMARK [2][-]{subsection.5.2.4}{Resta}{section.5.2}% 41
+\BOOKMARK [2][-]{subsection.5.2.5}{Diferencia Sim\351trica}{section.5.2}% 42
+\BOOKMARK [2][-]{subsection.5.2.6}{Producto Cartesiano}{section.5.2}% 43
+\BOOKMARK [2][-]{subsection.5.2.7}{Conjunto Potencia}{section.5.2}% 44
+\BOOKMARK [1][-]{section.5.3}{Leyes de los Conjuntos}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.4}{Identidades y Propiedades}{chapter.5}% 46
+\BOOKMARK [2][-]{subsection.5.4.1}{Propiedades usando SubConjuntos}{section.5.4}% 47
+\BOOKMARK [2][-]{subsection.5.4.2}{Propiedades usando Conjunto Potencia}{section.5.4}% 48
+\BOOKMARK [1][-]{section.5.5}{Cardinalidad y sus Propiedades}{chapter.5}% 49
+\BOOKMARK [2][-]{subsection.5.5.1}{Propiedades usando Complemento}{section.5.5}% 50
+\BOOKMARK [2][-]{subsection.5.5.2}{Propiedades usando Subconjuntos}{section.5.5}% 51
+\BOOKMARK [2][-]{subsection.5.5.3}{Propiedades usando Uni\363n e Intersecci\363n}{section.5.5}% 52
+\BOOKMARK [2][-]{subsection.5.5.4}{Propiedades usando Resta}{section.5.5}% 53
+\BOOKMARK [2][-]{subsection.5.5.5}{Propiedades usando Diferencia Simetrica}{section.5.5}% 54
+\BOOKMARK [2][-]{subsection.5.5.6}{Propiedades usando Producto Cartesiano}{section.5.5}% 55
+\BOOKMARK [2][-]{subsection.5.5.7}{Propiedades usando Conjunto Potencia}{section.5.5}% 56
+\BOOKMARK [-1][-]{part.3}{III Relaciones y Funciones}{}% 57
+\BOOKMARK [0][-]{chapter.6}{Relaciones}{part.3}% 58
+\BOOKMARK [1][-]{section.6.1}{Definici\363n}{chapter.6}% 59
+\BOOKMARK [1][-]{section.6.2}{Dominio, Contradominio e Imagen}{chapter.6}% 60
+\BOOKMARK [1][-]{section.6.3}{Relaci\363n Inversa}{chapter.6}% 61
+\BOOKMARK [1][-]{section.6.4}{Reflexiva, Sim\351trica y Transitiva}{chapter.6}% 62
+\BOOKMARK [2][-]{subsection.6.4.1}{Reflexiva}{section.6.4}% 63
+\BOOKMARK [2][-]{subsection.6.4.2}{Sim\351trica}{section.6.4}% 64
+\BOOKMARK [2][-]{subsection.6.4.3}{Transitiva}{section.6.4}% 65
+\BOOKMARK [2][-]{subsection.6.4.4}{Relaci\363n de Equivalencia}{section.6.4}% 66
+\BOOKMARK [0][-]{chapter.7}{Funciones}{part.3}% 67
+\BOOKMARK [1][-]{section.7.1}{Definici\363n}{chapter.7}% 68
+\BOOKMARK [1][-]{section.7.2}{Dominio e Imagen}{chapter.7}% 69
+\BOOKMARK [1][-]{section.7.3}{Inyectivas, Suprayectivas y Biyectivas}{chapter.7}% 70
+\BOOKMARK [2][-]{subsection.7.3.1}{Biyectiva}{section.7.3}% 71
+\BOOKMARK [2][-]{subsection.7.3.2}{Funciones Inyectivas}{section.7.3}% 72
+\BOOKMARK [2][-]{subsection.7.3.3}{Suprayectivas}{section.7.3}% 73
+\BOOKMARK [2][-]{subsection.7.3.4}{Principio del Palomar}{section.7.3}% 74
+\BOOKMARK [1][-]{section.7.4}{Funci\363n Inversa}{chapter.7}% 75
+\BOOKMARK [1][-]{section.7.5}{Imag\351n y Preimagen}{chapter.7}% 76
+\BOOKMARK [1][-]{section.7.6}{Cardinalidad y Funciones}{chapter.7}% 77
