@@ -19,6 +19,7 @@
     \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
     \usepackage[T1]{fontenc}                                        %Please use spanish
     \usepackage{textcmds}                                           %Allow us to use quoutes
+    \usepackage{changepage}                                         %Allow us to use identate paragraphs
 
     % *********   MATH AND HIS STYLE  *********
     \usepackage{amsthm, amssymb, amsfonts, mathrsfs}                %Make math beautiful
@@ -58,7 +59,7 @@
             {\footnotesize{\textsc{\nouppercase{\rightmark}}}}      %And fot it put the name
     }
 
-    \rfoot{\textsc{\small{\hyperref[sec:Index]{Ve al Índice}}}}    %This will always be a footer  
+    \rfoot{\textsc{\small{\hyperref[sec:Index]{Ve al Índice}}}}     %This will always be a footer  
 
     \fancyfoot[L]{                                                  %Algoritm for a changing footer
         \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
@@ -78,7 +79,13 @@
 
     % =====  GENERAL TEXT  ==========
     \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
-
+    \newenvironment{Indentation}[1][0.75em]                         %Use: \begin{Inde...}[Num]...\end{Inde...}
+    {\begin{adjustwidth}{#1}{}}                                     %If you dont put nothing i will use 0.75 em
+    {\end{adjustwidth}}                                             %This indentate a paragraph
+    \newenvironment{SmallIndentation}[1][0.75em]                    %Use: The same that we upper one, just 
+    {\begin{adjustwidth}{#1}{}\begin{footnotesize}}                 %footnotesize size of letter by default
+    {\end{footnotesize}\end{adjustwidth}}                           %that's it
+        
     % =====  GENERAL MATH  ==========
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
     \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
@@ -88,13 +95,15 @@
     \DeclareMathOperator \doublearrow {\leftrightarrow}             %Use: \doublearrow for a double arrow
     \newcommand \lequal {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lequal for a double arrow
     \newcommand \linfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lequal for a double arrow
+    \newcommand \longto {\longrightarrow}                           %Use: \longto for a long arrow
 
     % =====  NUMBER THEORY  ==========
-    \DeclareMathOperator \Naturals {\mathbb{N}}                     %Use: \Naturals por Notation
-    \DeclareMathOperator \Integers {\mathbb{Z}}                     %Use: \Integers por Notation
-    \DeclareMathOperator \Racionals{\mathbb{Q}}                     %Use: \Racionals por Notation
-    \DeclareMathOperator \Reals {\mathbb{R}}                        %Use: \Reals por Notation
-    \DeclareMathOperator \Complexs {\mathbb{C}}                     %Use: \Complex por Notation
+    \DeclareMathOperator \Naturals  {\mathbb{N}}                     %Use: \Naturals por Notation
+    \DeclareMathOperator \Primes    {\mathbb{P}}                     %Use: \Naturals por Notation
+    \DeclareMathOperator \Integers  {\mathbb{Z}}                     %Use: \Integers por Notation
+    \DeclareMathOperator \Racionals {\mathbb{Q}}                     %Use: \Racionals por Notation
+    \DeclareMathOperator \Reals     {\mathbb{R}}                     %Use: \Reals por Notation
+    \DeclareMathOperator \Complexs  {\mathbb{C}}                     %Use: \Complex por Notation
 
     % === LINEAL ALGEBRA & VECTORS ===
     \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
@@ -105,9 +114,24 @@
     \newcommand{\lVector}[1]{                                       %Use: \lVector {Matrix Notation} use a abs 
         \ensuremath{\begin{vmatrix}#1\end{vmatrix}}                 %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
     }
+    \newcommand{\bVector}[1]{                                       %Use: \bVector {Matrix Notation} use a brackets 
+        \ensuremath{\begin{bmatrix}#1\end{bmatrix}}                 %Example: \bVector{a\\b\\c} or \bVector{a&b&c} 
+    }
     \newcommand{\Vector}[1]{                                        %Use: \Vector {Matrix Notation} no parentesis
         \ensuremath{\begin{matrix}#1\end{matrix}}                   %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
     }
+
+    % MATRIX
+    \makeatletter                                                   %Example: \begin{matrix}[cc|c]
+    \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c] {             %WTF! IS THIS
+        \hskip -\arraycolsep                                        %WTF! IS THIS
+        \let\@ifnextchar\new@ifnextchar                             %WTF! IS THIS
+        \array{#1}                                                  %WTF! IS THIS
+    }                                                               %WTF! IS THIS
+    \makeatother                                                    %WTF! IS THIS
+    \newcommand{\Brackets}[1]{\left[ #1 \right]}                    %Use: \Brackets {Info} 
+
+
 
 
 
@@ -2356,6 +2380,129 @@
                 \item $P(|\Reals|) = \aleph_2$
 
             \end{itemize} 
+
+
+
+
+
+    % ======================================================================================
+    % ===================          ANILLOS, CAMPOS Y GRUPOS             ====================
+    % ======================================================================================
+    \chapter{Grupos, Anillos y Campos}
+        \clearpage
+
+
+        % =====================================================
+        % ==========              GRUPOS              =========
+        % =====================================================
+        \clearpage
+        \section{Grupo}
+
+            % ==================================
+            % =========   FORMAL     ===========
+            % ==================================
+            \subsection*{Definición Formal}
+
+                Un grupo es una combinación de tres elementos que van de la mano:
+                \begin{itemize}
+                    \item
+                        \textbf{Conjunto Base:}
+
+                        \begin{SmallIndentation}[1em]
+                            Un conjunto llamado $G$ que no este vacío (daaa!)
+                        \end{SmallIndentation}
+
+
+                    \item
+                        \textbf{Relación Maestra:}
+
+                        \begin{SmallIndentation}[1em]
+                            
+                            Una relación entre $R: (G \times  G) \to G$, es decir,
+                            es una relación que recibe dos elementos de $G$ (o más
+                            específicos un par ordenado) y te regresa un nuevo
+                            elemento de $G$.
+
+                            Vamos a suponer que esta relación tendrá la misma notación
+                            que la multiplicación para que se vea mas normal:
+                            $(a)(b) = c \MiniSpace$ donde $a, b, c \in G$
+
+                            Por lo tanto este grupo será cerrado con respecto a esa
+                            operación.
+
+                            Esta relación tiene que cumplir que sea asociativa, es
+                            decir $\forall a, b, c \in G, \MiniSpace (ab)c = a(bc)$
+
+                        \end{SmallIndentation}
+
+                    
+
+                    \item
+                        \textbf{Elemento Identidad para $R$:}
+
+                        \begin{SmallIndentation}[1em]
+                            Tendrá que existir un solo elemento llamado $1 \in G$
+                            que cumpla con las siguientes caracteristicas: 
+                            
+                            \begin{itemize}
+                                \item \textbf{Es neutro con respecto a esa operación:}
+                                    $\forall a \in G, \MiniSpace 1a = a1 = a$
+
+                                \item \textbf{Existen inversos:}
+                                    $\forall a \in G, \MiniSpace \exists b \in G, \MiniSpace ab=ba=1$
+                            \end{itemize}
+                        \end{SmallIndentation}
+
+                \end{itemize}
+
+
+
+            % ==================================
+            % =====     GRUPO ABELIANO     =====
+            % ==================================
+            \subsection{Grupo Abeliano}
+
+                Un Grupo Abeliano es aquel grupo donde tenemos que:
+
+                $\forall a, b \in G, \MiniSpace ab = ba$
+
+
+
+        % =====================================================
+        % ==========              ANILLOS             =========
+        % =====================================================
+        \clearpage
+        \section{Anillo}
+
+            % ==================================
+            % =========   FORMAL     ===========
+            % ==================================
+            \subsection*{Definición Formal}
+
+                Un Anillo es un conjunto $G$ que viene equipado con dos relaciones
+                $R_1$ y $R_2$, (la que me referiré con las notaciones de la suma
+                y la multiplicación).
+
+                Donde se cumple que:
+
+                \begin{itemize}
+                    \item \textbf{$G$ es un grupo con respecto a $+$}
+
+                    \item \textbf{$G$ es un grupo con respecto a $*$}
+
+                    \item
+                        \textbf{Propiedad Distrivutiva}
+                        
+                        \begin{SmallIndentation}[1em]
+                            Se cumple la propiedad especial en la que:
+                            $\forall a, b, c \in G, \MiniSpace a(b+c)= ab +ac$
+                        \end{SmallIndentation}
+
+                \end{itemize}
+
+
+
+
 
 
 

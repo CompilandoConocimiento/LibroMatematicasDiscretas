@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  20 JUL 2017 22:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  26 JUL 2017 13:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/Users/mac/Downloads/ApuntesMatematicasDiscretas/MatematicasDiscretas.tex
-(/Users/mac/Downloads/ApuntesMatematicasDiscretas/MatematicasDiscretas.tex
+**/Users/mac/Downloads/LibroMatematicasDiscretas/MatematicasDiscretas.tex
+(/Users/mac/Downloads/LibroMatematicasDiscretas/MatematicasDiscretas.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/report.cls
@@ -511,6 +511,11 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsrefs/textcmds.sty
 Package: textcmds 2012/08/02 v2.00
 )
+(/usr/local/texlive/2016/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count103
+\cp@tempcnt=\count104
+)
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks19
@@ -558,13 +563,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count103
+\inf@bad=\count105
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count104
-\leftroot@=\count105
+\uproot@=\count106
+\leftroot@=\count107
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count106
-\DOTSCASE@=\count107
+\classnum@=\count108
+\DOTSCASE@=\count109
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
@@ -573,15 +578,15 @@ LaTeX Info: Redefining \cdots on input line 518.
 \big@size=\dimen118
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count108
-\c@MaxMatrixCols=\count109
+\macc@depth=\count110
+\c@MaxMatrixCols=\count111
 \dotsspace@=\muskip11
-\c@parentequation=\count110
-\dspbrk@lvl=\count111
+\c@parentequation=\count112
+\dspbrk@lvl=\count113
 \tag@help=\toks27
-\row@=\count112
-\column@=\count113
-\maxfields@=\count114
+\row@=\count114
+\column@=\count115
+\maxfields@=\count116
 \andhelp@=\toks28
 \eqnshift@=\dimen119
 \alignsep@=\dimen120
@@ -615,7 +620,7 @@ Package graphics Info: Driver file: pdftex.def on input line 96.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-\Gread@gobject=\count115
+\Gread@gobject=\count117
 ))
 \Gin@req@height=\dimen125
 \Gin@req@width=\dimen126
@@ -623,29 +628,29 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 (/usr/local/texlive/2016/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen127
 \WF@size=\dimen128
-\c@WF@wrappedlines=\count116
+\c@WF@wrappedlines=\count118
 \WF@box=\box28
 \WF@everypar=\toks31
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count117
+\lst@mode=\count119
 \lst@gtempboxa=\box29
 \lst@token=\toks32
-\lst@length=\count118
+\lst@length=\count120
 \lst@currlwidth=\dimen129
-\lst@column=\count119
-\lst@pos=\count120
+\lst@column=\count121
+\lst@pos=\count122
 \lst@lostspace=\dimen130
 \lst@width=\dimen131
-\lst@newlines=\count121
-\lst@lineno=\count122
+\lst@newlines=\count123
+\lst@lineno=\count124
 \lst@maxwidth=\dimen132
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count123
-\lst@skipnumbers=\count124
+\c@lstnumber=\count125
+\lst@skipnumbers=\count126
 \lst@framebox=\box30
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/listings.cfg
@@ -659,7 +664,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen133
 \enit@toks=\toks33
 \enit@inbox=\box31
-\enitdp@description=\count125
+\enitdp@description=\count127
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tasks/tasks.sty
 (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -675,24 +680,24 @@ L3 Module: l3tl 2016/03/26 v6465 L3 Token lists
 L3 Module: l3str 2016/03/24 v6441 L3 Strings
 L3 Module: l3seq 2015/08/05 v5777 L3 Sequences and stacks
 L3 Module: l3int 2016/03/24 v6441 L3 Integers
-\c_max_int=\count126
-\l_tmpa_int=\count127
-\l_tmpb_int=\count128
-\g_tmpa_int=\count129
-\g_tmpb_int=\count130
+\c_max_int=\count128
+\l_tmpa_int=\count129
+\l_tmpb_int=\count130
+\g_tmpa_int=\count131
+\g_tmpb_int=\count132
 L3 Module: l3quark 2015/08/17 v5855 L3 Quarks
 L3 Module: l3prg 2015/11/01 v6216 L3 Control structures
-\g__prg_map_int=\count131
+\g__prg_map_int=\count133
 L3 Module: l3clist 2015/09/02 v5901 L3 Comma separated lists
 L3 Module: l3token 2016/04/03 v6470 L3 Experimental token manipulation
 L3 Module: l3prop 2016/01/05 v6366 L3 Property lists
 L3 Module: l3msg 2016/03/26 v6464 L3 Messages
 L3 Module: l3file 2016/03/25 v6458 L3 File and I/O operations
-\l_iow_line_count_int=\count132
-\l__iow_target_count_int=\count133
-\l__iow_current_line_int=\count134
-\l__iow_current_word_int=\count135
-\l__iow_current_indentation_int=\count136
+\l_iow_line_count_int=\count134
+\l__iow_target_count_int=\count135
+\l__iow_current_line_int=\count136
+\l__iow_current_word_int=\count137
+\l__iow_current_indentation_int=\count138
 L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \c_zero_dim=\dimen134
 \c_max_dim=\dimen135
@@ -713,18 +718,18 @@ L3 Module: l3skip 2016/01/05 v6366 L3 Dimensions and skips
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
 L3 Module: l3keys 2015/11/17 v6284 L3 Key-value interfaces
-\g__keyval_level_int=\count137
-\l_keys_choice_int=\count138
+\g__keyval_level_int=\count139
+\l_keys_choice_int=\count140
 L3 Module: l3fp 2016/03/26 v6465 L3 Floating points
-\c__fp_leading_shift_int=\count139
-\c__fp_middle_shift_int=\count140
-\c__fp_trailing_shift_int=\count141
-\c__fp_big_leading_shift_int=\count142
-\c__fp_big_middle_shift_int=\count143
-\c__fp_big_trailing_shift_int=\count144
-\c__fp_Bigg_leading_shift_int=\count145
-\c__fp_Bigg_middle_shift_int=\count146
-\c__fp_Bigg_trailing_shift_int=\count147
+\c__fp_leading_shift_int=\count141
+\c__fp_middle_shift_int=\count142
+\c__fp_trailing_shift_int=\count143
+\c__fp_big_leading_shift_int=\count144
+\c__fp_big_middle_shift_int=\count145
+\c__fp_big_trailing_shift_int=\count146
+\c__fp_Bigg_leading_shift_int=\count147
+\c__fp_Bigg_middle_shift_int=\count148
+\c__fp_Bigg_trailing_shift_int=\count149
 L3 Module: l3box 2015/08/09 v5822 L3 Experimental boxes
 \c_empty_box=\box32
 \l_tmpa_box=\box33
@@ -774,41 +779,41 @@ L3 Module: l3luatex 2016/03/26 v6465 L3 Experimental LuaTeX-specific functions
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2016/03/26 v6465 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count148
+\l__driver_color_stack_int=\count150
 \l__driver_tmp_box=\box47
 ))
 (/usr/local/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2016/05/18 v6512 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count149
-\l__xparse_m_args_int=\count150
-\l__xparse_mandatory_args_int=\count151
-\l__xparse_processor_int=\count152
-\l__xparse_v_nesting_int=\count153
+\l__xparse_current_arg_int=\count151
+\l__xparse_m_args_int=\count152
+\l__xparse_mandatory_args_int=\count153
+\l__xparse_processor_int=\count154
+\l__xparse_v_nesting_int=\count155
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/eepic/epic.sty
 Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
-\@@multicnt=\count154
-\d@lta=\count155
+\@@multicnt=\count156
+\d@lta=\count157
 \@delta=\dimen165
 \@@delta=\dimen166
-\@gridcnt=\count156
-\@joinkind=\count157
+\@gridcnt=\count158
+\@joinkind=\count159
 \@dotgap=\dimen167
 \@ddotgap=\dimen168
-\@x@diff=\count158
-\@y@diff=\count159
+\@x@diff=\count160
+\@y@diff=\count161
 \x@diff=\dimen169
 \y@diff=\dimen170
 \@dotbox=\box48
-\num@segments=\count160
-\num@segmentsi=\count161
+\num@segments=\count162
+\num@segmentsi=\count163
 \@datafile=\read1
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/cntformats/cntformats.sty
 Package: cntformats 2014/07/20 v0.7 A different way to read counters. (CN)
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count162
+\etb@tempcnta=\count164
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/cnltx/cnltx-base.sty
 Package: cnltx-base 2015/08/17 v0.13 LaTeX tools and documenting facilities (CN
@@ -829,9 +834,9 @@ ode.tex
 \pgfopts@list@add@a@toks=\toks37
 \pgfopts@list@add@b@toks=\toks38
 )
-\c@cnltx@tmpa=\count163
-\c@cnltx@tmpb=\count164
-\c@cnltx@tmpc=\count165
+\c@cnltx@tmpa=\count165
+\c@cnltx@tmpb=\count166
+\c@cnltx@tmpc=\count167
 \cnltx@tmpa@length=\skip57
 \cnltx@tmpb@length=\skip58
 \cnltx@tmpc@length=\skip59
@@ -860,21 +865,21 @@ y
 Package: xtemplate 2016/05/18 v6512 L3 Experimental prototype document function
 s
 \l__xtemplate_tmp_dim=\dimen171
-\l__xtemplate_tmp_int=\count166
+\l__xtemplate_tmp_int=\count168
 \l__xtemplate_tmp_muskip=\muskip18
 \l__xtemplate_tmp_skip=\skip60
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 )
 Package: tasks 2016/05/04 v0.11a Horizontalcolumnedlists (CN)
-\l__tasks_depth_int=\count167
-\g__tasks_int=\count168
-\g__tasks_total_items_int=\count169
-\l__tasks_columns_int=\count170
-\l__tasks_rows_int=\count171
-\g__tasks_current_col_num_int=\count172
-\g__tasks_current_row_num_int=\count173
-\l__tasks_item_columns_int=\count174
+\l__tasks_depth_int=\count169
+\g__tasks_int=\count170
+\g__tasks_total_items_int=\count171
+\l__tasks_columns_int=\count172
+\l__tasks_rows_int=\count173
+\g__tasks_current_col_num_int=\count174
+\g__tasks_current_row_num_int=\count175
+\l__tasks_item_columns_int=\count176
 \l__tasks_item_indent_dim=\dimen172
 \l__tasks_item_default_indent_dim=\dimen173
 \l__tasks_item_width_dim=\dimen174
@@ -889,9 +894,9 @@ Package: tasks 2016/05/04 v0.11a Horizontalcolumnedlists (CN)
 \l__tasks_after_list_skip=\skip64
 \l__tasks_item_coffin=\box49
 \l__tasks_label_coffin=\box50
-\c@task=\count175
-\l__tasks_tmpa_int=\count176
-\l__tasks_tmpb_int=\count177
+\c@task=\count177
+\l__tasks_tmpa_int=\count178
+\l__tasks_tmpb_int=\count179
 \l__tasks_tmpa_coffin=\box51
 .................................................
 . xtemplate info: "declare-object-type"
@@ -939,16 +944,16 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip66
 \LTpre=\skip67
 \LTpost=\skip68
-\LTchunksize=\count178
+\LTchunksize=\count180
 \LTcapwidth=\dimen184
 \LT@head=\box52
 \LT@firsthead=\box53
 \LT@foot=\box54
 \LT@lastfoot=\box55
-\LT@cols=\count179
-\LT@rows=\count180
-\c@LT@tables=\count181
-\c@LT@chunks=\count182
+\LT@cols=\count181
+\LT@rows=\count182
+\c@LT@tables=\count183
+\c@LT@chunks=\count184
 \LT@p@ftn=\toks39
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/booktabs/booktabs.sty
@@ -963,12 +968,12 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \cmidrulesep=\dimen192
 \cmidrulekern=\dimen193
 \defaultaddspace=\dimen194
-\@cmidla=\count183
-\@cmidlb=\count184
+\@cmidla=\count185
+\@cmidlb=\count186
 \@aboverulesep=\dimen195
 \@belowrulesep=\dimen196
-\@thisruleclass=\count185
-\@lastruleclass=\count186
+\@thisruleclass=\count187
+\@lastruleclass=\count188
 \@thisrulewidth=\dimen197
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/tabularx.sty
@@ -987,7 +992,7 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \TX@old@col=\dimen258
 \TX@target=\dimen259
 \TX@delta=\dimen260
-\TX@cols=\count187
+\TX@cols=\count189
 \TX@ftn=\toks41
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
@@ -995,14 +1000,14 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
-\c@tracingmulticols=\count188
+\c@tracingmulticols=\count190
 \mult@box=\box56
 \multicol@leftmargin=\dimen262
-\c@unbalance=\count189
-\c@collectmore=\count190
-\doublecol@number=\count191
-\multicoltolerance=\count192
-\multicolpretolerance=\count193
+\c@unbalance=\count191
+\c@collectmore=\count192
+\doublecol@number=\count193
+\multicoltolerance=\count194
+\multicolpretolerance=\count195
 \full@width=\dimen263
 \page@free=\dimen264
 \premulticols=\dimen265
@@ -1033,14 +1038,14 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \@tempa=\box77
 \@tempa=\box78
 \@tempa=\box79
-\c@columnbadness=\count194
-\c@finalcolumnbadness=\count195
+\c@columnbadness=\count196
+\c@finalcolumnbadness=\count197
 \last@try=\dimen268
 \multicolovershoot=\dimen269
 \multicolundershoot=\dimen270
 \mult@nat@firstbox=\box80
 \colbreak@box=\box81
-\mc@col@check@num=\count196
+\mc@col@check@num=\count198
 )
 (/usr/local/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip73
@@ -1059,20 +1064,20 @@ LaTeX Info: Redefining \% on input line 23.
 )
 \openout1 = `MatematicasDiscretas.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 117.
-LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 141.
+LaTeX Font Info:    ... okay on input line 141.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1109,38 +1114,38 @@ LaTeX Font Info:    ... okay on input line 117.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box82
-Package hyperref Info: Link coloring OFF on input line 117.
+Package hyperref Info: Link coloring OFF on input line 141.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count197
+\c@section@level=\count199
 )
-LaTeX Info: Redefining \ref on input line 117.
-LaTeX Info: Redefining \pageref on input line 117.
-LaTeX Info: Redefining \nameref on input line 117.
+LaTeX Info: Redefining \ref on input line 141.
+LaTeX Info: Redefining \pageref on input line 141.
+LaTeX Info: Redefining \nameref on input line 141.
 
 (./MatematicasDiscretas.out) (./MatematicasDiscretas.out)
 \@outlinefile=\write3
 \openout3 = `MatematicasDiscretas.out'.
 
-LaTeX Info: Redefining \. on input line 117.
-LaTeX Info: Redefining \% on input line 117.
+LaTeX Info: Redefining \. on input line 141.
+LaTeX Info: Redefining \% on input line 141.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count198
+\scratchcounter=\count266
 \scratchdimen=\dimen271
 \scratchbox=\box83
-\nofMPsegments=\count199
-\nofMParguments=\count266
+\nofMPsegments=\count267
+\nofMParguments=\count268
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count267
+\MPscratchCnt=\count269
 \MPscratchDim=\dimen272
-\MPnumerator=\count268
-\makeMPintoPDFobject=\count269
+\MPnumerator=\count270
+\makeMPintoPDFobject=\count271
 \everyMPtoPDFconversion=\toks43
 ) (/usr/local/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1157,7 +1162,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count270
+\c@lstlisting=\count272
 
 [1
 
@@ -1183,7 +1188,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.28 ...rincipios B\IeC {\'a}sicos}{25}{chapter.4}
+l.28 ...rincipios B\IeC {\'a}sicos}{26}{chapter.4}
                                                    [1
 
 ]
@@ -1191,424 +1196,422 @@ LaTeX Info: Redefining \. on input line 68.
 LaTeX Info: Redefining \% on input line 68.
 LaTeX Info: Redefining \. on input line 68.
 LaTeX Info: Redefining \% on input line 68.
- [2])
+ [2]
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
+ [3])
 \tf@toc=\write4
 \openout4 = `MatematicasDiscretas.toc'.
 
-LaTeX Info: Redefining \. on input line 149.
-LaTeX Info: Redefining \% on input line 149.
-LaTeX Info: Redefining \. on input line 149.
-LaTeX Info: Redefining \% on input line 149.
- [3] [4
+LaTeX Info: Redefining \. on input line 173.
+LaTeX Info: Redefining \% on input line 173.
+LaTeX Info: Redefining \. on input line 173.
+LaTeX Info: Redefining \% on input line 173.
+ [4] [5
 
 
 ]
 Cap\'{\i }tulo 1.
-[5
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
-
- []
-
-LaTeX Info: Redefining \. on input line 226.
-LaTeX Info: Redefining \% on input line 226.
-LaTeX Info: Redefining \. on input line 226.
-LaTeX Info: Redefining \% on input line 226.
 [6
 
 ]
-LaTeX Info: Redefining \. on input line 253.
-LaTeX Info: Redefining \% on input line 253.
-LaTeX Info: Redefining \. on input line 253.
-LaTeX Info: Redefining \% on input line 253.
- [7
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+LaTeX Info: Redefining \. on input line 250.
+LaTeX Info: Redefining \% on input line 250.
+LaTeX Info: Redefining \. on input line 250.
+LaTeX Info: Redefining \% on input line 250.
+[7
 
 ]
-LaTeX Info: Redefining \. on input line 293.
-LaTeX Info: Redefining \% on input line 293.
-LaTeX Info: Redefining \. on input line 293.
-LaTeX Info: Redefining \% on input line 293.
+LaTeX Info: Redefining \. on input line 277.
+LaTeX Info: Redefining \% on input line 277.
+LaTeX Info: Redefining \. on input line 277.
+LaTeX Info: Redefining \% on input line 277.
  [8
 
 ]
-Overfull \hbox (13.31746pt too wide) in alignment at lines 299--310
+LaTeX Info: Redefining \. on input line 317.
+LaTeX Info: Redefining \% on input line 317.
+LaTeX Info: Redefining \. on input line 317.
+LaTeX Info: Redefining \% on input line 317.
+ [9
+
+]
+Overfull \hbox (13.31746pt too wide) in alignment at lines 323--334
  [] [] [] 
  []
 
 
-Overfull \hbox (213.22542pt too wide) in paragraph at lines 314--316
+Overfull \hbox (213.22542pt too wide) in paragraph at lines 338--340
 []|[]|| 
  []
 
 
-Overfull \hbox (213.22542pt too wide) in paragraph at lines 320--322
+Overfull \hbox (213.22542pt too wide) in paragraph at lines 344--346
 []|[]|| 
  []
 
 
-Overfull \hbox (213.22542pt too wide) in paragraph at lines 327--329
+Overfull \hbox (213.22542pt too wide) in paragraph at lines 351--353
 []|[]|| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--348
+Underfull \hbox (badness 10000) in paragraph at lines 370--372
 
  []
 
 
-Overfull \hbox (213.22542pt too wide) in paragraph at lines 333--348
+Overfull \hbox (213.22542pt too wide) in paragraph at lines 357--372
 []|[]|| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--359
+Underfull \hbox (badness 10000) in paragraph at lines 381--383
 
  []
 
 
-Overfull \hbox (213.22542pt too wide) in paragraph at lines 352--360
+Overfull \hbox (213.22542pt too wide) in paragraph at lines 376--384
 []|[]| 
  []
 
 
-Overfull \hbox (13.31746pt too wide) in alignment at lines 310--361
+Overfull \hbox (13.31746pt too wide) in alignment at lines 334--385
  [] [] [] 
  []
 
-LaTeX Info: Redefining \. on input line 366.
-LaTeX Info: Redefining \% on input line 366.
-LaTeX Info: Redefining \. on input line 366.
-LaTeX Info: Redefining \% on input line 366.
-[9
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 389--391
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 410--412
-
- []
-
-LaTeX Info: Redefining \. on input line 432.
-LaTeX Info: Redefining \% on input line 432.
-LaTeX Info: Redefining \. on input line 432.
-LaTeX Info: Redefining \% on input line 432.
+LaTeX Info: Redefining \. on input line 390.
+LaTeX Info: Redefining \% on input line 390.
+LaTeX Info: Redefining \. on input line 390.
+LaTeX Info: Redefining \% on input line 390.
 [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 438--440
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--453
+Underfull \hbox (badness 10000) in paragraph at lines 413--415
 
  []
 
-LaTeX Info: Redefining \. on input line 490.
-LaTeX Info: Redefining \% on input line 490.
-LaTeX Info: Redefining \. on input line 490.
-LaTeX Info: Redefining \% on input line 490.
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--436
+
+ []
+
+LaTeX Info: Redefining \. on input line 456.
+LaTeX Info: Redefining \% on input line 456.
+LaTeX Info: Redefining \. on input line 456.
+LaTeX Info: Redefining \% on input line 456.
 [11
 
 ]
-LaTeX Info: Redefining \. on input line 531.
-LaTeX Info: Redefining \% on input line 531.
-LaTeX Info: Redefining \. on input line 531.
-LaTeX Info: Redefining \% on input line 531.
- [12
+Underfull \hbox (badness 10000) in paragraph at lines 462--464
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--477
+
+ []
+
+LaTeX Info: Redefining \. on input line 514.
+LaTeX Info: Redefining \% on input line 514.
+LaTeX Info: Redefining \. on input line 514.
+LaTeX Info: Redefining \% on input line 514.
+[12
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 542.
+LaTeX Info: Redefining \. on input line 555.
+LaTeX Info: Redefining \% on input line 555.
+LaTeX Info: Redefining \. on input line 555.
+LaTeX Info: Redefining \% on input line 555.
+ [13
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 566.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 542.
-LaTeX Info: Redefining \. on input line 564.
-LaTeX Info: Redefining \% on input line 564.
-LaTeX Info: Redefining \. on input line 564.
-LaTeX Info: Redefining \% on input line 564.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 566.
+LaTeX Info: Redefining \. on input line 588.
+LaTeX Info: Redefining \% on input line 588.
+LaTeX Info: Redefining \. on input line 588.
+LaTeX Info: Redefining \% on input line 588.
 
-[13
+[14
 
 ]
-LaTeX Info: Redefining \. on input line 610.
-LaTeX Info: Redefining \% on input line 610.
-LaTeX Info: Redefining \. on input line 610.
-LaTeX Info: Redefining \% on input line 610.
- [14
+LaTeX Info: Redefining \. on input line 634.
+LaTeX Info: Redefining \% on input line 634.
+LaTeX Info: Redefining \. on input line 634.
+LaTeX Info: Redefining \% on input line 634.
+ [15
 
 ]
 Cap\'{\i }tulo 2.
-[15
+[16
 
 
 ]
-LaTeX Info: Redefining \. on input line 653.
-LaTeX Info: Redefining \% on input line 653.
-LaTeX Info: Redefining \. on input line 653.
-LaTeX Info: Redefining \% on input line 653.
- [16
-
-]
-LaTeX Info: Redefining \. on input line 697.
-LaTeX Info: Redefining \% on input line 697.
-LaTeX Info: Redefining \. on input line 697.
-LaTeX Info: Redefining \% on input line 697.
+LaTeX Info: Redefining \. on input line 677.
+LaTeX Info: Redefining \% on input line 677.
+LaTeX Info: Redefining \. on input line 677.
+LaTeX Info: Redefining \% on input line 677.
  [17
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 700--701
+LaTeX Info: Redefining \. on input line 721.
+LaTeX Info: Redefining \% on input line 721.
+LaTeX Info: Redefining \. on input line 721.
+LaTeX Info: Redefining \% on input line 721.
+ [18
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 724--725
 
  []
 
-LaTeX Info: Redefining \. on input line 778.
-LaTeX Info: Redefining \% on input line 778.
-LaTeX Info: Redefining \. on input line 778.
-LaTeX Info: Redefining \% on input line 778.
-[18
+LaTeX Info: Redefining \. on input line 802.
+LaTeX Info: Redefining \% on input line 802.
+LaTeX Info: Redefining \. on input line 802.
+LaTeX Info: Redefining \% on input line 802.
+[19
 
 ]
-LaTeX Info: Redefining \. on input line 853.
-LaTeX Info: Redefining \% on input line 853.
-LaTeX Info: Redefining \. on input line 853.
-LaTeX Info: Redefining \% on input line 853.
- [19
+LaTeX Info: Redefining \. on input line 877.
+LaTeX Info: Redefining \% on input line 877.
+LaTeX Info: Redefining \. on input line 877.
+LaTeX Info: Redefining \% on input line 877.
+ [20
 
 ]
 Cap\'{\i }tulo 3.
-[20
+[21
 
 
 ]
-LaTeX Info: Redefining \. on input line 895.
-LaTeX Info: Redefining \% on input line 895.
-LaTeX Info: Redefining \. on input line 895.
-LaTeX Info: Redefining \% on input line 895.
- [21
+LaTeX Info: Redefining \. on input line 919.
+LaTeX Info: Redefining \% on input line 919.
+LaTeX Info: Redefining \. on input line 919.
+LaTeX Info: Redefining \% on input line 919.
+ [22
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 905--907
+Underfull \hbox (badness 10000) in paragraph at lines 929--931
 
  []
 
-LaTeX Info: Redefining \. on input line 933.
-LaTeX Info: Redefining \% on input line 933.
-LaTeX Info: Redefining \. on input line 933.
-LaTeX Info: Redefining \% on input line 933.
-[22
+LaTeX Info: Redefining \. on input line 957.
+LaTeX Info: Redefining \% on input line 957.
+LaTeX Info: Redefining \. on input line 957.
+LaTeX Info: Redefining \% on input line 957.
+[23
 
 ]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 959.
-LaTeX Info: Redefining \. on input line 992.
-LaTeX Info: Redefining \% on input line 992.
-LaTeX Info: Redefining \. on input line 992.
-LaTeX Info: Redefining \% on input line 992.
- [23
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 983.
+LaTeX Info: Redefining \. on input line 1016.
+LaTeX Info: Redefining \% on input line 1016.
+LaTeX Info: Redefining \. on input line 1016.
+LaTeX Info: Redefining \% on input line 1016.
+ [24
 
-] [24
+] [25
 
 ]
 Cap\'{\i }tulo 4.
-[25
+[26
 
 ]
-LaTeX Info: Redefining \. on input line 1043.
-LaTeX Info: Redefining \% on input line 1043.
-LaTeX Info: Redefining \. on input line 1043.
-LaTeX Info: Redefining \% on input line 1043.
- [26
+LaTeX Info: Redefining \. on input line 1067.
+LaTeX Info: Redefining \% on input line 1067.
+LaTeX Info: Redefining \. on input line 1067.
+LaTeX Info: Redefining \% on input line 1067.
+ [27
 
 ]
-LaTeX Info: Redefining \. on input line 1050.
-LaTeX Info: Redefining \% on input line 1050.
-LaTeX Info: Redefining \. on input line 1050.
-LaTeX Info: Redefining \% on input line 1050.
- [27]
-LaTeX Info: Redefining \. on input line 1102.
-LaTeX Info: Redefining \% on input line 1102.
-LaTeX Info: Redefining \. on input line 1102.
-LaTeX Info: Redefining \% on input line 1102.
- [28
+LaTeX Info: Redefining \. on input line 1074.
+LaTeX Info: Redefining \% on input line 1074.
+LaTeX Info: Redefining \. on input line 1074.
+LaTeX Info: Redefining \% on input line 1074.
+ [28]
+LaTeX Info: Redefining \. on input line 1126.
+LaTeX Info: Redefining \% on input line 1126.
+LaTeX Info: Redefining \. on input line 1126.
+LaTeX Info: Redefining \% on input line 1126.
+ [29
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1127--1131
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1155
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1134--1135
+Underfull \hbox (badness 10000) in paragraph at lines 1158--1159
 
  []
 
-LaTeX Info: Redefining \. on input line 1145.
-LaTeX Info: Redefining \% on input line 1145.
-LaTeX Info: Redefining \. on input line 1145.
-LaTeX Info: Redefining \% on input line 1145.
-[29
+LaTeX Info: Redefining \. on input line 1169.
+LaTeX Info: Redefining \% on input line 1169.
+LaTeX Info: Redefining \. on input line 1169.
+LaTeX Info: Redefining \% on input line 1169.
+[30
 
 ]
-LaTeX Info: Redefining \. on input line 1154.
-LaTeX Info: Redefining \% on input line 1154.
-LaTeX Info: Redefining \. on input line 1154.
-LaTeX Info: Redefining \% on input line 1154.
- [30]
-LaTeX Info: Redefining \. on input line 1200.
-LaTeX Info: Redefining \% on input line 1200.
-LaTeX Info: Redefining \. on input line 1200.
-LaTeX Info: Redefining \% on input line 1200.
- [31
-
-]
-LaTeX Info: Redefining \. on input line 1226.
-LaTeX Info: Redefining \% on input line 1226.
-LaTeX Info: Redefining \. on input line 1226.
-LaTeX Info: Redefining \% on input line 1226.
+LaTeX Info: Redefining \. on input line 1178.
+LaTeX Info: Redefining \% on input line 1178.
+LaTeX Info: Redefining \. on input line 1178.
+LaTeX Info: Redefining \% on input line 1178.
+ [31]
+LaTeX Info: Redefining \. on input line 1224.
+LaTeX Info: Redefining \% on input line 1224.
+LaTeX Info: Redefining \. on input line 1224.
+LaTeX Info: Redefining \% on input line 1224.
  [32
 
 ]
-LaTeX Info: Redefining \. on input line 1267.
-LaTeX Info: Redefining \% on input line 1267.
-LaTeX Info: Redefining \. on input line 1267.
-LaTeX Info: Redefining \% on input line 1267.
+LaTeX Info: Redefining \. on input line 1250.
+LaTeX Info: Redefining \% on input line 1250.
+LaTeX Info: Redefining \. on input line 1250.
+LaTeX Info: Redefining \% on input line 1250.
  [33
 
 ]
-LaTeX Info: Redefining \. on input line 1304.
-LaTeX Info: Redefining \% on input line 1304.
-LaTeX Info: Redefining \. on input line 1304.
-LaTeX Info: Redefining \% on input line 1304.
+LaTeX Info: Redefining \. on input line 1291.
+LaTeX Info: Redefining \% on input line 1291.
+LaTeX Info: Redefining \. on input line 1291.
+LaTeX Info: Redefining \% on input line 1291.
  [34
 
 ]
+LaTeX Info: Redefining \. on input line 1328.
+LaTeX Info: Redefining \% on input line 1328.
+LaTeX Info: Redefining \. on input line 1328.
+LaTeX Info: Redefining \% on input line 1328.
+ [35
+
+]
 Cap\'{\i }tulo 5.
-[35
+[36
 
 ]
-LaTeX Info: Redefining \. on input line 1345.
-LaTeX Info: Redefining \% on input line 1345.
-LaTeX Info: Redefining \. on input line 1345.
-LaTeX Info: Redefining \% on input line 1345.
- [36
-
-
-]
-LaTeX Info: Redefining \. on input line 1385.
-LaTeX Info: Redefining \% on input line 1385.
-LaTeX Info: Redefining \. on input line 1385.
-LaTeX Info: Redefining \% on input line 1385.
+LaTeX Info: Redefining \. on input line 1369.
+LaTeX Info: Redefining \% on input line 1369.
+LaTeX Info: Redefining \. on input line 1369.
+LaTeX Info: Redefining \% on input line 1369.
  [37
 
+
 ]
-LaTeX Info: Redefining \. on input line 1414.
-LaTeX Info: Redefining \% on input line 1414.
-LaTeX Info: Redefining \. on input line 1414.
-LaTeX Info: Redefining \% on input line 1414.
+LaTeX Info: Redefining \. on input line 1409.
+LaTeX Info: Redefining \% on input line 1409.
+LaTeX Info: Redefining \. on input line 1409.
+LaTeX Info: Redefining \% on input line 1409.
  [38
 
 ]
-LaTeX Info: Redefining \. on input line 1431.
-LaTeX Info: Redefining \% on input line 1431.
-LaTeX Info: Redefining \. on input line 1431.
-LaTeX Info: Redefining \% on input line 1431.
+LaTeX Info: Redefining \. on input line 1438.
+LaTeX Info: Redefining \% on input line 1438.
+LaTeX Info: Redefining \. on input line 1438.
+LaTeX Info: Redefining \% on input line 1438.
  [39
 
 ]
-LaTeX Info: Redefining \. on input line 1457.
-LaTeX Info: Redefining \% on input line 1457.
-LaTeX Info: Redefining \. on input line 1457.
-LaTeX Info: Redefining \% on input line 1457.
+LaTeX Info: Redefining \. on input line 1455.
+LaTeX Info: Redefining \% on input line 1455.
+LaTeX Info: Redefining \. on input line 1455.
+LaTeX Info: Redefining \% on input line 1455.
  [40
 
 ]
-LaTeX Info: Redefining \. on input line 1479.
-LaTeX Info: Redefining \% on input line 1479.
-LaTeX Info: Redefining \. on input line 1479.
-LaTeX Info: Redefining \% on input line 1479.
+LaTeX Info: Redefining \. on input line 1481.
+LaTeX Info: Redefining \% on input line 1481.
+LaTeX Info: Redefining \. on input line 1481.
+LaTeX Info: Redefining \% on input line 1481.
  [41
 
 ]
-LaTeX Info: Redefining \. on input line 1506.
-LaTeX Info: Redefining \% on input line 1506.
-LaTeX Info: Redefining \. on input line 1506.
-LaTeX Info: Redefining \% on input line 1506.
+LaTeX Info: Redefining \. on input line 1503.
+LaTeX Info: Redefining \% on input line 1503.
+LaTeX Info: Redefining \. on input line 1503.
+LaTeX Info: Redefining \% on input line 1503.
  [42
 
 ]
-LaTeX Info: Redefining \. on input line 1546.
-LaTeX Info: Redefining \% on input line 1546.
-LaTeX Info: Redefining \. on input line 1546.
-LaTeX Info: Redefining \% on input line 1546.
+LaTeX Info: Redefining \. on input line 1530.
+LaTeX Info: Redefining \% on input line 1530.
+LaTeX Info: Redefining \. on input line 1530.
+LaTeX Info: Redefining \% on input line 1530.
  [43
 
 ]
-LaTeX Info: Redefining \. on input line 1579.
-LaTeX Info: Redefining \% on input line 1579.
-LaTeX Info: Redefining \. on input line 1579.
-LaTeX Info: Redefining \% on input line 1579.
+LaTeX Info: Redefining \. on input line 1570.
+LaTeX Info: Redefining \% on input line 1570.
+LaTeX Info: Redefining \. on input line 1570.
+LaTeX Info: Redefining \% on input line 1570.
  [44
 
 ]
-LaTeX Info: Redefining \. on input line 1620.
-LaTeX Info: Redefining \% on input line 1620.
-LaTeX Info: Redefining \. on input line 1620.
-LaTeX Info: Redefining \% on input line 1620.
+LaTeX Info: Redefining \. on input line 1603.
+LaTeX Info: Redefining \% on input line 1603.
+LaTeX Info: Redefining \. on input line 1603.
+LaTeX Info: Redefining \% on input line 1603.
  [45
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 1626--1628
+LaTeX Info: Redefining \. on input line 1644.
+LaTeX Info: Redefining \% on input line 1644.
+LaTeX Info: Redefining \. on input line 1644.
+LaTeX Info: Redefining \% on input line 1644.
+ [46
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 1650--1652
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1629--1630
+Underfull \hbox (badness 10000) in paragraph at lines 1653--1654
 
  []
 
-LaTeX Info: Redefining \. on input line 1661.
-LaTeX Info: Redefining \% on input line 1661.
-LaTeX Info: Redefining \. on input line 1661.
-LaTeX Info: Redefining \% on input line 1661.
-[46
+LaTeX Info: Redefining \. on input line 1685.
+LaTeX Info: Redefining \% on input line 1685.
+LaTeX Info: Redefining \. on input line 1685.
+LaTeX Info: Redefining \% on input line 1685.
+[47
 
 ]
-LaTeX Info: Redefining \. on input line 1694.
-LaTeX Info: Redefining \% on input line 1694.
-LaTeX Info: Redefining \. on input line 1694.
-LaTeX Info: Redefining \% on input line 1694.
- [47
-
-]
-LaTeX Info: Redefining \. on input line 1732.
-LaTeX Info: Redefining \% on input line 1732.
-LaTeX Info: Redefining \. on input line 1732.
-LaTeX Info: Redefining \% on input line 1732.
+LaTeX Info: Redefining \. on input line 1718.
+LaTeX Info: Redefining \% on input line 1718.
+LaTeX Info: Redefining \. on input line 1718.
+LaTeX Info: Redefining \% on input line 1718.
  [48
 
 ]
-LaTeX Info: Redefining \. on input line 1772.
-LaTeX Info: Redefining \% on input line 1772.
-LaTeX Info: Redefining \. on input line 1772.
-LaTeX Info: Redefining \% on input line 1772.
+LaTeX Info: Redefining \. on input line 1756.
+LaTeX Info: Redefining \% on input line 1756.
+LaTeX Info: Redefining \. on input line 1756.
+LaTeX Info: Redefining \% on input line 1756.
  [49
 
 ]
-LaTeX Info: Redefining \. on input line 1789.
-LaTeX Info: Redefining \% on input line 1789.
-LaTeX Info: Redefining \. on input line 1789.
-LaTeX Info: Redefining \% on input line 1789.
+LaTeX Info: Redefining \. on input line 1796.
+LaTeX Info: Redefining \% on input line 1796.
+LaTeX Info: Redefining \. on input line 1796.
+LaTeX Info: Redefining \% on input line 1796.
  [50
 
 ]
@@ -1626,10 +1629,10 @@ LaTeX Info: Redefining \% on input line 1837.
  [52
 
 ]
-LaTeX Info: Redefining \. on input line 1853.
-LaTeX Info: Redefining \% on input line 1853.
-LaTeX Info: Redefining \. on input line 1853.
-LaTeX Info: Redefining \% on input line 1853.
+LaTeX Info: Redefining \. on input line 1861.
+LaTeX Info: Redefining \% on input line 1861.
+LaTeX Info: Redefining \. on input line 1861.
+LaTeX Info: Redefining \% on input line 1861.
  [53
 
 ]
@@ -1640,109 +1643,109 @@ LaTeX Info: Redefining \% on input line 1877.
  [54
 
 ]
-LaTeX Info: Redefining \. on input line 1909.
-LaTeX Info: Redefining \% on input line 1909.
-LaTeX Info: Redefining \. on input line 1909.
-LaTeX Info: Redefining \% on input line 1909.
+LaTeX Info: Redefining \. on input line 1901.
+LaTeX Info: Redefining \% on input line 1901.
+LaTeX Info: Redefining \. on input line 1901.
+LaTeX Info: Redefining \% on input line 1901.
  [55
 
-] [56
+]
+LaTeX Info: Redefining \. on input line 1933.
+LaTeX Info: Redefining \% on input line 1933.
+LaTeX Info: Redefining \. on input line 1933.
+LaTeX Info: Redefining \% on input line 1933.
+ [56
+
+] [57
 
 ]
 Cap\'{\i }tulo 6.
-[57
+[58
 
 ]
-LaTeX Info: Redefining \. on input line 1951.
-LaTeX Info: Redefining \% on input line 1951.
-LaTeX Info: Redefining \. on input line 1951.
-LaTeX Info: Redefining \% on input line 1951.
- [58
-
-]
-LaTeX Info: Redefining \. on input line 1979.
-LaTeX Info: Redefining \% on input line 1979.
-LaTeX Info: Redefining \. on input line 1979.
-LaTeX Info: Redefining \% on input line 1979.
+LaTeX Info: Redefining \. on input line 1975.
+LaTeX Info: Redefining \% on input line 1975.
+LaTeX Info: Redefining \. on input line 1975.
+LaTeX Info: Redefining \% on input line 1975.
  [59
 
 ]
-LaTeX Info: Redefining \. on input line 1995.
-LaTeX Info: Redefining \% on input line 1995.
-LaTeX Info: Redefining \. on input line 1995.
-LaTeX Info: Redefining \% on input line 1995.
+LaTeX Info: Redefining \. on input line 2003.
+LaTeX Info: Redefining \% on input line 2003.
+LaTeX Info: Redefining \. on input line 2003.
+LaTeX Info: Redefining \% on input line 2003.
  [60
 
 ]
-LaTeX Info: Redefining \. on input line 2041.
-LaTeX Info: Redefining \% on input line 2041.
-LaTeX Info: Redefining \. on input line 2041.
-LaTeX Info: Redefining \% on input line 2041.
+LaTeX Info: Redefining \. on input line 2019.
+LaTeX Info: Redefining \% on input line 2019.
+LaTeX Info: Redefining \. on input line 2019.
+LaTeX Info: Redefining \% on input line 2019.
  [61
 
 ]
-LaTeX Info: Redefining \. on input line 2070.
-LaTeX Info: Redefining \% on input line 2070.
-LaTeX Info: Redefining \. on input line 2070.
-LaTeX Info: Redefining \% on input line 2070.
+LaTeX Info: Redefining \. on input line 2065.
+LaTeX Info: Redefining \% on input line 2065.
+LaTeX Info: Redefining \. on input line 2065.
+LaTeX Info: Redefining \% on input line 2065.
  [62
 
 ]
-LaTeX Info: Redefining \. on input line 2093.
-LaTeX Info: Redefining \% on input line 2093.
-LaTeX Info: Redefining \. on input line 2093.
-LaTeX Info: Redefining \% on input line 2093.
+LaTeX Info: Redefining \. on input line 2094.
+LaTeX Info: Redefining \% on input line 2094.
+LaTeX Info: Redefining \. on input line 2094.
+LaTeX Info: Redefining \% on input line 2094.
  [63
 
 ]
-LaTeX Info: Redefining \. on input line 2116.
-LaTeX Info: Redefining \% on input line 2116.
-LaTeX Info: Redefining \. on input line 2116.
-LaTeX Info: Redefining \% on input line 2116.
+LaTeX Info: Redefining \. on input line 2117.
+LaTeX Info: Redefining \% on input line 2117.
+LaTeX Info: Redefining \. on input line 2117.
+LaTeX Info: Redefining \% on input line 2117.
  [64
 
 ]
+LaTeX Info: Redefining \. on input line 2140.
+LaTeX Info: Redefining \% on input line 2140.
+LaTeX Info: Redefining \. on input line 2140.
+LaTeX Info: Redefining \% on input line 2140.
+ [65
+
+]
 Cap\'{\i }tulo 7.
-[65
+[66
 
 ]
-LaTeX Info: Redefining \. on input line 2169.
-LaTeX Info: Redefining \% on input line 2169.
-LaTeX Info: Redefining \. on input line 2169.
-LaTeX Info: Redefining \% on input line 2169.
- [66
-
-]
-LaTeX Info: Redefining \. on input line 2196.
-LaTeX Info: Redefining \% on input line 2196.
-LaTeX Info: Redefining \. on input line 2196.
-LaTeX Info: Redefining \% on input line 2196.
+LaTeX Info: Redefining \. on input line 2193.
+LaTeX Info: Redefining \% on input line 2193.
+LaTeX Info: Redefining \. on input line 2193.
+LaTeX Info: Redefining \% on input line 2193.
  [67
 
 ]
-LaTeX Info: Redefining \. on input line 2246.
-LaTeX Info: Redefining \% on input line 2246.
-LaTeX Info: Redefining \. on input line 2246.
-LaTeX Info: Redefining \% on input line 2246.
+LaTeX Info: Redefining \. on input line 2220.
+LaTeX Info: Redefining \% on input line 2220.
+LaTeX Info: Redefining \. on input line 2220.
+LaTeX Info: Redefining \% on input line 2220.
  [68
 
 ]
-LaTeX Info: Redefining \. on input line 2249.
-LaTeX Info: Redefining \% on input line 2249.
-LaTeX Info: Redefining \. on input line 2249.
-LaTeX Info: Redefining \% on input line 2249.
- [69]
-LaTeX Info: Redefining \. on input line 2263.
-LaTeX Info: Redefining \% on input line 2263.
-LaTeX Info: Redefining \. on input line 2263.
-LaTeX Info: Redefining \% on input line 2263.
- [70
+LaTeX Info: Redefining \. on input line 2270.
+LaTeX Info: Redefining \% on input line 2270.
+LaTeX Info: Redefining \. on input line 2270.
+LaTeX Info: Redefining \% on input line 2270.
+ [69
 
 ]
-LaTeX Info: Redefining \. on input line 2285.
-LaTeX Info: Redefining \% on input line 2285.
-LaTeX Info: Redefining \. on input line 2285.
-LaTeX Info: Redefining \% on input line 2285.
+LaTeX Info: Redefining \. on input line 2273.
+LaTeX Info: Redefining \% on input line 2273.
+LaTeX Info: Redefining \. on input line 2273.
+LaTeX Info: Redefining \% on input line 2273.
+ [70]
+LaTeX Info: Redefining \. on input line 2287.
+LaTeX Info: Redefining \% on input line 2287.
+LaTeX Info: Redefining \. on input line 2287.
+LaTeX Info: Redefining \% on input line 2287.
  [71
 
 ]
@@ -1753,41 +1756,70 @@ LaTeX Info: Redefining \% on input line 2309.
  [72
 
 ]
-LaTeX Info: Redefining \. on input line 2339.
-LaTeX Info: Redefining \% on input line 2339.
-LaTeX Info: Redefining \. on input line 2339.
-LaTeX Info: Redefining \% on input line 2339.
+LaTeX Info: Redefining \. on input line 2333.
+LaTeX Info: Redefining \% on input line 2333.
+LaTeX Info: Redefining \. on input line 2333.
+LaTeX Info: Redefining \% on input line 2333.
  [73
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2362.
-LaTeX Info: Redefining \. on input line 2362.
-LaTeX Info: Redefining \% on input line 2362.
-LaTeX Info: Redefining \. on input line 2362.
-LaTeX Info: Redefining \% on input line 2362.
+LaTeX Info: Redefining \. on input line 2363.
+LaTeX Info: Redefining \% on input line 2363.
+LaTeX Info: Redefining \. on input line 2363.
+LaTeX Info: Redefining \% on input line 2363.
  [74
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2362.
+LaTeX Info: Redefining \. on input line 2391.
+LaTeX Info: Redefining \% on input line 2391.
+LaTeX Info: Redefining \. on input line 2391.
+LaTeX Info: Redefining \% on input line 2391.
+ [75
+
+]
+Cap\'{\i }tulo 8.
+[76
+
+]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2448.
+
+LaTeX Info: Redefining \. on input line 2474.
+LaTeX Info: Redefining \% on input line 2474.
+LaTeX Info: Redefining \. on input line 2474.
+LaTeX Info: Redefining \% on input line 2474.
+ [77
+
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2509.
+LaTeX Info: Redefining \. on input line 2509.
+LaTeX Info: Redefining \% on input line 2509.
+LaTeX Info: Redefining \. on input line 2509.
+LaTeX Info: Redefining \% on input line 2509.
+ [78
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2509.
  (./MatematicasDiscretas.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2362.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2362.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2509.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2509.
 
 Package rerunfilecheck Info: File `MatematicasDiscretas.out' has not changed.
-(rerunfilecheck)             Checksum: 1361B55740448A21E647168DB360FFE8;5356.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2362.
+(rerunfilecheck)             Checksum: EC77D5E8F3D1477109CAFCBAE80530E3;5595.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2509.
  ) 
 Here is how much of TeX's memory you used:
- 19345 strings out of 493014
- 327771 string characters out of 6133351
- 416772 words of memory out of 5000000
- 22400 multiletter control sequences out of 15000+600000
- 27358 words of font info for 70 fonts, out of 8000000 for 9000
+ 19425 strings out of 493014
+ 328868 string characters out of 6133351
+ 417808 words of memory out of 5000000
+ 22463 multiletter control sequences out of 15000+600000
+ 28943 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,13n,52p,10492b,751s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,13n,52p,10490b,757s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{section.0.0} has been referenced but does not exi
 st, replaced by a fixed one
 
@@ -1804,26 +1836,28 @@ al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
 texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive
-/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/201
-6/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/te
-xmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2016/texm
-f-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2016/texmf-
-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2016/texmf-di
-st/fonts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2016/texmf-dist
-/fonts/type1/public/cm-super/sfxc1728.pfb>
-Output written on MatematicasDiscretas.pdf (75 pages, 438881 bytes).
+/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/public/cm-super/sfti1440.pfb></usr/local/texlive/2016/texmf-dist/f
+onts/type1/public/cm-super/sfxc1440.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/public/cm-super/sfxc1728.pfb>
+Output written on MatematicasDiscretas.pdf (79 pages, 480118 bytes).
 PDF statistics:
- 1207 PDF objects out of 1440 (max. 8388607)
- 1094 compressed objects within 11 object streams
- 237 named destinations out of 1000 (max. 500000)
- 617 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1269 PDF objects out of 1440 (max. 8388607)
+ 1149 compressed objects within 12 object streams
+ 247 named destinations out of 1000 (max. 500000)
+ 649 words of extra memory for PDF output out of 10000 (max. 10000000)
 
