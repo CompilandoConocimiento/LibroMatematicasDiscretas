@@ -101,5 +101,12 @@
 \contentsline {section}{\numberline {7.6}Cardinalidad y Funciones}{75}{section.7.6}
 \contentsline {chapter}{\numberline {8}Grupos, Anillos y Campos}{76}{chapter.8}
 \contentsline {section}{\numberline {8.1}Grupo}{77}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Grupo Abeliano}{77}{subsection.8.1.1}
-\contentsline {section}{\numberline {8.2}Anillo}{78}{section.8.2}
+\contentsline {subsection}{\numberline {8.1.1}Definici\IeC {\'o}n Formal}{77}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Ideas}{77}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}Grupo Abeliano}{78}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Ejemplo de un Grupo}{78}{subsection.8.1.4}
+\contentsline {section}{\numberline {8.2}Anillos}{79}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Definici\IeC {\'o}n Formal}{79}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Ideas}{80}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Rng-Pseudo Anillo vs Anillo Unitario}{81}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Anillo Conmutativo}{81}{subsection.8.2.4}

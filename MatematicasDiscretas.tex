@@ -2401,104 +2401,292 @@
             % ==================================
             % =========   FORMAL     ===========
             % ==================================
-            \subsection*{Definición Formal}
+            \subsection{Definición Formal}
 
-                Un grupo es una combinación de tres elementos que van de la mano:
+                Un Grupo es una un tupla $(G, \diamond)$ donde:
+                \begin{Indentation}[1em]
                 \begin{itemize}
-                    \item
-                        \textbf{Conjunto Base:}
-
-                        \begin{SmallIndentation}[1em]
-                            Un conjunto llamado $G$ que no este vacío (daaa!)
-                        \end{SmallIndentation}
-
-
-                    \item
-                        \textbf{Relación Maestra:}
-
-                        \begin{SmallIndentation}[1em]
-                            
-                            Una relación entre $R: (G \times  G) \to G$, es decir,
-                            es una relación que recibe dos elementos de $G$ (o más
-                            específicos un par ordenado) y te regresa un nuevo
-                            elemento de $G$.
-
-                            Vamos a suponer que esta relación tendrá la misma notación
-                            que la multiplicación para que se vea mas normal:
-                            $(a)(b) = c \MiniSpace$ donde $a, b, c \in G$
-
-                            Por lo tanto este grupo será cerrado con respecto a esa
-                            operación.
-
-                            Esta relación tiene que cumplir que sea asociativa, es
-                            decir $\forall a, b, c \in G, \MiniSpace (ab)c = a(bc)$
-
-                        \end{SmallIndentation}
-
+                \small{
                     
+                    \item
+                        \textbf{Conjunto Base: $G$}
+
+                        Un Conjunto llamado $G$ que no este vacío (daaaaa!)
 
                     \item
-                        \textbf{Elemento Identidad para $R$:}
+                        \textbf{Relación Maestra: $\diamond: (G \times  G) \to G$}
 
-                        \begin{SmallIndentation}[1em]
-                            Tendrá que existir un solo elemento llamado $1 \in G$
-                            que cumpla con las siguientes caracteristicas: 
-                            
-                            \begin{itemize}
-                                \item \textbf{Es neutro con respecto a esa operación:}
-                                    $\forall a \in G, \MiniSpace 1a = a1 = a$
-
-                                \item \textbf{Existen inversos:}
-                                    $\forall a \in G, \MiniSpace \exists b \in G, \MiniSpace ab=ba=1$
-                            \end{itemize}
-                        \end{SmallIndentation}
-
+                        Una relación $\diamond: (G \times  G) \to G$, es decir, es una relación
+                        que recibe dos elementos de $G$ (o más específico un par ordenado) y te
+                        regresa un nuevo elemento de $G$.
+                }
                 \end{itemize}
+                \end{Indentation}
+
+
+                Donde esta tupla $(G, \diamond)$ cumple que:
+                \begin{Indentation}[1em]
+                \begin{itemize}
+                \small{
+                    
+                    \item 
+                        \textbf{Ley Asociativa:}
+                        $\forall a, b, c \in G, \MiniSpace
+                            (a \diamond b) \diamond c = a \diamond (b \diamond c)$
+
+                    \item 
+                        \textbf{Existe un Elemento Indentidad:}
+                        $\exists 0 \in G, \MiniSpace
+                            \forall a \in G, \MiniSpace 0 \diamond a = a \diamond 0 = a$
+
+                    \item 
+                        \textbf{Existen Inversos:}
+                        $\forall a \in G, \MiniSpace
+                                \exists b \in G, \MiniSpace
+                                    a \diamond b = b \diamond a = 0$
+
+                }
+                \end{itemize}
+                \end{Indentation}
+
+           
+            % ============================
+            % =====     IDEAS        =====
+            % ============================
+            \subsection{Ideas}
+
+                \begin{itemize}
+                    \item ¿El elemento identidad es único?
+
+                    \begin{SmallIndentation}[1em]
+                        Nunca se dijo en la definición que esto tendría porque ser
+                        así, aunque una vez que lo piensas es muy obvio que es único
+                        pues si $1$ y $1'$ quieren ser la indentidad tendremos que:
+
+                        $1 = 1 \diamond 1' = 1'$
+                    \end{SmallIndentation}
+
+                    \item ¿El elemento inverso es único?
+
+                    \begin{SmallIndentation}[1em]
+                        Nunca se dijo en la definición que esto tendría porque ser
+                        así, aunque una vez que lo piensas es muy obvio que es único
+                        pues si $b$ y $b'$ quieren ser inversos tendremos que:
+
+                        $b = b \diamond 1 = b (a \diamond b') = (b \diamond a) b' = 1 \diamond b' = b'$
+                    \end{SmallIndentation}
+                \end{itemize}
+
 
 
 
             % ==================================
             % =====     GRUPO ABELIANO     =====
             % ==================================
+            \clearpage
             \subsection{Grupo Abeliano}
 
-                Un Grupo Abeliano es aquel grupo donde tenemos que:
+                Un Grupo Abeliano es aquel Grupo $(G, \diamond)$ donde tenemos que:
 
-                $\forall a, b \in G, \MiniSpace ab = ba$
+                $\forall a, b \in G, \MiniSpace a \diamond b = b \diamond a$
 
 
+            % ==================================
+            % =====     EJEMPLO DE GRUPO   =====
+            % ==================================
+            \subsection{Ejemplo de un Grupo}
+
+                Considera $(\Integers, +)$ podemos ver que:
+                \begin{Indentation}[1em]
+                \begin{itemize}
+                \small{
+                    
+                    \item 
+                        \textbf{Ley Asociativa:}
+                        $\forall a, b, c \in \Integers, \MiniSpace (a + b) + c = a + (b + c)$
+
+                    \item 
+                        \textbf{Existe un Elemento Indentidad:}
+                        $\exists 0 \in \Integers, \MiniSpace
+                            \forall a \in \Integers, \MiniSpace 0 + a = a + 0 = a$
+
+                    \item 
+                        \textbf{Existen Inversos:}
+                        $\forall a \in \Integers, \MiniSpace
+                                \exists b \in \Integers, \MiniSpace
+                                    a + b = b + a = 0$
+
+                }
+                \end{itemize}
+                \end{Indentation}
+
+
+
+
+
+ 
 
         % =====================================================
-        % ==========              ANILLOS             =========
+        % ===========            ANILLOS              =========
         % =====================================================
         \clearpage
-        \section{Anillo}
+        \section{Anillos}
 
             % ==================================
             % =========   FORMAL     ===========
             % ==================================
-            \subsection*{Definición Formal}
+            \subsection{Definición Formal}
 
-                Un Anillo es un conjunto $G$ que viene equipado con dos relaciones
-                $R_1$ y $R_2$, (la que me referiré con las notaciones de la suma
-                y la multiplicación).
+                Un Anillo es un Grupo Abeliano con una segunda operación binaria que es Asociativa, 
+                Distributiva sobre el Grupo Abeliano y que contiene una Identidad.
 
-                Donde se cumple que:
-
+                Un Anillo es una un tupla $(G, \diamond, \star)$ donde:
+                \begin{Indentation}[1em]
                 \begin{itemize}
-                    \item \textbf{$G$ es un grupo con respecto a $+$}
+                \small{
+                    
+                    \item
+                        \textbf{Conjunto Base: $G$}
 
-                    \item \textbf{$G$ es un grupo con respecto a $*$}
+                        Un Conjunto llamado $G$ que no este vacío (daaaaa!)
 
                     \item
-                        \textbf{Propiedad Distrivutiva}
-                        
-                        \begin{SmallIndentation}[1em]
-                            Se cumple la propiedad especial en la que:
-                            $\forall a, b, c \in G, \MiniSpace a(b+c)= ab +ac$
-                        \end{SmallIndentation}
+                        \textbf{Relación 1: $\diamond: (G \times  G) \to G$}
+
+                        Una relación $\diamond: (G \times  G) \to G$, es decir, es una relación
+                        que recibe dos elementos de $G$ (o más específico un par ordenado) y te
+                        regresa un nuevo elemento de $G$.
+
+                    \item
+                        \textbf{Relación 2: $\star: (G \times  G) \to G$}
+
+                        Una relación $\star: (G \times  G) \to G$, es decir, es una relación
+                        que recibe dos elementos de $G$ (o más específico un par ordenado) y te
+                        regresa un nuevo elemento de $G$.
+                }
+                \end{itemize}
+                \end{Indentation}
+
+
+                Donde esta tupla $(G, \diamond, \star)$ cumple que:
+                \begin{Indentation}[1em]
+                \begin{itemize}
+                \small{
+                    
+                    \item 
+                        \textbf{Ley Aditiva Asociativa:}
+                        $\forall a, b, c \in G, \MiniSpace
+                            (a \diamond b) \diamond c = a \diamond (b \diamond c)$
+
+                    \item 
+                        \textbf{Elemento Indentidad Aditivo:}
+                        $\exists 0 \in G, \MiniSpace
+                            \forall a \in G, \MiniSpace 0 \diamond a = a \diamond 0 = a$
+
+                    \item 
+                        \textbf{Existen Inversos Aditivos:}
+                        $\forall a \in G, \MiniSpace
+                                \exists b \in G, \MiniSpace
+                                    a \diamond b = b \diamond a = 0$
+
+                    \item 
+                        \textbf{Ley Aditiva Conmutativa:}
+                        $\forall a, b \in G, \MiniSpace a \diamond b = b \diamond a$
+
+
+                    \item 
+                        \textbf{Ley Distributiva:}
+                        $\forall a, b, c \in G, \MiniSpace
+                            a \star (b \diamond c) = (a \star b) \diamond (a \star c) 
+                            \text{ y }
+                            (b \diamond c)\star a = (b\star a) \diamond (c \star a)$
+
+                    \item 
+                        \textbf{Ley Multiplicativa Asociativa:}
+                        $\forall a, b, c \in G, \MiniSpace
+                            (a \star b) \star c = a \star (b \star c)$
+
+                    \item 
+                        \textbf{Elemento Indentidad Multiplicativo:}
+                        $\exists 1 \in G, \MiniSpace
+                            \forall a \in G, \MiniSpace 1 \star a = a \star 1 = a$
+
+                }
+                \end{itemize}
+                \end{Indentation}
+
+
+
+
+            % ============================
+            % =====     IDEAS        =====
+            % ============================
+            \clearpage
+            \subsection{Ideas}
+
+                \begin{itemize}
+                    \item ¿La segunda operación $\star$ tiene que tener una identidad?
+
+                    \begin{SmallIndentation}[1em]
+                        Existe algo de debate en la comunidad científica sobre si un Anillo debería tener
+                        o no una indetidad multiplicativa, así que las siguientes hojas clasificamos
+                        a los anillos en dos dependiendo de esta propiedad, ahora la verdad es que los anillos
+                        que si que tienen una identidad multiplicativa son mucho más interesantes.
+                    \end{SmallIndentation}
+
+                    \item ¿Es cierto que $a \star c = b \star c \to a = b$?
+
+                    \begin{SmallIndentation}[1em]
+                        Esto no es cierto, al menos no siempre, de hecho hay muchos casos donde esto no se
+                        cumple por ejemplo:
+
+                        $2 * 6 \equiv 6 *6 \pmod{8}$ pero $2 \not{\equiv} 6 \pmod{8}$
+
+                        La razón por la que ocurre esto es que hay muchos anillos (como este) en el que no
+                        todos sus elementos tienen inversos multiplicativos.
+
+                    \end{SmallIndentation}
+
 
                 \end{itemize}
+
+
+
+            % ==================================
+            % ====    ANILLO CONMUTATIVO   =====
+            % ==================================
+            \clearpage
+            \subsection{Rng-Pseudo Anillo vs Anillo Unitario}
+
+                \small{
+
+                    \begin{itemize}
+                        \item Si tu Anillo tiene una indentidad multiplicativa entonces se llama
+                            un \textbf{Anillo Unitario}.
+
+                        \item Si tu Anillo NO tiene una indentidad multiplicativa entonces se llama
+                            un \textbf{Pseudo Anillo ó Rng}.
+
+                    \end{itemize}
+                }
+
+
+
+
+            % ==================================
+            % ====    ANILLO CONMUTATIVO   =====
+            % ==================================
+            \subsection{Anillo Conmutativo}
+
+                Un Anillo Conmutativo es aquel Anillo $(G, \diamond, \star)$ donde tenemos que:
+
+                $\forall a, b \in G, \MiniSpace a \star b = b \star a$
+           
+
+
+            
+
+
 
 
 
