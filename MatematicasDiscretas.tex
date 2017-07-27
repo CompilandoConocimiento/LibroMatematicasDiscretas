@@ -2579,6 +2579,11 @@
                             (a \diamond b) \diamond c = a \diamond (b \diamond c)$
 
                     \item 
+                        \textbf{Ley Aditiva Conmutativa:}
+                        $\forall a, b \in G, \MiniSpace a \diamond b = b \diamond a$
+
+
+                    \item 
                         \textbf{Elemento Indentidad Aditivo:}
                         $\exists 0 \in G, \MiniSpace
                             \forall a \in G, \MiniSpace 0 \diamond a = a \diamond 0 = a$
@@ -2589,12 +2594,7 @@
                                 \exists b \in G, \MiniSpace
                                     a \diamond b = b \diamond a = 0$
 
-                    \item 
-                        \textbf{Ley Aditiva Conmutativa:}
-                        $\forall a, b \in G, \MiniSpace a \diamond b = b \diamond a$
-
-
-                    \item 
+                    \item
                         \textbf{Ley Distributiva:}
                         $\forall a, b, c \in G, \MiniSpace
                             a \star (b \diamond c) = (a \star b) \diamond (a \star c) 
@@ -2655,8 +2655,7 @@
             % ==================================
             % ====    ANILLO CONMUTATIVO   =====
             % ==================================
-            \clearpage
-            \subsection{Rng-Pseudo Anillo vs Anillo Unitario}
+            \subsection{Rng ó Pseudo Anillo vs Anillo Unitario}
 
                 \small{
 
@@ -2685,6 +2684,109 @@
 
 
             
+
+        % =====================================================
+        % ===========            CAMPO                =========
+        % =====================================================
+        \clearpage
+        \section{Campo}
+
+            % ==================================
+            % =========   FORMAL     ===========
+            % ==================================
+            \subsection{Definición Formal}
+
+                Un Campo es un Anillo Conmutativo con dos indentidades con respecto a cada operación binaria,
+                donde cualquier elemento que no sea la identidad multiplicativa tiene un inverso multiplicativo.
+
+                Un Campo es una un tupla $(G, \diamond, \star)$ donde:
+                \begin{Indentation}[1em]
+                \begin{itemize}
+                \small{
+                    
+                    \item
+                        \textbf{Conjunto Base: $G$}
+
+                        Un Conjunto llamado $G$ que no este vacío (daaaaa!)
+
+                    \item
+                        \textbf{Relación 1: $\diamond: (G \times  G) \to G$}
+
+                        Una relación $\diamond: (G \times  G) \to G$, es decir, es una relación
+                        que recibe dos elementos de $G$ (o más específico un par ordenado) y te
+                        regresa un nuevo elemento de $G$.
+
+                    \item
+                        \textbf{Relación 2: $\star: (G \times  G) \to G$}
+
+                        Una relación $\star: (G \times  G) \to G$, es decir, es una relación
+                        que recibe dos elementos de $G$ (o más específico un par ordenado) y te
+                        regresa un nuevo elemento de $G$.
+                }
+                \end{itemize}
+                \end{Indentation}
+
+
+                Donde esta tupla $(G, \diamond, \star)$ cumple que:
+                \begin{Indentation}[1em]
+                \begin{itemize}
+                \small{
+                    
+                    \item 
+                        \textbf{Ley Aditiva Asociativa:}
+                        $\forall a, b, c \in G, \MiniSpace
+                            (a \diamond b) \diamond c = a \diamond (b \diamond c)$
+
+                    \item 
+                        \textbf{Ley Aditiva Conmutativa:}
+                        $\forall a, b \in G, \MiniSpace a \diamond b = b \diamond a$
+
+
+                    \item 
+                        \textbf{Elemento Indentidad Aditivo:}
+                        $\exists 0 \in G, \MiniSpace
+                            \forall a \in G, \MiniSpace 0 \diamond a = a \diamond 0 = a$
+
+                    \item 
+                        \textbf{Existen Inversos Aditivos:}
+                        $\forall a \in G, \MiniSpace
+                                \exists b \in G, \MiniSpace
+                                    a \diamond b = b \diamond a = 0$
+
+
+                    \item 
+                        \textbf{Ley Distributiva:}
+                        $\forall a, b, c \in G, \MiniSpace
+                            a \star (b \diamond c) = (a \star b) \diamond (a \star c) 
+                            \text{ y }
+                            (b \diamond c)\star a = (b\star a) \diamond (c \star a)$
+
+                    \item 
+                        \textbf{Ley Multiplicativa Asociativa:}
+                        $\forall a, b, c \in G, \MiniSpace
+                            a \star b = b \star a$
+
+                    \item 
+                        \textbf{Ley Multiplicativa Distributiva:}
+                        $\forall a, b, c \in G, \MiniSpace
+                            (a \star b) \star c = a \star (b \star c)$
+
+                    \item 
+                        \textbf{Elemento Indentidad Multiplicativo:}
+                        $\exists 1 \in G, \MiniSpace
+                            \forall a \in G, \MiniSpace 1 \star a = a \star 1 = a$
+
+                    \item 
+                        \textbf{Existen Inversos Multiplicativos:}
+                        $\forall a \in G - {0}, \MiniSpace
+                                \exists b \in G, \MiniSpace
+                                    a \diamond b = b \diamond a = 1$
+
+                }
+                \end{itemize}
+                \end{Indentation}
+
+
 
 
 

@@ -108,5 +108,7 @@
 \contentsline {section}{\numberline {8.2}Anillos}{79}{section.8.2}
 \contentsline {subsection}{\numberline {8.2.1}Definici\IeC {\'o}n Formal}{79}{subsection.8.2.1}
 \contentsline {subsection}{\numberline {8.2.2}Ideas}{80}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}Rng-Pseudo Anillo vs Anillo Unitario}{81}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}Anillo Conmutativo}{81}{subsection.8.2.4}
+\contentsline {subsection}{\numberline {8.2.3}Rng \IeC {\'o} Pseudo Anillo vs Anillo Unitario}{80}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Anillo Conmutativo}{80}{subsection.8.2.4}
+\contentsline {section}{\numberline {8.3}Campo}{81}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}Definici\IeC {\'o}n Formal}{81}{subsection.8.3.1}
