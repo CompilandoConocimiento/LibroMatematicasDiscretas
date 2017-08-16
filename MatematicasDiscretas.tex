@@ -7,10 +7,11 @@
 % =======         HEADER FOR DOCUMENT        ============
 % =======================================================
     % *********   DOCUMENT ITSELF   **************
-    \documentclass[12pt]{report}                                    %Type of docuemtn and size of font
+    \documentclass[12pt, fleqn]{report}                             %Type of docuemtn and size of font and left eq
     \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
     \usepackage{ifthen}                                             %Allow simple programming
     \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
+    \hypersetup{pageanchor=false}                                   %Solve 'double page 1' warnings in build
     \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
     \author{Oscar Andrés Rosas}                                     %Who I am
 
@@ -22,8 +23,8 @@
     \usepackage{changepage}                                         %Allow us to use identate paragraphs
 
     % *********   MATH AND HIS STYLE  *********
-    \usepackage{amsthm, amssymb, amsfonts, mathrsfs}                %Make math beautiful
-    \usepackage[fleqn]{amsmath}                                     %Please make equations left
+    \usepackage{ntheorem, amsmath, amssymb, amsfonts}               %All fucking math, I want all!
+    \usepackage{mathrsfs, mathtools, empheq}                        %All fucking math, I want all!
     \usepackage{centernot}                                          %Allow me to negate a symbol
     \decimalpoint                                                   %Use decimal point
 
@@ -79,6 +80,9 @@
 
     % =====  GENERAL TEXT  ==========
     \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
+    \newcommand \Over {\overline}                                   %Use: \Bar to use just for short
+    \newcommand \ForceNewLine {$\Space$\\}                          %Use it in theorems for example
+    
     \newenvironment{Indentation}[1][0.75em]                         %Use: \begin{Inde...}[Num]...\end{Inde...}
     {\begin{adjustwidth}{#1}{}}                                     %If you dont put nothing i will use 0.75 em
     {\end{adjustwidth}}                                             %This indentate a paragraph
@@ -90,6 +94,26 @@
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
     \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
     \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
+    \newcommand \Also {\Space \text{y} \Space}                      %Use: \Also so it's look cool
+    \newcommand \Remember[1]{\Space\text{\scriptsize{#1}}}          %Use: \Remember so it's look cool
+
+    \newtheorem{Theorem}{Teorema}[section]                          %Use: \begin{Theorem}[Name]\label{Nombre}...
+    \newtheorem{Corollary}{Colorario}[Theorem]                      %Use: \begin{Corollary}[Name]\label{Nombre}...
+    \newtheorem{Lemma}[Theorem]{Lemma}                              %Use: \begin{Lemma}[Name]\label{Nombre}...
+    \newtheorem{Definition}{Definición}[section]                    %Use: \begin{Definition}[Name]\label{Nombre}...
+
+    \newcommand{\Set}[1]{\left\{ \MiniSpace #1 \MiniSpace \right\}} %Use: \Set {Info}
+    \newcommand{\Brackets}[1]{\left[ #1 \right]}                    %Use: \Brackets {Info} 
+    \newcommand{\Wrap}[1]{\left( #1 \right)}                        %Use: \Wrap {Info} 
+    \newcommand{\pfrac}[2]{\Wrap{\dfrac{#1}{#2}}}                   %Use: Put fractions in parentesis
+
+    \newenvironment{MultiLineEquation}[1]                           %Use: To create MultiLine equations
+        {\begin{equation}\begin{alignedat}{#1}}                     %Use: \begin{Multi..}{Num. de Columnas}
+        {\end{alignedat}\end{equation}}                             %And.. that's it!
+    \newenvironment{MultiLineEquation*}[1]                          %Use: To create MultiLine equations
+        {\begin{equation*}\begin{alignedat}{#1}}                    %Use: \begin{Multi..}{Num. de Columnas}
+        {\end{alignedat}\end{equation*}}                            %And.. that's it!
+
 
     % =====  LOGIC  ==================
     \DeclareMathOperator \doublearrow {\leftrightarrow}             %Use: \doublearrow for a double arrow
@@ -107,6 +131,7 @@
 
     % === LINEAL ALGEBRA & VECTORS ===
     \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
+    \newcommand{\Mag}[1]{\left| #1 \right|}                         %Use: \Mag {Info} 
 
     \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
         \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
@@ -129,7 +154,15 @@
         \array{#1}                                                  %WTF! IS THIS
     }                                                               %WTF! IS THIS
     \makeatother                                                    %WTF! IS THIS
-    \newcommand{\Brackets}[1]{\left[ #1 \right]}                    %Use: \Brackets {Info} 
+
+    % TRIGONOMETRIC FUNCTIONS
+    \newcommand{\Cos}[1]{\cos\Wrap{#1}}
+    \newcommand{\Sin}[1]{\sin\Wrap{#1}}
+
+    % === COMPLEX ANALYSIS ===
+    \newcommand \Cis[1]  {\Cos{#1} + i \Sin{#1}}                    %Use: \Cis for cos(x) + i sin(x)
+    \newcommand \pCis[1] {\Wrap{\Cis{#1}}}                          %Use: \pCis for the same ut parantesis
+    \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same to Brackets
 
 
 
@@ -206,7 +239,6 @@
 
             Así que empecemos por ahí ... ¿Qué son?
 
-
             % =====================================
             % =========   ¿QUE SON?     ===========
             % =====================================
@@ -214,7 +246,7 @@
                 
                 \textbf{Son proposiciones las frases que pueden adquirir un valor de verdadero o falso.}
                 
-                O dicho de manera formal:
+                O dicho de manera más formal:
 
                 \textbf{Es una oración aseverativa de la que tiene sentido decir que es verdadera o falsa}.\\
 
