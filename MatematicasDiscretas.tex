@@ -1399,7 +1399,7 @@
             % ======    SUBCONJUNTOS    =======
             % =================================
             \clearpage
-            \subsection{Subconjuntos}
+            \subsection{Subconjuntos $A \subseteq B$}
 
                 Esta es la relación mas importante siento yo, porque será la que mas ocupemos a lo largo
                 del tiempo.
@@ -1409,7 +1409,8 @@
 
                 \subsubsection{Definición}
 
-                    Una forma más formal de definirlo es que $x \in A \to x \in B$
+                    Podemos definir $A \subseteq B$ como forma más formal de definirlo es
+                    que $\forall x \in A \to x \in B$ ó $\forall x \in A, x \in B$.
 
                     Esta idea es muy inteligente, pues nos dice que un el hecho de que
                     un elemento pertenezca a A infiere o nos obliga a que ese mismo
@@ -1423,7 +1424,8 @@
                         \item $A \subseteq A$
                         \item Si $A = B$, entonces $A \subseteq B$
                         \item Todos los conjuntos son subconjuntos de conjunto universo $U$
-                        \item $\emptyset$ es un subconjunto de cualquier conjunto
+                        \item $\emptyset \subseteq A$
+                        \item Si $A \subseteq B$ y $B \subseteq C$ entonces $A \subseteq C$
                     \end{itemize}
 
                 \subsubsection{SubConjuntos Propios}
@@ -1463,6 +1465,23 @@
                 Esta operación basicamente nos da un conjunto en el que estan \textbf{solo} los elementos
                 que bien pertenezcan a A y también que pertenezcan a B.
 
+                % =================================
+                % ======   PROPIEDADES      =======
+                % =================================
+                \subsubsection{Propiedades}
+
+                    \begin{itemize}
+                        \item $A \cap A = A$
+
+                        \item $A \cap B = B \cap A$
+
+                        \item $A \cap B \subseteq A$
+
+                        \item $A \cap \emptyset = \emptyset$
+
+                        \item $A \cap (B \cap C) = (A \cap B) \cap C$
+                    \end{itemize}
+
 
             % =================================
             % ======        UNION       =======
@@ -1479,6 +1498,19 @@
 
                 Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
                 que bien pertenezcan a A o bien que pertenezcan a B.
+
+                % =================================
+                % ======   PROPIEDADES      =======
+                % =================================
+                \subsubsection{Propiedades}
+
+                    \begin{itemize}
+                        \item $A \subseteq A \cup B$
+
+                        \item $A \cup B = A$ si y solo si $B \subseteq A$
+                        
+                        \item Si $A \subseteq B$ y $B \subseteq C$ entonces $A \subseteq C$
+                    \end{itemize}
 
 
             % =================================
