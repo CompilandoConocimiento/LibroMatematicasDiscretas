@@ -94,7 +94,7 @@
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
     \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
     \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
-    \newcommand \Also {\Space \text{y} \Space}                      %Use: \Also so it's look cool
+    \newcommand \Also {\MiniSpace \text{y} \MiniSpace}              %Use: \Also so it's look cool
     \newcommand \Remember[1]{\Space\text{\scriptsize{#1}}}          %Use: \Remember so it's look cool
 
     \newtheorem{Theorem}{Teorema}[section]                          %Use: \begin{Theorem}[Name]\label{Nombre}...
@@ -1087,15 +1087,15 @@
 
                 \begin{itemize}
                     \item $\Naturals$ : Representa al conjunto de todos los naturales, ya sabes
-                            números como \\$1, 2, 3, \cdots$
+                            números como $1, 2, 3, \cdots$
                     \item $\Integers$ : Representa al conjunto de todos los enteros, ya sabes
-                            números como \\$\cdots, -1, 0, 1, \cdots$
+                            números como $\cdots, -1, 0, 1, \cdots$
                     \item $\Racionals$ : Representa al conjunto de todos los racionales, ya sabes
-                            números como \\$\frac{1}{1}, \frac{1}{2}, \frac{23}{72}, \cdots$
+                            números como $\frac{1}{1}, \frac{1}{2}, \frac{23}{72}, \cdots$
                     \item $\Reals$ : Representa al conjunto de todos los reales, ya sabes
-                            números como \\$\frac{3}{2}, -\pi, 3, \cdots$
+                            números como $\frac{3}{2}, -\pi, 3, \cdots$
                     \item $\Complexs$ : Representa al conjunto de todos los complejos, ya sabes
-                            números como \\$3 + 2i, \pi i, 3, \cdots$
+                            números como $3 + 2i, \pi i, 3, \cdots$
                 \end{itemize}
 
                 
@@ -1168,10 +1168,10 @@
                     Lo primero que hacemos es elegir una letra minúscula (de forma normal, no es ninguna regla)
                     que representará a cualquier elemento al azar del conjunto, por ejemplo usemos la $x$.
 
-                    También solemos usar la línea vertical, de esta forma: $P_1 | P_2$ que se lee como: 
+                    También solemos usar la línea vertical, de esta forma: $P_1 \Such P_2$ que se lee como: 
                     $P_1$ tal que $P_2$.  
 
-                    \subsubsection*{Formas Básica}
+                    \subsection*{Formas Básica}
 
                         Ahora si, veamos como se ve esta notación:
                         \begin{equation}   
@@ -1193,7 +1193,7 @@
                         y $x$ es menor que 4.
 
 
-                    \subsubsection*{Formas Alternas}
+                    \subsection*{Formas Alternas}
                     
                         También es común ver la característica que pertenece a cierto conjunto mayor
                         antes de la línea vertical.
@@ -1289,32 +1289,57 @@
 
             De hecho, me gusta, hablemos de el Conjunto vacío como un caja vacía.
 
-            \subsubsection*{Definición}
-            Llamemos $\phi$ como aquel conjunto tal que $\phi = \{ \}$ es decir el conjunto que no
-            tiene elementos.
+            % =================================
+            % ========   DEFINICION    ========
+            % =================================
+            \subsection*{Definición}
 
-            Solemos usar este simbolo por su parecido con un cero, pero recuerda no es un cero, simplemente
-            es una forma de denotar al conjunto vacío.
+                Llamemos $\phi$ como aquel conjunto tal que $\phi = \{ \}$ es decir el conjunto que no
+                tiene elementos.
 
-            \subsubsection*{Ideas Importantes}
-            Listo, eso es casí todo, además te gustará que te recuerde las siguientes
-            proposiciones:
+                Solemos usar este símbolo por su parecido con un cero, pero recuerda no es un cero,
+                simplemente
+                es una forma de denotar al conjunto vacío.
 
-            \begin{itemize}
-                \item $|\phi| = 0$ : 
-                        Esto quiere decir que la cardinalidad \emph{(es decir
-                        la cantidad de elementos)} del conjunto vacío es la misma que 
-                        la cantidad de galletas en una caja vacía de galletas, osea 0.
 
-                \item $\phi \neq \{\phi\}$: 
-                        Esto quiere decir que no es lo mismo hablar del conjunto
-                        vacío que de hablar de un conjunto cualquiera que contiene al
-                        conjunto vacío.
+            % =================================
+            % ====   IDEAS IMPORTANTES    =====
+            % =================================
+            \subsection{Ideas Importantes}
 
-                        Es decir simplemente no es lo mismo tener una caja vacía que una caja
-                        con una caja vacía dentro \emph{(si lo piensas la segunda caja ya 
-                        no esta completamente vacía)}
-            \end{itemize}
+                Listo, eso es casí todo, además te gustará que te recuerde las siguientes
+                proposiciones:
+
+                \begin{itemize}
+                    \item $|\phi| = 0$
+
+                            Esto quiere decir que la cardinalidad \emph{(es decir
+                            la cantidad de elementos)} del conjunto vacío es la misma que 
+                            la cantidad de galletas en una caja vacía de galletas, osea 0.
+
+                    \item $\phi \neq \{\phi\}$
+
+                            Esto quiere decir que no es lo mismo hablar del conjunto
+                            vacío que de hablar de un conjunto cualquiera que contiene al
+                            conjunto vacío.
+
+                            Es decir simplemente no es lo mismo tener una caja vacía que una caja
+                            con una caja vacía dentro \emph{(si lo piensas la segunda caja ya 
+                            no esta completamente vacía)}
+                \end{itemize}
+
+
+            % =================================
+            % ========   VACUIDAD      ========
+            % =================================
+            \subsection{Demostrar que un Conjunto es el vacío}
+
+                Para demostrar que un conjunto esta vacío basta con tomar
+                un elemento arbitrario del conjunto y llegas a una contradicción.
+
+                Por lo tanto comcluyes que no puede existir ningún elemento.
+
+                Esto se conoce como demostración por vacuidad.
 
 
         % =====================================================
@@ -1330,25 +1355,28 @@
 
             Muchas veces a la hora de hablar sobre conjuntos solemos definirlos sobre un universo.
 
-            Podemos ver muchaS analogías, veamos a ver cual te gusta más:
+            Podemos ver muchas analogías, veamos a ver cual te gusta más:
 
             \begin{itemize}
                 \item Es como si el universo fuera el padre, entonces las hijas son nuestros conjuntos
-                \item Es como si el universo una caja de cereal, entonces nuestros conjuntos son grupos de cereales
-                    que estaban dentro de la caja.
+                \item Es como si el universo una caja de cereal, entonces nuestros conjuntos son grupos
+                    de cerealesque estaban dentro de la caja.
             \end{itemize}
 
 
-            \subsubsection*{Definición}
-            Un conjunto universo es aquel conjunto que contiene a cualquier conjunto del que estemos hablando.
+            \subsection*{Definición}
+                Un conjunto universo es aquel conjunto que contiene a cualquier conjunto del que estemos
+                hablando.
 
 
-            \subsubsection*{Ideas Importantes}
-            Creo que resulta bastante obvio pero aquí hay algunas cosas que quizá te interesen.
-            \begin{itemize}
-                \item $\phi^C = U$
-                \item $U^C = \phi$
-            \end{itemize}
+            \subsection{Ideas Importantes}
+                Creo que resulta bastante obvio pero aquí hay algunas cosas que quizá te interesen.
+                \begin{itemize}
+                    \item $\phi^C = U$
+                    \item $U^C = \phi$
+                \end{itemize}
+
+
 
 
 
@@ -1360,265 +1388,333 @@
     \chapter{Álgebra y Operaciones}
         \clearpage
 
+        % ===================================================
+        % ================    EQUIVALENCIA    ===============
+        % ===================================================
+        \section{Equivalencia}
 
-        % =====================================================
-        % ============        RELACIONES               ========
-        % =====================================================
+            Creo que esta relación es más que obvia, tanto que ya la he usado sin darme cuenta
+            porque considero que es de lo más obvio.
+
+            Que dos conjuntos sea iguales quiere decir que ambos conjuntos contiene
+            \textbf{exactamente} los mismos elementos.
+            \begin{equation}
+                \text{Decimos que }
+                A = B 
+                \text{ si y solo si }
+                (\forall a \in A, a \in B) \;\text{y}\; (\forall b \in B, b \in A)
+            \end{equation}
+
+            Ve entonces que ahora tiene mucho sentido las ideas que puse antes:
+
+            \begin{itemize}
+                \item Los elementos repetidos no cuentan, si ya esta un elemento dentro del
+                    conjunto, da lo mismo que lo vuelvas a enumerar.\\
+                    $A = \{a, e, i, o, u\} = \{a, a, e, i, o, u\}$
+
+                \item No importa el orden en el me muestres los elementos,
+                    solo importa que esten dentro.\\
+                    $A = \{a, e, i, o, u\} = \{u, a, i, e, o\}$
+            \end{itemize}
+
+
+        % ================================================
+        % ==============    SUBCONJUNTOS    ==============
+        % ================================================
         \clearpage
-        \section{Relaciones}
+        \section{Subconjuntos}
 
-            Es muy importante que ademas de hablar de los conjuntos hablemos de las relaciones
-            que existen entre los dos conjuntos.
+            Esta es la relación mas importante siento yo, porque será la que mas ocupemos a lo largo
+            del tiempo.
+
+            Que el A sea un subconjunto de B quiere decir que \textbf{todos} los elementos de A
+            también son elementos de B.
 
 
             % =================================
-            % ======    EQUIVALENCIA    =======
+            % ========   DEFINICION    ========
             % =================================
-            \subsection{Equivalencia}
+            \subsection*{Definición}
 
-                Creo que esta relación es más que obvia, tanto que ya la he usado sin darme cuenta
-                porque considero que es de lo más obvio.
+                Podemos definir de la siguiente manera:
 
-                Que dos conjuntos sea iguales quiere decir que ambos conjuntos contiene \textbf{exactamente}
-                los mismos elementos.
+                \begin{equation}
+                    \text{Decimos que }
+                    A \subseteq B 
+                    \text{ si y solo si }
+                    \forall a \in A \longto a \in B
+                \end{equation}
 
-                Ve entonces que ahora tiene mucho sentido las ideas que puse antes:
+                Esta idea es muy inteligente, pues nos dice que un el hecho de que
+                un elemento pertenezca a A infiere o nos obliga a que ese mismo
+                elemento pertenezca a B.
 
+            % =================================
+            % ====  SUBCONJUNTOS PROPIOS   ====
+            % =================================
+            \subsection{SubConjuntos Propios}
+
+                Solemos usar la idea de un subconjunto propio $A \subset B$ si es que sabemos ya que:
+                $A \subseteq B$ y $A \neq B$
+
+
+            % =================================
+            % ====   DOBLE CONTENCIÓN      ====
+            % =================================
+            \subsection{Demostrar la Equivalencia de 2 Conjuntos}
+
+                Para demostrar que dos conjuntos son iguales podemos usar la idea de
+                demostrar que $(A \subseteq B ) \Also (B \subseteq A)$.
+
+                Conocido como doble contención entre los matemáticos.
+
+
+            % =================================
+            % ====   IDEAS IMPORTANTES     ====
+            % =================================
+            \clearpage
+            \subsection{Ideas Imporantes}
+
+                Algunas proposiciones muy obvias son que:
                 \begin{itemize}
-                    \item Los elementos repetidos no cuentan, si ya esta un elemento dentro del
-                        conjunto, da lo mismo que lo vuelvas a enumerar.\\
-                        $A = \{a, e, i, o, u\} = \{a, a, e, i, o, u\}$
-
-                    \item No importa el orden en el me muestres los elementos,
-                        solo importa que esten dentro.\\
-                        $A = \{a, e, i, o, u\} = \{u, a, i, e, o\}$
+                    \item $A \subseteq A$
+                    \item Si $A = B$, entonces $A \subseteq B$
+                    \item Todos los conjuntos son subconjuntos de conjunto universo $U$
+                    \item $\emptyset \subseteq A$
+                    \item Si $A \subseteq B$ y $B \subseteq C$ entonces $A \subseteq C$
+                    \item $(A \cap C) \subseteq (B \cap C)$
+                    \item $(A \cup C) \subseteq (B \cup C)$
+                    \item Si $A \subseteq B$ y $A \subseteq C$ entonces $A \subseteq (B \cap C)$
+                    \item Si $A \subseteq C$ y $B \subseteq C$ entonces $(A \cup B) \subseteq C$
                 \end{itemize}
 
 
-            % =================================
-            % ======    SUBCONJUNTOS    =======
-            % =================================
-            \clearpage
-            \subsection{Subconjuntos $A \subseteq B$}
-
-                Esta es la relación mas importante siento yo, porque será la que mas ocupemos a lo largo
-                del tiempo.
-
-                Que el A sea un subconjunto de B quiere decir que \textbf{todos} los elementos de A
-                también son elementos de B.
-
-                \subsubsection{Definición}
-
-                    Podemos definir $A \subseteq B$ como forma más formal de definirlo es
-                    que $\forall x \in A \to x \in B$ ó $\forall x \in A, x \in B$.
-
-                    Esta idea es muy inteligente, pues nos dice que un el hecho de que
-                    un elemento pertenezca a A infiere o nos obliga a que ese mismo
-                    elemento pertenezca a B.
 
 
-                \subsubsection{Proposiciones}
-
-                    Algunas proposiciones muy obvias son que:
-                    \begin{itemize}
-                        \item $A \subseteq A$
-                        \item Si $A = B$, entonces $A \subseteq B$
-                        \item Todos los conjuntos son subconjuntos de conjunto universo $U$
-                        \item $\emptyset \subseteq A$
-                        \item Si $A \subseteq B$ y $B \subseteq C$ entonces $A \subseteq C$
-                    \end{itemize}
-
-                \subsubsection{SubConjuntos Propios}
-
-                    Solemos usar la idea de un subconjunto propio $A \subset B$ si es que sabemos ya que:
-                    $A \subseteq B$ y $A \neq B$
 
 
 
 
 
         % =====================================================
-        % ============           OPERACIONES           ========
+        % ============           INTERSECCION           =======
         % =====================================================
         \clearpage
-        \section{Operaciones}
+        \section{Intersección}
 
-            Podemos hacer operaciones con los conjuntos de una manera muy similiar a como hacemos
-            operaciones con los números normales, tu defines una operación, y la haces entre dos conjuntos
-            y esta te dará un nuevo conjunto,  pero aquí siento que son incluso más divertidas.
+            Lo mejor de dos mundos, veamos como seleccionar a los elementos en común con operaciones
+            de conjuntos.
 
-            Te presentaré estas operaciones una a una y te mostraré con mas detalle cada una, así 
-            que vamos, empecemos:
+            \begin{equation}
+                A \cap B = \{ x \Such x \in A \Also x \in B \}
+            \end{equation}
+
+            Esta operación basicamente nos da un conjunto en el que estan \textbf{solo} los elementos
+            que bien pertenezcan a A \textbf{y también} que pertenezcan a B.
 
             % =================================
-            % ======    INTERSECCION    =======
+            % ======   PROPIEDADES      =======
             % =================================
-            \subsection{Intersección}
+            \subsection{Ideas Importantes}
 
-                Lo mejor de dos mundos, veamos como seleccionar a los elementos en común con operaciones
-                de conjuntos.
+                \begin{itemize}
+                    \item $A \cap A = A$
+
+                    \item $A \cap B = B \cap A$
+
+                    \item $A \cap B \subseteq A$
+
+                    \item $A \cap \emptyset = \emptyset$
+
+                    \item $A \cap (B \cap C) = (A \cap B) \cap C$
+                \end{itemize}
+
+
+        % =====================================================
+        % ============           UNION           ==============
+        % =====================================================
+        \clearpage
+        \section{Unión}
+
+            La unión representa la fuerza, así que veamos que representa la unión cuando estemos
+            hablando de conjuntos.
+
+            \begin{equation}
+                A \cup B = \{ x \Such x \in A \text{ ó bien } x \in B \}
+            \end{equation}
+
+            Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+            que bien pertenezcan a A \textbf{o bien} que pertenezcan a B.
+
+            % =================================
+            % ======   PROPIEDADES      =======
+            % =================================
+            \subsection{Ideas Importantes}
+
+                \begin{itemize}
+                    \item $A \subseteq A \cup B$
+
+                    \item $A \cup B = A$ si y solo si $B \subseteq A$
+                \end{itemize}
+
+
+
+
+        % =====================================================
+        % ============           RESTA           ==============
+        % =====================================================
+        \clearpage
+        \section{Resta o Diferencia}
+
+            No quiero nada que ver contigo, así que veamos que representa la resta cuando estemos
+            hablando de conjuntos.
+
+            \begin{equation}
+                A - B = A \char`\\ B = \{ x \Such x \in A \Also  x \notin B \}
+            \end{equation}
+
+            Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+            de A que no pertenezcen a B.
+
+            A esta operación también se la conoce como complemento relativo.
+
+            % =================================
+            % ======   PROPIEDADES      =======
+            % =================================
+            \subsection{Ideas Importantes}
+
+                \begin{itemize}
+                    \item $A - B = A \cap B^C$
+
+                    \item $A - (B \cup C) = (A - B) \cap (A - C)$
+
+                    \item $A - (B \cap C) = (A - B) \cup (A - C)$
+
+                \end{itemize}
+
+
+
+
+        % =====================================================
+        % ===============    DIFERENCIA SIMETRICA   ===========
+        % =====================================================
+        \clearpage
+        \section{Diferencia Simétrica}
+
+            El XOR de los conjuntos, así que veamos que representa la diferencia simétrica cuando estemos
+            hablando de conjuntos.
+
+            \begin{equation}
+                A \Delta B = \{ x \Such x \in A \cup B \Also  x \notin A \cap B \}
+            \end{equation}
+
+            Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+            que pertenezcen a $A$ y a $B$, pero no a ambos.
+
+            % =================================
+            % ======   PROPIEDADES      =======
+            % =================================
+            \subsection{Ideas Importantes}
+
+                \begin{itemize}
+                    \item $A \Delta B = (A \cup B) - ( A \cap B)$
+
+                    \item $A \Delta B = (A - B) \cup ( B - A)$
+
+                \end{itemize}
+
+            De hecho de la útima proposición sale su nombre, es una diferencia simétrica.
+
+
+
+
+        % =====================================================
+        % ===============       COMPLEMENTO         ===========
+        % =====================================================
+        \clearpage
+        \section{Complemento}
+
+            Todo lo que no seas tu, así que veamos que representa el complemento cuando estemos
+            hablando de conjuntos.
+
+            \begin{equation}
+                A^C = \overline A = \{ x \in U \Such x \notin A \}
+            \end{equation}
+
+            Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
+            que no pertenezcen a A.
+
+            También hay otra forma de definirlo como $A^C = U - A$
+
+            \subsection{Conjunto Universo}
+                Si lo piensas detenidamente, aquí hay un problema y es que no te dije que es $U$, este
+                representa el conjunto universo, es decir, es aquel conjunto que del que todos los demás
+                son subconjuntos.
+
+                Es importantes especificar cual es tu conjunto universo.
+
+
+            % =================================
+            % ======   PROPIEDADES      =======
+            % =================================
+            \subsection{Ideas Importantes}
+
+                \begin{itemize}
+                    \item $(A \cup B)^C = A^C \cap B^C$
+
+                    \item $(A \cap B)^C = A^C \cup B^C$
+
+                    \item $(A^C)^C$
+
+                    \item $A \cap A^C = \emptyset$
+
+                    \item $(A - B) \cap B = \emptyset$
+
+                \end{itemize}
+
+
+
+        % =====================================================
+        % ==========   PRODUCTO CARTESIANO          ===========
+        % =====================================================
+        \clearpage
+        \section{Producto Cartesiano}
+
+            Esta es la base de lo que se conoce como es plano cartesiano, y es quizá
+            la operación mas útil que vas a conocer a lo largo de estos textos,
+            veamos específicamente porque:
+
+
+            % ====================================
+            % ==========   N - TUPLAS  ===========
+            % ====================================
+            \subsection{N-Tuplas}
+
+                El resultado de un producto cartesiano es un conjunto formado de n-tuplas,
+                cada n-tuplas es una agrupación ordenada de elementos.
+                Por ejemplo $(a,b)$ ó $(x,y,z)$.
+
+                Al ser un ente ordenado $(a,b) \neq (b,a)$
+
+                La n en su nombre solo nos dice la cantidad de elementos que tiene cada tupla.
+
+            % ====================================
+            % ==========   DEFINICION  ===========
+            % ====================================
+            \subsection*{Definición}
+
+                Esta operación basicamente nos da un conjunto en el que estan \textbf{todas} las n-tuplas
+                donde su primer elemento pertenece a $A$ y su segundo elemento pertenece a $B$.
 
                 \begin{equation}
-                    A \cap B = \{ x \Such x \in A \text{ y también } x \in B \}
+                    A \times B = \{ (a, b) \Such a \in A \text{ y también } b \in B \}
                 \end{equation}
 
-                Esta operación basicamente nos da un conjunto en el que estan \textbf{solo} los elementos
-                que bien pertenezcan a A y también que pertenezcan a B.
 
-                % =================================
-                % ======   PROPIEDADES      =======
-                % =================================
-                \subsubsection{Propiedades}
-
-                    \begin{itemize}
-                        \item $A \cap A = A$
-
-                        \item $A \cap B = B \cap A$
-
-                        \item $A \cap B \subseteq A$
-
-                        \item $A \cap \emptyset = \emptyset$
-
-                        \item $A \cap (B \cap C) = (A \cap B) \cap C$
-                    \end{itemize}
-
-
-            % =================================
-            % ======        UNION       =======
-            % =================================
-            \clearpage
-            \subsection{Unión}
-
-                La unión representa la fuerza, así que veamos que representa la unión cuando estemos
-                hablando de conjuntos.
-
-                \begin{equation}
-                    A \cup B = \{ x \Such x \in A \text{ ó bien } x \in B \}
-                \end{equation}
-
-                Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
-                que bien pertenezcan a A o bien que pertenezcan a B.
-
-                % =================================
-                % ======   PROPIEDADES      =======
-                % =================================
-                \subsubsection{Propiedades}
-
-                    \begin{itemize}
-                        \item $A \subseteq A \cup B$
-
-                        \item $A \cup B = A$ si y solo si $B \subseteq A$
-                        
-                        \item Si $A \subseteq B$ y $B \subseteq C$ entonces $A \subseteq C$
-                    \end{itemize}
-
-
-            % =================================
-            % ======   COMPLEMENTO      =======
-            % =================================
-            \clearpage
-            \subsection{Complemento}
-
-                Todo lo que no seas tu, así que veamos que representa el complemento cuando estemos
-                hablando de conjuntos.
-
-                \begin{equation}
-                    A^C = \overline A = \{ x \in U \Such x \notin A \}
-                \end{equation}
-
-                Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
-                que no pertenezcen a A.
-
-                También hay otra forma de definirlo como $A^C = U - A$
-
-                \subsubsection{Conjunto Universo}
-                    Si lo piensas detenidamente, aquí hay un problema y es que no te dije que es $U$, este
-                    representa el conjunto universo, es decir, es aquel conjunto que del que todos los demás
-                    son subconjuntos.
-
-                    Es importantes especificar cual es tu conjunto universo.
-
-
-            % =================================
-            % ======      RESTA         =======
-            % =================================
-            \clearpage
-            \subsection{Resta}
-
-                No quiero nada que ver contigo, así que veamos que representa la resta cuando estemos
-                hablando de conjuntos.
-
-                \begin{equation}
-                    A - B = A \char`\\ B = \{ x \Such x \in A \text{ y también }  x \notin B \}
-                \end{equation}
-
-                Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
-                de A que no pertenezcen a B.
-
-                A esta operación también se la conoce como complemento relativo.
-
-                También hay otra forma de definirlo como $A - B = A \cap B^C$
-
-
-
-            % =================================
-            % ==    DIFERENCIA SIMETRICA   ====
-            % =================================
-            \clearpage
-            \subsection{Diferencia Simétrica}
-
-                El XOR de los conjuntos, así que veamos que representa la diferencia simétrica cuando estemos
-                hablando de conjuntos.
-
-                \begin{equation}
-                    A \Delta B = \{ x \Such x \in A \cup B \text{ y también }  x \notin A \cap B \}
-                \end{equation}
-
-                Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los elementos
-                que pertenezcen a $A$ y a $B$, pero no a ambos.
-
-                Ve que de la definición se tiene que:
-                \begin{equation*}
-                \begin{split}
-                    A \Delta B &= (A \cup B) - ( A \cap B) \\
-                    A \Delta B &= (A - B) \cup ( B - A)
-                \end{split}
-                \end{equation*}
-
-                De hecho de la útima proposición sale su nombre, es una diferencia simétrica.
-
-
-            % =================================
-            % ==    PRODUCTO CARTESIANO    ====
-            % =================================
-            \clearpage
-            \subsection{Producto Cartesiano}
-
-                Esta es la base de lo que se conoce como es plano cartesiano, y es quizá
-                la operación mas útil que vas a conocer a lo largo de estos textos,
-                veamos específicamente porque:
-
-                \subsubsection*{N-Tuplas}
-
-                    El resultado de un producto cartesiano es un conjunto formado de n-tuplas,
-                    cada n-tuplas es una agrupación ordenada de elementos.
-                    Por ejemplo $(a,b)$ ó $(x,y,z)$.
-
-                    Al ser un ente ordenado $(a,b) \neq (b,a)$
-
-                    La n en su nombre solo nos dice la cantidad de elementos que tiene cada tupla.
-
-
-                \subsubsection*{Definición}
-
-                    Esta operación basicamente nos da un conjunto en el que estan \textbf{todas} las n-tuplas
-                    donde su primer elemento pertenece a $A$ y su segundo elemento pertenece a $B$.
-
-                    \begin{equation}
-                        A \times B = \{ (a, b) \Such a \in A \text{ y también } b \in B \}
-                    \end{equation}
-
-                \subsubsection*{Ideas Importantes}
+            % ====================================
+            % =======   IDEAS IMPORTANTES ========
+            % ====================================
+            \subsection{Ideas Importantes}
 
                 \begin{itemize}
                     \item Ve que de la definición se tiene que $ A \times B \neq B \times A$
@@ -1628,64 +1724,77 @@
                     \item Un elemento de $A \times B \times C$ es $((a,b),c) = (a,(b,c)) = (a,b,c)$
                 \end{itemize}
 
-                % ====================
-                % ==    EJEMPLOS  ====
-                % ====================
-                \clearpage
-                \subsection*{Ejemplo}
-
-                    Podemos hacer uso de una tabla para encontrar todos los elementos del producto
-                    cartesiano.
-
-                    Veamos por ejemplo $A = \{a, b, c\}$ y $B = \{ x, y, z\}$
-
-                    \begin{tabular}{r ||c |c | c  }
-                       $A \times B$ & $x$ & $y$ & $z$ \\
-                       \midrule
-                      
-                       $a$ &  $(a, x)$  &  $(a, y)$  &  $(a, z)$  \\
-                       $b$ &  $(b, x)$  &  $(b, y)$  &  $(b, z)$  \\
-                       $c$ &  $(c, x)$  &  $(c, y)$  &  $(c, z)$  \\
-                     
-                    \end{tabular}
-
-                    Entonces : 
-                    \begin{equation*}
-                        A \times B = 
-                        \{
-                            (a, x) , (a, y) , (a, z) ,
-                            (b, x) , (b, y) , (b, z) ,
-                            (c, x) , (c, y) , (c, z) 
-                        \}
-                    \end{equation*}
 
 
-
-            % =================================
-            % ==    CONJUNTO POTENCIA      ====
-            % =================================
+            % ============================
+            % ====    EJEMPLOS  ==========
+            % ============================
             \clearpage
-            \subsection{Conjunto Potencia}
+            \subsection*{Ejemplo}
 
-                El conjunto que contiene a todos los subconjuntos posibles. 
+                Podemos hacer uso de una tabla para encontrar todos los elementos del producto
+                cartesiano.
 
-                Esta operación es diferente en el sentido de que no toma sus elementos del conjunto
-                que toma como entrada, sino que usa esos elementos para combinarlos y crear subconjuntos
-                que son los elementos de esta nueva operación.
+                Veamos por ejemplo $A = \{a, b, c\}$ y $B = \{ x, y, z\}$
 
-                Ok, ok, quizá me puse muy intenso con el párrafo de arriba, veamos un poco más calmado
-                como es que funciona.
+                \begin{tabular}{r ||c |c | c  }
+                   $A \times B$ & $x$ & $y$ & $z$ \\
+                   \midrule
+                  
+                   $a$ &  $(a, x)$  &  $(a, y)$  &  $(a, z)$  \\
+                   $b$ &  $(b, x)$  &  $(b, y)$  &  $(b, z)$  \\
+                   $c$ &  $(c, x)$  &  $(c, y)$  &  $(c, z)$  \\
+                 
+                \end{tabular}
 
-                \subsubsection*{Definición}
+                Entonces : 
+                \begin{equation*}
+                    A \times B = 
+                    \{
+                        (a, x) , (a, y) , (a, z) ,
+                        (b, x) , (b, y) , (b, z) ,
+                        (c, x) , (c, y) , (c, z) 
+                    \}
+                \end{equation*}
 
-                    Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los
-                    conjuntos que son subconjuntos de tu conjunto original.
 
-                    \begin{equation}
-                        P(A) = \{ A' \Such A' \subseteq A \}
-                    \end{equation}
 
-                \subsubsection*{Ideas Importantes}
+
+
+
+        % =====================================================
+        % ==========   PRODUCTO POTENCIA            ===========
+        % =====================================================
+        \clearpage
+        \section{Producto Potencia}
+
+            El conjunto que contiene a todos los subconjuntos posibles. 
+
+            Esta operación es diferente en el sentido de que no toma sus elementos del conjunto
+            que toma como entrada, sino que usa esos elementos para combinarlos y crear subconjuntos
+            que son los elementos de esta nueva operación.
+
+            Ok, ok, quizá me puse muy intenso con el párrafo de arriba, veamos un poco más calmado
+            como es que funciona.
+
+            % ====================================
+            % ==========   DEFINICION  ===========
+            % ====================================
+            \subsection*{Definición}
+
+                Esta operación basicamente nos da un conjunto en el que estan \textbf{todos} los
+                conjuntos que son subconjuntos de tu conjunto original.
+
+                \begin{equation}
+                    P(A) = \{ A' \Such A' \subseteq A \}
+                \end{equation}
+
+
+            % ====================================
+            % =======   IDEAS IMPORTANTES ========
+            % ====================================
+            \clearpage
+            \subsection{Ideas Importantes}
 
                 \begin{itemize}
                     \item Si tu conjunto tiene $n$ elementos, tu conjunto potencia tendrá $2^n$ elementos.
@@ -1700,46 +1809,56 @@
                     \item $A \in P(A)$
                     \item Solo si $A = \{\emptyset\}$ entonces $A \subseteq P(A)$,
                     en cualquier otro caso $A \nsubseteq P(A)$
+
+                    \item $P(A \cap B) = P(A) \cap P(B)$
+
+                    \item $P(A) \cup P(B) \subseteq P(A \cup B)$
+
                 \end{itemize}
 
-                % ====================
-                % ==    EJEMPLOS  ====
-                % ====================
-                \clearpage
-                \subsection*{Ejemplo}
-
-                    Podemos hacer uso de una tabla y el binario para encontrar todos los
-                    elementos del conjunto potencia.
-
-                    Si quieres crear un conjunto potencia, escribe la sucesión de números binarios de $n$ cifras,
-                    y con cada número haz un subconjunto: Cuando haya un $'1'$, añade el elemento que corresponde.\\
-
-                    Veamos por ejemplo $A = \{a, b, c\}$ \\
 
 
-                    \begin{tabular}{c | c  }
-                       $a b c$ & SubConjuntos       \\
-                       \midrule
-                      
-                       $0 0 0$ &  $\{ \}$           \\
-                       $0 0 1$ &  $\{ c \}$         \\
-                       $0 1 0$ &  $\{ b \}$         \\
-                       $0 1 1$ &  $\{ b, c \}$      \\
-                       $1 0 0$ &  $\{ a \}$         \\
-                       $1 0 1$ &  $\{ a, c \}$      \\
-                       $1 1 0$ &  $\{ a, b \}$      \\
-                       $1 1 1$ &  $\{ a, b, c \}$   \\
-                     
-                    \end{tabular}
+            % ===============================
+            % ========    EJEMPLOS  =========
+            % ===============================
+            \clearpage
+            \subsection*{Ejemplo}
 
-                    Entonces : 
-                    \begin{equation*}
-                        P(A) = 
-                        \{
-                            \{ \}, \{ c \}, \{ b \}, \{ b, c \}, 
-                            \{ a \}, \{ a, c \}, \{ a, b \}, \{ a, b, c \}
-                        \}
-                    \end{equation*}
+                Podemos hacer uso de una tabla y el binario para encontrar todos los
+                elementos del conjunto potencia.
+
+                Si quieres crear un conjunto potencia, escribe la sucesión de números binarios de $n$ cifras,
+                y con cada número haz un subconjunto: Cuando haya un $'1'$, añade el elemento que corresponde.\\
+
+                Veamos por ejemplo $A = \{a, b, c\}$ \\
+
+
+                \begin{tabular}{c | c  }
+                   $a b c$ & SubConjuntos       \\
+                   \midrule
+                  
+                   $0 0 0$ &  $\{ \}$           \\
+                   $0 0 1$ &  $\{ c \}$         \\
+                   $0 1 0$ &  $\{ b \}$         \\
+                   $0 1 1$ &  $\{ b, c \}$      \\
+                   $1 0 0$ &  $\{ a \}$         \\
+                   $1 0 1$ &  $\{ a, c \}$      \\
+                   $1 1 0$ &  $\{ a, b \}$      \\
+                   $1 1 1$ &  $\{ a, b, c \}$   \\
+                 
+                \end{tabular}
+
+                Entonces : 
+                \begin{equation*}
+                    P(A) = 
+                    \{
+                        \{ \}, \{ c \}, \{ b \}, \{ b, c \}, 
+                        \{ a \}, \{ a, c \}, \{ a, b \}, \{ a, b, c \}
+                    \}
+                \end{equation*}
+
+
+
 
 
 
@@ -1814,60 +1933,6 @@
             \end{itemize}
 
 
-        % =====================================================
-        % ============           CARDINALIDAD          ========
-        % =====================================================
-        \clearpage
-        \section{Identidades y Propiedades}
-                
-            Ya conocemos su definición formal, incluso me dedique a poner algunas cosas super obvias en
-            la pagina de definción de cada uno de ellos, pero es que hay tantas propiedades super interesantes
-            que tenia que ponerles una sección propia para las mejores:
-
-
-            % =====================================
-            % ==========   SUBCONJUNTOS    ========
-            % =====================================
-            \subsection{Propiedades usando SubConjuntos}
-                
-                \subsubsection{Proposición}
-                    Sea $A, B, C$ conjuntos cualesquiera tal que $A \subseteq B$. Entonces tenemos que:
-                    \begin{equation*}
-                    \begin{split}
-                        (A \cap C) &\subseteq (B \cap C)        \\
-                        (A \cup C) &\subseteq (B \cup C)
-                    \end{split}
-                    \end{equation*}
-
-                \subsubsection{Proposición}
-                    Sea $A, B, C$ conjuntos cualesquiera. Si $A \subseteq B$ y $A \subseteq C$.
-                    Entonces tenemos que:
-                    \begin{equation*}
-                        A \subseteq (B \cap C)
-                    \end{equation*}
-
-                \subsubsection{Proposición}
-                    Sea $A, B, C$ conjuntos cualesquiera. Si $A \subseteq C$ y $B \subseteq C$.
-                    Entonces tenemos que:
-                    \begin{equation*}
-                        (A \cup B) \subseteq C
-                    \end{equation*}
-
-
-            % =====================================
-            % =====   CONJUNTO POTENCIA    ========
-            % =====================================
-            \clearpage
-            \subsection{Propiedades usando Conjunto Potencia}
-                
-                \subsubsection{Proposición}
-                    $P(A \cap B) = P(A) \cap P(B)$
-
-                \subsubsection{Proposición}
-                    $P(A) \cup P(B) \subseteq P(A \cup B)$
-
-
-
 
 
 
@@ -1895,94 +1960,22 @@
 
 
 
-            % =====================================
-            % =====        COMPLEMENTOS      ======
-            % =====================================
+            % ====================================
+            % =======   IDEAS IMPORTANTES ========
+            % ====================================
             \clearpage
-            \subsection{Propiedades usando Complemento}
-                
-                \subsubsection{Proposición}
-                    Sea $A$ un conjunto cualquiera de un universo U, entonces tenemos que:
-                    \begin{equation*}
-                        |A^C| = |U| - |A|
-                    \end{equation*}  
+            \subsection{Ideas Importantes}
 
-            % =====================================
-            % =====        SUBCONJUNTOS      ======
-            % =====================================
-            \subsection{Propiedades usando Subconjuntos}
-                
-                \subsubsection{Proposición}
-                    Sea $A, B$ conjuntos cualesquiera. Si  $A \subseteq B$, entonces tenemos que:
-                    \begin{equation*}
-                        |A| \leq |B|
-                    \end{equation*}
-
-
-            % =====================================
-            % =====   UNION E INTERSECCION   ======
-            % =====================================
-            \clearpage
-            \subsection{Propiedades usando Unión e Intersección}
-                
-                \subsubsection{Proposición}
-                    Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
-                    \begin{equation*}
-                    \begin{split}
-                        |A \cup B| &= |A| + |B| - |A \cap B|    \\  
-                        |A \cap B| &= |A| + |B| - |A \cup B|  
-                    \end{split}
-                    \end{equation*}
-
-
-            % =====================================
-            % =====           RESTA          ======
-            % =====================================
-            \clearpage
-            \subsection{Propiedades usando Resta}
-
-                \subsubsection{Proposición}
-                    Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
-                    \begin{equation*}
-                        |A - B| = |A| - |A \cap B|
-                    \end{equation*}
-
-
-            % =====================================
-            % ====     DIFERENCIA SIMETRICA   =====
-            % =====================================
-            \subsection{Propiedades usando Diferencia Simetrica}
-
-                \subsubsection{Proposición}
-                    Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
-                    \begin{equation*}
-                        |A \Delta B| = |A| + |B| - 2|A \cap B|
-                    \end{equation*}
-
-            % =====================================
-            % =====   PRODUCTO CARTESIANO     =====
-            % =====================================
-            \clearpage
-            \subsection{Propiedades usando Producto Cartesiano}
-
-                \subsubsection{Proposición}
-                    Sea $A, B$ conjuntos cualesquiera, entonces tenemos que:
-                    \begin{equation*}
-                        |A \times B| = |A| \cdot |B|
-                    \end{equation*}
-
-            % =====================================
-            % =====   CONJUNTO POTENCIA      ======
-            % =====================================
-            \subsection{Propiedades usando Conjunto Potencia}
-
-                \subsubsection{Proposición}
-                    Sea $A$ conjunto cualquiera, tal que $|A| = n$ entonces tenemos que:
-                    \begin{equation*}
-                        |P(A)| = 2^n
-                    \end{equation*}
-
-
+                \begin{itemize}
+                    \item $|A^C| = |U| - |A|$
+                    \item $|A| \leq |B|$
+                    \item $|A \cup B| = |A| + |B| - |A \cap B|$
+                    \item $|A \cap B| = |A| + |B| - |A \cup B|$
+                    \item $|A - B| = |A| - |A \cap B|$
+                    \item $|A \Delta B| = |A| + |B| - 2|A \cap B|$
+                    \item $|A \times B| = |A| \cdot |B|$
+                    \item $|P(A)| = 2^{|A|}$
+                \end{itemize}
 
 
 
