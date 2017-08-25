@@ -1486,6 +1486,7 @@
                     \item $(A \cup C) \subseteq (B \cup C)$
                     \item Si $A \subseteq B$ y $A \subseteq C$ entonces $A \subseteq (B \cap C)$
                     \item Si $A \subseteq C$ y $B \subseteq C$ entonces $(A \cup B) \subseteq C$
+                    \item Si $A \subseteq B$ y $C \subseteq D$ entonces $(A \cap C) \subseteq (B \cap D)$
                 \end{itemize}
 
 
@@ -1527,6 +1528,10 @@
                     \item $A \cap \emptyset = \emptyset$
 
                     \item $A \cap (B \cap C) = (A \cap B) \cap C$
+
+                    \item $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+
+                    \item $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
                 \end{itemize}
 
 
@@ -1555,6 +1560,10 @@
                     \item $A \subseteq A \cup B$
 
                     \item $A \cup B = A$ si y solo si $B \subseteq A$
+
+                    \item $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+
+                    \item $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$
                 \end{itemize}
 
 
@@ -1621,9 +1630,15 @@
 
                     \item $A \Delta B = (A - B) \cup ( B - A)$
 
+                    \item $A \Delta \emptyset = A$
+
+                    \item $A \Delta A = \emptyset$
+
+                    \item $A \Delta B = B \Delta A$
+
                 \end{itemize}
 
-            De hecho de la útima proposición sale su nombre, es una diferencia simétrica.
+            De hecho de la idea que: $A \Delta B = (A - B) \cup ( B - A)$ sale su nombre, es una diferencia simétrica.
 
 
 
