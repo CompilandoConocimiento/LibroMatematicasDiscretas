@@ -1632,6 +1632,8 @@
 
                     \item $A \Delta \emptyset = A$
 
+                    \item $(A \Delta B) \Delta C = A \Delta (B \Delta C)$
+
                     \item $A \Delta A = \emptyset$
 
                     \item $A \Delta B = B \Delta A$
@@ -1812,22 +1814,31 @@
             \subsection{Ideas Importantes}
 
                 \begin{itemize}
-                    \item Si tu conjunto tiene $n$ elementos, tu conjunto potencia tendrá $2^n$ elementos.
+                    \item Si tu conjunto tiene $n$ elementos, tu conjunto potencia tendrá
+                        $2^n$ elementos.
 
-                    \item Si $n < |A|$ entonces existen $\pVector{n\\r} = \frac{n!}{r!(n-r)!}$ subconjuntos
-                            de $A$ de cardinalidad $r$
+                    \item Si $n < |A|$ entonces existen $\pVector{n\\r} = \frac{n!}{r!(n-r)!}$ 
+                        subconjuntos de $A$ de cardinalidad $r$
+
+                    \item $\emptyset \in P(A)$
+
+                    \item $A \in P(A)$
 
                     \item $P(\emptyset) = \{\emptyset\}$
 
                     \item $P( \{\emptyset\}) = \{\emptyset, \{\emptyset\} \}$
 
-                    \item $A \in P(A)$
                     \item Solo si $A = \{\emptyset\}$ entonces $A \subseteq P(A)$,
-                    en cualquier otro caso $A \nsubseteq P(A)$
+                        en cualquier otro caso $A \nsubseteq P(A)$
 
                     \item $P(A \cap B) = P(A) \cap P(B)$
 
                     \item $P(A) \cup P(B) \subseteq P(A \cup B)$
+
+                    \item $A \subseteq B$ si y solo si  $P(A) \subseteq P(B)$ 
+
+                    \item Si $A \subseteq P(X)$ y $B \subseteq P(X)$ entonces 
+                    $A \cup B, A \cap B,  A - B,  A \Delta B \in P(X)$
 
                 \end{itemize}
 
