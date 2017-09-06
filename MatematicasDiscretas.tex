@@ -1691,93 +1691,6 @@
 
 
 
-        % =====================================================
-        % ==========   PRODUCTO CARTESIANO          ===========
-        % =====================================================
-        \clearpage
-        \section{Producto Cartesiano}
-
-            Esta es la base de lo que se conoce como es plano cartesiano, y es quizá
-            la operación mas útil que vas a conocer a lo largo de estos textos,
-            veamos específicamente porque:
-
-
-            % ====================================
-            % ==========   N - TUPLAS  ===========
-            % ====================================
-            \subsection{N-Tuplas}
-
-                El resultado de un producto cartesiano es un conjunto formado de n-tuplas,
-                cada n-tuplas es una agrupación ordenada de elementos.
-                Por ejemplo $(a,b)$ ó $(x,y,z)$.
-
-                Al ser un ente ordenado $(a,b) \neq (b,a)$
-
-                La n en su nombre solo nos dice la cantidad de elementos que tiene cada tupla.
-
-            % ====================================
-            % ==========   DEFINICION  ===========
-            % ====================================
-            \subsection*{Definición}
-
-                Esta operación basicamente nos da un conjunto en el que estan \textbf{todas} las n-tuplas
-                donde su primer elemento pertenece a $A$ y su segundo elemento pertenece a $B$.
-
-                \begin{equation}
-                    A \times B = \{ (a, b) \Such a \in A \text{ y también } b \in B \}
-                \end{equation}
-
-
-            % ====================================
-            % =======   IDEAS IMPORTANTES ========
-            % ====================================
-            \subsection{Ideas Importantes}
-
-                \begin{itemize}
-                    \item Ve que de la definición se tiene que $ A \times B \neq B \times A$
-
-                    \item También de manera común solemos simplificar $A \times A$ como $A^2$
-
-                    \item Un elemento de $A \times B \times C$ es $((a,b),c) = (a,(b,c)) = (a,b,c)$
-                \end{itemize}
-
-
-
-            % ============================
-            % ====    EJEMPLOS  ==========
-            % ============================
-            \clearpage
-            \subsection*{Ejemplo}
-
-                Podemos hacer uso de una tabla para encontrar todos los elementos del producto
-                cartesiano.
-
-                Veamos por ejemplo $A = \{a, b, c\}$ y $B = \{ x, y, z\}$
-
-                \begin{tabular}{r ||c |c | c  }
-                   $A \times B$ & $x$ & $y$ & $z$ \\
-                   \midrule
-                  
-                   $a$ &  $(a, x)$  &  $(a, y)$  &  $(a, z)$  \\
-                   $b$ &  $(b, x)$  &  $(b, y)$  &  $(b, z)$  \\
-                   $c$ &  $(c, x)$  &  $(c, y)$  &  $(c, z)$  \\
-                 
-                \end{tabular}
-
-                Entonces : 
-                \begin{equation*}
-                    A \times B = 
-                    \{
-                        (a, x) , (a, y) , (a, z) ,
-                        (b, x) , (b, y) , (b, z) ,
-                        (c, x) , (c, y) , (c, z) 
-                    \}
-                \end{equation*}
-
-
-
-
-
 
         % =====================================================
         % ==========   PRODUCTO POTENCIA            ===========
@@ -1880,6 +1793,127 @@
                     \{
                         \{ \}, \{ c \}, \{ b \}, \{ b, c \}, 
                         \{ a \}, \{ a, c \}, \{ a, b \}, \{ a, b, c \}
+                    \}
+                \end{equation*}
+
+
+
+
+
+        % =====================================================
+        % ==========   PRODUCTO CARTESIANO          ===========
+        % =====================================================
+        \clearpage
+        \section{Producto Cartesiano}
+
+            Esta es la base de lo que se conoce como es plano cartesiano, y es quizá
+            la operación mas útil que vas a conocer a lo largo de estos textos,
+            veamos específicamente porque:
+
+
+            % ====================================
+            % ==========   N - TUPLAS  ===========
+            % ====================================
+            \subsection{N-Tuplas}
+
+                El resultado de un producto cartesiano es un conjunto formado de n-tuplas,
+                cada n-tuplas es una agrupación ordenada de elementos.
+                Por ejemplo $(a,b)$ ó $(x,y,z)$.
+
+                Al ser un ente ordenado $(a,b) \neq (b,a)$
+
+                La n en su nombre solo nos dice la cantidad de elementos que tiene cada tupla.
+
+
+
+                % ====================================
+                % ===  N - TUPLAS COMO CONJUNTOS  ====
+                % ====================================
+                \subsection*{Definición como Conjuntos}
+
+                    Ya que estamos hablando de que todo en matemáticas se puede expresar como
+                    conjunto, entonces podemos expresar esta definición como:
+
+                    \begin{equation}
+                        (a, b) := \Set{ \Set{a}, \Set{a, b} }
+                    \end{equation}
+
+                    \subsubsection{Propiedades}
+                    \begin{itemize}
+                        \item $(a, a) = \Set{ \Set{a}, \Set{a, a} } = \Set{ \Set{a} }$
+                        \item La idea $a$ es la primera coordenada de $(a, b)$ se puede
+                        proponer como: $\forall C \in (a, b), \MiniSpace a \in C$
+                    \end{itemize}
+
+
+            % ====================================
+            % ==========   DEFINICION  ===========
+            % ====================================
+            \clearpage
+            \subsection*{Definición}
+
+                Esta operación basicamente nos da un conjunto en el que estan \textbf{todas} las n-tuplas
+                donde su primer elemento pertenece a $A$ y su segundo elemento pertenece a $B$.
+
+                \begin{equation}
+                    A \times B = \Set{ (a, b) \Such a \in A \text{ y también } b \in B }
+                \end{equation}
+
+
+            % ====================================
+            % =======   IDEAS IMPORTANTES ========
+            % ====================================
+            \subsection{Ideas Importantes}
+
+                \begin{itemize}
+                    \item Ve que de la definición se tiene que $ A \times B \neq B \times A$
+
+                    \item $A \times \emptyset = \emptyset$
+
+                    \item También de manera común solemos simplificar $A \times A$ como $A^2$
+
+                    \item Un elemento de $A \times B \times C$ es $((a,b),c) = (a,(b,c)) = (a,b,c)$
+
+                    \item Si $A \subseteq B$ y $C \subseteq D$ entonces $A \times C \subseteq B \times D$ 
+
+                    \item Si $A \times (B \cup C) = (A \times B) \cup (A \times C)$ 
+
+                    \item Si $A \times (B \cap C) = (A \times B) \cap (A \times C)$ 
+
+                    \item Si $A \times (B - C) = (A \times B) - (A \times C)$ 
+
+                \end{itemize}
+
+
+
+            % ============================
+            % ====    EJEMPLOS  ==========
+            % ============================
+            \clearpage
+            \subsection*{Ejemplo}
+
+                Podemos hacer uso de una tabla para encontrar todos los elementos del producto
+                cartesiano.
+
+                Veamos por ejemplo $A = \{a, b, c\}$ y $B = \{ x, y, z\}$
+
+                \begin{tabular}{r ||c |c | c  }
+                   $A \times B$ & $x$ & $y$ & $z$ \\
+                   \midrule
+                  
+                   $a$ &  $(a, x)$  &  $(a, y)$  &  $(a, z)$  \\
+                   $b$ &  $(b, x)$  &  $(b, y)$  &  $(b, z)$  \\
+                   $c$ &  $(c, x)$  &  $(c, y)$  &  $(c, z)$  \\
+                 
+                \end{tabular}
+
+                Entonces : 
+                \begin{equation*}
+                    A \times B = 
+                    \{
+                        (a, x) , (a, y) , (a, z) ,
+                        (b, x) , (b, y) , (b, z) ,
+                        (c, x) , (c, y) , (c, z) 
                     \}
                 \end{equation*}
 
