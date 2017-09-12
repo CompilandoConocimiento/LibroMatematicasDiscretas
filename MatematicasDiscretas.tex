@@ -1814,13 +1814,14 @@
             % ====================================
             % ==========   N - TUPLAS  ===========
             % ====================================
-            \subsection{N-Tuplas}
+            \subsection{N-Tuplas y Pares Ordenados}
 
                 El resultado de un producto cartesiano es un conjunto formado de n-tuplas,
                 cada n-tuplas es una agrupación ordenada de elementos.
                 Por ejemplo $(a,b)$ ó $(x,y,z)$.
 
-                Al ser un ente ordenado $(a,b) \neq (b,a)$
+
+                Al ser un ente ordenado $(a,b) \neq (b,a)$ a menos que $a=b$
 
                 La n en su nombre solo nos dice la cantidad de elementos que tiene cada tupla.
 
@@ -1838,11 +1839,96 @@
                         (a, b) := \Set{ \Set{a}, \Set{a, b} }
                     \end{equation}
 
+                    Antes que nada, es importante notar que esta definición es arbitraria
+                    esta hecha a la medida por un hombre que se llamaba Kuratowski pero
+                    no es la única definición que existe, pero si una con propiedades muy
+                    bonitas y de algún modo es la más minimalista.
+
+                    \clearpage
+
+                    Recuerda que para que podamos considerar que ese conjunto de arriba es
+                    un par ordenado tendrá que cumplir con que:
+
+                    $(a,b) = (c, d)$ si y solo si $a=c$ y $c=d$
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Empecemos por la primera implicación:
+                        Supongamos que $(a,b) = (c, d)$
+
+                        Supongamos primero que $a=b$ entonces tendremos que:
+                        \begin{MultiLineEquation*}{3}
+                            (a, b) =
+                                &= \Set{ \Set{a}, \Set{a, b} }
+                                &= \Set{ \Set{a}, \Set{a, a} }
+                                &= \Set{ \Set{a}, \Set{a}}
+                                &= \Set{ \Set{a} }
+                        \end{MultiLineEquation*}
+
+                        Por lo tanto nuestra demostración se reduce a
+                        $\{\{a\}\} = \{\{c\}\}$ y esto solo pasa si 
+                        $a = c$ y $b = d$.
+
+                        Por otro lado si $a \neq b$ tenemos que:
+                        $\Set{ \Set{a}, \Set{a, b} } = \Set{ \Set{c}, \Set{c, d} }$
+                        es decir tendremos que $\Set{a} = \Set{c}$ y 
+                        $\Set{a, b} = \Set{c, d}$.
+
+                        De esto tenemos que $a=c$ y $b=d$.
+
+                        Ahora por el otro lado, si $a=c$ y $b=d$
+                        tenemos que el par ordenado que generan es exactamente el mismo
+
+
+                    \end{SmallIndentation}
+
+
                     \subsubsection{Propiedades}
                     \begin{itemize}
-                        \item $(a, a) = \Set{ \Set{a}, \Set{a, a} } = \Set{ \Set{a} }$
                         \item La idea $a$ es la primera coordenada de $(a, b)$ se puede
-                        proponer como: $\forall C \in (a, b), \MiniSpace a \in C$
+                            proponer como: $\forall C \in (a, b), \MiniSpace a \in C$
+                        
+                        \item La idea $b$ es la segunda coordenada de $(a, b)$ se puede
+                            proponer como: $\exists C \in (a, b), \MiniSpace a \notin C$
+                        
+                        \item $(a,b) \subseteq P({a,b})$
+
+                            % ======== DEMOSTRACION ========
+                            \begin{SmallIndentation}[1em]
+                                \textbf{Demostración}:
+
+                                Basta con ver explicitamente que:
+                                $P({a,b}) = \Set{\emptyset, a, b, \{a, b\}}$
+
+                            \end{SmallIndentation}
+
+
+                        \item $\forall a \in A$ y $b \in B, \; (a,b) \in P(P(A \cup B))$
+
+                            % ======== DEMOSTRACION ========
+                            \begin{SmallIndentation}[1em]
+                                \textbf{Demostración}:
+
+                                Ya sabemos que $(a,b) \subseteq P({a,b})$.
+
+                                Ahora ve que ${a,b} \subseteq A \cup B$, por lo
+                                tanto $P({a,b}) \subseteq P(A \cup B)$
+
+                                Por lo tanto, usando la propiedad transitiva tenemos que
+                                $(a,b) \subset P(A \cup B)$, que es lo mismo que decir
+                                que $(a,b) \in P(P(A \cup B))$
+
+
+                                Y gracias a como definimos el producto catesiano 
+                                $A \times B := \{ (a, b) \Such a \in A$ y también $ b \in B \}$
+                                tenemos que $A \times B \subseteq P(P(A \cup B))$
+
+                            \end{SmallIndentation}
+
+
+
                     \end{itemize}
 
 
