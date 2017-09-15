@@ -1885,7 +1885,7 @@
                     \end{SmallIndentation}
 
 
-                    \subsubsection{Propiedades}
+                    \subsection*{Propiedades}
                     \begin{itemize}
                         \item La idea $a$ es la primera coordenada de $(a, b)$ se puede
                             proponer como: $\forall C \in (a, b), \MiniSpace a \in C$
@@ -1893,7 +1893,7 @@
                         \item La idea $b$ es la segunda coordenada de $(a, b)$ se puede
                             proponer como: $\exists C \in (a, b), \MiniSpace a \notin C$
                         
-                        \item $(a,b) \subseteq P({a,b})$
+                        \item $(a,b) \subseteq P(\{a,b\})$
 
                             % ======== DEMOSTRACION ========
                             \begin{SmallIndentation}[1em]
@@ -1952,7 +1952,8 @@
             \subsection{Ideas Importantes}
 
                 \begin{itemize}
-                    \item Ve que de la definición se tiene que $ A \times B \neq B \times A$
+                    \item Ve que de la definición se tiene que mientras sean conjuntos distintos 
+                        $ A \times B \neq B \times A$
 
                     \item $A \times \emptyset = \emptyset$
 
@@ -1966,7 +1967,15 @@
 
                     \item Si $A \times (B \cap C) = (A \times B) \cap (A \times C)$ 
 
-                    \item Si $A \times (B - C) = (A \times B) - (A \times C)$ 
+                    \item Si $A \times (B - C) = (A \times B) - (A \times C)$
+
+                    \item Sea $A, B, C, D$ con $C, D$ diferentes de $\emptyset$
+                        entonces $C \times D \subseteq A \times B$ si y solo si $C \subseteq A$
+                        y $D \subseteq B$
+
+                    \item Sea $X \subset A \times B$ entonces $X$ no necesariamente se puede expresar
+                    como $X = A' \times B'$.
+
 
                 \end{itemize}
 
@@ -2181,8 +2190,7 @@
             \subsection*{Dominio}
 
                 El dominio $D_R$ de una relación $R : A \to B$ es simplemente el subconjunto de $A$ que
-                contiene a todos los elementos que están relacionados hacia algun elemento de $B$.
-
+                contiene a todos los elementos que están relacionados hacia algun elemento de $B$ mediante $R$
                 \begin{equation}
                     D_R = \{ a \in A \Such \exists b, \MiniSpace aRb \}
                 \end{equation}
@@ -2190,12 +2198,45 @@
             \subsection*{Imagen}
 
                 También le llama Rango, la Imagen $I_R$ de una relación $R : A \to B$
-                es simplemente el subconjunto de $B$ que contiene a todos los elementos que están
-                relacionados mediante $R$.
+                es simplemente el subconjunto de $B$ que contiene a todos los elementos
+                para los cuales algún elemento de $A$ los relaciona mediante $R$.
 
                 \begin{equation}
                     I_R = \{ b \in B \Such \exists a, \MiniSpace aRb \}
                 \end{equation}
+
+            \subsection*{Codominio}
+
+                El codominio de una relación $R: A \to B$ es... es $B$, simplemente eso :/
+
+
+        % =====================================================
+        % ==============   DOMINIO E IMAGEN    ================
+        % =====================================================
+        \clearpage
+        \section{SubImagen e SubImagen Inversa}
+
+            Dada una relación $R: A \to B$ y dado $C \subseteq A$ y $D \subseteq B$
+            entonces podemos definir lo siguiente:
+
+            \subsection*{Subimágen de $C$ bajo $R$}
+
+                La Subimágen de $C$ bajo $R$ es simplemente el subconjunto de $B$ que contiene
+                a todos los elementos para los cuales algún elemento de $C$ los relaciona
+                mediante $R$.
+                \begin{equation}
+                    I_R[C] = \{ b \in B \Such \exists a \in C, \MiniSpace aRb \}
+                \end{equation}
+
+
+                \subsection*{Subimágen Inversa de $C$ bajo $R$}
+
+                Esta la definimos como:
+                \begin{equation}
+                    I_R^{-1}[C] = \{ a \in A \Such \exists b \in D, \MiniSpace aRb \}
+                \end{equation}
+
+
 
 
 
@@ -2207,10 +2248,49 @@
         \section{Relación Inversa}
 
             Una relación inversa es bastante fácil de definir:
-
             \begin{equation}
                 R^{-1} = \{ (b, a) \in (B \times A) \Such (a, b) \in R \}
             \end{equation}
+
+
+        % =====================================================
+        % ========         RELACION COMPUESTA      ============
+        % =====================================================
+        \section{Relación Compuesta}
+
+            Sea $A, B, C$ conjuntos cualesquiera, si $R \subseteq A \times B$ 
+            y $S \subseteq B \times C$ entonces podemos definir a la relación
+            compuesta como:            
+            \begin{equation}
+                S \circ R = \Set{ (a,c) \in A \times C \Such
+                        \exists b \in R \text{ tal que } 
+                            (a,b) \in R \text{ y } (b, c) \in S
+                    }
+            \end{equation}
+
+
+            Podemos también decir que si la intesección entre $Imagen(R)$ y
+            $Dominio(S)$ es $\emptyset$ implica que $S \circ R = \emptyset$
+
+
+        % =====================================================
+        % ========         RELACION IDENTIDAD       ===========
+        % =====================================================
+        \section{Relación Identidad}
+
+            Una relación identidad es bastante fácil de definir donde tenemos
+            que $\Delta_{A} \subseteq A \times A$:
+            \begin{equation}
+                \Delta_{A} = \{ (a, a) \Such a \in A \}
+            \end{equation}
+
+            Esta identidad tiene unas propiedades muy locas:
+            \begin{itemize}
+                \item $R \circ \Delta_{A} = R$
+                \item $\Delta_{B} \circ R = R$
+            \end{itemize}
+
+
 
 
 
@@ -2231,7 +2311,6 @@
 
                 Una relación reflexiva es aquella en la que cualquier $a$ tiene que estar relacionada
                 consigo misma.
-
                 \begin{equation}
                     \forall a \in A, \MiniSpace aRa
                 \end{equation}
@@ -2269,7 +2348,6 @@
             \subsection{Simétrica}
 
                 Una relación simétrica es aquella en la que cualquier si existe $aRb$ existe $bRa$.
-
                 \begin{equation}
                     \forall a,b \in A,\MiniSpace (aRb) \to (bRa)
                 \end{equation}
@@ -2297,9 +2375,8 @@
             \clearpage
             \subsection{Transitiva}
 
-                Una relación transitiva es aquella en la que cualquier a tiene que estar relacionada consigo
+                Una relación transitiva es aquella que cumple con que:
                 misma.
-
                 \begin{equation}
                     \forall a,b,c \in A, \MiniSpace ((aRb) \land (bRa)) \linfire (aRc)
                 \end{equation}
