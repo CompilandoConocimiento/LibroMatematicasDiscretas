@@ -2391,15 +2391,18 @@
                 \end{itemize}
 
 
-            % =============================
-            % =====     EQUIVALENCIA  =====
-            % =============================
-            \clearpage
-            \subsection{Relación de Equivalencia}
-                Decimos que $R$ es una relación de equivalencia si es que se cumplen las 3 propiedades antes vistas.
+        % =========================================
+        % ==========     EQUIVALENCIA  ============
+        % =========================================
+        \clearpage
+        \section{Relación de Equivalencia}
+            Decimos que $R$ es una relación de equivalencia si es que se cumplen las 3 propiedades antes vistas: Simetrica, transitiva y reflexiva.
 
 
-            \subsubsection{Clases de Equivalencia}
+            % =========================================
+            % ========  CLASES  EQUIVALENCIA  =========
+            % =========================================
+            \subsection{Clases de Equivalencia}
 
                 Una relación de equivalencia $R$ sobre un conjunto $A$ produce una partición
                 del conjunto en subconjuntos disjuntos, llamados \textbf{Clases de
@@ -2408,6 +2411,34 @@
 
                 Esta partición se representa por $A \backslash R$ y se llama
                 \textbf{Conjunto Cociente}.
+
+                Sea $R$ una relación de equivalencia en $A$, entonces podemos escribir
+                a una clase de equivalencia como:
+                \begin{equation*}
+                    [a]_R := \Set{ b \in A \Such a R b}
+                \end{equation*} 
+
+
+
+            % =========================================
+            % ========  CLASES  EQUIVALENCIA  =========
+            % =========================================
+            \subsection{Propiedades}
+
+            Sea $R$ una relación de equivalencia en $A$, entonces podemos decir que:
+            \begin{itemize}
+
+                \item $\forall a \in A, \Space [a]_R \neq \emptyset$
+
+                \item $[a]_R = [b]_R$ si y solo si $a R b$
+
+                \item $[a]_R \cap [b]_R = \emptyset$ si y solo si $a R b$ si y solo si
+                    $[a]_R \neq [b]_R$
+
+            \end{itemize}
+
+
+
 
 
 
