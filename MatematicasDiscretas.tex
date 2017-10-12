@@ -2396,7 +2396,8 @@
         % =========================================
         \clearpage
         \section{Relación de Equivalencia}
-            Decimos que $R$ es una relación de equivalencia si es que se cumplen las 3 propiedades antes vistas: Simetrica, transitiva y reflexiva.
+            Decimos que $R$ es una relación de equivalencia si es que se cumplen las 3
+            propiedades antes vistas: Simetrica, transitiva y reflexiva.
 
 
             % =========================================
@@ -2419,23 +2420,43 @@
                 \end{equation*} 
 
 
+                    % =========================================
+                    % ========  CLASES  EQUIVALENCIA  =========
+                    % =========================================
+                    \subsubsection{Propiedades}
+
+                    Sea $R$ una relación de equivalencia en $A$, entonces podemos decir que:
+                    \begin{itemize}
+
+                        \item $\forall a \in A, \Space [a]_R \neq \emptyset$
+
+                        \item $[a]_R = [b]_R$ si y solo si $a R b$
+
+                        \item $[a]_R \cap [b]_R = \emptyset$ si y solo si $a R b$ si y solo si
+                            $[a]_R \neq [b]_R$
+
+                    \end{itemize}
+
 
             % =========================================
-            % ========  CLASES  EQUIVALENCIA  =========
+            % ========      PARTICIONAR       =========
             % =========================================
-            \subsection{Propiedades}
+            \clearpage
+            \subsection{Particiones}
 
-            Sea $R$ una relación de equivalencia en $A$, entonces podemos decir que:
-            \begin{itemize}
+                Sea $\mathcal{F}$ un conjunto $F = \Set{A_0, A_1, A_2 \dots A_n}$, cuyos elementos
+                son subconjuntos de $X$ es una partición de $X$ si y solo si:
 
-                \item $\forall a \in A, \Space [a]_R \neq \emptyset$
+                \begin{itemize}
+                    \item $\forall A, B \in \mathcal{F}, \text{ si } A \neq B
+                        \text{ entonces } A \cap B = \emptyset$
 
-                \item $[a]_R = [b]_R$ si y solo si $a R b$
+                    \item $\cup_{i = 1}^n A_i = X$
+                \end{itemize}
 
-                \item $[a]_R \cap [b]_R = \emptyset$ si y solo si $a R b$ si y solo si
-                    $[a]_R \neq [b]_R$
 
-            \end{itemize}
+
+
 
 
 
