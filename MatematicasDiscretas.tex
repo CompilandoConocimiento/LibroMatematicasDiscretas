@@ -2444,15 +2444,22 @@
             \clearpage
             \subsection{Particiones}
 
-                Sea $\mathcal{F}$ un conjunto $F = \Set{A_0, A_1, A_2 \dots A_n}$, cuyos elementos
-                son subconjuntos de $X$ es una partición de $X$ si y solo si:
+                Sea $P$ un conjunto $P = \Set{A_0, A_1, A_2 \dots A_n} = \Set{A_i}_{i \in I}$, 
+                cuyos elementos son subconjuntos de $A$ es una partición de $X$ si y solo si:
 
                 \begin{itemize}
-                    \item $\forall A, B \in \mathcal{F}, \text{ si } A \neq B
-                        \text{ entonces } A \cap B = \emptyset$
+                    \item $\forall i \in I \; A_i \subseteq A$
 
-                    \item $\cup_{i = 1}^n A_i = X$
+                    \item $\forall i \in I \; A_i \neq \emptyset$
+
+                    \item Si $i \neq j$ entonces $A_i \cap A_j = \emptyset$
+
+                    \item $\cup_{i \in I} A_i = A$
                 \end{itemize}
+
+
+                Algo también muy importante de recalcar es que toda Partición induce una Relación de
+                Equivalencia, esta es tan sencilla como que $(x,y) \in R$ si y solo si $x, y \in A_i$
 
 
 
