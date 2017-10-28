@@ -89,7 +89,8 @@
     \newenvironment{SmallIndentation}[1][0.75em]                    %Use: The same that we upper one, just 
     {\begin{adjustwidth}{#1}{}\begin{footnotesize}}                 %footnotesize size of letter by default
     {\end{footnotesize}\end{adjustwidth}}                           %that's it
-        
+
+
     % =====  GENERAL MATH  ==========
     \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
     \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
@@ -156,15 +157,66 @@
     \makeatother                                                    %WTF! IS THIS
 
     % TRIGONOMETRIC FUNCTIONS
-    \newcommand{\Cos}[1]{\cos\Wrap{#1}}
-    \newcommand{\Sin}[1]{\sin\Wrap{#1}}
+    \newcommand{\Cos}[1]{\cos\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Sin}[1]{\sin\Wrap{#1}}                             %Simple wrappers
 
     % === COMPLEX ANALYSIS ===
     \newcommand \Cis[1]  {\Cos{#1} + i \Sin{#1}}                    %Use: \Cis for cos(x) + i sin(x)
     \newcommand \pCis[1] {\Wrap{\Cis{#1}}}                          %Use: \pCis for the same ut parantesis
     \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same to Brackets
 
+    % === CALCULUS ===
+    \newcommand \MiniDerivate[1][x] {\dfrac{d}{d #1}}               %Use: \MiniDerivate for simple use
+    \newcommand \Derivate[2]                                        %Complete Derivate -- [f(x)][x]
+        {\dfrac{d \; #1}{d #2}}                                     %Use: \Partial for simple use
+    
+    \newcommand \MiniUpperDerivate[2]                               %Mini Derivate High Orden Derivate -- [x][1]
+        {\dfrac{d^{#2}}{d#1^{#2}}}                                  %Mini Derivate High Orden Derivate
+    \newcommand \UpperDerivate[3]                                   %Complete High Orden Derivate -- [f(x)][x][1]
+        {\dfrac{d^{#3} \; #1}{d#2^{#3}}}                            %Use: \UpperDerivate for simple use
+    
+    \newcommand \MiniPartial[1][x] {\dfrac{\partial}{\partial #1}} %Use: \MiniDerivate for simple use
+    \newcommand \Partial[2]                                        %Complete Derivate -- [f(x)][x]
+        {\dfrac{\partial \; #1}{\partial #2}}                      %Use: \Partial for simple use
+    
+    \newcommand \MiniUpperPartial[2]                                %Mini Derivate High Orden Derivate -- [x][1] 
+        {\dfrac{\partial^{#2}}{\partial #1^{#2}}}                   %Mini Derivate High Orden Derivate
+    \newcommand \UpperPartial[3]                                    %Complete High Orden Derivate -- [f(x)][x][1]
+        {\dfrac{\partial^{#3} \; #1}{\partial#2^{#3}}}              %Use: \UpperDerivate for simple use
 
+
+    % =====  GENERAL COLOR  =========
+    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
+    \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
+    \definecolor{TealMD}{HTML}{009688}                              %Use: Color :D        
+    \definecolor{BlueGrey800MD}{HTML}{37474F}                       %Use: Color :D
+    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D
+    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
+    \definecolor{Green100MD}{HTML}{DCEDC8}                          %Use: Color :D
+
+    \newenvironment{ColorText}[1]{                                  %Use: \begin{ColorText}
+        \leavevmode\color{#1}\ignorespaces}                         %That's is!
+
+
+    % =====  CODE EDITOR =========
+    \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
+        backgroundcolor=\color{BlueGrey800MD},                      %Background Color  
+        basicstyle=\tiny\color{white},                              %Font color
+        commentstyle=\color{BlueGrey100MD},                         %Comment color
+        stringstyle=\color{TealMD},                                 %String color
+        keywordstyle=\color{Green100MD},                            %keywords color
+        numberstyle=\tiny\color{TealMD},                            %Size of a number
+        frame=shadowbox,                                            %Adds a frame around the code
+        breakatwhitespace=true,                                     %Style                       
+        breaklines=true,                                            %Style                   
+        keepspaces=true,                                            %Style                   
+        numbers=left,                                               %Style                   
+        numbersep=10pt,                                             %Style 
+        xleftmargin=\parindent,                                     %Style 
+        tabsize=4                                                   %Style 
+    }
+ 
+    \lstset{style=CompilandoStyle}                                  %Use this style
 
 
 
@@ -2489,7 +2541,7 @@
             Las funciones son más que meras descripciones de relaciones numéricas. En un sentido más general,
             las funciones pueden comparar y relacionar diferentes tipos de estructuras matemáticas.
 
-            Es probable que vea una función como un tipo de fórmula que describe una relación entre dos
+            Es probable que veas una función como un tipo de fórmula que describe una relación entre dos
             (o más) cantidades.
 
             Podemos definirlas de una manera informal como aquellas relaciones donde cada elemento de $A$ 
@@ -2498,27 +2550,38 @@
             % =====================================
             % =========   ¿QUE SON?     ===========
             % =====================================
-            \subsubsection*{Definición Formal}
+            \subsubsection*{Definición Formal: Común}
 
-            Digamos que tenemos una relación $f$ entre dos conjuntos $A$ y $B$.
-            Decimos que esta relación es una función si y solo si:
+                Digamos que tenemos una relación $f$ entre dos conjuntos $A$ y $B$.
+                Decimos que esta relación es una función si y solo si cumple estas dos proposiciones:
 
-            \begin{itemize}
-                \item Todo los elementos del dominio tienen un valor asignado:
-                    \begin{equation}
-                        \forall a \in A, \exists b \in B, \MiniSpace afb
-                    \end{equation}
+                \begin{itemize}
+                    \item Todo los elementos del dominio tienen un valor asignado:
+                        \begin{equation*}
+                            \forall a \in A, \; \exists b \in B, \MiniSpace afb
+                        \end{equation*}
 
-                \item Si $aRb_1$ y $aRb_2$ entonces $b_1 = b_2$
+                    \item Si $aRb_1$ y $aRb_2$ entonces $b_1 = b_2$
 
-            \end{itemize}
+                \end{itemize}
 
-            Pero no es la única forma de definirlo, otra forma que una función es una relación que 
-            cumple con la propiedad de que para cada $a \in A$, la relación $f$ contiene exactamente
-            un par ordenado de la forma $(a,b) \in f$.
+            % =====================================
+            % =========   ¿QUE SON?     ===========
+            % =====================================
+            \subsubsection*{Definición Formal: Pro}
 
-            Ya que solo existe un par ordenado para cada $a \in A$, entonces solemos escribir 
-            $aRb$ como $f(a) = b$.
+                Pero no es la única forma de definirlo, otra forma es decir que una función es
+                una relación que cumple con la propiedad de que para cada $a \in A$, la relación
+                $f$ contiene exactamente un par ordenado de la forma $(a,b) \in f$.
+
+                Es decir, con un lenguaje mas formal tenemos que:
+                \begin{equation*}
+                    \forall a \in A, \; \exists ! \; b \in B \text{ tal que } (a,b) \in f
+                \end{equation*}
+
+                Ya que solo existe un par ordenado para cada $a \in A$, entonces solemos escribir 
+                $aRb$ como $f(a) = b$.
+
 
 
 
