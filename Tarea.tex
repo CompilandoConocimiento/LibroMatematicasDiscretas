@@ -280,178 +280,154 @@
 % =====================================================
 % ================     EJERCICIO 5   ==================
 % =====================================================
-\section{Ejercicio 5}
+\section{Ejercicio 6}
 
-    Ya se demostro que la relación: $R: \Naturals^2 \times \Naturals^2$ que esta dada por la regla
-    $(a, b) \; R \; (c, d)$ si y solo si $a+d = b+c$ es de equivalencia
+    Sea $X$ un conjunto de $F: P(X) \to P(X)$ definida por $F(A) = X - A$
 
-    Además es la forma en la que construimos a los enteros desde un punto de vista conjuntivista.
-
-    Demuestra que: Existe un representante de la forma $(n, 0)$ o $(0, n)$ o $(n,n)$ en cada
-    clase de equivalencia
+    Demuestre que $F \circ F = Id_{P(X)}$
 
     % ======== DEMOSTRACION ========
     \begin{SmallIndentation}[1em]
         \textbf{Demostración}:
 
-        Antes que nada recuerda que la resta en los naturales del estilo $m-n$ solo esta definida
-        para $m \geq n$ y se define como el $m-n = k$ donde $k \in \Naturals$ tal que $k+n=m$.
+        Veamos que $F(F(A)) = X - (X-A)$ 
 
-        Considera la clase de equivalencia $[(a, b)]_R$ esta contiene por definición a $(a,b)$.
+        Por lo tanto a cualquier elemento $A \in P(X)$ lo va a mapear a $X - (X-A)$
 
-        Ahora veamos por casos, considera primero que el caso en que $a=b$, si esto pasa esta clase
-        de equivalencia contienen al famoso $(0,0)$ pues $a+0=b+0$. En esta clase estará cualquier
-        elemento del estilo $(n, n)$ pues $a+n=b+n$ es equivalente a $a+n=a+n$ que es equivalente a $n=n$.
-        A este algun día lo llamaremos el cero de los enteros.
+        Veamos que dichos conjuntos son iguales por doble contención:
 
-        Ahora considera el par $(a,b)$ donde $a<b$, entonces podemos pensar en el natural $b-a$, considera
-        entonces el par ordenado $(0, b-a)$, vemos que esta dentro de la misma clase de equivalencia pues
-        $a+b-a=b+0$ se puede reducir a $b=b$ lo cual es claramente siempre cierto, por lo tanto
-        para la clase de equivalencia arbitraria $[(a, b)]_R$ con $a<b$ tenemos que existe el representante
-        $(0, n)$ con $n$ definida como el natural $b-a$. A este algún lo llamaremos el -n en los enteros.
+        \begin{itemize}
+            \item Por un lado tenemos que:
+                Sea $a$ un elemento arbitrario de $A$ con $A \subseteq X$, entonces
+                tenemos que $a \in (X \land A)$ podemos decir entonces que:
+                $a \in (\emptyset \lor (X \land A))$ por lo tanto podemos decir que $a \in \emptyset$ ó
+                $a \in (X \land A)$, es decir ($a \in X$ y $a \notin X$) ó ($a \in X$ y $a \land A$), 
+                es decir $a \in X$ y ($a \notin X$ ó $a \in A$), por lo tanto
+                $a \in X$ y $a \notin (X-A)$ y por definición de diferencia $a \in (X - (X-A))$
 
-        Ahora considera el par $(a,b)$ donde $a>b$, entonces podemos pensar en el natural $a-b$, considera
-        entonces el par ordenado $(a-b, 0)$, vemos que esta dentro de la misma clase de equivalencia pues
-        $a+0=b+a-b$ se puede reducir a $a=a$ lo cual es claramente siempre cierto, por lo tanto
-        para la clase de equivalencia arbitraria $[(a, b)]_R$ con $a>b$ tenemos que existe el representante
-        $(0, n)$ con $n$ definida como el natural $a-b$. A este algún lo llamaremos el n en los enteros.
+            \item Por otro lado tenemos que:
+                Sea $a$ un elemento arbitrario de $(X - (X-A))$,
+                por definición de diferencia $a \in X$ y $a \notin (X-A)$,
+                es decir $a \in X$ y ($a \notin X$ ó $a \in A$).
+
+                Es decir ($a \in X$ y $a \notin X$) ó ($a \in X$ y $a \in A$) y ya que
+                la primera proposición entre parentesis es el vacío tenemos que:
+                $a \in X$ y $a \in A$.
+                    
+        \end{itemize}
+
+
+        Ahora ya que sabemos que son ambos conjuntos iguales la regla de correspondencia nos dice que
+        $(F \circ F)(A) = A$.
+
+        Podemos probar que:
+        \begin{itemize}
+            \item $F$ es inyectiva:
+
+                Supón que $A,B \in P(X)$ y que $f(A) = f(B)$, entonces gracias a la regla de 
+                correspondencia tenemos que $X-A = X-B$.
+                Ahora si $X-A = X-B$ podemos por las propiedades que ya demostramos de la diferencia de
+                conjuntos podemos decir que $A = B$.
+
+            \item $F$ es suprayectiva:
+
+                Sea $B$ un elemento arbitrario de $P(X)$, y sea $A = X-B \in P(X)$ entonces
+                tenemos que $\forall b \in P(x), \; \exists A \in P(X)$ tal que
+                $f(A) = f(X-B)= X-(X-B) = B$
+
+        \end{itemize}
+
+        Ahora ya que probamos que la composición de funciones suprayectivas es suprayectiva y que la
+        composición de funciones inyectivas es inyectiva tenemos que $f \circ f$ es una biyección cuya
+        regla de correspondencia es $f(A) = A$. Por lo tanto $f \circ f$ es la identidad de $P(X)$.
+
 
     \end{SmallIndentation}
                 
 
 
 
-
-% =====================================================
-% ================     EJERCICIO 7   ==================
-% =====================================================
-\clearpage
 \section{Ejercicio 7}
 
-    Ya se demostro que la relación: $R: \Reals \times \Reals$ que esta dada por la regla
-    $a \; R \; b$ si y solo si $a-b \in \Integers$ es una relación de equivalencia, además
-    $[0,1)$ es un conjunto de todos los represetantes de las clases de equivalencia
+    Sea $X = \Set{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}$, de una función $f : X \to X$ tal que:
+    \begin{itemize}
+        \item $f^{-1}[\Set{1,2,3}] = \emptyset$
+        \item $f^{-1}[\Set{4, 5}] =  \Set{1,3,7}$
+        \item $f^{-1}[\Set{8, 10}] = \Set{8, 10}$
+    \end{itemize}
+
+    % ======== DEMOSTRACION ========
+    \begin{SmallIndentation}[1em]
+        \textbf{Solución}:
+        
+        Sea $f = \Set{
+                        (1, 4),
+                        (2, 9),
+                        (3, 4),
+                        (4, 9),
+                        (5, 9),
+                        (6, 9),
+                        (7, 5),
+                        (8, 8),
+                        (9, 9),
+                        (10,10)}$
+
+    \end{SmallIndentation}
+
+
+
+\section{Ejercicio 9}
+
+    Sea $\Reals^+ = \Set{x \in \Reals \Such x > 0}$ y $f: \Reals^+ \to \Reals^+$.
+    dada por $f(x) = \dfrac{1}{1+x^2}$.
+
+    Demuestre que $f$ es inyectiva
+
 
     % ======== DEMOSTRACION ========
     \begin{SmallIndentation}[1em]
         \textbf{Demostración}:
         
-        Es Reflexiva pues dado cualquier real $a$ tenemos que $a-a=0$ y $0 \in \Integers$, por lo tanto
-        $\forall a \in \Reals \; (a, a) \in R$.
+        Supón que $x,y \in \Reals^+$ y que $f(x) = f(y)$
 
-        Es Simetrica pues si $(a,b) \in R$ entonces $a-b \in \Integers$, pero sea $n = a-b$ entonces tanto
-        $n \in \Integers$ como $-n \in \Integers$, por lo tanto $b-a \in \Integers$, por lo tanto
-        $(b, a) \in R$, es decir de forma general $\forall (a,b) \in R \; (b,a) \in R$. 
-    
-
-        Finalmente podemos ver que para $(a,b) \in R$ y $(b,c) \in R$ tenemos por la definición de 
-        la misma relación $a-b \in \Integers$ y $b-c \in \Integers$ por lo tanto sea $n=a-b$ y $m=b-c$
-        entonces veamos al entero $n+m$ este se puede ver como $a-b+b-c$ es decir $m+n=a-c$ y para cualquiera
-        dos enteros, su suma sigue en los enteros, por lo tanto $a-c \in \Integers$, por lo tanto
-        $(a,c) \in R$, es decir de forma general $\forall (a,b) \in R$ y $(b,c) \in R$ tenemos que $(a,c) \in R$. 
-
-        Finalmente para ver que $[0,1)$ es un conjunto de todos los represetantes de las clases de equivalencia
-        basta con ver que para un entero arbitrario $a$ existe un elemento en $b \in [0,1)$ tal que $a \; R \; b$
-
-        Esto lo podemos demostrar por casos, sea $a \in \Reals$:
-        \begin{itemize}
-
-            \item
-                Si $a \in \Integers$ entonces $a \; R \; 0$ pues $a-0 \in \Integers$, y ya que $0 \in [0,1)$
-                logramos encontrar un representante dentro del conjunto.
-
-            \item
-                Si $a$ no esta en los enteros, podemos describirla como $a=b+k$ con $b \in \Integers$ y
-                $k \in \Reals$ donde $b$ es el entero inmediatamente anterior, ya que la separacióne entre
-                enteros es de un real, $0 < k < 1$.
-                Finalmente podemos ver que $a \; R \; k$ pues $a=b+k-k \in \Integers$ por lo tanto encotramos
-                una $k$ tal que $0 < k < 1$ y que esta en la misma clase de equivalencia, por lo tanto
-                es un representante de la misma
-
-        \end{itemize}
-
-        Entonces sin importar si $a$ es un entero o no, podemos encontrar un elemento dentro de $[0,1)$
-        para cada clase de equivalencia, por lo tanto ese conjunto es un conjunto de representantes.
+        Por lo tanto por la regla de correspondencia $\dfrac{1}{1+x^2} = \dfrac{1}{1+y^2}$, por lo tanto
+        $1+x^2 = 1+y^2$, por lo tanto $x^2=y^2$ y al aplicar raíz cuadrada a ambos lados
+        $+\sqrt{x^2} = +\sqrt{y^2}$ y ya que estamos en los reales positivos $x = y$
 
     \end{SmallIndentation}
-        
 
 
 
-
-
-% =====================================================
-% ================     EJERCICIO 8   ==================
-% =====================================================
-\clearpage
-\section{Ejercicio 8}
-
-
-    Sea $X$ y $Y$ conjuntos ajenos. Si $\Set{X_i}_{i \in I}$ es una partición de $X$
-    y $\Set{Y_j}_{j \in J}$ es una partición de $Y$, entonces $\Set{X_i}_{i \in I} \cup \Set{Y_j}_{j \in J}$
-    es una partición de $X \cup Y$.
+    Encuentre dos funciones $g, h : \Reals^+ \to \Reals^+$ tal que $g \circ f = h \circ f = Id_{\Reals^+}$
 
     % ======== DEMOSTRACION ========
     \begin{SmallIndentation}[1em]
-        \textbf{Demostración}:
+        \textbf{Solución}:
         
-        Ya que son con conjuntos disconjuntos $X \cap Y = \emptyset$.
+        Sea $g(x) = \sqrt{\dfrac{1}{x}-1}$, entonces 
+        \begin{MultiLineEquation*}{3}
+            f(g(x)) 
+                &= (f \circ g)(x)                          \\
+                &= \dfrac{1}{1+\sqrt{\frac{1}{x}-1}^2}     \\
+                &= \dfrac{1}{1+(\frac{1}{x}-1)}            \\
+                &= \dfrac{1}{\frac{1}{x}}                  \\
+                &= x
+        \end{MultiLineEquation*}
 
-        Sea $Z_k \in \Set{X_i}_{i \in I} \cup \Set{Y_j}_{j \in J}$
 
-        Ahora para podemos decir que $\Set{X_i}_{i \in I} \cup \Set{Y_j}_{j \in J}$ es una partición de $X \cup Y$
-        si y solo si:
-
-        \begin{itemize}
-            \item $\forall k \in I \cup J \; Z_k \subseteq \Set{X_i}_{i \in I} \cup \Set{Y_j}_{j \in J}$
-
-                Este sale directo, pues sea $Z_k \in \Set{X_i}_{i \in I} \cup \Set{Y_j}_{j \in J}$
-                entonces o bien $Z_k \subseteq X$ o $Z_k \subseteq Y$, vayamos por casos:
-
-                Si $Z_k \in \Set{X_i}_{i \in I}$ entonces por definición de partición sobre X
-                $Z_k \subseteq X \subseteq X \cup Y$ por lo tanto $Z_k \in X \cup Y$
-
-                Si $Z_k \in \Set{Y_j}_{j \in J}$ entonces por definición de partición sobre Y
-                $Z_k \subseteq Y \subseteq Y \cup X = X \cup Y$ por lo tanto $Z_k \in X \cup Y$
-
-            \item $\forall k \in I \cup J \; Z_k \neq \emptyset$
-
-                Si $Z_k \in \Set{X_i}_{i \in I}$ por definición de partición niguna de las $X_i$ puede
-                ser vacia, por lo tanto $Z_k$ no será vacía.
-
-                O bien $Z_k \in \Set{Y_j}_{j \in J}$ por definición de partición niguna de las $Y_i$ puede
-                ser vacia, por lo tanto $Z_k$ no será vacía.
-
-            \item Si $z \in Z_k$ entonces $z$ no pertenece a $Z_{k'}$ $\forall k' \in I \cup J$ donde $k' \neq k$
-
-                Esta proposición nos dice que no existen elementos que pertenzcan a más de una partición.
-
-                Sea $z \in Z_k$ un elemento cualquiera dentro de $X \cup Y$.
-
-                Si $Z_k \in \Set{X_i}_{i \in I}$ entonces por definición de partición sobre X 
-                si $i \neq j$ entonces $X_i \cap X_j = \emptyset$, por lo tanto z no esta en nigun otro subconjunto
-                de $X$ además de $Z_k$ y ya que $X$ y $Y$ son ajenos no existe elementos de X en Y, por lo tanto
-                si $z \in Z_k$, z no pertenecerá a ninguna $Z_{k'}$ con $k' \neq k$.
-
-                Si $Z_k \in \Set{X_j}_{j \in J}$ entonces por definición de partición sobre Y
-                si $i \neq j$ entonces $Y_i \cap Y_j = \emptyset$, por lo tanto z no esta en nigun otro subconjunto
-                de $Y$ además de $Z_k$ y ya que $X$ y $Y$ son ajenos no existe elementos de Y en X, por lo tanto
-                si $z \in Z_k$, z no pertenecerá a ninguna $Z_{k'}$ con $k' \neq k$.
-
-            \item $\cup_{k \in I \cup J} Z_k = X \cup Y$
-
-                Sea $Z_k \in \Set{X_i}_{i \in I} \cup \Set{Y_j}_{j \in J}$
-                \begin{MultiLineEquation*}{3}
-                    \cup_{k \in I \cup J} Z_k
-                        &= \cup_{i \in I} \Set{X_i} \;\; \cup \;\; \cup_{j \in J} \Set{Y_i}   \\
-                        &= X \cup Y                                                 
-                \end{MultiLineEquation*}
-        \end{itemize}
+        Sea $h(x) = \dfrac{\dfrac{1}{x}-1}{\sqrt{\dfrac{1}{x}-1}}$, entonces 
+        \begin{MultiLineEquation*}{3}
+            h(f(x)) 
+                &= (h \circ f)(x)                        \\
+                &= \dfrac{\dfrac{1}{\frac{1}{1+x^2}}-1}{\sqrt{\dfrac{1}{\frac{1}{1+x^2}}-1}}    \\
+                &= \dfrac{(1+x^2)-1}{\sqrt{\dfrac{1}{\frac{1}{1+x^2}}-1}}                       \\
+                &= \dfrac{x^2}{\sqrt{\dfrac{1}{\frac{1}{1+x^2}}-1}}                             \\
+                &= \dfrac{x^2}{x}                             \\
+                &= x                                      \\
+        \end{MultiLineEquation*}
     
     \end{SmallIndentation}
         
-
-
 
 
 \end{document}
