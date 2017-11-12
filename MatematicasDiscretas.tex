@@ -2674,6 +2674,13 @@
             Decimos que dos funciones $f : X \to Y$ y $g: X \to Y'$ son iguales si y solo si
             $f(x) = g(x) \; \forall x \in X$
 
+        % =====================================================
+        % ==============   IGUALDAD DE FUNCIONES  =============
+        % =====================================================
+        \section{Composición de Funciones}
+
+            Recuerda que $h \circ (g \circ f) = (h \circ g) \circ f$
+
 
 
 
@@ -2754,21 +2761,50 @@
                 \end{equation*}
 
 
-            % =======================================
-            % =======  PRINCIPIO DEL PALOMAR   ======
-            % =======================================
-            \clearpage
-            \subsection{Principio del Palomar}
+        % =====================================================
+        % ==============   IGUALDAD DE FUNCIONES  =============
+        % =====================================================
+        \section{Inversa por la Izquierda e Inyectivas}
 
-                Aquí hay una gran historia de porque se llama así este principio.
+            Dada una función $f: A \to B$ que es inyectiva siempre existirá una función
+            $g: B \to A$ tal que $g \circ f = Id_A$.
 
-                Supón que $A$ y $B$ son conjuntos finitos y que existe una $f: A \to B$ que es una función.
+            Decimos que $g$ es la inversa por la izquierda de $f$
 
-                Entonces tenemos que:
-                \begin{itemize}
-                    \item Si $|A| > |B|$, entonces $f$ no es inyectiva.
-                    \item Si $|A| < |B|$, entonces $f$ no es suprayectiva.
-                \end{itemize}
+            Nota decimos que existe una $g$, ya que si $|A| \neq |B|$ entonces existen más.
+
+
+        % =====================================================
+        % ==============   IGUALDAD DE FUNCIONES  =============
+        % =====================================================
+        \section{Inversa por la Derecha e Suprayectivas}
+
+            Dada una función $f: A \to B$ que es suprayectiva siempre existirá una función
+            $h: B \to A$ tal que $f \circ h = Id_B$.
+
+            Decimos que $h$ es la inversa por la derecha de $f$
+
+            Nota decimos que existe una $h$, ya que si $|A| \neq |B|$ entonces existen más.
+
+
+
+
+
+        % =======================================
+        % =======  PRINCIPIO DEL PALOMAR   ======
+        % =======================================
+        \clearpage
+        \section{Principio del Palomar}
+
+            Aquí hay una gran historia de porque se llama así este principio.
+
+            Supón que $A$ y $B$ son conjuntos finitos y que existe una $f: A \to B$ que es una función.
+
+            Entonces tenemos que:
+            \begin{itemize}
+                \item Si $|A| > |B|$, entonces $f$ no es inyectiva.
+                \item Si $|A| < |B|$, entonces $f$ no es suprayectiva.
+            \end{itemize}
 
 
 
@@ -2777,7 +2813,6 @@
         % =====================================================
         % ========         FUNCION INVERSA        =============
         % =====================================================
-        \clearpage
         \section{Función Inversa}
 
             Aunque parecido, para que exista la relación inversa sea también una función,
@@ -2793,6 +2828,17 @@
             \begin{equation*}
                 \forall y \in B, \MiniSpace f(f^{-1}(y)) = y
             \end{equation*}
+
+
+            Es decir que ya que $f$ es inyectiva entonces existe una inversa por la
+            izquierda $g$ y como $f$ es suprayectiva entonces existe una inversa por la
+            derecha.
+
+            Mas aún, $g = h$ por lo tanto en vez de llamarlas inversas por la derecha o izquierda
+            la llamamos $f^-1$
+
+
+
 
 
 
