@@ -2835,40 +2835,63 @@
             derecha.
 
             Mas aún, $g = h$ por lo tanto en vez de llamarlas inversas por la derecha o izquierda
-            la llamamos $f^-1$
+            la llamamos $f^{-1}$
 
 
 
 
 
+        % =====================================================
+        % ========       CONJUNTOS EQUIPOTENTES          ======
+        % =====================================================
+        \clearpage
+        \section{Conjuntos Equipotentes}
+
+            Decimos que dos conjuntos $A, B$ son equipotentes si y solo si existe una función 
+            biyectiva de $A$ a $B$.
 
 
+            % =====================================================
+            % ========         IDEAS IMPORTANTES             ======
+            % =====================================================
+            \subsection{Ideas Importantes}
 
-
+                \begin{itemize}
+                    \item No existe una función biyectiva entre cualquier conjunto $A$
+                        y $P(A)$
+                \end{itemize}
 
         % =====================================================
         % ========         CARDINALIDAD Y FUNCIONES      ======
         % =====================================================
-        \clearpage
         \section{Cardinalidad y Funciones}
 
             Podemos definir la cardinalidad de los conjuntos de una mejor manera
-            usando la cardinalidad:
+            usando la equipotencia:
 
             Los conjuntos tienen la misma cardinalidad $|A| = |B|$ si y solo si es que existe
-            una función biyectiva $f : A \to B$.
+            una función biyectiva $f : A \to B$, es decir, dos conjuntos son equipotentes si y solo
+            si son equipotentes.
 
+            Aquí hay algo muy obvio pero importante, podemos decir cosas como
+            $|\Set{a, b, c}| = 3$ porque bajo las ideas conjuntivistas el 3 solo es una abreviación
+            de $\Set{0, 1, 2} = \Set{\emptyset, \Set{\emptyset}, \Set{\emptyset, \Set{\emptyset}}}$
+            y es mas obvio ahora que podemos hacer una biyección entre dichos conjuntos. 
 
             Gracias a esto podemos decir que:
 
             \begin{itemize} 
-                \item $|\Naturals| = |\Integers| = |\Racionals| = \aleph_0$
+                \item $|\Naturals| = |\Integers| = |\Racionals| = |\Racionals|
+                                   = |\Naturals \times \Naturals| = |\Integers \times \Integers| = \aleph_0$
 
-                \item $P(|\Naturals|) = |\Reals| = \aleph_1$
+                \item $P(|\Naturals|) = |(0, 1)| = |\Reals| = \aleph_1$
 
                 \item $P(|\Reals|) = \aleph_2$
 
+                \item $\dots$
+
             \end{itemize} 
+
 
 
 
