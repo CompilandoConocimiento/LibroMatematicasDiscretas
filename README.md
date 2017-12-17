@@ -1,4 +1,4 @@
-# ![alt text](https://secure.gravatar.com/blavatar/4560c02ab420ca3cefc52ab44e8aefc1?s=114) Compilado: Matemáticas Discretas
+# ![alt text](https://secure.gravatar.com/blavatar/4560c02ab420ca3cefc52ab44e8aefc1?s=32) Compilado: Matemáticas Discretas
 
 Bienvenido al Compilado sobre Matemáticas Discretas, en este repositorio
 podrás encontrar todo lo relacionado con este documento, su creación y link de descarga
