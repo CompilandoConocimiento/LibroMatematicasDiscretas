@@ -13,15 +13,15 @@ Puedes acceder a este libro completamente gratis en línea haciendo click [aquí
 
 Puedes descargar el documento de igual manera en este [link](https://compilandoconocimiento.com/biblioteca/#Discretas) 
 
-### Creado Con
+## Creado Con
 
 * [Latex](https://www.latex-project.org/) - Esto es el corazón de este documento
 
-### Autor
+## Autor
 
 * [SoyOscarRH](https://github.com/SoyOscarRH) - Oscar Andrés Rosas Hernandez
 
-### Licencia
+## Licencia
 
 Este proyecto se encuentra bajo la licencia  GNU V2 License - puedes leerla en [LICENSE.md](LICENSE.md)
 
