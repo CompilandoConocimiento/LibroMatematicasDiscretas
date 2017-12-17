@@ -11,6 +11,7 @@
     \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
     \usepackage{ifthen}                                             %Allow simple programming
     \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
+    \usepackage{pdfpages}                                           %Create MetaData for a PDF and LINKS!
     \hypersetup{pageanchor=false}                                   %Solve 'double page 1' warnings in build
     \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
     \author{Oscar Andrés Rosas}                                     %Who I am
@@ -34,7 +35,7 @@
     \graphicspath{ {Graphics/} }                                    %Where are the images :D
 
     % *********   LISTS AND TABLES ***********
-    \usepackage{listings}                                           %We will be using code here
+    \usepackage{listings, listingsutf8}                             %We will be using code here
     \usepackage[inline]{enumitem}                                   %We will need to enumarate
     \usepackage{tasks}                                              %Horizontal lists
     \usepackage{longtable}                                          %Lets make tables awesome
@@ -159,11 +160,20 @@
     % TRIGONOMETRIC FUNCTIONS
     \newcommand{\Cos}[1]{\cos\Wrap{#1}}                             %Simple wrappers
     \newcommand{\Sin}[1]{\sin\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Tan}[1]{tan\Wrap{#1}}                              %Simple wrappers
+    
+    \newcommand{\Sec}[1]{sec\Wrap{#1}}                              %Simple wrappers
+    \newcommand{\Csc}[1]{csc\Wrap{#1}}                              %Simple wrappers
+    \newcommand{\Cot}[1]{cot\Wrap{#1}}                              %Simple wrappers
 
     % === COMPLEX ANALYSIS ===
     \newcommand \Cis[1]  {\Cos{#1} + i \Sin{#1}}                    %Use: \Cis for cos(x) + i sin(x)
     \newcommand \pCis[1] {\Wrap{\Cis{#1}}}                          %Use: \pCis for the same ut parantesis
     \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same to Brackets
+
+    % ====== TRANSFORMS =====
+    \newcommand{\FourierT}[1]                                       %Use: \FourierT {Funtion} 
+        {\mathscr{F} \left\{ #1 \right\} }                          %Use: \FourierT {Funtion}
 
     % === CALCULUS ===
     \newcommand \MiniDerivate[1][x] {\dfrac{d}{d #1}}               %Use: \MiniDerivate for simple use
@@ -184,39 +194,47 @@
     \newcommand \UpperPartial[3]                                    %Complete High Orden Derivate -- [f(x)][x][1]
         {\dfrac{\partial^{#3} \; #1}{\partial#2^{#3}}}              %Use: \UpperDerivate for simple use
 
+    \DeclareMathOperator \Evaluate  {\Big|}                         %Use: \Evaluate por Notation
 
+    
     % =====  GENERAL COLOR  =========
-    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
-    \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
     \definecolor{TealMD}{HTML}{009688}                              %Use: Color :D        
-    \definecolor{BlueGrey800MD}{HTML}{37474F}                       %Use: Color :D
-    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D
     \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
     \definecolor{Green100MD}{HTML}{DCEDC8}                          %Use: Color :D
+    \definecolor{Blue300MD}{HTML}{64B5F6}                           %Use: Color :D
+    \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
+    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D
+    \definecolor{BlueGrey800MD}{HTML}{37474F}                       %Use: Color :D
+    \definecolor{BlueGrey200MD}{HTML}{B0BEC5}                       %Use: Color :D
+    \definecolor{Lime300MD}{HTML}{E6EE9C}                           %Use: Color :D
 
     \newenvironment{ColorText}[1]{                                  %Use: \begin{ColorText}
         \leavevmode\color{#1}\ignorespaces}                         %That's is!
-
 
     % =====  CODE EDITOR =========
     \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
         backgroundcolor=\color{BlueGrey800MD},                      %Background Color  
         basicstyle=\tiny\color{white},                              %Font color
-        commentstyle=\color{BlueGrey100MD},                         %Comment color
-        stringstyle=\color{TealMD},                                 %String color
-        keywordstyle=\color{Green100MD},                            %keywords color
+        commentstyle=\color{BlueGrey200MD},                         %Comment color
+        stringstyle=\color{Lime300MD},                              %String color
+        keywordstyle=\color{Blue300MD},                             %keywords color
         numberstyle=\tiny\color{TealMD},                            %Size of a number
         frame=shadowbox,                                            %Adds a frame around the code
-        breakatwhitespace=true,                                     %Style                       
+        breakatwhitespace=true,                                     %Style   
+        showstringspaces=false,                                     %Hate those spaces                  
         breaklines=true,                                            %Style                   
         keepspaces=true,                                            %Style                   
         numbers=left,                                               %Style                   
         numbersep=10pt,                                             %Style 
         xleftmargin=\parindent,                                     %Style 
-        tabsize=4                                                   %Style 
+        tabsize=4,                                                  %Style
+        inputencoding=utf8/latin1                                   %Allow me to use special chars
     }
  
     \lstset{style=CompilandoStyle}                                  %Use this style
+
+
+
 
 
 
@@ -233,7 +251,7 @@
 
     % ============ NAME OF THE DOCUMENT  ============
     \rule{\linewidth}{0.5mm} \\[1.0cm]
-        { \huge \bfseries Matemáticas Discretas}\\[1.0cm] 
+        { \huge \bfseries Introducción a Matemáticas Discretas }\\[1.0cm] 
     \rule{\linewidth}{0.5mm} \\[2.0cm]
     
     % ====== SEMI TITLE ==========
@@ -257,6 +275,45 @@
 
 \clearpage
 
+
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+% ///////////////////////           ¿QUE ES LO QUE ESTOY LEYENDO?           //////////////////////////////////////////
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+\section{¿Qué es lo que estoy leyendo?}
+
+    
+    Hola... ¡Hey! Seguramente te estarás preguntando
+    ¿Qué demonios estoy leyendo?
+
+    Bueno, este pequeño texto intenta darle solución a esa pregunta, la respuesta mas inmediata es
+    que este texto (o compilado como a mí me gusta decirle) es una recopilación de teoremas, ideas
+    y conceptos importantes que aprendí a lo largo del tiempo sobre este tema.
+
+    De manera regular estaré actualizando estos textos con todo aquello nuevo que aprenda intentando
+    profundizar en todos estos temas y cerrar posibles dudas en estas páginas, así que siempre mantente
+    alerta de tener la última versión, esta siempre esta en \href{http://www.CompilandoConocimiento.com}
+    {\underline{CompilandoConocimiento.com}} 
+
+    Este Compilado intenta ser lo más estricto posible, aunque soy humano y es posible (e incluso probable) que
+    cometa pequeños errores de vez en cuando.
+
+    Estos textos están creados como una base con la que tu puedas leer rápidamente todo lo que he aprendido
+    a lo largo del tiempo y que usándolo tu puedas profundizar más en estos conceptos.
+
+    Este texto esta publicado bajo la GPL, por lo tanto es software libre y tu tienes el control total sobre
+    el, puedes descargar este texto, puedes ver su código fuente, puedes modificarlo y puedes distribuir este
+    texto y sus versiones modificadas, puedes acceder a todo lo que necesitas 
+    \href{http://www.github.com/CompilandoConocimiento/LibroMatematicasDiscretas}{\underline{aquí}} 
+
+    Cualquier pregunta, comentario o si quieres contactar conmigo no dudes en escribir el email del proyecto:
+    CompilandoConocimiento@gmail.com
+
+    Espero que tomes estas páginas como un regalo, creado por un ser imperfecto pero con muchos ánimos de hacer
+    del mundo un lugar mejor, ahora si, abróchate los cinturones que esto acaba de empezar.
+
+    \begin{flushright}
+        Compilar es Compartir
+    \end{flushright}
 
 
 
@@ -2899,6 +2956,71 @@
 
 
 
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+% /////////////////////////////////         INDUCCIÓN                    /////////////////////////////////////////////
+% ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+\part{Cosas fuera de Lugar pero necesarias}
+
+    % ======================================================================================
+    % ===================             INDUCCION                         ====================
+    % ======================================================================================
+    \chapter{Inducción}
+        \clearpage
+
+
+
+        % =====================================================
+        % ==========              INDUCCION           =========
+        % =====================================================
+        \clearpage
+        \section{Primer Principio Inductivo}
+
+            La inducción matemática es un método de demostración que se utiliza cuando se trata
+            de establecer la veracidad de una lista infinita de proposiciones.
+
+            
+            % ================================
+            % ==========    PASOS    =========
+            % ================================
+            \section{Pasos}
+
+                \begin{itemize}
+                    \item Caso Base: 
+                        Toma tu proposición, y encuentra un caso base, es decir el natural más
+                        pequeño que cumple la proposición.
+
+                        Nota: Muchas, muchísimas veces es ese número es uno (ósea siempre se cumple), pero no
+                        siempre, así que no te confíes, encuentra ese caso base.
+
+                    \item Supone que se cumple para k: Este es el paso más simple, lo único que tienes que hacer
+                        es creer (tratar como un axioma, como tu quieras verlo) que se cumple para el caso k.
+
+                    \item Demuestra k+1: No todo en la vida podría ser tan fácil, este paso el el 95\% de la
+                        dificultad del problema, usando lo del paso anterior tienes que demostrar que si se
+                        cumple para k A FUERZAS se cumple para K+1.
+
+                \end{itemize}
+
+
+        % =====================================================
+        % ==========              INDUCCION           =========
+        % =====================================================
+        \clearpage
+        \section{Segundo Principio Inductivo}
+
+            El segundo principio de la inducción, a veces llamado Principio Fuerte de Inducción, 
+            en contraposición a la habitual, que es también llamado a la versión débil. Esta distinción
+            es sólo aparente a primera ya que ambos son equivalentes.
+
+            La diferencia básicamente es que en la versión anterior la hipótesis inductiva es sólo que la
+            propiedad a demostrar que es verdadera para algún entero $k$, y, a continuación,
+            que muestran que también vale para $n+1$.
+
+            Mientras que la versión fuerte nos permite suponer que la propiedad se cumple para algun natural
+            $k$ y TODOS los anteriores.
+
+
+
 
 
 
@@ -2907,9 +3029,9 @@
 
 
     % ======================================================================================
-    % ===================          ANILLOS, CAMPOS Y GRUPOS             ====================
+    % ===================          ESTRUCTURAS ALGEBRAICAS              ====================
     % ======================================================================================
-    \chapter{Grupos, Anillos y Campos}
+    \chapter{Estructuras Algebraicas}
         \clearpage
 
 
@@ -3045,7 +3167,7 @@
 
 
 
- 
+
 
         % =====================================================
         % ===========            ANILLOS              =========
