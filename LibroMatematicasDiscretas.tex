@@ -6,31 +6,40 @@
 % =======================================================
 % =======         HEADER FOR DOCUMENT        ============
 % =======================================================
+    
+    % *********  SPECIFIC FOR THIS BOOK  ********
+    \def\ProjectAuthorLink{https://github.com/CompilandoConocimiento}
+    \def\ProjectNameLink{\ProjectAuthorLink/LibroMatematicasDiscretas}    
+    
+
     % *********   DOCUMENT ITSELF   **************
-    \documentclass[12pt, fleqn]{report}                             %Type of docuemtn and size of font and left eq
+    \documentclass[12pt, fleqn]{report}                             %Type of doc and size of font and left equations
     \usepackage[margin=1.2in]{geometry}                             %Margins and Geometry pacakge
-    \usepackage{ifthen}                                             %Allow simple programming
-    \usepackage{hyperref}                                           %Create MetaData for a PDF and LINKS!
-    \usepackage{pdfpages}                                           %Create MetaData for a PDF and LINKS!
-    \hypersetup{pageanchor=false}                                   %Solve 'double page 1' warnings in build
+    \usepackage{ifthen}                                             %Allow simple programming using if - then
+    \usepackage[hidelinks]{hyperref}                                %Allow to create hiperlinks and Fuck Firefox
+    \usepackage{pdfpages}                                           %Allow us 'import' PDF's
+    \hypersetup{pageanchor=false}                                   %Solve 'double page 1' warnings in build :v
     \setlength{\parindent}{0pt}                                     %Eliminate ugly indentation
     \author{Oscar Andrés Rosas}                                     %Who I am
 
-    % *********   LANGUAJE AND UFT-8   *********
-    \usepackage[spanish]{babel}                                     %Please use spanish
-    \usepackage[utf8]{inputenc}                                     %Please use spanish - UFT
-    \usepackage[T1]{fontenc}                                        %Please use spanish
+    % *********   LANGUAJE    *****************
+    \usepackage[spanish]{babel}                                     %Please allow me to type in spanish
+    \usepackage[utf8]{inputenc}                                     %Lets use UFT-8
+    \usepackage[T1]{fontenc}                                        %Allow for better font support
     \usepackage{textcmds}                                           %Allow us to use quoutes
     \usepackage{changepage}                                         %Allow us to use identate paragraphs
+    \usepackage{anyfontsize}                                        %All the sizes for fonts wiiiii!
 
     % *********   MATH AND HIS STYLE  *********
     \usepackage{ntheorem, amsmath, amssymb, amsfonts}               %All fucking math, I want all!
     \usepackage{mathrsfs, mathtools, empheq}                        %All fucking math, I want all!
+    \usepackage{cancel}                                             %Negate symbol
     \usepackage{centernot}                                          %Allow me to negate a symbol
     \decimalpoint                                                   %Use decimal point
 
     % *********   GRAPHICS AND IMAGES *********
     \usepackage{graphicx}                                           %Allow to create graphics
+    \usepackage{float}                                              %For images
     \usepackage{wrapfig}                                            %Allow to create images
     \graphicspath{ {Graphics/} }                                    %Where are the images :D
 
@@ -44,6 +53,10 @@
     \usepackage{multirow}                                           %Lets make tables awesome
     \usepackage{multicol}                                           %Create multicolumns
 
+    % *********   REMOVE SOME ERRORS **********
+    \hbadness=10000                                                 %Ignore \vbox and \hbox warings
+    \hfuzz=\maxdimen\newdimen\hfuzz                                 %Ignore \vbox and \hbox warings
+
     % *********   HEADERS AND FOOTERS ********
     \usepackage{fancyhdr}                                           %Lets make awesome headers/footers
     \pagestyle{fancy}                                               %Lets make awesome headers/footers
@@ -51,12 +64,12 @@
     \setlength{\parskip}{0.5em}                                     %Top line
     \renewcommand{\footrulewidth}{0.5pt}                            %Bottom line
 
-    \lhead{                                                         %Left Header
+    \lhead {                                                        %Left Header
         \hyperlink{chapter.\arabic{chapter}}                        %Make a link to the current chapter
         {\normalsize{\textsc{\nouppercase{\leftmark}}}}             %And fot it put the name
     }
 
-    \rhead{                                                         %Right Header
+    \rhead {                                                        %Right Header
         \hyperlink{section.\arabic{chapter}.\arabic{section}}       %Make a link to the current chapter
             {\footnotesize{\textsc{\nouppercase{\rightmark}}}}      %And fot it put the name
     }
@@ -65,7 +78,7 @@
 
     \fancyfoot[L]{                                                  %Algoritm for a changing footer
         \ifthenelse{\isodd{\value{page}}}                           %IF ODD PAGE:
-            {\href{https://compilandoconocimiento.com/yo/}          %DO THIS:
+            {\href{https://SoyOscarRH.github.io/}                   %DO THIS:
                 {\footnotesize                                      %Send the page
                     {\textsc{Oscar Andrés Rosas}}}}                 %Send the page
             {\href{https://compilandoconocimiento.com}              %ELSE DO THIS: 
@@ -74,81 +87,148 @@
     }
     
     
-    
-% ========================================
-% ===========   COMMANDS    ==============
-% ========================================
+% =======================================================
+% ===================   COMMANDS    =====================
+% =======================================================
 
-    % =====  GENERAL TEXT  ==========
-    \newcommand \Quote {\qq}                                        %Use: \Quote to use quotes
-    \newcommand \Over {\overline}                                   %Use: \Bar to use just for short
-    \newcommand \ForceNewLine {$\Space$\\}                          %Use it in theorems for example
-    
+    % =========================================
+    % =======   NEW ENVIRONMENTS   ============
+    % =========================================
     \newenvironment{Indentation}[1][0.75em]                         %Use: \begin{Inde...}[Num]...\end{Inde...}
-    {\begin{adjustwidth}{#1}{}}                                     %If you dont put nothing i will use 0.75 em
-    {\end{adjustwidth}}                                             %This indentate a paragraph
+        {\begin{adjustwidth}{#1}{}}                                 %If you dont put nothing i will use 0.75 em
+        {\end{adjustwidth}}                                         %This indentate a paragraph
+    
     \newenvironment{SmallIndentation}[1][0.75em]                    %Use: The same that we upper one, just 
-    {\begin{adjustwidth}{#1}{}\begin{footnotesize}}                 %footnotesize size of letter by default
-    {\end{footnotesize}\end{adjustwidth}}                           %that's it
-
-
-    % =====  GENERAL MATH  ==========
-    \DeclareMathOperator \Space {\quad}                             %Use: \Space for a cool mega space
-    \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
-    \newcommand \Such {\MiniSpace|\MiniSpace}                       %Use: \Such like in sets
-    \newcommand \Also {\MiniSpace \text{y} \MiniSpace}              %Use: \Also so it's look cool
-    \newcommand \Remember[1]{\Space\text{\scriptsize{#1}}}          %Use: \Remember so it's look cool
-
-    \newtheorem{Theorem}{Teorema}[section]                          %Use: \begin{Theorem}[Name]\label{Nombre}...
-    \newtheorem{Corollary}{Colorario}[Theorem]                      %Use: \begin{Corollary}[Name]\label{Nombre}...
-    \newtheorem{Lemma}[Theorem]{Lemma}                              %Use: \begin{Lemma}[Name]\label{Nombre}...
-    \newtheorem{Definition}{Definición}[section]                    %Use: \begin{Definition}[Name]\label{Nombre}...
-
-    \newcommand{\Set}[1]{\left\{ \MiniSpace #1 \MiniSpace \right\}} %Use: \Set {Info}
-    \newcommand{\Brackets}[1]{\left[ #1 \right]}                    %Use: \Brackets {Info} 
-    \newcommand{\Wrap}[1]{\left( #1 \right)}                        %Use: \Wrap {Info} 
-    \newcommand{\pfrac}[2]{\Wrap{\dfrac{#1}{#2}}}                   %Use: Put fractions in parentesis
-
+        {\begin{adjustwidth}{#1}{}\begin{footnotesize}}             %footnotesize size of letter by default
+        {\end{footnotesize}\end{adjustwidth}}                       %that's it
+    
+    \def \Eq {equation}                                             %Stupid Visual studio error
     \newenvironment{MultiLineEquation}[1]                           %Use: To create MultiLine equations
-        {\begin{equation}\begin{alignedat}{#1}}                     %Use: \begin{Multi..}{Num. de Columnas}
-        {\end{alignedat}\end{equation}}                             %And.. that's it!
+        {\begin{\Eq}\begin{alignedat}{#1}}                          %Use: \begin{Multi..}{Num. de Columnas}
+        {\end{alignedat}\end{\Eq}}                                  %And.. that's it!
+    
     \newenvironment{MultiLineEquation*}[1]                          %Use: To create MultiLine equations
-        {\begin{equation*}\begin{alignedat}{#1}}                    %Use: \begin{Multi..}{Num. de Columnas}
-        {\end{alignedat}\end{equation*}}                            %And.. that's it!
+        {\begin{\Eq*}\begin{alignedat}{#1}}                         %Use: \begin{Multi..}{Num. de Columnas}
+        {\end{alignedat}\end{\Eq*}}                                 %And.. that's it!
+    
 
+    % =========================================
+    % == GENERAL TEXT & SYMBOLS ENVIRONMENTS ==
+    % =========================================
+    
+    % =====  TEXT  ======================
+    \newcommand \Quote              {\qq}                           %Use: \Quote to use quotes
+    \newcommand \Over               {\overline}                     %Use: \Bar to use just for short
+    \newcommand \ForceNewLine       {$\Space$\\}                    %Use it in theorems for example
+    \newcommand \ForceColumnBreak   {\vfill\null\columnbreak}       %Use only in multicols
 
-    % =====  LOGIC  ==================
-    \DeclareMathOperator \doublearrow {\leftrightarrow}             %Use: \doublearrow for a double arrow
-    \newcommand \lequal {\MiniSpace \Leftrightarrow \MiniSpace}     %Use: \lequal for a double arrow
-    \newcommand \linfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lequal for a double arrow
-    \newcommand \longto {\longrightarrow}                           %Use: \longto for a long arrow
+    % =====  SPACES  ====================
+    \DeclareMathOperator \Space     {\quad}                         %Use: \Space for a cool mega space
+    \DeclareMathOperator \MegaSpace {\quad \quad}                   %Use: \MegaSpace for a cool mega mega space
+    \DeclareMathOperator \MiniSpace {\;}                            %Use: \Space for a cool mini space
+    
+    % =====  MATH TEXT  =================
+    \newcommand \Such           {\MiniSpace | \MiniSpace}           %Use: \Such like in sets
+    \newcommand \Also           {\MiniSpace \text{y} \MiniSpace}    %Use: \Also so it's look cool
+    \newcommand \Remember[1]    {\Space\text{\scriptsize{#1}}}      %Use: \Remember so it's look cool
+    
+    % =====  THEOREMS: IN SPANISH :0  ===
+    \newtheorem{Theorem}        {Teorema}[section]                  %Use: \begin{Theorem}[Name]\label{Nombre}...
+    \newtheorem{Corollary}      {Colorario}[Theorem]                %Use: \begin{Corollary}[Name]\label{Nombre}...
+    \newtheorem{Lemma}[Theorem] {Lemma}                             %Use: \begin{Lemma}[Name]\label{Nombre}...
+    \newtheorem{Definition}     {Definición}[section]               %Use: \begin{Definition}[Name]\label{Nombre}...
+    \theoremstyle{break}                                            %THEOREMS START 1 SPACE AFTER Fuck!
 
-    % =====  NUMBER THEORY  ==========
-    \DeclareMathOperator \Naturals  {\mathbb{N}}                     %Use: \Naturals por Notation
-    \DeclareMathOperator \Primes    {\mathbb{P}}                     %Use: \Naturals por Notation
-    \DeclareMathOperator \Integers  {\mathbb{Z}}                     %Use: \Integers por Notation
-    \DeclareMathOperator \Racionals {\mathbb{Q}}                     %Use: \Racionals por Notation
-    \DeclareMathOperator \Reals     {\mathbb{R}}                     %Use: \Reals por Notation
-    \DeclareMathOperator \Complexs  {\mathbb{C}}                     %Use: \Complex por Notation
+    % =====  LOGIC  =====================
+    \newcommand \lIff    {\leftrightarrow}                          %Use: \lIff for logic iff
+    \newcommand \lEqual  {\MiniSpace \Leftrightarrow \MiniSpace}    %Use: \lEqual for a logic double arrow
+    \newcommand \lInfire {\MiniSpace \Rightarrow \MiniSpace}        %Use: \lInfire for a logic infire
+    \newcommand \lLongTo {\longrightarrow}                          %Use: \lLongTo for a long arrow
 
-    % === LINEAL ALGEBRA & VECTORS ===
+    % =====  FAMOUS SETS  ===============
+    \DeclareMathOperator \Naturals     {\mathbb{N}}                 %Use: \Naturals por Notation
+    \DeclareMathOperator \Primes       {\mathbb{P}}                 %Use: \Primes por Notation
+    \DeclareMathOperator \Integers     {\mathbb{Z}}                 %Use: \Integers por Notation
+    \DeclareMathOperator \Racionals    {\mathbb{Q}}                 %Use: \Racionals por Notation
+    \DeclareMathOperator \Reals        {\mathbb{R}}                 %Use: \Reals por Notation
+    \DeclareMathOperator \Complexs     {\mathbb{C}}                 %Use: \Complex por Notation
+    \DeclareMathOperator \GenericField {\mathbb{F}}                 %Use: \GenericField por Notation
+    \DeclareMathOperator \VectorSet    {\mathbb{V}}                 %Use: \VectorSet por Notation
+    \DeclareMathOperator \SubVectorSet {\mathbb{W}}                 %Use: \SubVectorSet por Notation
+    \DeclareMathOperator \Polynomials  {\mathbb{P}}                 %Use: \Polynomials por Notation
+    \DeclareMathOperator \VectorSpace  {\VectorSet_{\GenericField}} %Use: \VectorSpace por Notation
     \DeclareMathOperator \LinealTransformation {\mathcal{T}}        %Use: \LinealTransformation for a cool T
-    \newcommand{\Mag}[1]{\left| #1 \right|}                         %Use: \Mag {Info} 
+    \DeclareMathOperator \LinTrans      {\mathcal{T}}               %Use: \LinTrans for a cool T
+    \DeclareMathOperator \Laplace       {\mathcal{L}}               %Use: \LinTrans for a cool T
 
-    \newcommand{\pVector}[1]{                                       %Use: \pVector {Matrix Notation} use parentesis
-        \ensuremath{\begin{pmatrix}#1\end{pmatrix}}                 %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
-    }
-    \newcommand{\lVector}[1]{                                       %Use: \lVector {Matrix Notation} use a abs 
-        \ensuremath{\begin{vmatrix}#1\end{vmatrix}}                 %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
-    }
-    \newcommand{\bVector}[1]{                                       %Use: \bVector {Matrix Notation} use a brackets 
-        \ensuremath{\begin{bmatrix}#1\end{bmatrix}}                 %Example: \bVector{a\\b\\c} or \bVector{a&b&c} 
-    }
-    \newcommand{\Vector}[1]{                                        %Use: \Vector {Matrix Notation} no parentesis
-        \ensuremath{\begin{matrix}#1\end{matrix}}                   %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
-    }
+    % =====  CONTAINERS   ===============
+    \newcommand{\Set}[1]            {\left\{ \; #1 \; \right\}}     %Use: \Set {Info} for INTELLIGENT space 
+    \newcommand{\bigSet}[1]         {\big\{  \; #1 \; \big\}}       %Use: \bigSet  {Info} for space 
+    \newcommand{\BigSet}[1]         {\Big\{  \; #1 \; \Big\}}       %Use: \BigSet  {Info} for space 
+    \newcommand{\biggSet}[1]        {\bigg\{ \; #1 \; \bigg\}}      %Use: \biggSet {Info} for space 
+    \newcommand{\BiggSet}[1]        {\Bigg\{ \; #1 \; \Bigg\}}      %Use: \BiggSet {Info} for space 
+        
+    \newcommand{\Wrap}[1]           {\left( #1 \right)}             %Use: \Wrap {Info} for INTELLIGENT space
+    \newcommand{\bigWrap}[1]        {\big( \; #1 \; \big)}          %Use: \bigBrackets  {Info} for space 
+    \newcommand{\BigWrap}[1]        {\Big( \; #1 \; \Big)}          %Use: \BigBrackets  {Info} for space 
+    \newcommand{\biggWrap}[1]       {\bigg( \; #1 \; \bigg)}        %Use: \biggBrackets {Info} for space 
+    \newcommand{\BiggWrap}[1]       {\Bigg( \; #1 \; \Bigg)}        %Use: \BiggBrackets {Info} for space 
 
-    % MATRIX
+    \newcommand{\Brackets}[1]       {\left[ #1 \right]}             %Use: \Brackets {Info} for INTELLIGENT space
+    \newcommand{\bigBrackets}[1]    {\big[ \; #1 \; \big]}          %Use: \bigBrackets  {Info} for space 
+    \newcommand{\BigBrackets}[1]    {\Big[ \; #1 \; \Big]}          %Use: \BigBrackets  {Info} for space 
+    \newcommand{\biggBrackets}[1]   {\bigg[ \; #1 \; \bigg]}        %Use: \biggBrackets {Info} for space 
+    \newcommand{\BiggBrackets}[1]   {\Bigg[ \; #1 \; \Bigg]}        %Use: \BiggBrackets {Info} for space 
+
+    \newcommand{\Generate}[1]   {\left\langle #1 \right\rangle}     %Use: \Generate {Info} <>
+    \newcommand{\Floor}[1]      {\left \lfloor #1 \right \rfloor}   %Use: \Floor {Info} for floor 
+    \newcommand{\Ceil}[1]       {\left \lceil #1 \right \rceil }    %Use: \Ceil {Info} for ceil
+    
+    % =====  BETTERS MATH COMMANDS   =====
+    \newcommand{\pfrac}[2]      {\Wrap{\dfrac{#1}{#2}}}             %Use: Put fractions in parentesis
+
+    % =========================================
+    % ====   LINEAL ALGEBRA & VECTORS    ======
+    % =========================================
+
+    % ===== UNIT VECTORS  ================
+    \newcommand{\hati}      {\hat{\imath}}                           %Use: \hati for unit vector    
+    \newcommand{\hatj}      {\hat{\jmath}}                           %Use: \hatj for unit vector    
+    \newcommand{\hatk}      {\hat{k}}                                %Use: \hatk for unit vector
+
+    % ===== MAGNITUDE  ===================
+    \newcommand{\abs}[1]    {\left\lvert #1 \right\lvert}           %Use: \abs{expression} for |x|
+    \newcommand{\Abs}[1]    {\left\lVert #1 \right\lVert}           %Use: \Abs{expression} for ||x||
+    \newcommand{\Mag}[1]    {\left| #1 \right|}                     %Use: \Mag {Info} 
+    
+    \newcommand{\bVec}[1]   {\mathbf{#1}}                           %Use for bold type of vector
+    \newcommand{\lVec}[1]   {\overrightarrow{#1}}                   %Use for a long arrow over a vector
+    \newcommand{\uVec}[1]   {\mathbf{\hat{#1}}}                     %Use: Unitary Vector Example: $\uVec{i}
+
+    % ===== FN LINEAL TRANSFORMATION  ====
+    \newcommand{\FnLinTrans}[1]{\mathcal{T}\Wrap{#1}}               %Use: \FnLinTrans for a cool T
+    \newcommand{\VecLinTrans}[1]{\mathcal{T}\pVector{#1}}           %Use: \LinTrans for a cool T
+    \newcommand{\FnLinealTransformation}[1]{\mathcal{T}\Wrap{#1}}   %Use: \FnLinealTransformation
+
+    % ===== ALL FOR DOT PRODUCT  =========
+    \makeatletter                                                   %WTF! IS THIS
+    \newcommand*\dotP{\mathpalette\dotP@{.5}}                       %Use: \dotP for dot product
+    \newcommand*\dotP@[2] {\mathbin {                               %WTF! IS THIS            
+        \vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}           %WTF! IS THIS
+    }                                                               %WTF! IS THIS
+    \makeatother                                                    %WTF! IS THIS
+
+    % === WRAPPERS FOR COLUMN VECTOR ===
+    \newcommand{\pVector}[1]                                        %Use: \pVector {Matrix Notation} use parentesis
+        { \ensuremath{\begin{pmatrix}#1\end{pmatrix}} }             %Example: \pVector{a\\b\\c} or \pVector{a&b&c} 
+    \newcommand{\lVector}[1]                                        %Use: \lVector {Matrix Notation} use a abs 
+        { \ensuremath{\begin{vmatrix}#1\end{vmatrix}} }             %Example: \lVector{a\\b\\c} or \lVector{a&b&c} 
+    \newcommand{\bVector}[1]                                        %Use: \bVector {Matrix Notation} use a brackets 
+        { \ensuremath{\begin{bmatrix}#1\end{bmatrix}} }             %Example: \bVector{a\\b\\c} or \bVector{a&b&c} 
+    \newcommand{\Vector}[1]                                         %Use: \Vector {Matrix Notation} no parentesis
+        { \ensuremath{\begin{matrix}#1\end{matrix}} }               %Example: \Vector{a\\b\\c} or \Vector{a&b&c}
+
+    % === MAKE MATRIX BETTER  =========
     \makeatletter                                                   %Example: \begin{matrix}[cc|c]
     \renewcommand*\env@matrix[1][*\c@MaxMatrixCols c] {             %WTF! IS THIS
         \hskip -\arraycolsep                                        %WTF! IS THIS
@@ -157,85 +237,172 @@
     }                                                               %WTF! IS THIS
     \makeatother                                                    %WTF! IS THIS
 
-    % TRIGONOMETRIC FUNCTIONS
-    \newcommand{\Cos}[1]{\cos\Wrap{#1}}                             %Simple wrappers
-    \newcommand{\Sin}[1]{\sin\Wrap{#1}}                             %Simple wrappers
-    \newcommand{\Tan}[1]{tan\Wrap{#1}}                              %Simple wrappers
-    
-    \newcommand{\Sec}[1]{sec\Wrap{#1}}                              %Simple wrappers
-    \newcommand{\Csc}[1]{csc\Wrap{#1}}                              %Simple wrappers
-    \newcommand{\Cot}[1]{cot\Wrap{#1}}                              %Simple wrappers
+    % =========================================
+    % =======   FAMOUS FUNCTIONS   ============
+    % =========================================
 
-    % === COMPLEX ANALYSIS ===
+    % == TRIGONOMETRIC FUNCTIONS  ====
+    \newcommand{\Cos}[1] {\cos\Wrap{#1}}                            %Simple wrappers
+    \newcommand{\Sin}[1] {\sin\Wrap{#1}}                            %Simple wrappers
+    \newcommand{\Tan}[1] {tan\Wrap{#1}}                             %Simple wrappers
+    
+    \newcommand{\Sec}[1] {sec\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Csc}[1] {csc\Wrap{#1}}                             %Simple wrappers
+    \newcommand{\Cot}[1] {cot\Wrap{#1}}                             %Simple wrappers
+
+    % === COMPLEX ANALYSIS TRIG ======
     \newcommand \Cis[1]  {\Cos{#1} + i \Sin{#1}}                    %Use: \Cis for cos(x) + i sin(x)
-    \newcommand \pCis[1] {\Wrap{\Cis{#1}}}                          %Use: \pCis for the same ut parantesis
-    \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same to Brackets
+    \newcommand \pCis[1] {\Wrap{\Cis{#1}}}                          %Use: \pCis for the same with parantesis
+    \newcommand \bCis[1] {\Brackets{\Cis{#1}}}                      %Use: \bCis for the same with Brackets
 
-    % ====== TRANSFORMS =====
-    \newcommand{\FourierT}[1]                                       %Use: \FourierT {Funtion} 
-        {\mathscr{F} \left\{ #1 \right\} }                          %Use: \FourierT {Funtion}
 
-    % === CALCULUS ===
-    \newcommand \MiniDerivate[1][x] {\dfrac{d}{d #1}}               %Use: \MiniDerivate for simple use
-    \newcommand \Derivate[2]                                        %Complete Derivate -- [f(x)][x]
-        {\dfrac{d \; #1}{d #2}}                                     %Use: \Partial for simple use
+    % =========================================
+    % ===========     CALCULUS     ============
+    % =========================================
+
+    % ====== TRANSFORMS =============
+    \newcommand{\FourierT}[1]   {\mathscr{F} \left\{ #1 \right\} }  %Use: \FourierT {Funtion}
+    \newcommand{\InvFourierT}[1]{\mathscr{F}^{-1}\left\{#1\right\}} %Use: \InvFourierT {Funtion}
+
+    % ====== DERIVATIVES ============
+    \newcommand \MiniDerivate[1][x]   {\dfrac{d}{d #1}}             %Use: \MiniDerivate[var] for simple use [var]
+    \newcommand \Derivate[2]          {\dfrac{d \; #1}{d #2}}       %Use: \Derivate [f(x)][x]
+    \newcommand \MiniUpperDerivate[2] {\dfrac{d^{#2}}{d#1^{#2}}}    %Mini Derivate High Orden Derivate -- [x][pow]
+    \newcommand \UpperDerivate[3] {\dfrac{d^{#3} \; #1}{d#2^{#3}}}  %Complete High Orden Derivate -- [f(x)][x][pow]
     
-    \newcommand \MiniUpperDerivate[2]                               %Mini Derivate High Orden Derivate -- [x][1]
-        {\dfrac{d^{#2}}{d#1^{#2}}}                                  %Mini Derivate High Orden Derivate
-    \newcommand \UpperDerivate[3]                                   %Complete High Orden Derivate -- [f(x)][x][1]
-        {\dfrac{d^{#3} \; #1}{d#2^{#3}}}                            %Use: \UpperDerivate for simple use
-    
-    \newcommand \MiniPartial[1][x] {\dfrac{\partial}{\partial #1}} %Use: \MiniDerivate for simple use
-    \newcommand \Partial[2]                                        %Complete Derivate -- [f(x)][x]
-        {\dfrac{\partial \; #1}{\partial #2}}                      %Use: \Partial for simple use
-    
-    \newcommand \MiniUpperPartial[2]                                %Mini Derivate High Orden Derivate -- [x][1] 
+    \newcommand \MiniPartial[1][x] {\dfrac{\partial}{\partial #1}}  %Use: \MiniDerivate for simple use [var]
+    \newcommand \Partial[2] {\dfrac{\partial \; #1}{\partial #2}}   %Complete Partial Derivate -- [f(x)][x]
+    \newcommand \MiniUpperPartial[2]                                %Mini Derivate High Orden Derivate -- [x][pow] 
         {\dfrac{\partial^{#2}}{\partial #1^{#2}}}                   %Mini Derivate High Orden Derivate
-    \newcommand \UpperPartial[3]                                    %Complete High Orden Derivate -- [f(x)][x][1]
+    \newcommand \UpperPartial[3]                                    %Complete High Orden Derivate -- [f(x)][x][pow]
         {\dfrac{\partial^{#3} \; #1}{\partial#2^{#3}}}              %Use: \UpperDerivate for simple use
 
     \DeclareMathOperator \Evaluate  {\Big|}                         %Use: \Evaluate por Notation
 
+    % ====== INTEGRALS ============
+    \newcommand{\inftyInt} {\int_{-\infty}^{\infty}}                %Use: \inftyInt for simple integrants
     
-    % =====  GENERAL COLOR  =========
+        
+% =======================================================
+% ===========      COLOR: MATERIAL DESIGN     ===========
+% =======================================================
+
+    % =====  COLORS ==================
+    \definecolor{RedMD}{HTML}{F44336}                               %Use: Color :D        
+    \definecolor{Red100MD}{HTML}{FFCDD2}                            %Use: Color :D        
+    \definecolor{Red200MD}{HTML}{EF9A9A}                            %Use: Color :D        
+    \definecolor{Red300MD}{HTML}{E57373}                            %Use: Color :D        
+    \definecolor{Red700MD}{HTML}{D32F2F}                            %Use: Color :D 
+
+    \definecolor{PurpleMD}{HTML}{9C27B0}                            %Use: Color :D        
+    \definecolor{Purple100MD}{HTML}{E1BEE7}                         %Use: Color :D        
+    \definecolor{Purple200MD}{HTML}{EF9A9A}                         %Use: Color :D        
+    \definecolor{Purple300MD}{HTML}{BA68C8}                         %Use: Color :D        
+    \definecolor{Purple700MD}{HTML}{7B1FA2}                         %Use: Color :D 
+
+    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D        
+    \definecolor{Indigo100MD}{HTML}{C5CAE9}                         %Use: Color :D        
+    \definecolor{Indigo200MD}{HTML}{9FA8DA}                         %Use: Color :D        
+    \definecolor{Indigo300MD}{HTML}{7986CB}                         %Use: Color :D        
+    \definecolor{Indigo700MD}{HTML}{303F9F}                         %Use: Color :D 
+
+    \definecolor{BlueMD}{HTML}{2196F3}                              %Use: Color :D        
+    \definecolor{Blue100MD}{HTML}{BBDEFB}                           %Use: Color :D        
+    \definecolor{Blue200MD}{HTML}{90CAF9}                           %Use: Color :D        
+    \definecolor{Blue300MD}{HTML}{64B5F6}                           %Use: Color :D        
+    \definecolor{Blue700MD}{HTML}{1976D2}                           %Use: Color :D        
+    \definecolor{Blue900MD}{HTML}{0D47A1}                           %Use: Color :D  
+
+    \definecolor{CyanMD}{HTML}{00BCD4}                              %Use: Color :D        
+    \definecolor{Cyan100MD}{HTML}{B2EBF2}                           %Use: Color :D        
+    \definecolor{Cyan200MD}{HTML}{80DEEA}                           %Use: Color :D        
+    \definecolor{Cyan300MD}{HTML}{4DD0E1}                           %Use: Color :D        
+    \definecolor{Cyan700MD}{HTML}{0097A7}                           %Use: Color :D        
+    \definecolor{Cyan900MD}{HTML}{006064}                           %Use: Color :D 
+
     \definecolor{TealMD}{HTML}{009688}                              %Use: Color :D        
-    \definecolor{IndigoMD}{HTML}{3F51B5}                            %Use: Color :D
-    \definecolor{Green100MD}{HTML}{DCEDC8}                          %Use: Color :D
-    \definecolor{Blue300MD}{HTML}{64B5F6}                           %Use: Color :D
+    \definecolor{Teal100MD}{HTML}{B2DFDB}                           %Use: Color :D        
+    \definecolor{Teal200MD}{HTML}{80CBC4}                           %Use: Color :D        
+    \definecolor{Teal300MD}{HTML}{4DB6AC}                           %Use: Color :D        
+    \definecolor{Teal700MD}{HTML}{00796B}                           %Use: Color :D        
+    \definecolor{Teal900MD}{HTML}{004D40}                           %Use: Color :D 
+
+    \definecolor{GreenMD}{HTML}{4CAF50}                             %Use: Color :D        
+    \definecolor{Green100MD}{HTML}{C8E6C9}                          %Use: Color :D        
+    \definecolor{Green200MD}{HTML}{A5D6A7}                          %Use: Color :D        
+    \definecolor{Green300MD}{HTML}{81C784}                          %Use: Color :D        
+    \definecolor{Green700MD}{HTML}{388E3C}                          %Use: Color :D        
+    \definecolor{Green900MD}{HTML}{1B5E20}                          %Use: Color :D
+
+    \definecolor{AmberMD}{HTML}{FFC107}                             %Use: Color :D        
+    \definecolor{Amber100MD}{HTML}{FFECB3}                          %Use: Color :D        
+    \definecolor{Amber200MD}{HTML}{FFE082}                          %Use: Color :D        
+    \definecolor{Amber300MD}{HTML}{FFD54F}                          %Use: Color :D        
+    \definecolor{Amber700MD}{HTML}{FFA000}                          %Use: Color :D        
+    \definecolor{Amber900MD}{HTML}{FF6F00}                          %Use: Color :D
+
+    \definecolor{BlueGreyMD}{HTML}{607D8B}                          %Use: Color :D        
+    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D        
+    \definecolor{BlueGrey200MD}{HTML}{B0BEC5}                       %Use: Color :D        
+    \definecolor{BlueGrey300MD}{HTML}{90A4AE}                       %Use: Color :D        
+    \definecolor{BlueGrey700MD}{HTML}{455A64}                       %Use: Color :D        
+    \definecolor{BlueGrey900MD}{HTML}{263238}                       %Use: Color :D        
+
     \definecolor{DeepPurpleMD}{HTML}{673AB7}                        %Use: Color :D
-    \definecolor{BlueGrey100MD}{HTML}{CFD8DC}                       %Use: Color :D
-    \definecolor{BlueGrey800MD}{HTML}{37474F}                       %Use: Color :D
-    \definecolor{BlueGrey200MD}{HTML}{B0BEC5}                       %Use: Color :D
-    \definecolor{Lime300MD}{HTML}{E6EE9C}                           %Use: Color :D
 
-    \newenvironment{ColorText}[1]{                                  %Use: \begin{ColorText}
-        \leavevmode\color{#1}\ignorespaces}                         %That's is!
+    % =====  ENVIRONMENT ==============
+    \newcommand{\Color}[2]{\textcolor{#1}{#2}}                      %Simple color environment
+    \newenvironment{ColorText}[1]                                   %Use: \begin{ColorText}
+        { \leavevmode\color{#1}\ignorespaces }                      %That's is!
 
-    % =====  CODE EDITOR =========
+
+% =======================================================
+% ===========           CODE EDITING          ===========
+% =======================================================
+
+    % =====  CODE EDITOR =============
     \lstdefinestyle{CompilandoStyle} {                              %This is Code Style
-        backgroundcolor=\color{BlueGrey800MD},                      %Background Color  
-        basicstyle=\tiny\color{white},                              %Font color
-        commentstyle=\color{BlueGrey200MD},                         %Comment color
-        stringstyle=\color{Lime300MD},                              %String color
-        keywordstyle=\color{Blue300MD},                             %keywords color
-        numberstyle=\tiny\color{TealMD},                            %Size of a number
-        frame=shadowbox,                                            %Adds a frame around the code
-        breakatwhitespace=true,                                     %Style   
-        showstringspaces=false,                                     %Hate those spaces                  
-        breaklines=true,                                            %Style                   
-        keepspaces=true,                                            %Style                   
-        numbers=left,                                               %Style                   
-        numbersep=10pt,                                             %Style 
-        xleftmargin=\parindent,                                     %Style 
-        tabsize=4,                                                  %Style
-        inputencoding=utf8/latin1                                   %Allow me to use special chars
+        backgroundcolor     = \color{BlueGrey900MD},                %Background Color  
+        basicstyle          = \tiny\color{white},                   %Style of text
+        commentstyle        = \color{BlueGrey200MD},                %Comment style
+        stringstyle         = \color{Green300MD},                   %String style
+        keywordstyle        = \color{Blue300MD},                    %keywords style
+        numberstyle         = \tiny\color{TealMD},                  %Size of a number
+        frame               = shadowbox,                            %Adds a frame around the code
+        breakatwhitespace   = true,                                 %Style   
+        breaklines          = true,                                 %Style   
+        showstringspaces    = false,                                %Hate those spaces                  
+        breaklines          = true,                                 %Style                   
+        keepspaces          = true,                                 %Style                   
+        numbers             = left,                                 %Style                   
+        numbersep           = 10pt,                                 %Style 
+        xleftmargin         = \parindent,                           %Style 
+        tabsize             = 4,                                    %Style
+        inputencoding       = utf8/latin1                           %Allow me to use special chars
+    }
+
+    % =====  CODE EDITOR =============
+    \lstdefinestyle{CompilandoStylePurity} {                        %This is Code Style
+        backgroundcolor     = \color{white},                        %Background Color  
+        basicstyle          = \tiny\color{BlueGrey900MD},           %Style of text
+        commentstyle        = \color{Green300MD},                   %Comment style
+        stringstyle         = \color{Teal700MD},                    %String style
+        keywordstyle        = \color{Blue700MD},                    %keywords style
+        numberstyle         = \tiny\color{TealMD},                  %Size of a number
+        frame               = none,                                 %Adds a frame around the code
+        breakatwhitespace   = true,                                 %Style   
+        breaklines          = true,                                 %Style   
+        showstringspaces    = false,                                %Hate those spaces                  
+        breaklines          = true,                                 %Style                   
+        keepspaces          = true,                                 %Style                   
+        numbers             = left,                                 %Style                   
+        numbersep           = 11pt,                                 %Style 
+        xleftmargin         = \parindent,                           %Style 
+        tabsize             = 4,                                    %Style
+        inputencoding       = utf8/latin1                           %Allow me to use special chars
     }
  
-    \lstset{style=CompilandoStyle}                                  %Use this style
-
-
-
-
+    \lstset{style = CompilandoStyle}                                %Use this style
 
 
 % =====================================================
@@ -243,29 +410,52 @@
 % =====================================================
 \begin{document}
 \begin{titlepage}
-
-    \center
-    % ============ UNIVERSITY NAME AND DATA =========
-    \textbf{\textsc{\Large Proyecto Compilando Conocimiento}}\\[1.0cm] 
-    \textsc{\Large Matemáticas Discretas}\\[1.0cm] 
-
-    % ============ NAME OF THE DOCUMENT  ============
-    \rule{\linewidth}{0.5mm} \\[1.0cm]
-        { \huge \bfseries Introducción a Matemáticas Discretas }\\[1.0cm] 
-    \rule{\linewidth}{0.5mm} \\[2.0cm]
     
-    % ====== SEMI TITLE ==========
-    {\LARGE Una Pequeña Introducción al corazón de las matemáticas}\\[7cm] 
-    
-    % ============  MY INFORMATION  =================
-    \begin{center} \large
-    \textbf{\textsc{Autor:}}\\
-    Rosas Hernandez Oscar Andres
-    \end{center}
+    % ============ TITLE PAGE STYLE  ================
+    \definecolor{TitlePageColor}{cmyk}{1,.60,0,.40}                 %Simple colors
+    \definecolor{ColorSubtext}{cmyk}{1,.50,0,.10}                   %Simple colors
+    \newgeometry{left=0.25\textwidth}                               %Defines an Offset
+    \pagecolor{TitlePageColor}                                      %Make it this Color to page
+    \color{white}                                                   %General things should be white
 
-    \vfill
+    % ===== MAKE SOME SPACE =========
+    \vspace                                                         %Give some space
+    \baselineskip                                                   %But we need this to up command
+
+    % ============ NAME OF THE PROJECT  ============
+    \makebox[0pt][l]{\rule{1.3\textwidth}{3pt}}                     %Make a cool line
+    
+    \href{https://compilandoconocimiento.com}                       %Link to project
+    {\textbf{\textsc{\Huge Compilando Conocimiento}}}\\[2.7cm]      %Name of project   
+
+    % ============ NAME OF THE BOOK  ===============
+    \href{\ProjectNameLink}                                         %Link to Author
+    {\fontsize{40}{45}\selectfont \textbf{Matemáticas Discretas}}\\[0.5cm] %Name of the book
+    \textcolor{ColorSubtext}{\textsc{\Huge Matemáticas Discretas}}  %Name of the general theme
+    
+    \vfill                                                          %Fill the space
+    
+    % ============ NAME OF THE AUTHOR  =============
+    \href{\ProjectAuthorLink}                                       %Link to Author
+    {\LARGE \textsf{Oscar Andrés Rosas Hernandez}}                  %Author
+
+    % ===== MAKE SOME SPACE =========
+    \vspace                                                         %Give some space
+    \baselineskip                                                   %But we need this to up command
+    
+    {\large \textsf{Julio 2018}}                                    %Date
 
 \end{titlepage}
+
+
+% =====================================================
+% ==========      RESTORE TO DOCUMENT      ============
+% =====================================================
+\restoregeometry                                                    %Restores the geometry
+\nopagecolor                                                        %Use to restore the color to white
+
+
+
 
 % =====================================================
 % ========                INDICE              =========
@@ -276,28 +466,30 @@
 \clearpage
 
 
+
+
+
 % ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 % ///////////////////////           ¿QUE ES LO QUE ESTOY LEYENDO?           //////////////////////////////////////////
 % ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 \section{¿Qué es lo que estoy leyendo?}
-
     
     Hola... ¡Hey! Seguramente te estarás preguntando
     ¿Qué demonios estoy leyendo?
 
     Bueno, este pequeño texto intenta darle solución a esa pregunta, la respuesta mas inmediata es
-    que este texto (o compilado como a mí me gusta decirle) es una recopilación de teoremas, ideas
+    que este texto (o compilado como nos gusta decirle) es una recopilación de teoremas, ideas
     y conceptos importantes que aprendí a lo largo del tiempo sobre este tema.
 
-    De manera regular estaré actualizando estos textos con todo aquello nuevo que aprenda intentando
+    De manera regular estarémos actualizando estos textos con todo aquello nuevo que aprenda intentando
     profundizar en todos estos temas y cerrar posibles dudas en estas páginas, así que siempre mantente
     alerta de tener la última versión, esta siempre esta en \href{http://www.CompilandoConocimiento.com}
     {\underline{CompilandoConocimiento.com}} 
 
-    Este Compilado intenta ser lo más estricto posible, aunque soy humano y es posible (e incluso probable) que
-    cometa pequeños errores de vez en cuando.
+    Este Compilado intenta ser lo más estricto posible, aunque somos humanos y es posible (e incluso probable) que
+    cometamos pequeños errores de vez en cuando.
 
-    Estos textos están creados como una base con la que tu puedas leer rápidamente todo lo que he aprendido
+    Estos textos están creados como una base con la que tu puedas leer rápidamente todo lo que hemos aprendido
     a lo largo del tiempo, aprender los conceptos más importantes y que usándo esto tu puedas profundizar
     más en la maravilla que es aprender más sobre este maravilloso mundo.
 
@@ -305,20 +497,17 @@
     el, puedes descargar este texto, puedes ver su código fuente, puedes modificarlo y puedes distribuir este
     texto y sus versiones modificadas, puedes acceder a todo lo que necesitas 
     \href{http://www.github.com/CompilandoConocimiento/LibroMatematicasDiscretas}
-    {\underline{en el Repositorio del Libro de Matemáticas Discretas}}.
+    {\underline{en el Repositorio del Libro de Matemáticas Discretas}}. 
 
-    Cualquier pregunta, comentario o si quieres contactar conmigo no dudes en escribir el email del proyecto:
+    Cualquier pregunta, comentario o si quieres contactar con nosotros no dudes en escribir al email del proyecto:
     CompilandoConocimiento@gmail.com
 
-    Espero que tomes estas páginas como un regalo, creado por un ser imperfecto pero con muchos ánimos de hacer
+    Espero que tomes estas páginas como un regalo, creado por seres imperfectos pero con muchos ánimos de hacer
     del mundo un lugar mejor, ahora si, abróchate los cinturones que esto acaba de empezar.
 
     \begin{flushright}
         Compilar es Compartir
     \end{flushright}
-
-
-
 
 
 % ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -518,7 +707,7 @@
                 }\\
                 \end{itemize}\end{minipage}                                                 \\[1.5ex]
 
-                \hline & & \\ \large si y solo si  &  \large{p $\doublearrow$ q}            &
+                \hline & & \\ \large si y solo si  &  \large{p $\lEqual$ q}            &
 
                 \begin{minipage}[t]{\textwidth}\begin{itemize}
                 \small{
@@ -644,7 +833,7 @@
                             Esta equivalencia es muy importante, pues es muy usada para las demostraciones
                             (no te preocupes Timmy, ya entenderas después).
                             \begin{equation*}
-                                p \to q \lequal \lnot q \to \lnot p
+                                p \to q \lEqual \lnot q \to \lnot p
                             \end{equation*}
 
                         \item \textbf{Implicaciones Famosas}
@@ -674,7 +863,7 @@
             \subsection{Bicondicional}
 
                 En lógica la idea de $(p \to q ) \land (q \to p)$ aparece tan seguido que decidimos darle su
-                propio símbolo $p \doublearrow q$.
+                propio símbolo $p \lEqual q$.
 
                 Esta operación nos regresa verdadero \textbf{solo} cuando ambas premisas tengan el mismo valor de
                 verdad. Ojo no dije que ambas sean verdad, simplemente que si una es falsa, obliga a la otra a 
@@ -693,9 +882,9 @@
 
             Llega a pasar en lógica que tenemos dos expresiones lógicas que al momento de ver su tabla de 
             verdad vemos que son iguales en todos los valores de verdad de sus variables entonces podemos
-            decir que son logicamente equivalentes. Y solemos denotar eso con este símbolo $p \lequal q$.
+            decir que son logicamente equivalentes. Y solemos denotar eso con este símbolo $p \lEqual q$.
 
-            Usamos este símbolo porque si $p$ y $q$ son logicamente equivalentes entonces $p \doublearrow q$
+            Usamos este símbolo porque si $p$ y $q$ son logicamente equivalentes entonces $p \lEqual q$
             será siempre verdad, una tautología.
 
             Esta idea es importante pues nos permite ver ideas que ya tenemos expresadas en la lógica de una
@@ -716,68 +905,68 @@
 
                 \begin{itemize}
                     \item \textbf{Doble Complemento} \\
-                            $\lnot(\lnot p) \lequal p$
+                            $\lnot(\lnot p) \lEqual p$
 
                     \item \textbf{Propiedad Conmutativa}
                         \begin{itemize}
-                            \item $p \land q \lequal q \land p$
-                            \item $p \lor  q \lequal q \lor  p$
+                            \item $p \land q \lEqual q \land p$
+                            \item $p \lor  q \lEqual q \lor  p$
                         \end{itemize}
 
                     \item \textbf{Propiedad Asociativa}
                         \begin{itemize}
-                            \item $p \land (q \land r) \lequal (p \land q) \land C$
-                            \item $p \lor (q \lor r) \lequal (p \lor q) \lor C$
+                            \item $p \land (q \land r) \lEqual (p \land q) \land C$
+                            \item $p \lor (q \lor r) \lEqual (p \lor q) \lor C$
                         \end{itemize}
 
                     \item \textbf{Propiedad Distributiva}
                         \begin{itemize}
-                            \item $p \land (q \lor r) \lequal (p \land q) \lor (p \land r)$
-                            \item $p \lor (q \land r) \lequal (p \lor q) \land (p \lor r)$
+                            \item $p \land (q \lor r) \lEqual (p \land q) \lor (p \land r)$
+                            \item $p \lor (q \land r) \lEqual (p \lor q) \land (p \lor r)$
                         \end{itemize}
 
                     \item \textbf{Leyes de Morgan}
                         \begin{itemize}
-                            \item $\lnot (p \land q) \lequal (\lnot p) \lor (\lnot q)$
-                            \item $\lnot (p \lor q) \lequal (\lnot p) \land (\lnot q)$
+                            \item $\lnot (p \land q) \lEqual (\lnot p) \lor (\lnot q)$
+                            \item $\lnot (p \lor q) \lEqual (\lnot p) \land (\lnot q)$
                         \end{itemize}
 
                     \clearpage
 
                     \item \textbf{Propiedad de los Neutros}
                         \begin{itemize}
-                            \item $p \land T \lequal p$
-                            \item $p \lor F \lequal p$
+                            \item $p \land T \lEqual p$
+                            \item $p \lor F \lEqual p$
                         \end{itemize}
 
                     \item \textbf{Propiedad de los Inversos}
                         \begin{itemize}
-                            \item $p \land \lnot p \lequal F$
-                            \item $p \lor \lnot p \lequal T$
+                            \item $p \land \lnot p \lEqual F$
+                            \item $p \lor \lnot p \lEqual T$
                         \end{itemize}
 
                     \item \textbf{Propiedad de Dominación}
                         \begin{itemize}
-                            \item $p \land F \lequal F$
-                            \item $p \lor T \lequal T$
+                            \item $p \land F \lEqual F$
+                            \item $p \lor T \lEqual T$
                         \end{itemize}
 
                     \item \textbf{Propiedad de Inepotencia}
                         \begin{itemize}
-                            \item $p \land p \lequal p$
-                            \item $p \lor p \lequal p$
+                            \item $p \land p \lEqual p$
+                            \item $p \lor p \lEqual p$
                         \end{itemize}
 
                     \item \textbf{Propiedad de Absorción}
                         \begin{itemize}
-                            \item $p \land (p \lor q) \lequal p$
-                            \item $p \lor (p \land q) \lequal p$
+                            \item $p \land (p \lor q) \lEqual p$
+                            \item $p \lor (p \land q) \lEqual p$
                         \end{itemize}
 
                     \item \textbf{Propiedad de Contrapositiva}
                         \begin{itemize}
-                            \item $p \to q \lequal \lnot q \to \lnot p$
-                            \item $p \doublearrow q  \lequal \lnot p \doublearrow \lnot q$
+                            \item $p \to q \lEqual \lnot q \to \lnot p$
+                            \item $p \lEqual q  \lEqual \lnot p \lEqual \lnot q$
                         \end{itemize}
 
                 \end{itemize}
@@ -811,7 +1000,7 @@
 
                 Es decir:
                 \begin{equation*}
-                    [p_1 \land p_2 \land p_3 \dots \to q] \lequal T
+                    [p_1 \land p_2 \land p_3 \dots \to q] \lEqual T
                 \end{equation*}
 
                 En español esto quiere decir que el hecho de que todas las premisas sean verdaderas obliga a
@@ -852,32 +1041,32 @@
                 \begin{itemize}
                     \item
                         \textbf{Contrapositiva de la Inferencia}\\
-                        $p \linfire q$ si y solo si $\lnot q \linfire \lnot p$
+                        $p \lInfire q$ si y solo si $\lnot q \lInfire \lnot p$
 
                     \item
                         \textbf{Por Contradicción}\\
-                        $p \linfire q$ si y solo si $p \land \lnot q \linfire F$
+                        $p \lInfire q$ si y solo si $p \land \lnot q \lInfire F$
 
                     \item
                         \textbf{Por Corriento del Condicional}\\
-                        $p \linfire q \to r$ si y solo si $p \land q \linfire s$
+                        $p \lInfire q \to r$ si y solo si $p \land q \lInfire s$
 
 
                     \item
                         \textbf{Disyunción}\\
-                        Si ya sabemos que $p \linfire q$ entonces sabremos que $p \land r \linfire q \land r$
+                        Si ya sabemos que $p \lInfire q$ entonces sabremos que $p \land r \lInfire q \land r$
 
                     \item
                         \textbf{Conjunción}\\
-                        Si ya sabemos que $p \linfire q$ entonces sabremos que $p \lor r \linfire q \lor r$
+                        Si ya sabemos que $p \lInfire q$ entonces sabremos que $p \lor r \lInfire q \lor r$
 
                     \item
                         \textbf{Condicional}\\
-                        Si ya sabemos que $p \linfire q$ entonces sabremos que $r \to p \linfire r \to q$
+                        Si ya sabemos que $p \lInfire q$ entonces sabremos que $r \to p \lInfire r \to q$
 
                     \item
                         \textbf{Transitiva}\\
-                        Si ya sabemos que $p \linfire q$ y que $q \linfire r$ entonces sabremos que $p \linfire r$
+                        Si ya sabemos que $p \lInfire q$ y que $q \lInfire r$ entonces sabremos que $p \lInfire r$
                 \end{itemize}        
 
                
@@ -1082,8 +1271,8 @@
             % ====   SENTENCIAS ABIERTAS    =======
             % =====================================
             \subsection{Cuantificadores Ocultos}
-                Ahora llegamos al punto muy importante. En matemáticas, la expresión $p(x) \linfire q(x)$
-                se entiende que en realidad hablamos de la oración $\forall x \in A, \MiniSpace p(x) \linfire q(x)$.
+                Ahora llegamos al punto muy importante. En matemáticas, la expresión $p(x) \lInfire q(x)$
+                se entiende que en realidad hablamos de la oración $\forall x \in A, \MiniSpace p(x) \lInfire q(x)$.
 
                 Si, lo se, matemáticos que les da flojera ser formales, aunque entiendelos, es tal común esta
                 clase de enunciados que se notaría tan repetetitivo.
@@ -1106,7 +1295,7 @@
             simplemente otra forma de decir $\forall x ,\MiniSpace p(x)$.\\
 
             Otra forma de escribir el cuantificador universal $\forall x \in A,\MiniSpace p(x)$ es
-            escribir $(x \in A) \linfire p(x)$
+            escribir $(x \in A) \lInfire p(x)$
 
 
 
@@ -1139,27 +1328,27 @@
                 \begin{itemize}
                     \item
                     \textbf{Negación del Universal} \\
-                    $\lnot (\forall x \in A,\MiniSpace p(x)) \lequal \exists x \in A,\MiniSpace \lnot p(x)$
+                    $\lnot (\forall x \in A,\MiniSpace p(x)) \lEqual \exists x \in A,\MiniSpace \lnot p(x)$
 
                     \item
                     \textbf{Negación del Existencial} \\
-                    $\lnot (\exists x \in A,\MiniSpace p(x)) \lequal \forall x \in A,\MiniSpace \lnot p(x)$
+                    $\lnot (\exists x \in A,\MiniSpace p(x)) \lEqual \forall x \in A,\MiniSpace \lnot p(x)$
 
                     \item \textbf{Cambio de Variables} \\
-                            $p(a) \lequal (p(x) \land (x=a))$
+                            $p(a) \lEqual (p(x) \land (x=a))$
                             
                     \item \textbf{Cuantificadores sobre Proposiciones} \\
-                            $\exists x, p \lequal \forall x, p \lequal p$
+                            $\exists x, p \lEqual \forall x, p \lEqual p$
 
                     \item \textbf{Leyes Conmutativas para Cuantificador Existencial}
 
                         \begin{itemize}
 
                             \item
-                            $\exists x, [p(x) \lor q(x)] \lequal \exists x, p(x) \lor \exists x, q(x)$
+                            $\exists x, [p(x) \lor q(x)] \lEqual \exists x, p(x) \lor \exists x, q(x)$
 
                             \item
-                            $\exists x, [p(x) \land q(x)] \linfire \exists x, p(x) \land \exists x, q(x)$
+                            $\exists x, [p(x) \land q(x)] \lInfire \exists x, p(x) \land \exists x, q(x)$
 
                         \end{itemize}
 
@@ -1168,10 +1357,10 @@
                         \begin{itemize}
                             
                             \item
-                            $\forall x, [p(x) \land q(x)] \lequal \forall x, p(x) \land \forall x, q(x)$
+                            $\forall x, [p(x) \land q(x)] \lEqual \forall x, p(x) \land \forall x, q(x)$
 
                             \item
-                            $\forall x, p(x) \lor \forall x, q(x) \linfire \forall x, [p(x) \lor q(x)]$
+                            $\forall x, p(x) \lor \forall x, q(x) \lInfire \forall x, [p(x) \lor q(x)]$
 
                         \end{itemize}
                         
@@ -2517,7 +2706,7 @@
                 Una relación transitiva es aquella que cumple con que:
                 misma.
                 \begin{equation*}
-                    \forall a,b,c \in A, \MiniSpace ((aRb) \land (bRa)) \linfire (aRc)
+                    \forall a,b,c \in A, \MiniSpace ((aRb) \land (bRa)) \lInfire (aRc)
                 \end{equation*}
 
                 La cerradura transitiva $Cl_T(R)$ de una relación $R$ es una relación que cumple con:
@@ -2774,7 +2963,7 @@
 
                 Es decir si es que es imposible que $f(a_1) = b$ y que también $f(a_2) = b$.
                 \begin{equation*}
-                   \forall x, y \in A, \MiniSpace (x \neq y) \linfire (f(x) \neq f(y))
+                   \forall x, y \in A, \MiniSpace (x \neq y) \lInfire (f(x) \neq f(y))
                 \end{equation*}
 
                 % =======================================
