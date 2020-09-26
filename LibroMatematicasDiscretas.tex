@@ -4066,10 +4066,108 @@
 
 
 
+    % ======================================================================================
+    % ===================               GRAFOS                          ====================
+    % ======================================================================================
+    \chapter{Grafos}
+        \clearpage
 
 
+        % =====================================================
+        % ==========              GRUPOS              =========
+        % =====================================================
+        \clearpage
+        \section{Grafos Simples}
+
+            % ==================================
+            % =========   FORMAL     ===========
+            % ==================================
+            \subsection{Definición Formal}
+
+                Un grafo es una pareja ordenada $(V, A)$ de conjuntos discretos finitos, donde llamamos a $V$ el conjunto de
+                vértices y $V \neq \emptyset$ y $A$ es un conjunto de pares no ordenados 
+                $A = \BigSet{ \Set{x, y} \text{ tal que } x \neq y, \; x, y \in V}$
 
 
+                Cosas de notación:
+                \begin{itemize}
+                    \item Decimos que $\Set{x, y}$ de manera mas compatacta se escribe $xy$ y por ser
+                    parejas no ordenadas decimos que $yx$.
+                \end{itemize}
+
+            % ==================================
+            % =========   ADJACENCIA    ========
+            % ==================================
+            \subsection{Adjacencia}
+
+                Si $xy \in A$ decimos que $x$ es adyacente a $y$, denotado como $x \; adj_G \; y$.
+
+                Decimos que dos aristas en una grafica son adjacentes si es que comparten al menos un vertice.
+
+            % ==================================
+            % =========      ORDEN      ========
+            % ==================================
+            \subsection{Orden o tamaño}
+
+                Si tenemso una grafica $(V, A)$ decimos que el orden es $|V| = n$ ó $|V| = p$ y 
+                el tamaño de G como a $|A| = m$ ó $|A| = q$ 
+
+            \subsection{Maximo o minimo espacio}
+
+                \begin{itemize}
+                    \item $\delta(G)$ es el minimo de todos los grafos de $G$
+                    \item $\Delta(G)$ es el maximo de todos los grafos de $G$
+                \end{itemize}
+
+            % ==================================
+            % =========     INDUCIDA    ========
+            % ==================================
+            \subsection{Inducida}
+
+                Sea $S \in V(G)$ no vacio entonces decimos que la grafica inducida $G[S]$
+                esta definida por:
+                \begin{itemize}
+                    \item $V(G[S]) := S$
+                    \item $A(G[S]) := \Set{ xy \in A(G) \Such x, y \in S}$
+                \end{itemize}
+
+                Se puede hacer algo equivalente con $R \in A(G)$.
+
+            % ==================================
+            % =========     GENERADORA  ========
+            % ==================================
+            \subsection{Generadora}
+
+                Dada una $H$ que es una subgrafica de $G$, decimos que $H$ es generadora si $V(H) = V(G)$
+
+        % =====================================================
+        % ==========              TEOREMAS            =========
+        % =====================================================
+        \clearpage
+        \section{Teoremas}
+
+            % ==================================
+            % =========      SUMA       ========
+            % ==================================
+            \subsection{Teorema de Suma}
+
+            Sea $G$ un grafo de orden $n$ y tamaño $m$, entonces tenemos que:
+            \begin{equation*}
+                2m = \sum_{v \in V}{grado(v)}
+            \end{equation*}
+
+            \begin{SmallIndentation}[1em]
+                Idea de la demostración:
+                
+                Dado que cada arista $xy$ incide en $x$ y $y$ por lo que al sumar todos los grados obtenemos cada conexión
+                2 veces.
+            \end{SmallIndentation}
+
+            Nota que por lo tanto la suma de los grados de los vertices de la grafica siempre es par.
+            Esto nos llega a algo muy importante, en un grafo el numero de vertices de grado impar es par.
+                
+
+            
 
 
 
