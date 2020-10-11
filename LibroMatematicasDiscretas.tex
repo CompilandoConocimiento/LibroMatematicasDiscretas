@@ -4140,6 +4140,148 @@
 
                 Dada una $H$ que es una subgrafica de $G$, decimos que $H$ es generadora si $V(H) = V(G)$
 
+
+            % ==================================
+            % =========     SUBGRAFOS   ========
+            % ==================================
+            \subsection{Subgrafos}
+
+                Sean $G$ y $H$ grafos, tales que $V(H) \subseteq V(G)$ y $A(H) \subseteq A(G)$, entonces decimos que 
+                $H$ es una subgrafica de $G$. Denotado como $H \leq G$.
+
+
+            % ==================================
+            % =====         VECINOS     ========
+            % ==================================
+            \subsection{Vecinos}
+
+                Sea $G$ un grafo y $v \in V(G)$, entonces definimos al conjunto de los vecinos del vertice
+                como:
+
+                \begin{equation*}
+                    N_G(v) = \Set{y \in V(G) \Such{ vy \in A(G)}}
+                \end{equation*}
+
+                Nota que por la misma definición $|N_G(v)| = grado(v)$
+
+                Y definimos a la vecindad cerrada como:
+                $N_G[v] = N_G(v) \cup \Set{v}$
+          
+            % ==================================
+            % =====         CAMINOS     ========
+            % ==================================
+            \subsection{Caminos}
+
+                Sea $G$ un grafo y $u, v\in V(G)$, entonces definimos a un camino en $G$ como
+                la sucesión de vertices y aristas.
+
+                \begin{equation*}
+                    C = (u_1, u_1u_2, u_2, \dots, u_{n-1}u_n, u_n) 
+                \end{equation*}
+
+                Decimos que la longitud de un camino ($C_l$) es la cantidad de verticces en el camino, contando
+                repeticiones.
+
+                También decimos que el camino es cerrado si sus vertices extremos son iguales y abierto en otro caso.
+
+                Si un camino no repite aristas es un paseo.
+
+                A los paseos cerrados les llamo circuitos.
+
+                Un circuito en el que solo el primero y el ultimo son iguales se les llama ciclo.
+                
+                Y si un camino no repite vertices es llamado trayectoria.
+
+                \subsubsection{Observaciones}
+
+                \begin{itemize}
+                    \item Toda trayectoria es un paseo
+                    \item Todo ciclo es un circuito
+                    \item Para toda graficca no conexa existen subgraficas que si los son, a estas
+                    las llamamos componentes conexas, que son las subgraficas mas grandes (por numero de vertices)
+                    que si son conexas.
+                \end{itemize}
+
+                
+            % ==================================
+            % =====         CONEXA      ========
+            % ==================================
+            \subsection{Conexa}
+
+                Decimos que una grafica es conexa si puedes tomar dos vertices cuales quiera
+                y puedes crear un camino entre ellos.
+
+
+            % ==================================
+            % =====       COMPLETA      ========
+            % ==================================
+            \subsection{Completa}
+
+                Decimos que una grafica es completa si para cualquiera dos vertices
+                diferentes $v, u$ existe una arista entre ellas.
+
+                En ese caso $grado(v_x) = n - 1$
+                y el numero de aristas es $\frac{n (n - 1)}{2}$
+
+            % ==================================
+            % =====       REGULAR      ========
+            % ==================================
+            \subsection{Regular}
+
+                Decimos que una grafica es regular si es que todos sus vertices tienen
+                el mismo grado.
+
+            % ==================================
+            % =====       BIPARTITO     ========
+            % ==================================
+            \subsection{Bipartito}
+
+                Decimos que una grafica $G$ es bipartita si podemos crear otras dos
+                graficas $W, U$ tal que $\forall vw \in A(G) \lIff u \in U \text{ y } w \in W$.
+
+            % ==================================
+            % =====       COMPLEMENTO   ========
+            % ==================================
+            \subsection{Complemento}
+
+                Dada una grafica $G$ definimos a $\Over{G}$ como:
+                \begin{itemize}
+                    \item $V(\Over{G}) = V (G)$
+                    \item $A(\Over{G}) = \Set{xy \lIff x, y \not \in A(G)}$
+                \end{itemize}
+
+            %==================================
+            % =====       ISOMORFISMO   ========
+            % ==================================
+            \subsection{Isomorfismo}
+
+                Dada una grafica $G$ definimos que $H$ es isomorfa si y solo si:
+                \begin{itemize}
+                    \item $|V(G)| = |V(H)|$
+                    \item Existe una funcion biyectiva entre los verticces de una y de otra tal que
+                    $xy \in A(G) \lIff f(x)f(y) \in H(G)$.
+                \end{itemize}
+
+
+            %===========+=======================
+            % =====       LINEAS        ========
+            % ==================================
+            \subsection{Lineas}
+            
+                Una grafica de lineas es como convertir aristas en vertices.
+                Dada una grafica $G$ definimos que $L(G)$ como:
+                \begin{itemize}
+                    \item $V(L(G)) = A(G)$
+                    \item $ab \in A(L(G)) \lIff a \text{ es adjacente a } b \text{ en } G$.
+                \end{itemize}
+
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.45\textwidth]{lineas}
+                    \caption{Ejemplo}
+                \end{figure}
+
+
         % =====================================================
         % ==========              TEOREMAS            =========
         % =====================================================
@@ -4151,23 +4293,111 @@
             % ==================================
             \subsection{Teorema de Suma}
 
-            Sea $G$ un grafo de orden $n$ y tamaño $m$, entonces tenemos que:
-            \begin{equation*}
-                2m = \sum_{v \in V}{grado(v)}
-            \end{equation*}
+                Sea $G$ un grafo de orden $n$ y tamaño $m$, entonces tenemos que:
+                \begin{equation*}
+                    2m = \sum_{v \in V}{grado(v)}
+                \end{equation*}
 
-            \begin{SmallIndentation}[1em]
-                Idea de la demostración:
+                \begin{SmallIndentation}[1em]
+                    Idea de la demostración:
+                    
+                    Dado que cada arista $xy$ incide en $x$ y $y$ por lo que al sumar todos los grados obtenemos cada conexión
+                    2 veces.
+                \end{SmallIndentation}
+
+                Nota que por lo tanto la suma de los grados de los vertices de la grafica siempre es par.
+                Esto nos llega a algo muy importante, en un grafo el numero de vertices de grado impar es par.
                 
-                Dado que cada arista $xy$ incide en $x$ y $y$ por lo que al sumar todos los grados obtenemos cada conexión
-                2 veces.
-            \end{SmallIndentation}
 
-            Nota que por lo tanto la suma de los grados de los vertices de la grafica siempre es par.
-            Esto nos llega a algo muy importante, en un grafo el numero de vertices de grado impar es par.
+            % ==================================
+            % =========      VERTICES   ========
+            % ==================================
+            \subsection{Siempre hay dos vertices con grado igual}
+
+                Sea $G$ una gráfica y $V(G)$ sus vertices, entonces existen 2 vertices $v, u$
+                tal que $grado(v) = grado(u)$. (Suponiendo que no se valen vertices a ti mismo y no mas de una
+                arista entre dos vertices iguales).
+
+                    % ======== DEMOSTRACION ========
+                    \begin{SmallIndentation}[1em]
+                        \textbf{Demostración}:
+
+                        Va, supongamos que todos son diferentes, entonces crea una sucesión de dichos grados de los
+                        vertices.
+                        \begin{itemize}
+                            \item  $grado(u_1) = 0$
+                            \item  $grado(u_2) = 1$
+                            \item  $\dots$
+                            \item  $grado(u_n) = n - 1$
+                        \end{itemize}
+
+                        Entonces el primero lo mas pequeño que puede empezar es en cero, el siguiente
+                        no puede ser cero porque entonces ya valio, asi que si queremos minimizar tiene que ser
+                        uno, y asi, entonces en una grafica con $n$ vertices tenemos que el vertices con grado 
+                        mayor es $n - 1$, pero piensa que significa que un vertice tenga $n - 1$ aristas, pues
+                        que esta conectado a todos los demas.
+
+                        Pero eso no puede ser porque dijimos que $grado(u_1) = 1$, y es mas el grado no puede ser
+                        mayor a $n - 1$ porque no hay mas vertices para hacer conexión.
+
+
+                    \end{SmallIndentation}
+
+                Como comentario, podemos ver el teorema como que siempre hay dos vertices con el mismo grafo
+                con el mismo grado.
+
+
+            % ==================================
+            % =========      MAX TAMAÑO ========
+            % ==================================
+            \subsection{Máximo tamaño}
+
+                Sea $G$ una gráfica simple entonces pasa que:
+                \begin{equation*}
+                    num_{aristas} = {num_{vertices} \choose 2}
+                \end{equation*}
                 
 
-            
+                % ======== DEMOSTRACION ========
+                \begin{SmallIndentation}[1em]
+                    \textbf{Demostración}:
+
+                    
+                    \begin{align*}
+                        2m
+                            &= \sum_{v \in V}{grado(v)}
+                                && \Remember{Recuerda que el grado maximo de un vertice es $n -1$}    \\
+                            &\leq n (n - 1)
+                                && \Remember{por ser el universo}    \\
+                            m &\leq \frac{n (n - 1)}{2} \\
+                            m &\leq {n \choose 2}
+                        \end{align*}
+
+
+                \end{SmallIndentation}
+
+            % ==================================
+            % ====  CAMINO IMPLICA TRAYECTORIA =
+            % ==================================
+            \subsection{Camino implica trayectoria}
+
+                Para todo $uv$-camino hay una $uv$-trayectoria.
+
+            % ==================================
+            % ====  CAMINO IMPLICA TRAYECTORIA =
+            % ==================================
+            \subsection{Camino y ciclos}
+
+                Si tenemos un camino cerrado de longitud impar 
+                entonces existe un ciclo de longitud impar.
+
+            % ==================================
+            % ====  CAMINO IMPLICA TRAYECTORIA =
+            % ==================================
+            \subsection{Ciclos y trayectorias}
+
+                Todo ciclo tiene exactamente dos trayectorias independientes entre cualquiera
+                dos verticesbu.
 
 
 
