@@ -4243,7 +4243,7 @@
                 \begin{itemize}
                     \item Toda grafica bipartita no tiene ciclos impares
                     \item El tamaño de una grafica bipartita de orden n es a lo mas
-                    $n^2 \over 2$
+                    $\frac{n^2}{2}$
                 \end{itemize}
 
                 Entonces:
@@ -4383,9 +4383,9 @@
             % ==================================
             \subsection{Distancia}
 
-            La longitud de la trayectoria mas corta entre $v, y$ es llamada la distancia, en dado
-            caso de no existir (si no estan en la misma componente conexa) entonces por definicion decimos 
-            que es infinita.
+                La longitud de la trayectoria mas corta entre $v, y$ es llamada la distancia, en dado
+                caso de no existir (si no estan en la misma componente conexa) entonces por definicion decimos 
+                que es infinita.
 
 
             %===================================
@@ -4393,10 +4393,32 @@
             % ==================================
             \subsection{Arbol}
 
-            Una grafica $G$ es un arbol si es conexa y ademas no tiene ciclos.
-            Decimos que una union de arboles como bosques.
-            
-            Otra definicion alterna es que toda arista es un puente.
+                Una grafica $G$ es un arbol si es conexa y ademas no tiene ciclos.
+                Decimos que una union de arboles como bosques.
+                
+                Otra definicion alterna es que toda arista es un puente.
+
+
+            %===================================
+            % =====       BLOQUES          =====
+            % ==================================
+            \subsection{Bloques}
+
+                Una grafica $G$ es una sub grafica conexa, con el maximo numero de vertices
+                y que no tiene vertices de corte. 
+
+            %===================================
+            % =====       BLOQUES          =====
+            % ==================================
+            \subsection{Grafica de bloques}
+
+                Sea $G$ una grafica, $A$ el conjunto de vertices de corte
+                y $B$ el conjunto de bloques de $G$.
+
+                \begin{itemize}
+                    \item $V(B(G)) = A \cup B$
+                    \item $\forall a in A, b \in B \MegaSpace ab \in A(B(G)) \lIff a in B$
+                \end{itemize}
 
 
         % =====================================================
@@ -4524,9 +4546,21 @@
             % ==================================
             \subsection{Conexas}
 
-            \begin{itemize}
-                \item Sea $G$ una grafica conexa de orden $n$ y tamano $m$, si $n \geq 2$ entonces $m \geq n - 1$
-            \end{itemize}
+                \begin{itemize}
+                    \item Sea $G$ una grafica conexa de orden $n$ y tamano $m$, si $n \geq 2$ entonces $m \geq n - 1$
+                \end{itemize}
+
+            % ==================================
+            % ======    BIPARTITAS       =======
+            % ==================================
+            \subsection{Bipartitas}
+
+                \begin{itemize}
+                    \item Sea $G$ una grafica conexa, entonces $G$ 
+                    es bipartita si y solo si no tiene ciclos de longitud impar.
+
+                    Podemos ver como un colorario random que todo arbol es una grafica bipartita
+                \end{itemize}
 
 
             % ==================================
@@ -4534,11 +4568,35 @@
             % ==================================
             \subsection{Arboles}
 
-            \begin{itemize}
-                \item Para un arbol de orden $n$ hay $m = n - 1$
-                \item Una grafica es un arbol si y solo si existe un unico camino entre cuales quiera dos vertices
-                \item Tienen al menos dos vertices de grado 1.
+                \begin{itemize}
+                    \item Para un arbol de orden $n$ hay $m = n - 1$
+                    \item Una grafica es un arbol si y solo si existe un unico camino entre cuales quiera dos vertices
+                    \item Tienen al menos dos vertices de grado 1.
+                    \item Si le quitas una hoja a un arbol, la grafica resultante sigue siendo un arbol
+                    \item Sea $G$ una grafica conexa de orden $n$ entonces:
+                    \begin{itemize}
+                        \item G es arbol, es decir sin ciclos y conexa
+                        \item G no tiene ciclos y tiene $n - 1$ aristas
+                        \item G es conexa y tiene $n - 1$ aristas
+                    \end{itemize}
+
+                    \item Sea $G$ una grafica conexa entonces contiene un arbol generador
             \end{itemize}
+                
+
+
+            % ==================================
+            % =========     CONEXIDAD    =======
+            % ==================================
+            \subsection{Conexidad}
+
+                \begin{itemize}
+                    \item Si se tiene un puente tiene un vertice de corte
+                    \item $v$ es de corte si y solo si, para toda trayectoria entre dos vertices cuales quiera
+                    de dos componentes todas sus trayectorias pasan por ese vertice
+                    \item Sea $G$ una grafica 3-regular entonces tiene un vertice de corte si y solo si 
+                    tiene un puente
+                \end{itemize}
 
 
 
